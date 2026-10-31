@@ -748,3 +748,31 @@ more useful to permit linking proprietary applications with the library. If this
 what you want to do, use the GNU Lesser General Public License instead of this
 License. But first, please read
 &lt;<http://www.gnu.org/philosophy/why-not-lgpl.html>&gt;.
+
+V3：NS物种支持名单与手机版界面（2026-10-31）
+同一PKHeX固定提交：61da5c6f68fbc0f8fa5b09212dc8329169a830db
+按PersonalTable7GG、8SWSH、8BDSP、8LA、9SV、9ZA的IsSpeciesInGame规则。
+存在位偏移、记录长度、形态索引来自PersonalInfo对应类；最大物种编号来自Legality/Legal.cs。
+SwSh最多898、LA最多905、SV最多1025、ZA最多1000；不把表尾形态行当成新物种。
+Let's Go规则为关都151种及808/809；BDSP规则为1至493。
+名单是物种支持，不是地区图鉴号表，不是单机野生刷新表；含更新/DLC及迁入、交换兼容。
+NS新遭遇表来自同一PokéAPI快照的encounters.csv等，剑盾含DLC，概率暂未可靠换算。
+3DS旧记录与条件不改动；相同结果的条件组仅在界面以“或”合并。
+PNG只裁透明边缘并留4px边界，保留全部非透明像素，不替换缺失形态图。
+新增代码与组合继续遵守GPL-3.0；原有声明完整保留。
+
+主机教程（文档核对，不代表主机实测）：
+https://wiki.hacks.guide/wiki/3DS:Virtual_Console/Creation
+https://wiki.hacks.guide/wiki/3DS:Virtual_Console
+https://wiki.hacks.guide/wiki/3DS:DS_games
+https://github.com/MechanicalDragon0687/ndsForwarder
+https://wiki.ds-homebrew.com/zh-CN/ds-index/forwarders
+https://github.com/profi200/open_agb_firm
+https://github.com/d0k3/GodMode9
+https://github.com/BernardoGiordano/Checkpoint
+NSUI Beta28只链接Wiki提供的作者公开包；不托管游戏或已注入商业游戏CIA。
+Windows正式支持，Mac兼容环境未实测。NDS快捷入口仍依赖原.nds及路径。
+
+原书架撤下；暂不链接所给登录域名。风险依据（2024-03-27报道，不冒充当前归属认证）：
+https://torrentfreak.com/z-library-scammers-use-email-campaigns-to-lure-users-and-extract-payments-240327/
+报道明确列出z-lib.id为仿站邮件推广域名，不属于当时的原项目。
