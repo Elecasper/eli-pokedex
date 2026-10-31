@@ -1,10 +1,12 @@
-# Eli 存档类型查看器 v2
+# Eli 存档类型查看器 v2.1
 
 在线：<https://elecasper.github.io/eli-pokedex/save-types/?v=2>
 
 查询GBA/NDS存档协议、本体容量与RTC资料。支持已有简繁中、英、日别名，编号、CRC32、SHA1，以及有记录的改版SHA256。不读取、上传、修改或下载游戏与存档；无账户、追踪和运行时API。
 
 ## 本次变化
+
+v2.1：移除整栏“试试”快捷示例、相关事件/CSS和初始示例提示；保留正常搜索、筛选、改版条目与地区归并。
 
 - 同一游戏的已知协议、容量和RTC标注一致时，地区与修订归并成一张卡；所有编号、校验值、来源和open_agb_firm配置编号保留在逐版本详情。未知类型/容量不作为相同的证据。RTC同为未知仍显示未核验。
 - 绿宝石六个地区编号合并显示；搜索BPEE、完整商品编号、精确哈希或筛选日本时，只呈现命中的版本，不把其他地区混进详情。
@@ -37,7 +39,7 @@
 
 完整原版固定提交与文件摘要见`sources.json`。保留open_agb_firm、libn3ds、melonDS、mGBA、libretro/No-Intro和已提取中文标题的原声明。原始v1构建器及其格式输入在仓库`src/`和`third-party/save-types/`；新增的改版事实与引用不是游戏文件或作者资料的整站副本。整体新增代码与组合GPL-3.0，第三方权利不转移。
 
-离线包：`eli-save-types-offline-v2.zip`。直接打开包内`index.html`，数据与脚本均内嵌；只有主动点击来源链接才联网。
+离线包：`eli-save-types-offline-v2.1.zip`。直接打开包内`index.html`，数据与脚本均内嵌；只有主动点击来源链接才联网。
 
 ```sh
 python3 src/build-eli-save-types-v2.py
