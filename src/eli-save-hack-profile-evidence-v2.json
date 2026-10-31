@@ -1,0 +1,38 @@
+[
+  {
+    "game": "unbound-2.1.1.1",
+    "url": "https://raw.githubusercontent.com/Zannael/PUSE/c0e5190188be9177a2549af7628574694fb3ccfe/3ds-homebrew/romfs/data/profiles/unbound-2.1.1.1.json",
+    "sha256": "03f7557cd8b0ac5abf008407e033e9255d948148213dbfb2a1b2f0c394801272",
+    "identity": {
+      "game": "Pokemon Unbound",
+      "versions": [
+        "2.1.1.1"
+      ],
+      "language": "English",
+      "rom_sha256": [
+        "7aa25bbf568f7cfcf6ee1cf2e9e6ff637350b3d0705c2375cabb6baa7d9739f7"
+      ],
+      "selection": "explicit-built-in-default",
+      "save_version_detection": false
+    },
+    "flashSize": 131072
+  },
+  {
+    "game": "radical-red-4.1",
+    "url": "https://raw.githubusercontent.com/Zannael/PUSE/c0e5190188be9177a2549af7628574694fb3ccfe/3ds-homebrew/romfs/data/profiles/radical-red-4.1.json",
+    "sha256": "cf5f5ab997b6734746cccc2faad4f53433e91d768b6e4fb9f916214d650d22ec",
+    "identity": {
+      "game": "Pokemon Radical Red",
+      "versions": [
+        "4.1"
+      ],
+      "language": "English",
+      "rom_sha256": [
+        "679d112cdfe699c2793d82c7e7999ac9dfca9e222ad5a85d4f8f1e457cd0283f"
+      ],
+      "selection": "explicit-version-confirmation-for-generic-CFRU-signature",
+      "save_version_detection": false
+    },
+    "flashSize": 131072
+  }
+]

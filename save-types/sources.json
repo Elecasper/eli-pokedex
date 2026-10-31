@@ -117,5 +117,101 @@
     "path": "chsRoms - Nintendo - Nintendo DS.xml",
     "url": "https://github.com/SumavisionQ5/OfflineList.DAT/blob/4dec1d8543cca8f870beff5e6ad894bb669c88d7/chsRoms%20-%20Nintendo%20-%20Nintendo%20DS.xml",
     "sha256": "abb4869db649c93aaf356eb0adc658c3d05c3f48c91fb8e7364ee9bd9a588133"
+  },
+  {
+    "kind": "hack-profile-evidence",
+    "game": "unbound-2.1.1.1",
+    "url": "https://raw.githubusercontent.com/Zannael/PUSE/c0e5190188be9177a2549af7628574694fb3ccfe/3ds-homebrew/romfs/data/profiles/unbound-2.1.1.1.json",
+    "sha256": "03f7557cd8b0ac5abf008407e033e9255d948148213dbfb2a1b2f0c394801272",
+    "identity": {
+      "game": "Pokemon Unbound",
+      "versions": [
+        "2.1.1.1"
+      ],
+      "language": "English",
+      "rom_sha256": [
+        "7aa25bbf568f7cfcf6ee1cf2e9e6ff637350b3d0705c2375cabb6baa7d9739f7"
+      ],
+      "selection": "explicit-built-in-default",
+      "save_version_detection": false
+    },
+    "flashSize": 131072
+  },
+  {
+    "kind": "hack-profile-evidence",
+    "game": "radical-red-4.1",
+    "url": "https://raw.githubusercontent.com/Zannael/PUSE/c0e5190188be9177a2549af7628574694fb3ccfe/3ds-homebrew/romfs/data/profiles/radical-red-4.1.json",
+    "sha256": "cf5f5ab997b6734746cccc2faad4f53433e91d768b6e4fb9f916214d650d22ec",
+    "identity": {
+      "game": "Pokemon Radical Red",
+      "versions": [
+        "4.1"
+      ],
+      "language": "English",
+      "rom_sha256": [
+        "679d112cdfe699c2793d82c7e7999ac9dfca9e222ad5a85d4f8f1e457cd0283f"
+      ],
+      "selection": "explicit-version-confirmation-for-generic-CFRU-signature",
+      "save_version_detection": false
+    },
+    "flashSize": 131072
+  },
+  {
+    "kind": "hack-reference",
+    "game": "宝可梦 漆黑的魅影",
+    "scope": "5.0EX / 5.0EX+ BW、DP分支；具体补丁配置待核验",
+    "sources": [
+      {
+        "label": "魅影盒 · 制作组与版本说明",
+        "url": "https://ep.esplus.club/home/",
+        "claim": "仅确认作品身份、5.0EX+及BW/DP分支；不据此推断芯片类型。"
+      }
+    ]
+  },
+  {
+    "kind": "hack-reference",
+    "game": "宝可梦 水银",
+    "scope": "FC主线 v1.3.3；不含对战塔特别版3.0或未核验的翻译补丁",
+    "sources": [
+      {
+        "label": "水银百科 · 作者公告（固定源码）",
+        "url": "https://github.com/sum-light/azoth-wiki/tree/9355d2765caee841b203c3f48573ee2515aea512",
+        "claim": "v1.3.3主线身份、推荐模拟器与存档/系统时间警告；没有明确芯片协议或容量结论。"
+      },
+      {
+        "label": "作者公告页面",
+        "url": "https://sum-light.github.io/azoth-wiki/news/",
+        "claim": "仅作版本与使用说明资料来源，不提供游戏文件。"
+      }
+    ]
+  },
+  {
+    "kind": "hack-reference",
+    "game": "宝可梦 解放（Unbound）",
+    "scope": "英文版 2.1.1.1；汉化、随机化及其他补丁需另核对",
+    "sources": [
+      {
+        "label": "PUSE · 英文2.1.1.1配置",
+        "url": "https://github.com/Zannael/PUSE/blob/c0e5190188be9177a2549af7628574694fb3ccfe/3ds-homebrew/romfs/data/profiles/unbound-2.1.1.1.json",
+        "claim": "container.flash_size = 131072；identity限定英文2.1.1.1。"
+      },
+      {
+        "label": "open_agb_firm · Unbound RTC配置报告",
+        "url": "https://github.com/profi200/open_agb_firm/issues/246#issuecomment-3146537733",
+        "claim": "社区报告flash_1m_macronix_rtc可正常工作；未注明具体Unbound版本。"
+      }
+    ]
+  },
+  {
+    "kind": "hack-reference",
+    "game": "宝可梦 激进红（Radical Red）",
+    "scope": "英文版 4.1；其他补丁需另核对",
+    "sources": [
+      {
+        "label": "PUSE · 英文4.1配置",
+        "url": "https://github.com/Zannael/PUSE/blob/c0e5190188be9177a2549af7628574694fb3ccfe/3ds-homebrew/romfs/data/profiles/radical-red-4.1.json",
+        "claim": "container.flash_size = 131072；identity限定英文4.1。"
+      }
+    ]
   }
 ]

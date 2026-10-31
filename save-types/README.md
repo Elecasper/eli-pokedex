@@ -1,52 +1,49 @@
-# Eli 存档类型查看器 v1
+# Eli 存档类型查看器 v2
 
-在线：<https://elecasper.github.io/eli-pokedex/save-types/>
+在线：<https://elecasper.github.io/eli-pokedex/save-types/?v=2>
 
-输入游戏名、四位游戏编号、CRC32或SHA1，查询GBA/NDS原版存档类型与本体容量。支持已有的简繁中文、英文及日文别名，发行地区和修订分别保留。页面内嵌数据，不上传或修改游戏、存档，无账号、追踪、广告和付费服务。
+查询GBA/NDS存档协议、本体容量与RTC资料。支持已有简繁中、英、日别名，编号、CRC32、SHA1，以及有记录的改版SHA256。不读取、上传、修改或下载游戏与存档；无账户、追踪和运行时API。
 
-## 范围
+## 本次变化
 
-- 10,717条原版版本元数据，归并为10,093组；9,902条有明确类型，其中GBA 2,839条、NDS 7,063条。
-- 原始目录标题均可搜索；中日文并非全量翻译。中文别名覆盖1,200组，日文别名覆盖277组；另人工整理66个常见作品家族。
-- 示例：`绿宝石`、`綠寶石`、`Pokémon Emerald`、`ポケットモンスター エメラルド`、`BPEE`。
-- 按GBA原版SHA1匹配open_agb_firm表；少数SHA1缺项只采用mGBA明确的固定容量覆盖。NDS按游戏编号匹配melonDS；不保证所有修订完全相同。
-- 编号可跨平台复用，例如GBA的AXVE是宝可梦红宝石，NDS的AXVE是另一款游戏；不会把二者的存档类型混在一起。
-- 无记录保持“待核验”，不当作“无存档”。原始目录与类型表编号不一致时，保留目录编号并明确警示；SHA1匹配不按名字相似度改变。
+- 同一游戏的已知协议、容量和RTC标注一致时，地区与修订归并成一张卡；所有编号、校验值、来源和open_agb_firm配置编号保留在逐版本详情。未知类型/容量不作为相同的证据。RTC同为未知仍显示未核验。
+- 绿宝石六个地区编号合并显示；搜索BPEE、完整商品编号、精确哈希或筛选日本时，只呈现命中的版本，不把其他地区混进详情。
+- 只有人工明确关联的作品家族才跨不同原始标题归并；其他作品仅按相同原始标题身份归并。不同平台、不同协议/容量/RTC结论分开，汉化与改版绝不因沿用原版编号而合并。
+- 改版独立收录：漆黑的魅影、水银、解放Unbound、激进红Radical Red。每条标版本和依据。水银不是Liquid Crystal，主线也不等同对战塔特别版。
 
-## 不能省略的区别
+## 改版覆盖与缺项
 
-- `1 Mbit = 128 KiB`；不是1 MB。
-- open_agb_firm的源枚举`EEPROM_8k`在其底层源码实际对应512 B（4 Kbit）；大EEPROM为8 KiB（64 Kbit）。容量按源码计算，不按枚举名字猜。
-- RTC需求独立于保存介质，只在mGBA明确的硬件覆盖表中记录需要／不需要。未知不等于不需要，Boktai等作品的EEPROM+RTC也不能盲选Flash+RTC。
-- SRAM协议不保证物理芯片一定为SRAM，也可能采用兼容协议的FRAM。
-- `.sav`本体不等于`.dsv`封装、GBA VC填充、RTC附加段或即时存档；不要只按文件大小反推，更不要直接截断、填充或覆盖唯一原档。
-- 中文检索别名部分来自公开汉化目录，仅用于找到对应原版；不把汉化／改版当成原版实测。未读取、下载或提供任何ROM、存档、商业游戏下载链接或密钥。
+| 条目 | 范围 | 当前容量资料 |
+|---|---|---|
+| 漆黑的魅影 | 5.0EX / EX+ BW、DP分支；具体补丁待核验 | 协议、容量、RTC均待核验，不继承绿宝石 |
+| 水银 | FC主线1.3.3，不含对战塔版及翻译补丁 | 协议、容量、RTC均待核验，不继承火红 |
+| 解放 Unbound | 英文2.1.1.1 | FLASH 128 KiB；RTC采用社区公开配置参考，原报告未标版本 |
+| 激进红 Radical Red | 英文4.1 | FLASH 128 KiB；RTC未核验 |
 
-## 来源
+“已收录名称”不等于已实测硬件。版本资料详见`hacks.json`；已知容量来自固定提交PUSE配置中的`container.flash_size`，不是看用户文件大小推断。PUSE原文件SHA256与限定的英文游戏校验在`src/eli-save-hack-profile-evidence-v2.json`和`sources.json`中。本站未读取或分发ROM，也不提供商业游戏下载链接。
 
-完整固定提交、源文件路径和SHA-256见`sources.json`。构建读取结构化字节／文本，不运行上游代码。
+## 原版数据与边界
 
-- open_agb_firm `401c3dff900f658d3edf77ababcfaf5dca54a0a8`，GPL-3.0。
-- libn3ds子模块 `ccbb6a94d60bea2e6a1901263251636b192bad3f`，其实际容量映射源码随原声明保留。
-- melonDS `1e654443e4c0a54b40709c0208aa0eeba41e6142`，GPL-3.0。
-- mGBA `52de910807c0178d6cfb088aa350952569e8f08f`，MPL-2.0，原版权和完整许可保留。
-- libretro-database / No-Intro `2c93952f3cdf02837d2b34112aea5ee844d42b8b`，仅使用标题、编号、地区和校验等元数据，见各源的声明。
-- 部分中文检索名称：OfflineList.DAT `4dec1d8543cca8f870beff5e6ad894bb669c88d7`。只提取名称事实作别名，不重新托管汉化补丁、游戏、图片或整份该目录文件。
-- 繁简转换使用`opencc-python-reimplemented`；浏览器不加载外部语言库。
+保留v1全部10,717条原版版本元数据、10,093个源分组和所有硬件结论；其中9,902条有明确类型。原版SHA1、CRC32、地区、修订、别名、警告与源配置值未改变。另加4个改版条目，合计10,097个源分组，按显示规则可归并为7,669张配置卡；这不是7,669个独立游戏或硬件全覆盖的保证。
 
-本工具代码及整体组合按GPL-3.0发布，第三方文件保留各自许可；不把所有名称元数据宣称为本站所有。非官方参考工具，不代替实机检查。
+- GBA优先按原版SHA1匹配open_agb_firm；少数缺项只使用mGBA明确固定容量覆盖。NDS按平台内四字节编号匹配melonDS，不保证所有修订已逐一验证。
+- 原版RTC依据mGBA硬件覆盖表，改版独立引用资料。未知不等于不需要；配置相同不代表存档互通或VC一定兼容。
+- 1 Mbit = 128 KiB，不是1 MB。open_agb_firm枚举EEPROM_8k按libn3ds实际移位表对应512 B，不能按名字猜容量。
+- SRAM协议不保证物理介质一定是SRAM；EEPROM与RTC是独立事实，不能为了RTC盲选FLASH。
+- .sav本体不等于.dsv、VC填充、RTC附加段或即时存档；不得只按大小截断、填充和覆盖旧档。
+- 中日别名非全覆盖；搜索Unbound也可能命中Line Rider 2 - Unbound，完整别名的精确命中优先显示，不隐藏名称相近的其他作品。
 
-## 离线与复现
+## 来源、许可和复现
 
-直接用支持本地HTML的浏览器打开`index.html`即可离线查询。在线来源链接及返回图鉴需要联网；页面不自动请求这些站点。
+完整原版固定提交与文件摘要见`sources.json`。保留open_agb_firm、libn3ds、melonDS、mGBA、libretro/No-Intro和已提取中文标题的原声明。原始v1构建器及其格式输入在仓库`src/`和`third-party/save-types/`；新增的改版事实与引用不是游戏文件或作者资料的整站副本。整体新增代码与组合GPL-3.0，第三方权利不转移。
 
-仓库`src/`保留构建器、原始别名清单、模板、脚本及测试。公开类型数据、相关格式源码与许可在`third-party/save-types/`；未重新分发的名称目录在开发构建时从固定提交读取到`/tmp/eli-save-types-source/`，不会在浏览器运行时下载。
+离线包：`eli-save-types-offline-v2.zip`。直接打开包内`index.html`，数据与脚本均内嵌；只有主动点击来源链接才联网。
 
 ```sh
-python3 -m venv /tmp/eli-save-build
-/tmp/eli-save-build/bin/pip install opencc-python-reimplemented==0.1.7
-/tmp/eli-save-build/bin/python3 src/build-eli-save-types-v1.py
-python3 src/test-eli-save-types-v1.py
+python3 src/build-eli-save-types-v2.py
+node src/test-eli-save-types-v2.js
 ```
 
-构建器拒绝覆盖成品，先归档旧输出或另开版本。数据测试66项；浏览器验证涵盖多语言等价、跨平台同编号、地区筛选、未知类型、条件展开、分页和手机布局。手机验证为独立Chrome在320/360/390/428px及桌面1280px视口模拟，不是手机或掌机实测。
+v2构建只需要Python标准库。`src/eli-save-types-base-v1.json.gz`是固定v1基线（gzip mtime=0），新增条目、事实摘录、别名身份表和原来源清单随源码提供，不执行上游代码。构建输出到`src/eli-save-types-v2/`，拒绝覆盖成品；测试基于该输出。原v1的源解析器仍可独立复现原始基线。
+
+数据回归逐条确认10,093个原分组所有既有字段未改变，并验证不同协议/容量/RTC/平台/身份不误合并。另有43项UI检查，覆盖320/360/390/428px和桌面尺寸。均为独立Chrome模拟，不是手机或掌机实测。
