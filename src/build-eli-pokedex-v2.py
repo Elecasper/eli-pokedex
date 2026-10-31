@@ -92,7 +92,7 @@ D['learnsets']={p:{v:sorted(set(rs),key=lambda x:(x[2],x[0],x[1]))for v,rs in vs
 D['evolutionRules']=collections.defaultdict(list)
 for r in rows('pokemon_evolution'):
  if int(r['evolved_species_id'])<=1025:D['evolutionRules'][int(r['evolved_species_id'])].append({k:v for k,v in r.items()if v not in ['', '0'] or k=='relative_physical_stats' and v=='0'})
-D['items']=IN;D['versionGroups']={i:{'gen':int(v['generation_id']),'order':int(v['order'] or 0)}for i,v in VG.items()}
+D['items']=IN;D['formNames']=FN;D['versionGroups']={i:{'gen':int(v['generation_id']),'order':int(v['order'] or 0)}for i,v in VG.items()}
 D['versions'].insert(0,{'id':0,'n':'全国百科（不查地点）','gen':9,'vg':25,'platform':'百科','species':1025,'locations':0,'rows':0,'note':'百科招式按朱／紫及已收录DLC资料展示；不代表该宝可梦在朱／紫一定可获得。'})
 # 区域表补充：不覆盖已有的更细楼层/时段记录，不从“合法性表”推造概率。
 def key_name(s):
