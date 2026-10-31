@@ -2,7 +2,8 @@
 
 - [打开图鉴](https://elecasper.github.io/eli-pokedex/)
 - [3DS：GBA／NDS桌面图标中文教程](https://elecasper.github.io/eli-pokedex/handheld/)
-- [离线图鉴v3.1](https://elecasper.github.io/eli-pokedex/eli-pokedex-offline-v3.1.zip)
+- [离线图鉴v3.2](https://elecasper.github.io/eli-pokedex/eli-pokedex-offline-v3.2.zip)
+- [外部图书入口与风险提示](https://elecasper.github.io/eli-pokedex/books/)
 
 免费纯静态页面，无账号、广告和应用内追踪。数据与图像内嵌，不在运行时请求外部API。工具下载仅在用户主动点击后访问作者公开链接；不提供商业ROM、成品游戏CIA或密钥。
 
@@ -14,7 +15,7 @@ v3.1：默认按全国图鉴编号升序排列；切换平台或作品不重置�
 - GBA／NDS／3DS之外新增NS分类，共32个作品版本，另有全国百科。保留1–9世代1025种、310条特殊形态参考。
 - 删除“本作已收集”筛选和收集操作界面；不主动删除或改写浏览器中的旧记录，说明窗口仍可按原schema导出旧记录。
 - “本作收录的宝可梦”使用独立的**物种支持名单**，不再把“有地点记录”误当“本作有此物种”。
-- 原图书展示、EPUB和文学打包下载从当前站点撤下。`books/`只保留风险提示页；所给域名曾被公开报道为仿站，未核验前不设登录入口。不承诺清除其他人的缓存、已下载文件或Git历史。
+- 原图书展示、EPUB和文学打包下载从当前站点撤下。`books/`改为带风险提示的外部入口页。经用户明确要求提供`https://z-lib.id/`外链，点击继续后在新标签页打开；不标为官方认证，不嵌入或代理登录，不处理账号、付款与第三方下载。域名仍未核验；历史风险报道保留。不承诺清除其他人的缓存、已下载文件或Git历史。
 
 ## 名单的含义
 

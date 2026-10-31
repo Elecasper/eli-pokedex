@@ -773,6 +773,6 @@ https://github.com/BernardoGiordano/Checkpoint
 NSUI Beta28只链接Wiki提供的作者公开包；不托管游戏或已注入商业游戏CIA。
 Windows正式支持，Mac兼容环境未实测。NDS快捷入口仍依赖原.nds及路径。
 
-原书架撤下；暂不链接所给登录域名。风险依据（2024-03-27报道，不冒充当前归属认证）：
+原书架撤下。经用户明确要求，以外部链接接入z-lib.id；通过带风险提示的入口页，由读者主动点击后在新标签页打开。不嵌入、代理或处理登录，不标记为官方认证。历史风险依据（2024-03-27报道，不冒充当前归属认证）：
 https://torrentfreak.com/z-library-scammers-use-email-campaigns-to-lure-users-and-extract-payments-240327/
 报道明确列出z-lib.id为仿站邮件推广域名，不属于当时的原项目。
