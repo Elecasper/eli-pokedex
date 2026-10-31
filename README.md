@@ -2,11 +2,13 @@
 
 - [打开图鉴](https://elecasper.github.io/eli-pokedex/)
 - [3DS：GBA／NDS桌面图标中文教程](https://elecasper.github.io/eli-pokedex/handheld/)
-- [离线图鉴v3](https://elecasper.github.io/eli-pokedex/eli-pokedex-offline-v3.zip)
+- [离线图鉴v3.1](https://elecasper.github.io/eli-pokedex/eli-pokedex-offline-v3.1.zip)
 
 免费纯静态页面，无账号、广告和应用内追踪。数据与图像内嵌，不在运行时请求外部API。工具下载仅在用户主动点击后访问作者公开链接；不提供商业ROM、成品游戏CIA或密钥。
 
 ## v3调整
+
+v3.1：默认按全国图鉴编号升序排列；切换平台或作品不重置为常用优先，仍可手动切换排序。
 
 - 手机首屏只留平台、作品、搜索和物种范围。更多筛选、长说明、图鉴描述按需展开；招式改为可展开条目，不再挤大表格。
 - GBA／NDS／3DS之外新增NS分类，共32个作品版本，另有全国百科。保留1–9世代1025种、310条特殊形态参考。

@@ -1,7 +1,7 @@
 (()=>{'use strict';
 const D=JSON.parse(document.getElementById('pokedex-data').textContent),$=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),norm=s=>String(s??'').normalize('NFKD').replace(/\p{Diacritic}/gu,'').toLowerCase().replace(/[\s-]/g,''),PAD=n=>String(n).padStart(3,'0');
 const M=new Map(D.pokemon.map(p=>[p.id,p])),V=new Map(D.versions.map(v=>[v.id,v])),PAGE=24,featured=[280,25,443,133,252,255,258,282,384,448,1,4,7,130,248,373,447,387,390,393,150],colors={1:'#656a56',2:'#9e4937',3:'#676caa',4:'#7e488e',5:'#806b2c',6:'#7c6a2f',7:'#4e7226',8:'#505587',9:'#526f75',10:'#a95124',11:'#32658f',12:'#39713d',13:'#866d0c',14:'#9c3c60',15:'#377b80',16:'#5e4893',17:'#514c44',18:'#9d4f78'};
-const state={version:9,platform:'全部',selected:280,q:'',location:0,type:0,generation:0,sort:'popular',mode:'available',page:0,tab:'where',limit:6,form:0,moveMethod:1,moveQuery:'',moveLimit:30};
+const state={version:9,platform:'全部',selected:280,q:'',location:0,type:0,generation:0,sort:'number',mode:'available',page:0,tab:'where',limit:6,form:0,moveMethod:1,moveQuery:'',moveLimit:30};
 try{const q=new URLSearchParams(location.hash.slice(1));if(q.has('v')&&V.has(Number(q.get('v'))))state.version=Number(q.get('v'));if(M.has(Number(q.get('p'))))state.selected=Number(q.get('p'));}catch{}
 if(state.version===0){state.mode='all';state.tab='stats';}if(V.get(state.version).platform==='NS')state.platform='NS';
 let roster=new Set(),places=new Map(),gameRecords=new Map(),filtered=[],toastTimer,lastFocus;

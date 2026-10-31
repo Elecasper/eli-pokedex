@@ -4,6 +4,7 @@ async () => {
  const game=async id=>{close();$('version').value=String(id);$('version').dispatchEvent(new Event('change',{bubbles:true}));await wait(20);};
  const search=async q=>{$('search').value=q;$('search').dispatchEvent(new Event('input',{bubbles:true}));await wait(120);};
  const open=id=>{const b=document.querySelector('[data-mon="'+id+'"]');check('可点击物种'+id,!!b);b.click();};
+ const initialIds=[...document.querySelectorAll('[data-mon]')].map(b=>Number(b.dataset.mon));check('默认按编号升序',$('sort').value==='number'&&initialIds.every((id,i)=>i===0||id>initialIds[i-1]));
  document.querySelector('[data-platform="NS"]').click();check('NS直接选择朱',$('version').value==='40');check('NS仅显示10个NS作品',$('version').options.length===10&&[...$('version').options].every(o=>D.versions.find(v=>v.id===Number(o.value))?.platform==='NS'));
  for(const[id,n]of[[31,153],[32,153],[33,664],[34,664],[37,493],[38,493],[39,242],[40,733],[41,733],[47,364]]){await game(id);check('作品'+id+'按支持名单显示'+n,$('result-count').textContent===n+' 种');}
  await game(33);await search('小拉达');check('小拉达不混入剑名单',!document.querySelector('[data-mon="19"]')&&$('result-count').textContent==='0 种');document.querySelector('[data-mode="all"]').click();check('全部模式仍可查未收录的物种',!!document.querySelector('[data-mon="19"]'));open(19);check('未收录与缺地点明确区分',$('tab-content').innerText.includes('本作未收录此物种'));close();$('reset').click();await search('808');open(808);check('无地点的美录坦仍在剑名单',$('tab-content').innerText.includes('本作收录 · 地点待补'));close();$('reset').click();
