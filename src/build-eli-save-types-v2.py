@@ -26,7 +26,8 @@ for h in hacks['records']:
     assert all(s['url'].startswith('https://') for s in h['sources'])
     profile=profiles.get(h.get('profile'))
     if h['bytes'] is not None:
-        assert profile and profile['flashSize']==h['bytes']==131072 and h['type']=='FLASH'
+        assert h['type']=='FLASH' and h['bytes']==131072
+        assert (profile and profile['flashSize']==h['bytes']) or h.get('basis'), h['key']
     hashes=profile['identity'].get('rom_sha256',[]) if profile else []
     g={'id':len(D['records']),'kind':'hack','family':'hack:'+h['key'],'platform':'GBA','code':'',
        'display':h['display'],'aliases':sorted(set(h['aliases']+[h['display']])),'scope':h['scope'],

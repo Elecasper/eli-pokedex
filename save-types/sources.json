@@ -159,29 +159,39 @@
   {
     "kind": "hack-reference",
     "game": "宝可梦 漆黑的魅影",
-    "scope": "5.0EX / 5.0EX+ BW、DP分支；具体补丁配置待核验",
+    "scope": "5.0EX / 5.0EX+ BW、DP分支；以2011汉化版绿宝石为蓝本",
     "sources": [
       {
         "label": "魅影盒 · 制作组与版本说明",
         "url": "https://ep.esplus.club/home/",
-        "claim": "仅确认作品身份、5.0EX+及BW/DP分支；不据此推断芯片类型。"
+        "claim": "原文称以漫游&TGB联合汉化《口袋妖怪 绿宝石》2011汉化版为蓝本，并确认5.0EX+及BW/DP分支；未写存档芯片。"
+      },
+      {
+        "label": "百度知道 · 漆黑的魅影存档改为128K",
+        "url": "https://zhidao.baidu.com/question/617118785530048532.html",
+        "claim": "玩家回答：在模拟器存档类型中选flash128k / 128kb。玩家来源，非作者声明。"
       }
     ]
   },
   {
     "kind": "hack-reference",
     "game": "宝可梦 水银",
-    "scope": "FC主线 v1.3.3；不含对战塔特别版3.0或未核验的翻译补丁",
+    "scope": "FC主线 v1.3.3，基于火红+CFRU；不含对战塔特别版3.0或未核验的翻译补丁",
     "sources": [
       {
-        "label": "水银百科 · 作者公告（固定源码）",
-        "url": "https://github.com/sum-light/azoth-wiki/tree/9355d2765caee841b203c3f48573ee2515aea512",
-        "claim": "v1.3.3主线身份、推荐模拟器与存档/系统时间警告；没有明确芯片协议或容量结论。"
+        "label": "水银百科 · HOME存档盒子（固定源码）",
+        "url": "https://github.com/sum-light/azoth-wiki/blob/9355d2765caee841b203c3f48573ee2515aea512/docs/home/index.md",
+        "claim": "写明读取GBA存档（128 KiB Flash Save）。"
       },
       {
-        "label": "作者公告页面",
+        "label": "水银百科 · 原生存档读取（固定源码）",
+        "url": "https://github.com/sum-light/azoth-wiki/blob/9355d2765caee841b203c3f48573ee2515aea512/docs/play/native-save.js",
+        "claim": "接受0、131072、131088字节的.sav/.srm，提示“128 KB（可含RTC信息）”。"
+      },
+      {
+        "label": "水银百科 · 作者公告",
         "url": "https://sum-light.github.io/azoth-wiki/news/",
-        "claim": "仅作版本与使用说明资料来源，不提供游戏文件。"
+        "claim": "基于火红与CFRU；禁止随意修改系统时间；必须用游戏内电池存档；1.2新增虚拟时钟选项。"
       }
     ]
   },
@@ -211,6 +221,11 @@
         "label": "PUSE · 英文4.1配置",
         "url": "https://github.com/Zannael/PUSE/blob/c0e5190188be9177a2549af7628574694fb3ccfe/3ds-homebrew/romfs/data/profiles/radical-red-4.1.json",
         "claim": "container.flash_size = 131072；identity限定英文4.1。"
+      },
+      {
+        "label": "MiSTer GBA core · Radical Red RTC报告 #105",
+        "url": "https://github.com/MiSTer-devel/GBA_MiSTer/issues/105",
+        "claim": "玩家报告：核心上游戏警告“RTC could not be read”并影响昼夜；mGBA和NanoboyAdvance无此警告。未注明具体版本。"
       }
     ]
   }

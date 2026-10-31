@@ -4,40 +4,144 @@
     {
       "key": "dark-phantom",
       "display": "宝可梦 漆黑的魅影",
-      "aliases": ["漆黑的魅影", "漆黑", "口袋妖怪漆黑的魅影", "口袋怪兽漆黑的魅影", "神奇宝贝漆黑的魅影", "Pokemon Dark Phantom", "Pokemon Ebony Phantom"],
-      "scope": "5.0EX / 5.0EX+ BW、DP分支；具体补丁配置待核验",
-      "type": "未知", "bytes": null, "rtc": null,
-      "warnings": ["配置待核验，不直接套用绿宝石原版。BW、DP和不同补丁的存档不保证互通。"],
-      "sources": [{"label": "魅影盒 · 制作组与版本说明", "url": "https://ep.esplus.club/home/", "claim": "仅确认作品身份、5.0EX+及BW/DP分支；不据此推断芯片类型。"}]
+      "aliases": [
+        "漆黑的魅影",
+        "漆黑",
+        "口袋妖怪漆黑的魅影",
+        "口袋怪兽漆黑的魅影",
+        "神奇宝贝漆黑的魅影",
+        "Pokemon Dark Phantom",
+        "Pokemon Ebony Phantom"
+      ],
+      "scope": "5.0EX / 5.0EX+ BW、DP分支；以2011汉化版绿宝石为蓝本",
+      "type": "FLASH",
+      "bytes": 131072,
+      "rtc": true,
+      "warnings": [
+        "依据：魅影盒称本作以漫游&TGB联合汉化的《口袋妖怪 绿宝石》2011汉化版为蓝本；贴吧和百度知道上的玩家解答一致要求把存档类型设为Flash 128K。",
+        "RTC沿用绿宝石基底，作者页面没有明文说明；建议选带RTC的Flash 1Mbit，对不读取时钟的游戏也能正常存读。",
+        "BW、DP分支和不同补丁的存档不保证互通；先用新档测试保存和重读。"
+      ],
+      "sources": [
+        {
+          "label": "魅影盒 · 制作组与版本说明",
+          "url": "https://ep.esplus.club/home/",
+          "claim": "原文称以漫游&TGB联合汉化《口袋妖怪 绿宝石》2011汉化版为蓝本，并确认5.0EX+及BW/DP分支；未写存档芯片。"
+        },
+        {
+          "label": "百度知道 · 漆黑的魅影存档改为128K",
+          "url": "https://zhidao.baidu.com/question/617118785530048532.html",
+          "claim": "玩家回答：在模拟器存档类型中选flash128k / 128kb。玩家来源，非作者声明。"
+        }
+      ],
+      "basis": "基底为绿宝石（魅影盒原文）；玩家社区一致要求存档类型选Flash 128K；RTC沿用绿宝石基底，作者未明文说明"
     },
     {
       "key": "azoth-fc",
       "display": "宝可梦 水银",
-      "aliases": ["水银", "水銀", "口袋妖怪水银", "口袋怪兽水银", "Pokemon Mercury", "Pokemon Azoth", "Azoth", "水银FC", "致150年后的你"],
-      "scope": "FC主线 v1.3.3；不含对战塔特别版3.0或未核验的翻译补丁",
-      "type": "未知", "bytes": null, "rtc": null,
-      "warnings": ["水银不是液体水晶。芯片配置待核验；主线与对战塔版分开，勿随意改系统时间。"],
-      "sources": [{"label": "水银百科 · 作者公告（固定源码）", "url": "https://github.com/sum-light/azoth-wiki/tree/9355d2765caee841b203c3f48573ee2515aea512", "claim": "v1.3.3主线身份、推荐模拟器与存档/系统时间警告；没有明确芯片协议或容量结论。"}, {"label": "作者公告页面", "url": "https://sum-light.github.io/azoth-wiki/news/", "claim": "仅作版本与使用说明资料来源，不提供游戏文件。"}]
+      "aliases": [
+        "水银",
+        "水銀",
+        "口袋妖怪水银",
+        "口袋怪兽水银",
+        "Pokemon Mercury",
+        "Pokemon Azoth",
+        "Azoth",
+        "水银FC",
+        "致150年后的你"
+      ],
+      "scope": "FC主线 v1.3.3，基于火红+CFRU；不含对战塔特别版3.0或未核验的翻译补丁",
+      "type": "FLASH",
+      "bytes": 131072,
+      "rtc": true,
+      "warnings": [
+        "依据：作者的水银HOME工具写明读取“GBA存档（128 KiB Flash Save）”，且接受128 KiB或带16字节RTC信息（131088字节）的.sav。",
+        "游戏内时间默认与现实时间同步，所以要带RTC；作者公告：绝对禁止随意修改设备系统时间，否则可能坏档。1.2起可在游戏内启用虚拟时钟。",
+        "必须使用游戏内菜单存档（电池存档），不要只靠模拟器即时存档。主线与对战塔版分开。水银不是液体水晶。"
+      ],
+      "sources": [
+        {
+          "label": "水银百科 · HOME存档盒子（固定源码）",
+          "url": "https://github.com/sum-light/azoth-wiki/blob/9355d2765caee841b203c3f48573ee2515aea512/docs/home/index.md",
+          "claim": "写明读取GBA存档（128 KiB Flash Save）。"
+        },
+        {
+          "label": "水银百科 · 原生存档读取（固定源码）",
+          "url": "https://github.com/sum-light/azoth-wiki/blob/9355d2765caee841b203c3f48573ee2515aea512/docs/play/native-save.js",
+          "claim": "接受0、131072、131088字节的.sav/.srm，提示“128 KB（可含RTC信息）”。"
+        },
+        {
+          "label": "水银百科 · 作者公告",
+          "url": "https://sum-light.github.io/azoth-wiki/news/",
+          "claim": "基于火红与CFRU；禁止随意修改系统时间；必须用游戏内电池存档；1.2新增虚拟时钟选项。"
+        }
+      ],
+      "basis": "作者HOME工具写明读取128 KiB Flash Save，并接受带16字节RTC信息的.sav；游戏内时间默认与现实时间同步"
     },
     {
       "key": "unbound-2111",
       "display": "宝可梦 解放（Unbound）",
-      "aliases": ["解放", "口袋妖怪解放", "口袋怪兽解放", "宝可梦无界", "Pokemon Unbound", "Unbound"],
+      "aliases": [
+        "解放",
+        "口袋妖怪解放",
+        "口袋怪兽解放",
+        "宝可梦无界",
+        "Pokemon Unbound",
+        "Unbound"
+      ],
       "scope": "英文版 2.1.1.1；汉化、随机化及其他补丁需另核对",
-      "type": "FLASH", "bytes": 131072, "rtc": true,
+      "type": "FLASH",
+      "bytes": 131072,
+      "rtc": true,
       "profile": "unbound-2.1.1.1",
-      "warnings": ["容量限英文2.1.1.1。RTC为社区配置参考，报告未注明版本；汉化与其他补丁需另核对。"],
-      "sources": [{"label": "PUSE · 英文2.1.1.1配置", "url": "https://github.com/Zannael/PUSE/blob/c0e5190188be9177a2549af7628574694fb3ccfe/3ds-homebrew/romfs/data/profiles/unbound-2.1.1.1.json", "claim": "container.flash_size = 131072；identity限定英文2.1.1.1。"}, {"label": "open_agb_firm · Unbound RTC配置报告", "url": "https://github.com/profi200/open_agb_firm/issues/246#issuecomment-3146537733", "claim": "社区报告flash_1m_macronix_rtc可正常工作；未注明具体Unbound版本。"}]
+      "warnings": [
+        "容量限英文2.1.1.1。RTC为社区配置参考，报告未注明版本；汉化与其他补丁需另核对。"
+      ],
+      "sources": [
+        {
+          "label": "PUSE · 英文2.1.1.1配置",
+          "url": "https://github.com/Zannael/PUSE/blob/c0e5190188be9177a2549af7628574694fb3ccfe/3ds-homebrew/romfs/data/profiles/unbound-2.1.1.1.json",
+          "claim": "container.flash_size = 131072；identity限定英文2.1.1.1。"
+        },
+        {
+          "label": "open_agb_firm · Unbound RTC配置报告",
+          "url": "https://github.com/profi200/open_agb_firm/issues/246#issuecomment-3146537733",
+          "claim": "社区报告flash_1m_macronix_rtc可正常工作；未注明具体Unbound版本。"
+        }
+      ]
     },
     {
       "key": "radical-red-41",
       "display": "宝可梦 激进红（Radical Red）",
-      "aliases": ["激进红", "激進紅", "口袋妖怪激进红", "Pokemon Radical Red", "Radical Red"],
+      "aliases": [
+        "激进红",
+        "激進紅",
+        "口袋妖怪激进红",
+        "Pokemon Radical Red",
+        "Radical Red"
+      ],
       "scope": "英文版 4.1；其他补丁需另核对",
-      "type": "FLASH", "bytes": 131072, "rtc": null,
+      "type": "FLASH",
+      "bytes": 131072,
+      "rtc": true,
       "profile": "radical-red-4.1",
-      "warnings": ["限英文4.1。RTC尚未核验，不直接继承火红原版的结论。"],
-      "sources": [{"label": "PUSE · 英文4.1配置", "url": "https://github.com/Zannael/PUSE/blob/c0e5190188be9177a2549af7628574694fb3ccfe/3ds-homebrew/romfs/data/profiles/radical-red-4.1.json", "claim": "container.flash_size = 131072；identity限定英文4.1。"}]
+      "warnings": [
+        "限英文4.1。容量依据PUSE 4.1配置。",
+        "RTC：有公开报告称该游戏在读不到RTC时会弹警告，并可能影响昼夜循环；报告未注明具体版本，4.1以此作参考，建议选带RTC的Flash 1Mbit。"
+      ],
+      "sources": [
+        {
+          "label": "PUSE · 英文4.1配置",
+          "url": "https://github.com/Zannael/PUSE/blob/c0e5190188be9177a2549af7628574694fb3ccfe/3ds-homebrew/romfs/data/profiles/radical-red-4.1.json",
+          "claim": "container.flash_size = 131072；identity限定英文4.1。"
+        },
+        {
+          "label": "MiSTer GBA core · Radical Red RTC报告 #105",
+          "url": "https://github.com/MiSTer-devel/GBA_MiSTer/issues/105",
+          "claim": "玩家报告：核心上游戏警告“RTC could not be read”并影响昼夜；mGBA和NanoboyAdvance无此警告。未注明具体版本。"
+        }
+      ],
+      "basis": "容量来自PUSE 4.1配置；RTC来自玩家对该游戏的公开报告，未注明具体版本"
     }
   ]
 }
