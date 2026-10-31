@@ -1,0 +1,121 @@
+[
+  {
+    "repo": "profi200/open_agb_firm",
+    "commit": "401c3dff900f658d3edf77ababcfaf5dca54a0a8",
+    "path": "resources/gba_db.bin",
+    "url": "https://github.com/profi200/open_agb_firm/blob/401c3dff900f658d3edf77ababcfaf5dca54a0a8/resources/gba_db.bin",
+    "sha256": "5744b957cf8262cbcc03bf329d8dca157bdd565fc5614c429cc8b1cb71f1ad8c"
+  },
+  {
+    "repo": "profi200/open_agb_firm",
+    "commit": "401c3dff900f658d3edf77ababcfaf5dca54a0a8",
+    "path": "include/arm11/save_type.h",
+    "url": "https://github.com/profi200/open_agb_firm/blob/401c3dff900f658d3edf77ababcfaf5dca54a0a8/include/arm11/save_type.h",
+    "sha256": "b3493e3428b58681ca05bdeb418a2dcf7943f08dd5c6f68cdd281afa3742915b"
+  },
+  {
+    "repo": "profi200/open_agb_firm",
+    "commit": "401c3dff900f658d3edf77ababcfaf5dca54a0a8",
+    "path": "source/arm11/save_type.c",
+    "url": "https://github.com/profi200/open_agb_firm/blob/401c3dff900f658d3edf77ababcfaf5dca54a0a8/source/arm11/save_type.c",
+    "sha256": "2ab43c197e8139dbbb19f7e8fbae49f1ca83e890919c903e33c64e7a1596e9ea"
+  },
+  {
+    "repo": "profi200/open_agb_firm",
+    "commit": "401c3dff900f658d3edf77ababcfaf5dca54a0a8",
+    "path": "LICENSE.txt",
+    "url": "https://github.com/profi200/open_agb_firm/blob/401c3dff900f658d3edf77ababcfaf5dca54a0a8/LICENSE.txt",
+    "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+  },
+  {
+    "repo": "profi200/libn3ds",
+    "commit": "ccbb6a94d60bea2e6a1901263251636b192bad3f",
+    "path": "include/drivers/lgy_common.h",
+    "url": "https://github.com/profi200/libn3ds/blob/ccbb6a94d60bea2e6a1901263251636b192bad3f/include/drivers/lgy_common.h",
+    "sha256": "75a65398949a0e37979873a76e30fc04811229baed00afd6137d5ab3762ded6b"
+  },
+  {
+    "repo": "profi200/libn3ds",
+    "commit": "ccbb6a94d60bea2e6a1901263251636b192bad3f",
+    "path": "source/arm9/drivers/lgy9.c",
+    "url": "https://github.com/profi200/libn3ds/blob/ccbb6a94d60bea2e6a1901263251636b192bad3f/source/arm9/drivers/lgy9.c",
+    "sha256": "143bae624fa2af18f8d5620ed02089f6493b05970cc967af551e92967484b907"
+  },
+  {
+    "repo": "melonDS-emu/melonDS",
+    "commit": "1e654443e4c0a54b40709c0208aa0eeba41e6142",
+    "path": "src/ROMList.cpp",
+    "url": "https://github.com/melonDS-emu/melonDS/blob/1e654443e4c0a54b40709c0208aa0eeba41e6142/src/ROMList.cpp",
+    "sha256": "181926d537700c58c899a0a931c478db012f31e111132138ce863a0ebdaa0f38"
+  },
+  {
+    "repo": "melonDS-emu/melonDS",
+    "commit": "1e654443e4c0a54b40709c0208aa0eeba41e6142",
+    "path": "src/ROMList.h",
+    "url": "https://github.com/melonDS-emu/melonDS/blob/1e654443e4c0a54b40709c0208aa0eeba41e6142/src/ROMList.h",
+    "sha256": "be8cbd7915e5320de7140dca4ea9d4f796b71fc5c0ca909ef1af9d9616ead97a"
+  },
+  {
+    "repo": "melonDS-emu/melonDS",
+    "commit": "1e654443e4c0a54b40709c0208aa0eeba41e6142",
+    "path": "src/NDSCart/CartRetail.cpp",
+    "url": "https://github.com/melonDS-emu/melonDS/blob/1e654443e4c0a54b40709c0208aa0eeba41e6142/src/NDSCart/CartRetail.cpp",
+    "sha256": "bf6f8059e9c5e89ba5b0af8629a796ad23277920cf56c2a1b0aa386d3ec8b8df"
+  },
+  {
+    "repo": "melonDS-emu/melonDS",
+    "commit": "1e654443e4c0a54b40709c0208aa0eeba41e6142",
+    "path": "LICENSE",
+    "url": "https://github.com/melonDS-emu/melonDS/blob/1e654443e4c0a54b40709c0208aa0eeba41e6142/LICENSE",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  {
+    "repo": "mgba-emu/mgba",
+    "commit": "52de910807c0178d6cfb088aa350952569e8f08f",
+    "path": "src/gba/overrides.c",
+    "url": "https://github.com/mgba-emu/mgba/blob/52de910807c0178d6cfb088aa350952569e8f08f/src/gba/overrides.c",
+    "sha256": "c349de92c7a8a3326abfabdbda03c1d151f546e0e5736d4982fa30eda1976a65"
+  },
+  {
+    "repo": "mgba-emu/mgba",
+    "commit": "52de910807c0178d6cfb088aa350952569e8f08f",
+    "path": "LICENSE",
+    "url": "https://github.com/mgba-emu/mgba/blob/52de910807c0178d6cfb088aa350952569e8f08f/LICENSE",
+    "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+  },
+  {
+    "repo": "libretro/libretro-database",
+    "commit": "2c93952f3cdf02837d2b34112aea5ee844d42b8b",
+    "path": "metadat/no-intro/Nintendo - Game Boy Advance.dat",
+    "url": "https://github.com/libretro/libretro-database/blob/2c93952f3cdf02837d2b34112aea5ee844d42b8b/metadat/no-intro/Nintendo%20-%20Game%20Boy%20Advance.dat",
+    "sha256": "0b8bd3a414276e9c31137b0a245fcdaf917d34fd035e02499c965a290ac8fce4"
+  },
+  {
+    "repo": "libretro/libretro-database",
+    "commit": "2c93952f3cdf02837d2b34112aea5ee844d42b8b",
+    "path": "metadat/no-intro/Nintendo - Nintendo DS.dat",
+    "url": "https://github.com/libretro/libretro-database/blob/2c93952f3cdf02837d2b34112aea5ee844d42b8b/metadat/no-intro/Nintendo%20-%20Nintendo%20DS.dat",
+    "sha256": "0b3d7f233cdc14e13552fbf721edde3b57b8e9b54a68e3baf8689672a3c8f6e1"
+  },
+  {
+    "repo": "libretro/libretro-database",
+    "commit": "2c93952f3cdf02837d2b34112aea5ee844d42b8b",
+    "path": "README.md",
+    "url": "https://github.com/libretro/libretro-database/blob/2c93952f3cdf02837d2b34112aea5ee844d42b8b/README.md",
+    "sha256": "37baaa8ccadd6f092f610c790ae1456c78510c2b88d010dadb1f1a6598b4a453"
+  },
+  {
+    "repo": "SumavisionQ5/OfflineList.DAT",
+    "commit": "4dec1d8543cca8f870beff5e6ad894bb669c88d7",
+    "path": "chsRoms - Nintendo - Game Boy Advance.xml",
+    "url": "https://github.com/SumavisionQ5/OfflineList.DAT/blob/4dec1d8543cca8f870beff5e6ad894bb669c88d7/chsRoms%20-%20Nintendo%20-%20Game%20Boy%20Advance.xml",
+    "sha256": "6e120f5a2d8cb662111ea758343740afdcbfe579df7403bfd82b7bd4e90bc921"
+  },
+  {
+    "repo": "SumavisionQ5/OfflineList.DAT",
+    "commit": "4dec1d8543cca8f870beff5e6ad894bb669c88d7",
+    "path": "chsRoms - Nintendo - Nintendo DS.xml",
+    "url": "https://github.com/SumavisionQ5/OfflineList.DAT/blob/4dec1d8543cca8f870beff5e6ad894bb669c88d7/chsRoms%20-%20Nintendo%20-%20Nintendo%20DS.xml",
+    "sha256": "abb4869db649c93aaf356eb0adc658c3d05c3f48c91fb8e7364ee9bd9a588133"
+  }
+]

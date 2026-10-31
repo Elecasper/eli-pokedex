@@ -1,6 +1,7 @@
 # Eli的宝可梦图鉴
 
 - [打开图鉴](https://elecasper.github.io/eli-pokedex/)
+- [存档类型查看器（GBA / NDS，多语言名称）](https://elecasper.github.io/eli-pokedex/save-types/)
 - [3DS：GBA／NDS桌面图标中文教程](https://elecasper.github.io/eli-pokedex/handheld/)
 - [离线图鉴v3.2](https://elecasper.github.io/eli-pokedex/eli-pokedex-offline-v3.2.zip)
 - [外部图书入口与风险提示](https://elecasper.github.io/eli-pokedex/books/)
@@ -34,6 +35,12 @@ NS按固定PKHeX PersonalTable的物种支持判断：Let's Go153、剑盾664、
 基础种族值／属性／特性名保留世代差异；招式数值及作用描述为较新参考，不是所有作品历史机制的完整重建。传说系列和Let's Go不套用常规特性／培育系统；这里不是战斗模拟器。形态、进化条件、旧活动状态也不宣传全部齐全。
 
 精灵PNG仅裁透明边缘以改善小屏可读性，不替换角色或像素。缺失形态图继续明确标出。
+
+## 存档类型查看器
+
+新增`save-types/`独立工具。输入简繁中文、英文、已有日文别名、四位游戏编号或校验值，查询GBA/NDS原版存档类型、本体容量和已确认的RTC需求。共10,717条版本元数据，9,902条有明确类型。中日文别名不是全覆盖；无记录显示待核验，不套用相似游戏，更不把汉化／改版当原版实测。编号可能跨平台复用，需先确认GBA/NDS。
+
+详情与全部固定来源见`save-types/README.md`和`sources.json`；对应输入、类型解析源码和许可在`third-party/save-types/`。页面内嵌数据，不上传或修改游戏／存档。图鉴“说明”及掌机教程“存档”页有入口。
 
 ## 主机教程
 
