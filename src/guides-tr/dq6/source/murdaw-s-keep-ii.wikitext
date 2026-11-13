@@ -1,0 +1,100 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== Murdaw's Keep: Part 1 (2nd Visit) ==
+
+[[File:DQ6 Murdaw's Keep Part 1.png|thumb|right]]
+
+The Canniboxes listed here are monsters that you will be forced to fight upon opening their corresponding chests.  The DS version Canniboxes aren't a problem, but the SNES ones can cast Whack.  This spell will instantly kill if it hits!  It doesn't matter if, say, Carver has 999 HP; he will still drop dead on the spot!  And those Canniboxes aren't even the only ones to have it either!  
+
+Fortunately, players of the remakes will have it easy; they don't have enough MP to actually cast it!  And once you beat them, they're guaranteed to drop Seeds of Agility, so they're actually worth fighting!
+
+SNES players, as usual, are not so lucky.  Canniboxes will have enough MP to cast Whack, and will always cast it on their first turn.  Your characters will have an innate 70% resistance to the spell in all versions, but you won't actually get anything for beating them.  As a result, fighting them is  '''not''' worth it in that version; avoid them all costs.  And avoid the enemies as well; again, you don't need anymore EXP for now.  You have about as good of a shot against Murdaw as you are ever going to have, so it is recommended that you make a beeline straight to the end.
+
+If you decide to fight the enemies, you do not need to worry about conserving MP for Part 2.  Your whole party is going to enjoy an HP and MP refill at the end, and all dead party members will be revived!  Just be aware that some of the regular encounters can be trouble.  Mudslingers, for example, also have the Whack spell, and you can encounter up to '''four''' of them!  If you do fight them, your best bet is to spam Double Up with Carver (automatically goes first, and does double damage at the cost of also taking double Damage) and Snooze with Milly.  The Mudslingers have 50% resistance to Snooze, but you may be fine regardless.
+
+They are not the only troublemakers however; the Arrghgoyles have also come to join in the fun, and the Hell Ninos have Fire Breath.  All in all, this is another of the times where fighting the encounters is more trouble than it's worth.  Fortunately, this, Murdaw's Keep: Part 2, the final Dungeon in Chapter 6, and the Post-Game dungeon will be the only other places where this is your best option.  Chapters 4 and 5 are notably easier, so just push on through to the end!
+
+== Intermission ==
+
+The whole group will gather around a campfire once you get to the end; actually, they'll gather around the exact same campfire that you saw in the very beginning of the game.  All dead party members will be revived, and all HP and MP will be restored; nothing can stop you now!  So talk to Milly once again to get another free flight to Murdaw's Castle!
+
+== Murdaw's Keep: Part 2 ==
+
+[[File:DQ6 Murdaw's Keep Part 2.png|thumb|right]]
+
+Hopefully, anyone who is playing the SNES version will have remembered not to sell the Thief Key after getting the Poison Moth Knife; otherwise, the treasure room will be locked.  If you haven't, you will have locked yourself out of the most important item in this entire dungeon, the Flame Claw.  It is a weapon, but it can also be used as an item; when you do so, it will cast Frizzle.  
+
+This spell does 70-90 Damage to anyone who has no resistance to it.  Murdaw, for example, has two forms; and while the first one takes 70% damage from it, the second one has no resistance to it whatsoever.  This is good, because both forms are completely and utterly immune to the Sap spell!  Literally the only one who can do decent physical Damage is Carver, and even his Knuckle Sandwich only does about 25 Damage.  And if you try to take him down with offensive spells, you'll only run your MP dry doing so.
+
+Additionally, you cannot leave this castle any time you wish.  The only way for you to exit is to either defeat Murdaw, or die by his hands.  Fortunately, the game has mercy on you even in the SNES version; you can warp back to Murdaw's Castle at any time you wish.  
+
+[[File:DQ6 Ghent Elder Resurrects Party.png|thumb|left|Restore your entire party via the Ghent Elder!]]
+
+You can actually get a free instant heal from the Ghent elder!  He'll revive everyone in your party and refill their HP and MP while he's at it!  It's a good thing he does, because if you forgot that Thief Key, your only option is to let yourself die, buy one, and then head back to Murdaw's Keep.  
+
+At any rate, go up to the stairs at point '''G''' and you will be treated to a small cinematic.  Carver reunites with his Real World body, and gains the almighty Knuckle Punch!
+
+This is a 0 MP skill that does twice as much damage as a regular attack, at the cost of being inaccurate against some enemies.  More specifically, Knuckle Sandwich is a part of another family of attack "spells/skills" that belong in the "Physical skills" category.  What this means is that some enemies will always be hit by it, some will have a 15% chance of avoiding it, some will have a 50% chance of avoiding it, and some will just dodge it every single time.  
+
+Speaking of MP, skip all of the battles here, conserve MP by having Rex use Heal instead of Milly or Nevan, and go to the stairs at point '''D''' in order to get to the Fire Claw room.  Of course, you will have to fight 2-3 fights Sculptrices along the way...
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Rex Lvl 13, Carver Lvl 13, Milly Lvl 12, Nevan Lvl 10
+|-
+!HP: 
+|350
+|-
+!MP: 
+|15
+|- 
+!Item:
+|Magic Water (1/32 of dropping)
+|-
+!Attack:
+|75
+|-
+!Defense:
+|82
+|-
+!Agility:
+|31
+|-
+!EXP: 
+|165
+|-
+!Gold:
+|210
+|-
+!Attack Patterns:
+|Attack (50%), Kasnooze (16.66%), Kasap (16.66%), Cool Breath [13-16 Damage to all] (16.66%)
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|No resistance to Sap, 15% resistance to Dazzle and Knuckle Sandwich, 60% reduction of Bang, Frizz, and Sizz spells, 100% resistance to Crack, Snooze, Fizzle, Poof, Whack, Woosh, Lucida Shard and Poison Moth Knife
+|}
+
+These guys can be annoying, but they're really only that; annoying.  Take away their defense with Sap, and just wail against them with physical attacks.  They can stall you for a while, but they're not a threat.  Once you've taken care of them, skip the Urnexpected (it's even worse than the Cannibox), go across the electric damaging floor (1 HP of damage for every step taken), and claim your prize!
+
+== The Final Equipment Checkup ==
+
+Once that's accomplished, travel to the entrance to Murdaw's throne room, give as many Amor Seco Essences to Milly as you can, and set your party up like so...
+
+{| {{prettytable|notwide=1}}
+|'''Nevan (Level 10, Lvl 11 after Phase 1 ): ''3x Yggdrasil Leaves (Remakes Only)'', Chain Whip, Fur Cape/Full Plate Armour, Bronze Shield, Hardwood Headware, Gold Bracer'''
+|-
+|'''Carver (Level 13, Lvl 14 after Phase 1): ''Ghent Cane'', ''3x Yggdrasil Leaves (Remakes Only)'', Steel Broadsword, Full Plate Armour/Platinum Mail, Iron/Dragon Shield, Iron Helmet, Gold Bracer'''
+|-
+|'''Rex (Level 13): ''Fire Claw'', ''2-3x Yggdrasil Leaves (Remakes Only)'', Edged Boomerang, Royal Clothes/Platinum Mail, Iron/Dragon Shield, Iron Mask, Gold Bracer'''
+|-
+|'''Milly (Level 12, Lvl 13 after Phase 1): ''3-4x Amor Seco Essences'', ''2-3x Yggdrasil Leaves (Remakes Only)'', Enchanted Armour, Bunny Ears, Agility Ring'''
+|} 
+
+The equipment glitch in the SNES version is just as useful here as it was in the Bloodcreeper fight, so use it liberally! 
+Also, the Amor Seco Essences each restore 60-70 HP and come in very handy if Milly runs out of MP (a very real possibility against Murdaw's 2nd form).  Additionally, the Ghent Staff also restores 60-70 HP every time it is used in battle; and unlike the Prayer Ring, it can be used infinitely!  Healing is desperately needed in this fight, so you may as well giving it to Carver, who otherwise has no such capabilities.  You could also give it to Rex, but he has slightly higher Agility; it would be very inconvenient for him to accidentally go before Murdaw when trying to heal someone.
+
+Finally, the Flame Claw will be the sole source of almost all Damage done to Murdaw; his Defenses are just too insane to overcome by any other means.  And since Carver already has the Ghent Staff, you may as well give the Flame Claw to Rex.  Walk inside the door when you're ready, and face your destiny...
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Ghent|nextpage=VS. Murdaw, Round 3}}

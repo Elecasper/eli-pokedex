@@ -1,0 +1,140 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+[[File:DQ6 Ghent.png|thumb|left]]
+
+Be sure to get all the seeds here, then talk to the mayor inside the northwest house; he'll tell you to leave, but the Goddess herself will come and speak up for us once we try to leave.  Afterwards, follow Nevan, your new party member, into the Ship, and watch as it heads off for the Island of Murdaw!
+
+Ashlynn herself will then ask to stay behind, but that's ok; we can only have four party members anyway, and we can still use her outside of Murdaw's Dungeon.  Before going in, equip your party like so.  If you didn't remember to keep the Bronze Shield and Hardwood Headware, never fear.  Nevan's durability isn't all that important anyway, not for the upcoming fights.  In any case, head on in...
+
+== Murdaw's Keep: Part 1 (1st Visit) ==
+
+[[File:DQ6 Murdaw's Keep Part 1.png|thumb]]
+
+This will not be the last time this guide will guide you to this place.  The Chain Whip, Seed of Life, 1150G, and Full Plate Armour are all kind of off the beaten path, and we have another Seed of Life to get from Wellshire anyway.  So, run from everyone, get the Chain Whip and Seed of Life, use Evac, get the 1150G and Full Plate Armour (equip on Nevan), then use Evac.  Do that, and you'll be done with it for now.  So head on over to Wellshire!
+
+{{sidebar|title=Important Note for SNES players!|width=400px|float=left|contents=Now is when SNES players should should be able to buy the Enchanted Armour.  Ashlynn's going to be replaced by a fourth party member very shortly, one who will need nothing from you but a Bronze Shield and some Hardwood Headware; so sell all of her stuff except for the Gold Bracer and Bunny Ears.  Then sell everything Milly has except for the Agility Ring, and sell whatever other outdated gear you need to!  And no, you will not need the Thorn Whips; they will be replaced by better weapons later.}}
+{{-|left}}
+
+== Wellshire ==
+
+Go to the house in the Northeast corner, and you will find the mayor in a state of panic; his daughter has been kidnapped!  Talk to him again, and he will leave to rescue her.  You, however, are more than capable of doing that task for him, so head northeast to the well!  Once you do, talk to the thug, say '''Yes''', and then say '''No''' to trigger a fight!
+
+== VS. Bigg and Liddle ==
+
+{| {{prettytable}}
+!Bigg
+|The pig guy on the left
+|-
+!Recommended Level: 
+|Rex Lvl 13, Carver Lvl 13, Milly Lvl 12, Nevan Lvl 10
+|-
+!Recommended A.I. Settings for Party (Remakes Only; SNES A.I. is bad): 
+|Everyone (Show No Mercy)
+|-
+!HP: 
+|500
+|-
+!MP: 
+|0
+|- 
+!Item:
+|Boxer Shorts (Always drops)
+|-
+!Attack:
+|70
+|-
+!Defense:
+|80
+|-
+!Agility:
+|20
+|-
+!EXP: 
+|520
+|-
+!Gold:
+|250
+|-
+!Attack Patterns:
+|Attack -> Attack (40%)/Flails Weapon [1.25x Damage] (20%)/War Cry (20%)/Muster Strength (20%)
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|No resistance to Frizz, Sizz, Crack, or Woosh spells, 50% resistance to Sap, 100% resistance to Snooze, Dazzle, Lucida Shard and Poison Moth Knife
+|}
+
+{| {{prettytable}}
+!Liddle
+|The human on the right
+|-
+!Recommended Level: 
+|Rex Lvl 13, Carver Lvl 13, Milly Lvl 12, Nevan Lvl 10
+|-
+!Recommended A.I. Settings for Party (Remakes Only; SNES A.I. is bad): 
+|Everyone (Show No Mercy)
+|-
+!HP: 
+|320
+|-
+!MP: 
+|0
+|- 
+!Item:
+|Boxer Shorts (Always drops)
+|-
+!Attack:
+|55
+|-
+!Defense:
+|51
+|-
+!Agility:
+|45
+|-
+!EXP: 
+|305
+|-
+!Gold:
+|124
+|-
+!Attack Patterns:
+|Bewildered (Skips Turn) or Selflessness (like Forebearance, but protects only one person) -> Medical Herb (heals 30-40 HP) or Attacks -> Selflessness or Medical Herb 
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|No resistance to Frizz, Sizz, Crack, or Woosh spells, 15% resistance to Sap, Snooze, Dazzle, Lucida Shard, and Poison Moth Knife
+|}
+
+There's really no advice to give other than you should kill Liddle first, and wait until he's dead before trying to Sap Bigg (Selflessness will tank status moves as well).  These guys are joke bosses; their whole shtick is that they are the Team Rocket of this game.  Kick their butts, and once you do, the mayor will show up.  Some dialogue prompts will come up, and you will have two choices as to what you can say.  
+
+<blockquote>
+Say '''Yes''', and you will receive 5000G for your dishonesty
+
+Say '''No''', and drop by his house later on to receive a Seed of Life.
+</blockquote>
+
+For the purposes of beating Murdaw as reliably as possible, you are recommended to fight these guys, then choose the second option.  However, you can also choose to just give them the 5000G, at which point you will be faced with the following options instead.
+
+<blockquote>
+Say '''Yes''', and you will receive 5000G as compensation (so basically, you neither gain or lose anything from this sidequest).
+
+Say '''No''', and drop by his house later on to receive a Seed of Life and a Prayer Ring (restores 30 MP, and can be used multiple times.  Be warned though, it has a random chance of disappearing after every use).
+</blockquote>
+
+The Prayer Ring is somewhat nifty, but it's not worth losing 5000G (and therefore, the Enchanted Armour) over.  After all, you should still have at least one Magic Water on you, and you're going to get another one from the 1st Half of Murdaw's Keep.  Speaking of which, head on back over there; because this time, you're not stopping till you get to the big man himself!  Before you go to face him, make sure your party is equipped as thus...
+
+{| {{prettytable}}
+|'''Carver (Level 13): Steel Broadsword, Full Plate Armour/Platinum Mail, Iron/Dragon Shield, Iron Helmet, Gold Bracer'''
+|-
+|'''Rex (Level 13): Edged Boomerang, Royal Clothes/Platinum Mail, Iron/Dragon Shield, Hardwood Headware, Gold Bracer'''
+|-
+|'''Milly (Level 12): Thorn Whip, Enchanted Armour, Bunny Ears, Agility Ring'''
+|-
+|'''Nevan (Level 10): Ghent Cane, Fur Cape/Full Plate Armour, Bronze Shield, Hardwood Headware, Gold Bracer'''
+|} 
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=The Underkeep|nextpage=Murdaw's Keep II}}

@@ -1,0 +1,106 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== The Underkeep: Part 1 ==
+
+[[File:DQ6 Underkeep Part 1.png|thumb|right|Get the Seed of Magic, use Evac, go to the castle, and keep everyone's HP above 68!]]
+
+First and foremost, do not use offensive magic in any of the fights here; not if you're playing the SNES version.  You're only going to collect a total of two Magic Waters by the time you make it to the Chapter 3 endboss, and you're not going to want to use more than one of them here.  Besides that, they don't generally speed up the battles that much.
+
+Secondly, beware of the Arrghgoyles; they are extremely powerful compared to every other random enemy in this dungeon.  More to the point, they have Sizzle, and their version of it does 22-34 Damage to everyone in your party.  Fortunately, the SNES throws it's players a bone; some of it's PC's have innate resistances to certain spells.  In this case, Milly is immune to the Fuddle spell, and Ashlynn takes 30% less Damage from every spell in the Frizz, Sizz, Bang, and Crack family of spells.  As far as these guys go, this means that she'll only take 15-24 from Sizzle.
+
+This does not apply to the DS version.  Yes, this is one of the few ways in which DS players are at a disadvantage compared to SNES players, so don't get cocky.  And do NOT try to fight any encounter with more than one of these guys in it; Milly needs to learn Snooze at Level 11 before you can match them.  Otherwise, they may very easily overwhelm you completely.  If you do have it, have Milly and Ashlynn spam it until both of them are put to sleep (they have 50% resistance to it).  Once you do that, run; you're guaranteed to get away if both of them are asleep.
+
+If you are only fighting one of them however, that is a far more manageable fight.  Just have Ashlynn and Rex Sap away it's Defense, and kill it before it can do too much damage to you.  Follow these steps, '''keep your HP above 68 at all times (or at full HP, in Ashlynn's case)''', and the Underkeep should not cause too much difficulty.  
+
+On that note, none of the other monsters should cause any problems.  In fact, Snooze is very helpful against the Guaardvarks and Burning Men, so be sure to use that against them.  However...
+
+{{sidebar|title=One thing you should realize|float=center|width=875px|contents=There's not actually much of a point to getting anyone higher than Level 13-14 by the time you fight the end-boss of Chapter 3.  No, this upcoming fight against Murdaw is not the only boss fight you will go through by the time Chapter 3 is done; there is a much harder fight awaiting at the end of it.
+
+Unfortunately, said fight is not one you can win simply through brute force; you can get your guys all the way up to Level 18, and still lose to it just by using the wrong kind of strategy.  This isn't to say that extra levels are ''bad'' necessarily; they just aren't going to really help all that much.  And once you get to Chapter 4, there will be far more efficient ways of getting stronger than just pumping up your levels.
+
+So, if you are not interested in fighting unnecessary battles, then just get Rex to Level 12, and start running away from everything.  But if you are the sort of person that doesn't mind fighting a few extra fights, then by all means, keep fighting.  As stated before, it won't hurt you to do so.  Whatever you decide, get that Seed of Magic, use Evac, and charge on through to the castle!}}
+
+== The Underkeep: Part 2 ==
+
+Note: There are two more enemies here that can be slightly dangerous, the Grim Grinner.  In the SNES version, these guys use Inverted Targeting, which means that they tend to focus on the PC's in the 3rd and 4th slots, rather than the ones in the  1st and 2nd Slots.  Considering Ashlynn's relative lack of durability, this can be bad.  But, you should be fine all the same.
+
+In addition, there are also the Hermit Pixie's, who can do 14-34 Damage to all of your PC's with Swoosh.  However, they have no resistance whatsoever to Snooze, and they only have 27 Agility; between Ashlynn and Milly, you should never have a problem with these guys.
+
+[[File:DQ6 Underkeep Part 2.png|thumb|right|Note that the large room with the Dancer Costume is obscured in darkness when you first enter; you'll need to hit all of the yellow switches in order to light it up.]]
+
+The map on the right shows the "Dancer's Costume" floor as it is when fully lit up; however, much of it will be shrouded in darkness until you step on the four yellow switches on the first floor.  You can't hit them upon entering though; all of them are behind two locked doors.  In order to get those open, you have to go to the darkness room, fall down one of the pits, and hit the two gold switches on the bottom floor.  This will unlock the doors guarding the four other switches.  Get those as well, and everything will be all lit up.
+
+Or, you could just use the map included here to skip straight to Murdaw himself.  Just be sure to get the Dancer's Costume if you're playing the SNES version; after this fight is when you will finally have enough money to buy the Enchanted Armour, and the Dancer's Costume is going to help us with that.  
+
+For now though, use a Magic Water on Milly if her MP is below 40, put the Dancer's Costume on Ashlynn if she doesn't already have the Enchanted Armour, get to Murdaw, and make sure your party is set up to look something like this...
+
+{| {{prettytable|notwide=1}}
+|'''Carver (Level 12): Steel Broadsword, Fur Cape/Platinum Mail, Iron/Dragon Shield, Iron Helmet, Gold Bracer'''
+|-
+|'''Rex (Level 12): Edged Boomerang, Royal Clothes/Platinum Mail, Iron/Dragon Shield, Hardwood Headware, Gold Bracer'''
+|-
+|'''Milly (Level 11): Thorn Whip, Iron Cuirass, Hairband, Agility Ring'''
+|-
+|'''Ashlynn (Level 4-5): ''8x Herbs'', Thorn Whip, Dancer's Costume/Enchanted Armour, Bunny Ears, Gold Bracer'''
+|} 
+
+== VS. Murdaw ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Rex Lvl 12, Carver Lvl 12, Milly Lvl 11, Ashlynn Lvl 4-5
+|-
+!Recommended A.I. Settings (Remakes Only; SNES A.I. is bad):
+|Carver & Milly (Focus on Healing), Ashlynn (Follow Orders)
+|-
+!HP: 
+|900
+|-
+!MP: 
+|Infinite
+|- 
+!Item:
+|Seed of Magic (1/32 of dropping)
+|-
+!Attack:
+|109
+|-
+!Defense:
+|102
+|-
+!Agility:
+|35
+|-
+!EXP: 
+|2270
+|-
+!Gold:
+|580
+|-
+!Attack Patterns:
+|Flame Breath (30-40 Damage to everyone) or Attack -> Buff or Attack -> Frizzle (52-62 Damage) or Change's Party Tactics
+|-
+!A.I. Pecularities:
+|[Attacks in the above pattern as a group from left to right]
+|-
+!Resistances:
+|No resistance to Frizz or Sap, 30% reduction of Crack and Sizz spells, 100% resistance to Snooze, Dazzle, Lucida Shard and Poison Moth Knife
+|}
+
+Hopefully you have the Agility Ring on Milly, 8x Herbs on Ashlynn, and most of Rex's MP; you're most likely going to need all three of them on healing duty at some point or another.
+
+Speaking of healing duty, Milly and Ashlynn can both easily die if you're not careful.  It is recommended that you use Buff on both Milly and Ashlynn; this way, they can both survive a Physical Attack + Frizzle combo (provided that they have full HP of course).  
+
+Aside from that, this fight is surprisingly simple.  Just Sap away all of Murdaw's Defense, keep everyone above 62 HP, and keep wailing away at him until he dies.  In fact, you can literally just set everyone on Focus on Healing and still win for sure so long as you're playing the Remakes.  Milly should almost always go before him, so you shouldn't be in much actual damage, especially if you've gotten all that neat stuff from the Casino.  Also, try to make sure Milly has at least 8 MP after the fight ends; she needs it in order to cast Evac.  If she can't use it, then you're in for a rather long walk back home.  In any case...
+
+== From Somnia, to Wellshire, to the other Somnia ==
+
+Head on back to Somnia.  Go talk to the chancellor, go through the following scenes, walk down the stairs, and Ashlynn will tell you where you ought to go next.  If you're playing the DS version, great; you can get to the other Somnia near instantly.  If not, never fear; you do not need to walk all the way back through the Underground Tunnel to Alltrades.  Just warp to Haggleton, go west, and fall through that same hole you fell through all the way back at the beginning of the game.
+
+You will end up in Wellshire, and this time, it will end up on your Zoom list.  This is good because you'll wish to come back here very soon to do a sidequest.  Actually, you can technically complete it now; however, Ashlynn is going to be replaced by another character very soon, and this sidequest involves a mini-boss fight that gives 825 EXP to all party members.  You may as well let the new guy enjoy it; you'll be fighting the Chapter 3 endboss with him as your 4th party member, not Ashlynn.
+
+In any case, head on over to Real World Somnia, enter the castle, get yourself thrown in jail, walk around a bit to be released, talk to the King, walk down the stairs, then talk to him again on the southwest corner of the floor you end up on.  He'll give you your new mission; a trip to Ghent!  You are taking the fight right to Murdaw, and you'll need Ghent's legendary boat in order to do it!  So head on over, now!
+
+[[File:DQ6 Path to Ghent.jpg]]
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Moonmirror Tower|nextpage=Ghent}}

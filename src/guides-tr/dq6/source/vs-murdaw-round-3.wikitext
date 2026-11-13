@@ -1,0 +1,136 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+'''''Note: This Boss Fight is one of the hardest in the game, so a link has been provided to demonstrate it:''''' {{YouTube|video=CcuVFwxp_ao|float=left|title=Dragon Quest VI - VS. Murdaw, Round 2 (StrategyWiki Guide)|duration=13:14}}
+{{-}}
+== VS. Murdaw: Phase 1 ==
+
+''Note: The Recommended Levels assume that you gave Milly at least two Seeds of Life.  Otherwise, you will want Milly to be Level 14 by Phase 2''
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Rex Lvl 13, Carver Lvl 13 (should get to Lvl 14 after Phase 1), Milly Lvl 12 (should get to Lvl 13 after Phase 1), Nevan Lvl 10 (should get to Level 11 after Phase 1)
+|-
+!Recommended A.I. Settings (Remakes Only; SNES A.I. is bad):
+|Carver (Focus on Healing), Milly (Follow Orders if her and Nevan aren't Buffed, then Focus on Healing), Nevan (Watch My Back)
+|-
+!HP: 
+|500 (Regenerates 20 HP every round)
+|-
+!MP: 
+|90
+|- 
+!Item:
+|Seed of Resilience (1/4096 of dropping)
+|-
+!Attack:
+|95
+|-
+!Defense:
+|105
+|-
+!Agility:
+|47
+|-
+!EXP: 
+|1000
+|-
+!Gold:
+|None
+|-
+!Attack Patterns:
+|Flame Breath [30-40 Damage to everyone] (33.3%)/Attack (16.66%)/Kasap (16.66%)/Calls for Underlings [one Prickly Prankster immediately comes] (16.66%), Loudly Shouts for Underlings [one Harmour arrives at the start of the next turn] (16.66%)
+|-
+!A.I. Pecularities:
+|Harmours will have a 33.33% to summon Healsimes if you give Murdaw the chance to summon said Harmours
+|-
+!Resistances:
+|30% reduction of every single offensive spell you could possibly have, 15% resistance to Knuckle Sandwich, 100% resistance to every status ailment in the game.
+|}
+
+First of all, if you're playing the remakes, this is a fabulous time to put Carver on "Focus on Healing".  Instead of having to guess who's gonna need healing on the next round, you can simply leave it to the A.I. to react to whatever happens during the turn.  And if Murdaw fails to do significant damage during the turn, Carver will simply hit him with Knuckle Sandwich (~25-35 Damage if it lands).
+
+Do not try that if you're playing the SNES version; the A.I. will always ignore items.  If it had a choice between healing one person for 1 HP by casting a spelll, and using an item that restores 999 HP and MP to everyone in your party for free...it would still choose the spell.  Furthermore, even if it was that smart, the SNES version doesn't allow you to only have one person on a specific tactic; either everyone is on Focus on Healing, or nobody is.
+
+In any case, put Nevan in the 1st slot if you're playing the SNES version; he will be Defending regardless of what version you play, but SNES parties will appreciate the extra shielding.  As you do so, cast Buff on him; with any luck, he'll be above 68 HP by the next turn, which means he'll be safe for healing other people in your party.  Otherwise, you may wish to have him Defend if his HP is dropping a bit below your comfort level.  Actually, you should do that with anyone who looks like they might die from a good Flame Breath next turn (remember, even in the SNES version, Carver and Rex only take a max of 36 thanks to the Iron Shields.  And they only take 15-25 if they have Dragon Shields instead).
+
+With that out of the way, you will want to have Carver using the Ghent Staff on someone every single turn, even if everyone is already at full HP (Nevan and Carver himself are prime targets since they're in the first two slots).  While you do this, Rex needs to constantly be using the Fire Claw on Murdaw, and Milly needs to Carver, Rex, and herself after Buffing Nevan.  And if anyone drops below their regular Defense in the SNES version (you'll need to keep track of this), you'll want to use the Equipment Glitch to restore their Defense to normal.
+
+Then there's this final word of warning: '''do not''' try to take out the Prickly Pranksters first.  All they can do is physical attacks, so just Buff everyone's HP to the point where they can only do scratch damage.  If you DO try to kill them, Murdaw will either...
+
+# Summon more of them
+# Summon a Harmour instead, an enemy that is stronger and more durable (though one-shotted by the Fire Claw in the remakes).  What's worse, however, is that Harmours can summon Healslimes.  Those little pests will actually use the Heal spell on every enemy in this fight.  
+
+All that said, however, this fight is not actually that hard.  It is something of a slog, but Murdaw should die before anyone can get killed.  Once that happens, the fight will keep going until you've dealt with the two Prickly Pranksters.
+
+This is actually a blessing in disguise!  What this means is that you can kill one of them, and then stall until Carver has healed everyone with the Ghent Staff!  So keep Defending with everyone, get Carver and Rex's HP above 101, get Milly's HP above 95, and try to have Nevan walk into the next phase with full HP.
+
+== VS. Murdaw: Phase 2 ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Rex Lvl 13, Carver Lvl 14, Milly Lvl 13, Nevan Lvl 11
+|-
+!Recommended A.I. Settings (Remakes Only; SNES A.I. is bad): 
+|Nevan (Watch My Back), Milly (Follow Orders), Carver (Focus on Healing)
+|-
+!HP: 
+|900
+|-
+!MP: 
+|Infinite
+|- 
+!Item:
+|Magic Water (1/128 of dropping)
+|-
+!Attack:
+|115
+|-
+!Defense:
+|105
+|-
+!Agility:
+|45
+|-
+!EXP: 
+|2300
+|-
+!Gold:
+|770
+|-
+!Attack Patterns:
+|Chilly Breath (50-60 Damage to everyone) or Attack -> Lightning (35-45 Damage to everyone) or Attack -> Dazzleflash or Lullab-Eyes (Always puts it's target to sleep, no matter what.  Ignores sleep immunity).
+|-
+!A.I. Pecularities:
+|50% chance of attacking twice
+|-
+!Resistances:
+|No resistance to Frizz, Sizz, or Bang, 50% resistance to Knuckle Sandwich, 60% reduction of Crack and Woosh spells, 100% resistance to every status ailment in the game.
+|}
+
+First of all, you should arrange your party like so if you're playing the SNES version:
+
+<blockquote>
+1st Slot-Nevan, 2nd Slot-Milly, 3rd Slot-Carver, 4th Slot-Rex
+</blockquote>
+
+With that said, this is arguably the 3rd hardest boss fight.  If you're playing the remakes, you should have armour that is obscenely strong, cutting 15 HP of Damage off of both of his multi-target spells!  As if that weren't enough, you also have 10x Yggdrasil Leaves scattered across your party, and A.I. intelligent enough to use it without needing your command.
+
+But if you're playing the SNES version, things are more luck-reliant.  If Murdaw, for example, decides to attack with Chilly Breath and Lightning on Turn 1, use Lullab-Eyes and Chilly Breath on Turn 2, and then use Lightning and Lullab-Eyes on Turn 3, and then use Chilly Breath and Lightning on Turn 4...you're essentially dead.  Even a Level 19 party would be hard pressed to survive that kind of onslaught.
+
+However, the Ghent Elder heals you for free, you can always warp back to Murdaw's Castle, and the game becomes significantly easier after this Chapter.  In the meantime, it is still significantly faster to blaze through, die to Murdaw once, then kill him on the second attempt than it is to try to get all the way up to Level 19 for everyone in your party.  That's how high your levels need to be before your grinding started to finally make a significant difference, and no player is ever going to get that high if they're playing efficiently.
+
+Plus, Murdaw could also end up being a pushover, due to the random nature of his attack script.  that is an very unlikely scenario; Murdaw isn't even guaranteed to have more than one attack on each round.  He could just as easily Attack on Turn 1, Attack on Turn 2, Dazzleflash on Turn 3 (worthless against the Fire Claw), Attack on Turn 4, Attack on Turn 5, and Dazzleflash on Turn 6.  By that point, you'll have destroyed half his HP!
+
+Whatever your situation is, there are some general rules to follow.  First of all, Rex and Carver absolutely need to stay alive.  Rex's Fire Claw is the only thing that can do more than ~20 Damage without Carver's Double Up, and Carver's Ghent Staff is vital for keeping everyone alive.  So if you have to choose one person over another, choose Rex first, and Carver second.
+
+As for the other two, Milly is helpful as well.  She can cycle between casting Midheal and Buffing Rex and Carver, and she should be fast enough to consistently outspeed Murdaw.  Nevan, sadly, is just there as an extra healer and meatshield; feel free to let him die once you start getting closer to beating Murdaw. 
+
+== Alltrades Abbey (Restored) ==
+
+There is not much to do apart from getting the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">9th Mini Medal</span>, so you can immediately just go to the next page if you're playing the Remakes.  If you're playing the SNES version however, Zoom on over to Alltrades Abbey (Real World), enter the Dream World through the well, and enter the brand new, fully restored Alltrades Abbey in the Dream World.  That way, you get the **new** Dhama Shrine on your Zoom list!
+
+[[File:DQ6 Alltrades Abbey (Restored).png|thumb|right]]
+
+Yes, that giant hole you fell down was Murdaw's work; and by undoing him, you have also undone all his destruction.  Alltrades is back, which means we finally have access to the game's full combat system!  In addition to having regular levels, we now have Vocations!
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Murdaw's Keep II|nextpage=All About Vocations}}
