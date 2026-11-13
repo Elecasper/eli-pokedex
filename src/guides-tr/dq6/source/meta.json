@@ -100,5 +100,41 @@
   "revid": 863814,
   "timestamp": "2020-06-04T01:44:48Z",
   "bytes": 9430
+ },
+ "all-about-vocations": {
+  "title": "Dragon Quest VI: Realms of Revelation/All About Vocations",
+  "revid": 1061757,
+  "timestamp": "2024-02-28T11:02:31Z",
+  "bytes": 13865
+ },
+ "scrimsley": {
+  "title": "Dragon Quest VI: Realms of Revelation/Scrimsley",
+  "revid": 801560,
+  "timestamp": "2017-04-27T08:27:55Z",
+  "bytes": 4291
+ },
+ "job-class-grinding": {
+  "title": "Dragon Quest VI: Realms of Revelation/Job Class Grinding",
+  "revid": 860137,
+  "timestamp": "2020-04-23T21:27:25Z",
+  "bytes": 9299
+ },
+ "arkbolt": {
+  "title": "Dragon Quest VI: Realms of Revelation/Arkbolt",
+  "revid": 860138,
+  "timestamp": "2020-04-23T21:30:28Z",
+  "bytes": 9296
+ },
+ "wayfarer-s-pass": {
+  "title": "Dragon Quest VI: Realms of Revelation/Wayfarer's Pass",
+  "revid": 1167820,
+  "timestamp": "2026-03-01T09:10:39Z",
+  "bytes": 4292
+ },
+ "aridea": {
+  "title": "Dragon Quest VI: Realms of Revelation/Aridea",
+  "revid": 801566,
+  "timestamp": "2017-04-27T09:04:44Z",
+  "bytes": 6773
  }
 }

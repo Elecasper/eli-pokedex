@@ -1,0 +1,122 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+Before we can get too far in the cavern, there are two mini-boss enemies that need to be dealt with.
+
+== VS. Hellstriker and Jumping Jackal ==
+{| {{prettytable}}
+! Hellstalker
+| The purple demon on the left
+|-
+! Recommended Level: 
+| Amos Lvl 17, Carver Lvl 18, Milly Lvl 16, Nevan Lvl 15
+|-
+! Recommended A.I. Settings (Both):
+| SNES - Everyone: (Show No Mercy)
+Remakes - Carver & Amos: (Follow Orders), Milly & Nevan: (Back Me Up)
+|-
+! HP: 
+| 133-167
+|-
+! MP: 
+| 0
+|- 
+! Item:
+| Cloak of Evasion (1/128 of dropping)
+|-
+! Attack:
+| 123
+|-
+! Defense:
+| 97
+|-
+! Agility:
+| 88
+|-
+! EXP: 
+| 137-164
+|-
+! Gold:
+| 84-100
+|-
+! Attack Patterns:
+| Attack (50%), Lightning [35-45 Bang type Damage] (33.33%), Dodgy Dance [50% Evasion for 2-3 Turns] (16.66%)
+|-
+! A.I. Pecularities:
+| None
+|-
+! Resistances:
+| No resistance to Sap, 30% reduction of Frizz, Sizz, Bang, Fire, and Ice, 15% resistance to Sleep, Poison, and Knuckle Sandwich, 70% reduction of Crack and Zap, 50% resistance to Dazzle, Fuddle, and Stun, 100% resistance to everything else
+|}
+
+{| {{prettytable}}
+! Jumping Jackal
+| The wolf on the right
+|-
+! Recommended Level: 
+| Amos Lvl 17, Carver Lvl 18, Milly Lvl 16, Nevan Lvl 15
+|-
+! Recommended A.I. Settings (Both):
+| SNES - Everyone: (Show No Mercy)
+Remakes - Carver & Amos: (Follow Orders), Milly & Nevan: (Back Me Up)
+|-
+! HP: 
+| 168-210
+|-
+! MP: 
+| 0
+|- 
+! Item:
+| Iron Claw (1/64 of dropping)
+|-
+! Attack:
+| 147
+|-
+! Defense:
+| 78
+|-
+! Agility:
+| 92
+|-
+! EXP: 
+| 160-192
+|-
+! Gold:
+| 78-93
+|-
+! Attack Patterns:
+| Attack (33.33%), Slash [1.25x Damage] (33.33%), Thin Air [29-35 Woosh damage to all in the SNES version, 47-57 Woosh damage to all in the remakes] (33.33%)
+|-
+! A.I. Pecularities:
+| None
+|-
+! Resistances:
+| No resistance to Frizz, Sizz, Bang, Crack, Woosh, Zap, Fire, Ice, or Knuckle Sandwich, 50% resistance to Dazzle, Snooze, Fuddle, Sap, Poison, Stun, and Numb, 100% resistance to everything else
+|}
+
+Yet another fight that is harder in the remakes than in the SNES; Thin Air is now strong enough to kill any magic users you may have if Lightning is also used in the same turn.  Instead of overpowering them through brute force like in the SNES, you'll want your magic users on Back Me Up.  Then use Amos and Carver to kill the Jumping Jackal as fast as they can.
+
+This is still not a hard fight however; the A.I. should be able to do most of the work anyway.
+
+== Wayfarer's Pass ==
+[[File:DQ6 Wayfarer's Pass.png|thumb|float=right|All monsters disappear once you finish the dungeon]]
+
+This is an incredibly simple dungeon, especially if you have already mastered Roundhouse Kick, Boom, and Kasizzle. Without those, all you have to do is use Sleep or Fuddle on the Fuddleguanas; do that, and nothing should threaten you.
+
+Go down to the bottom floor and go all the way to the north end of it; you should see Terry destroy the monster you worked so hard to get to. You will have to walk all the way back out manually after this is done; the game does not allow you to use Evac until you have given your coffin back to the guards at the top. Warp to Arkbolt when that is done.
+{{-}}
+
+== Path to the Next Dream World Continent ==
+[[File:DQ6 Houses North of Arkbolt.png|thumb|float=right|]]
+
+Talk to the king, and you will activate the game's next sequence trigger.  His guards will stop blocking the eastern path in Wayfarer's Pass, and allow you to go to yet more lands!  Take said path in Wayfarer's pass, and you should come out here.  Get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">14th Mini Medal</span> in the northmost house and take the stairs to the next continent!
+
+[[File:DQ6 Path to the Next Dream World Continent.jpg]] 
+
+== Path to Aridea ==
+The enemies on the way to Aridea still aren't any different from how they were in the Pass, so there's nothing to fear.  Just grab the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">15th Mini Medal</span>!
+
+[[File:DQ6 Cave to Aridea.png|thumb|float=right|Use Evac after getting the Mini Medal for added convenience.  And don't rest at the Inn; it's very overpriced!]]
+
+[[File:DQ6 Path to Aridea.jpg]]
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Arkbolt|nextpage=Aridea}}

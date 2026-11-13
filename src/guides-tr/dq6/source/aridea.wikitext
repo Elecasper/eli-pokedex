@@ -1,0 +1,100 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+[[File:DQ6 Aridea.png|thumb|float=right|Talk to everyone inside every house, as well as the person in the well.  That's the next sequence trigger!]]
+
+You need to turn Rex, Carver, and Amos into Warriors ''immediately'', before you do anything else in Aridea.  The upcoming boss can do a lot of damage in a single round if you are unlucky, so you will desperately want the extra HP if you want everyone to survive.  Otherwise, you should do fine with your current vocations if you don't mind one or two PC's dying; the next boss isn't hard so much as he is frustratingly unpredictable.
+
+Anyway, make sure you get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">16th Mini Medal</span>.  Then activate the next sequence trigger by talking to the man inside the well before talking to everyone inside every house.  Night will fall, and you will be unable to Zoom anywhere unless three of the following events happen:
+
+#You kill the next boss
+#You get killed yourself
+#You travel all the way back through the cave, to the other side of the mountains. This will make daylight come automatically.
+
+This is why you should get the Warrior vocations on Rex, Carver, and Amos.  If you do not have Buff/Kabuff on any of those PC's, then keep Rex the way he is and turn Milly into a Warrior instead.  Either way, it's too hard to keep up on the healing with four party members, so make sure your party looks something like this
+
+{| {{prettytable|notwide=1}}
+|'''Amos (Level 17): Fire Claw, Full Plate Armour/Platinum Mail, Magic/Dragon Shield, Iron Mask'''
+|-
+|'''Carver (Level 18): Battle Axe, Full Plate Armour/Platinum Mail, Iron/Dragon Shield, Iron Mask, Gold Bracer'''
+|-
+|'''Rex (Level 18): ''Ghent Staff'', Enchanted Armour, Magic Shield, Iron Helmet, Gold Bracer'''
+|}
+
+Go due west of Aridea once night falls; you will find the floating island:
+
+[[File:DQ6 Floating Island.png]]
+
+The three treasures that are clumped together are unavailable for now; they're locked behind a door that you will not be able to get through for a long time.  You might be able to get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">17th Mini Medal</span> in the first room if you're playing the remakes, but otherwise, you'll have to wait until you beat the boss.  
+
+Talk to the man at the wheel to be let in, then talk to the bartender serving drinks.  Say '''Yes''' multiple times, and you will be engaged in the next boss fight!
+
+== VS. Jamirus ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Amos Lvl 17, Carver Lvl 18, Rex Lvl 18
+|-
+!Recommended A.I. Settings ('''Including the SNES version!'''):
+|Everyone: (Switch between Back Me Up and Follow Orders until everyone's Resilience is matched.  Then stay on Follow Orders) 
+|-
+!HP: 
+|1500
+|-
+!MP: 
+|0
+|- 
+!Item:
+|Fire Claw (1/8 of dropping)
+|-
+!Attack:
+|178
+|-
+!Defense:
+|125
+|-
+!Agility:
+|65
+|-
+!EXP: 
+|1050
+|-
+!Gold:
+|430
+|-
+!Attack Patterns:
+|Attack (16.66%), Grab PC [1.25x Damage] (33.33%), Flame Breath [30-40 Fire Damage], Fire Claw [52-62 Frizz Damage] (16.66%)
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|No resistance to Crack, Woosh, Zap, or Ice, 30% reduction of Bang, 15% resistance to Knuckle Sandwich and Sap, 60% reduction of Frizz, Sizz, and Fire, 100% resistance to everything else
+|}
+
+As stated before, this boss is more annoying than he is hard.  For example, he could technically kill Milly in one round by hitting her with two "grab PC's" in a row.  However, offense is all he has; he does not know any status ailments like Murdaw did, and he's not as hard to damage as he was.  Amos and Carver could solo him all by themselves so long as they have Buff and the Ghent Staff.  They would still be sent for a loop by a series of fire and Frizz attacks, but Jamirus generally wouldn't use them often enough to actually kill them. 
+
+The only reason Rex is in the party as all is because the Enchanted Armour chops 10 Damage off of Jamirus's Fire Claw; coupled with his HP being almost as high as Carver and Amos's, he's actually more durable than either of them so long as he has enough Buffs to reduce Jamirus's physicals to the single digits.
+
+Until then, have everyone on Back Me Up while Rex uses the Ghent Staff; if no one is damaged, then have him use it on himself anyway.  The idea is that by doing this, the PC's will be able to cast Buff/Kabuff while immediately healing any damage done to them.  After that (it should take 2-3 full Buffs to max everyone's resilience), all you need to do is keep Carver and Amos above 124 HP while keeping Rex above 104.  And if anyone's HP begins a round with their HP below those amounts, have them defend while Rex heals them.
+
+Keep slamming Jamirus with Wind Sickles and Knuckle Sandwich while Rex heals, and he should go down easily.  There should be no chance of him ever killing anyone if you are diligent in following this strategy.
+
+'''If you do not have Buff on anyone but Milly:''' If this is you, and you have only just come to look at this guide, you can still execute a similar strategy by having Milly fill in for Rex while Carver uses the Ghent Staff.  Milly needs to be free for casting Buff, and her HP is low enough that Jamirus could kill her immediately if the game really feels like trolling you.  Therefore, Carver will want to use the 1st round to pre-emptively use the Ghent Staff on her while she gets Buff on herself.  Just one of those will remove Jamirus's ability to kill her in one round, and three of those will make her almost as resilient as Rex would have been.
+
+This strategy is slower and more luck reliant than the previous strategy was; that's the problem with having just one Buff user.  Milly is on the low end as far as HP is concerned, and there simply isn't anything to be done about that.
+
+== Path to the Next Real World Continent ==
+
+Snag the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">17th Mini Medal</span> from your floating island if you have not already done so.  Change your vocations and equipment set-ups back to normal after doing that, then warp to the Underkeep.  Then it's as simple as going southwest to the island with the next staircase.
+
+[[File:DQ6 Path to the Next Real World Continent.jpg]]
+
+== Path to Howcastle ==
+
+You're still fighting low tier monsters at this point, so you still have nothing to worry about.  Just grab the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">18th Mini Medal</span> and on over to Howsworth Castle!
+
+[[File:DQ6 Howsworth Gate.png|thumb|float=right|]]
+
+[[File:DQ6 Path to Howcastle.jpg]]
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Wayfarer's Pass|nextpage=Howcastle}}

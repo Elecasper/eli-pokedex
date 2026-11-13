@@ -1,0 +1,123 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== Introduction to Vocations ==
+
+Vocations will be given to you by the man standing at the altar on the 1st floor, and they are where most of a character's strength will come from.  Changing into one provides stat bonuses and stat penalties according to which once you change into.  For example, the Warrior Vocation gives a 10% boost to HP and Str, but also gives a 60% penalty to MP, a 35% penalty to Agility, and a 30% penalty to Wisdom.  
+
+The true draw of these Vocations, however, is this; almost every spell and skill in your arsenal is going to come from said vocations.  Whenever you switch into one, your character will start off with one star in that vocation; but with enough battles, that will go up to a maximum of eight stars.  And you will get one or two new spells/skills with almost every new star you get!  Priests, for example, will gain the Heal and Poof spells after one battle (1✮), the Woosh and Squelch spells after 18 battles (2✮), the Buff and Fizzle spells after 36 battles (3✮), the Midheal and Tingle spells after 49 battles (4✮), and so on and so forth. What's more, you can switch Vocations whenever you want, and no character is under any restrictions as to what they can choose.
+
+This can very quickly become borderline abusive; there is almost nothing you can't do!  If you want a party where every single person knows Fullheal and Buff, you can do that!  You can teach Carver how to Buff himself and others, you can teach Rex how to cast better spells than even Nevan and Milly, and create all sorts of other ridiculous combos!
+
+== Tier 2 and Tier 3 Vocations ==
+
+Once you are done mastering at least two of the nine of the basic classes, your character can then move on to what are commonly known as Tier 2 and Tier 3 classes.  These classes give even better stat boosts, and offer even more skills for anyone who has fulfilled the pre-requisites needed to access them.  For a quick list of what they are...
+
+{| {{prettytable|}}
+!Tier 2 Classes || Prerequisites || Battles Needed to Meet Pre-requisites
+|-
+| Gladiator
+| Mastered Warrior and Fighter
+| 149 to master Warrior, 199 to master Fighter
+|-
+| Armamentalist
+| Mastered Warrior and Mage
+| 149 to master Warrior, 179 to master Mage
+|-
+| Paladin
+| Mastered Figher and Priest
+| 199 to master Fighter, 159 to master Priest
+|-
+| Sage
+| Mastered Mage and Priest
+| 179 to master Mage, 159 to master Priest
+|-
+| Ranger
+| Mastered Thief, Monster Master, and Merchant
+| 139 to master Thief, 164 to master Monster Tamer, 129 to master Merchant
+|-
+| Luminary
+| Mastered Dancer and Gababout
+| 119 to master Dancer, 149 to master Gadabout
+|}
+
+Then there is Tier 3:
+
+{| {{prettytable|}}
+! Tier 3 Classes || Prerequisites || Battles Needed to Meet Pre-requisites
+|-
+| Hero
+| Rex=Gladiator, Sage, Ranger, or Luminary mastered
+The Others=Gladiator, Sage, Ranger, and Luminary mastered
+| Rex=Varies
+The Others=2328 (DS) or 2318 (Mobile) 
+|-
+| Dragon
+| Draconic Diligence Scroll (one-time use only item)
+| None
+|-
+| Liquid Metal Slime
+| Liquid Metal Mind Scroll (one-time use only item)
+| None
+|}
+
+One thing you might notice is that there is a lot of fighting required before you can get into the Tier 2 classes.  But the second thing you might notice is that two of the three Tier 3 classes do not require any sort of grinding whatsoever!  Indeed,  they are not just stronger than Tier 2 classes, they can also be accessed through the use of a rare, one-use-only item on whoever you wish to unlock it for.  Technically, this means that you can play through almost all of the game with only Tier 1 classes, and then hop straight to the Dragon and Liquid Metal Slime classes once you have gained said items.  However, you may be well-advised to reconsider this idea for three reasons.
+
+# If you are playing the SNES version, it is outright impossible to enter the post-game dungeon without getting at least 5✮ in every single vocation.  This does not mean that everyone has to master everything; rather, it means that every Vocation has to be 5-Starred by at least one person.  So there is no advantage to skipping Tier 2 classes if you are playing the SNES version.
+# The two scrolls necessary for Dragon and Liquid Metal Slime are extraordinarily rare.  The Liquid Metal Slime scroll cannot be access until you have defeated the final boss himself, and entered the Post-game.  As for the Draconic Scrolls, they are acquirable in the main story line; but aside from one found in the final dungeon, you have to go very far out of your way to get any of these.
+# While it is faster to play through the game this way, it is also much harder.  This game does get easier in Chapters 4 and 5, but even those chapters have some bite to them; in addition, the difficulty curve ramps right back up at Chapter 6.  And unlike with Chapter 3, there are not going to be any easy ways to address your lack of power like there is now.
+
+So, you will want to spend some time working on whichever Vocations you choose.  But how do you do that?  The answer is simple.
+
+== How Vocation Advancement Works ==
+
+Note that the Android version has increased the "[[Dragon Quest VI: Realms of Revelation/Area level caps|Area level caps]]" for every area by 10; except for those that were already at 99.  Also note that both versions allow you to remove whatever Vocation you have on in favor of going "Vocationless".  In the SNES version, it is on the 2nd page of selectable classes, and in the Remakes, the man gives you the option to "Remove Vocation" instead of choosing one
+
+In general, you can advance in your vocations simply by fighting; but there are caveats to that.  For starters, each vocation is different in how many battles it takes to master it, or how many battles each Star level takes.  Just because Priest requires 49 Battles to reach 4✮, that doesn't mean it's the same for all classes.  The Gladiator class, for example, requires you to fight 64 Battles before you can get 4✮ in it!
+
+Furthermore, you cannot grind in any area where your characters are too strong relative to the monsters within.  Put simply, each Dungeon (and regions on both Overworlds) have what are often called "[[Dragon Quest VI: Realms of Revelation/Area level caps|Area level caps]]".  For example, the Overworld area just outside Weaver's Peak has a Level Cap of 5; that means that no one at Level 6 or higher will gain any benefit from Vocation grinding there.  They can fight 10,000 battles and still not get any higher than 1✮ in whatever vocation they are in.
+
+This is part of why the guide advocated for blowing through Chapter 3, even if it meant running from a lot of random encounters.  Not only did you beat Chapter 3 itself faster than you would have otherwise, but now grinding your vocations is going to go significantly faster!  Instead of having to grind outside the Underkeep (Area Cap Lvl 20), you can now grind at the Lucid Grotto (Area Cap Lvl 15 in lower floors)!
+
+Finally, Rex is the only one who can acquire the Hero Vocation in a reasonable amount of time; he only has to master one Tier 2 class, while the other PC's have to master four of them.  And in master all of those Tier 2 clases, they also have to master every Tier 1 class needed to get into said classes!  Because of this, he is also the primary candidate for the Luminary lines of classes.  The Luminary vocation, and both it's pre-requisites, take the least amount of time to grind up; and while the Dancer and Gadabout classes are rather useless, the Luminary class has some awesome skills that are well worth snagging.
+
+== Vocation Recommendations ==
+
+This is where the game really starts to open up, so it is not necessary to follow the guide to the letter like it was in the beginning.  Different players are going to have different goals, some may have opinions that differ from what is presented here, and a walkthrough can only do so much to accomodate them all.  With that said, a player's options, roughly speaking, are thus (and note that the last two named characters are optional ones)...
+
+{| {{prettytable}}
+! Playthrough Goals || Rex || Carver || Milly & Nevan || Ashlynn || Amos 
+|-
+! Post-Game Completed (SNES) || 1✮ Fighter -> Gadabout -> Dancer -> Luminary -> Hero || 5✮ Priest -> 5✮ Warrior -> 8✮ Martial Artist -> Warrior -> 2✮ Gladiator -> Metal Babble Slime || 1✮ Fighter -> Mage -> Priest -> Sage || 6✮ Monster Master -> Thief -> Merchant -> Ranger || 5✮ Martial Artist -> 4✮ Warrior -> 5✮ Priest -> Fighter -> Priest -> Paladin
+|-
+! Post-Game Completed (DS) || Gadabout -> 1✮ Fighter -> Dancer -> Luminary -> Hero || 5✮ Priest -> 5✮ Warrior -> 8✮ Martial Artist -> Warrior -> 2✮ Gladiator -> Metal Babble Slime || 1✮ Fighter -> Mage -> Priest -> Sage || Thief -> Priest -> Mage -> Sage || 5✮ Martial Artist -> 4✮ Warrior -> 5✮ Priest -> Fighter -> Priest -> Paladin
+|-
+! Main Story Only || 1✮ Fighter -> Gadabout -> Dancer -> 6✮ Luminary || Priest -> 4✮ Warrior -> Martial Artist -> 1✮ Paladin -> Dragon || 1✮ Fighter -> Mage -> Priest -> Sage || 6✮ Monster Master -> Thief -> Priest || 5✮ Martial Artist -> 4✮ Warrior -> 5✮ Priest -> Martial Artists -> Priest -> Paladin
+|-  
+! Speedrun (SNES) || 3✮ Priest -> Warrior || 3✮ Priest -> ?✮ Warrior -> Dragon || 1✮ Mage -> 4✮ Martial Artist / 4✮ Thief -> No Vocation || 2✮ Gadabout -> Priest || 3✮ Priest -> 4✮ Warrior -> Martial Artist
+|-  
+! Speedrun (DS) || 1✮ Martial Artist -> Warrior || Warrior -> Dragon || 1✮ Mage -> No Vocation || 1✮ Mage -> No Vocation || (Never Recruited)
+|}
+
+Note that "?✮" means that it does not matter how many stars you have before leaving the job class.  And if there are no stars next to the vocation, that means one of two things; you are going to master it, or you are going to stay in that vocation for the rest of the game.  
+
+Unfortunately, this game did not do the best job of making all classes equally viable, not even in the remakes.  The Ranger class, for example, is filled with skills that are either worthless, or are clearly outclassed by other skills that perform the same function better.  Pyre o' Fire, for example, is a 0 MP fire spell that is learned at 7✮ Ranger (602 total battles, including pre-requisite classes).  This does 170-190 Damage to a single target...but has a 1/3 chance of failing outright.  Kafrizzle, on the other hand, is a 10 MP fire spell that is learned at 8✮ Armamentalist (567 total battles).  This does 180-200 to it's target, and does not have that 1/3 chance of failing!  This, by the way, is at a point in the game where MP has long since stopped being a problem.
+
+And that is just one of the many instances in which some vocations are outright worse than other vocations; that is why the party set-ups are so homogenized.  The Armamentalist vocation, for example, consists mostly of single physical attack attack skills; and yet, it only gives it's wielders a 5% bonus (as compared to a Gladiator's 15%, or a Paladin's 10%).  In addition, it has no passive class bonuses like other classes do.  The Sage class, meanwhile, gives:
+
+# MP reduction costs to every spell cast, starting at 3✮.  By the time the wielder hits 8✮, all spells will have had their costs slashed to half their original amount.
+# Insulatle, which reduces all breath Damage (like Murdaw's Chilly Breath) by 50%.
+# Summons monsters to act as a 5th active party member (though you can't buff it or influence it's behaviors).
+# Multiheal, which restores 100-120 HP to everyone in your party.  Aside from one of the skills in the Luminary vocation, and one in the Hero vocation, this is the only class skill/spell you can learn that can heal everyone like that.
+# Kazing, which is 100% guaranteed to revive any dead party member to 100% of their HP.
+# Magic Barrier, which reduces all Magic Damage by 50% (though this was replaced by Kamikaze in the Mobile version)
+# Kaboom, which did 130-150 Bang type Damage to all enemies (replaced by Kathwack in the Mobile version)
+
+Ashlynn, for her part, has very low durability in exchange for having a wider equipment selection than Milly; however, it is not enough to make up for her low HP, and for the fact that she does not learn Buff or Kabuff naturally.  You can have her and Milly swap roles if you decide you like her better, but it is recommended that you keep her as a bench-warmer.  If you decide to do so, she'll be able to work on Ranger without slowing down the rest of your party.
+
+Gladiator, for it's part, also suffers when compared to the Paladin class.    The most useful skill from it, Focus Strength (next attack does 2.5x normal damage, and will never miss) comes at just 2✮; hardly any investment is needed to get the most out of Warrior.  Still, Gladiator gives Carver the stat boosts he finds most useful; so it's still worth giving it to him (and only him).
+
+As for the speed run playthrough, you will not get far into any of your classes.  You will run from every single random encounter in the game, and will not manage to master even one vocation.  If you do beat the final boss (who is actually harder than even Murdaw), you will do so only by the skin of your teeth.  This is why Rex and Carver choose Warrior; it's one main advantage over the Fighter class is that it has slightly higher HP and Strength.  This is insignificant in a normal playthrough, but every drop of HP counts in a Speed Run.
+
+Such a playthrough is not recommended for beginners; but if you do decide to do this, the strategies within this guide will still work for you.  In fact, the categories above them are purely for the benefit of the player; the game can be beaten at very low levels, and with few job skills.  However, only an expert would be able to follow such a path without dying again and again.
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=VS. Murdaw, Round 3|nextpage=Scrimsley}}

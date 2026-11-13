@@ -1,0 +1,130 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== Preamble ==
+
+The rest of the guide will assume that you are planning to go into the post-game.  In addition, it will assume that you have been keeping your levels low, as recommended.  If you have not kept them low, however, you will want to consult the "[[Dragon Quest VI: Realms of Revelation/Area level caps|Area level caps]]" page to see where you will want to grind.  With that in mind, you will want to accomplish the following goals in this section:
+
+# Get Healie once Ashlynn gets 2✮ Monster Master (if playing the SNES version).  Then have him master Warrior before working on Mage
+# Get Leg Sweep for Milly and Nevan (Rex already gets Sultry Dance, which also stuns)
+# Master the Mage class for Milly and Nevan.
+# Gain Double-Edged Slash, Knuckle Sandwich, and Kabuuf for Amos for Amos (4✮ Warrior, 5✮ Fighter and 5✮ Priest)
+# Learn Double-Edged Slash, Wind Sickles and Mercurial Thrust for Carver (5✮ Warrior, 3✮ Fighter and 5✮ Priest)
+# Master Gadabout for Rex immediately, and make headway on Dancer (8✮ Gadabout, ?✮ Dancer)
+# Get Ashlynn 6✮ Monster Master, and get as far as you can on Thief
+
+For this reason, your job progression should look something like this as you grind:
+
+{| {{prettytable}}
+! Playthrough Goals || Rex || Carver || Milly & Nevan || Ashlynn || Amos 
+|-
+! Post-Game Completed (SNES) || Gadabout -> Dancer -> Luminary -> Hero || 5✮ Priest -> 5✮ Warrior -> 8✮ Martial Artist -> Warrior -> 2✮ Gladiator -> Metal Babble Slime || 1✮ Fighter -> Mage -> Priest -> Sage || 6✮ Monster Master -> Thief -> Merchant -> Ranger || 5✮ Martial Artist -> 4✮ Warrior -> 5✮ Priest -> Fighter -> Priest -> Paladin
+|-
+! Post-Game Completed (DS) || Gadabout -> Dancer -> Luminary -> Hero || 5✮ Priest -> 5✮ Warrior -> 8✮ Martial Artist -> Warrior -> 2✮ Gladiator -> Metal Babble Slime || 1✮ Fighter -> Mage -> Priest -> Sage || Thief -> Priest -> Mage -> Sage || 5✮ Martial Artist -> 4✮ Warrior -> 5✮ Priest -> Fighter -> Priest -> Paladin
+|}
+
+The explanation for this is as follows.  First of all, the Mage vocation has a 40% HP handicap; this is absolutely crippling for anyone who wishes to survive with any modicum of ease.  On the other hand, it also has extremely powerful offensive spells like Boom, and you need it in order to get Sage anyway, so grinding it up is a necessary evil.  Therefore, it's better to take care of here than it is to work on it throughout the game, where the monsters will only get more and more powerful.
+
+As for Amos, he is by far your most resilient character right now, and Rex's own durability will take a nose-dive for as long as he is working on the Gadabout and Dancer classes.  For this reason, you will want to replace him with Amos until Rex learns Zap much later in the game.  So for now, give Rex the Gadabout vocation, give Carver the Priest vocation, give Amos the Fighter vocation, give Ashlynn the Monster Master vocation, and give Milly the Mage vocation.
+
+In regards to Armamentalist, that role is better relegated to a later character named Healie (who is recruited later on, if playing the remakes).
+
+== Dream Grotto (Grind here until Carver reaches Level 16) ==
+
+{| {{prettytable|notwide=1}}
+|'''Rex (Level 14): Edged Boomerang, Full Plate Armour/Platinum Mail, Iron/Dragon Shield, Iron Mask, Agility Ring'''
+|-
+|'''Amos (Level 15): Edged Boomerang, Full Plate Armour/Platinum Mail, Iron/Dragon Shield, Iron Mask'''
+|-
+|'''Nevan (Level 11): Morning Star, Royal Clothes/Full Plate Armour, Bronze Shield, Hardwood Headware, Gold Bracer'''
+|-
+|'''Ashlynn (Level 8): Chain Whip, Enchanted Armour, Bunny Ears, Gold Bracer'''
+|}
+
+[[File: DQ6 Whistle.png|float=right|thumb|Use Whistle to grind battles faster!]]
+
+First of all, be sure to go to Floor 2 before grinding; Floor 1 only has an Area Level Cap of 14.  Secondly, start using Whistle once Rex learns it; it will immediately summon another random encounter upon use!  Finally, put the A.I. on either Show No Mercy or Use No Magic; you will more or less fly through the random encounters with it on!
+
+== Recruiting Healie (SNES only) ==
+
+[[File:DQ6 Searching for Healie.png|thumb|float=right|Put only Amos in the Active Party until Healslimes are found!]]
+
+The mechanics of monster hunting are very simple in the SNES version: you are either able to get your monster, or you are not.  There are 18 monsters to be captured on the SNES version, and each one needs a certain level of mastery in the Monster Master vocation in order to be recruited; Healie needs 2✮ mastery, while other monsters need more.  After that, there is nothing you can do to increase your chances; Healie only has a 1/16 chance of joining you, and other monsters go as high as 1/64, or even 1/256!  There is nothing you can do about that; not even a full party of 8✮ Monster Masters will have any better luck than a party with just one 2✮ Monster Master.
+
+However, one does need to be in your Active Party by the time the battle ends, or else you will not get any chance at recruiting the monster.  Fortunately, it '''does not matter''' what order you kill the monsters in, unless there are multiple recruitable monsters in the same fight.  In that case, the monster that tries to join you is the one you killed last.
+
+Naturally, you will have to run from quite a few battles before you will finally find Healie, and you will generally have to fight quite a few Healies before you finally get one to join you.  For this reason, it is recommended that you have only Amos in your Active Party until you find an encounter with a Healslime in it.  This way, Amos, our most durable character, is the only one getting hit; this greatly decrease the amount of healing you have to do after each battle.
+
+Now once you get Healie, you will want to have him master Warrior before moving on to Mage.  The reason for this will be become clear later on.
+
+== The Underkeep ==
+
+At some point, Carver will hit Level 16, and be unable to earn anymore job experience.  That's when you will want to go to the Underkeep; so adjust your vocations as needed and make this party...
+
+<blockquote>
+1st Slot: Rex
+
+2nd Slot: (Random Boom user)
+
+3rd Slot: Ashlynn
+</blockquote> 
+
+By making three people, you are ensuring that the A.I. will be less wasteful when you put it on Show No Mercy; otherwise, it has a bad habit of spamming spells like Frizzle instead of casting Boom.  This is also why we don't have Amos in the party; an Edged Boomerang strike from him isn't strong enough to kill an entire enemy group in one swoop, but a Boom spell is.  If he goes before one of your Boom users, he will only waste time.
+
+Once you run out of Boom MP, your next move depends on what version you're playing.  If playing on the remakes, you can simply tag Amos in, and just rely on him, Rex, and Flame Breath to kill almost all the encounters in 1 turn.  But if on the SNES, the enemies have too much HP; so you'll need to recharge (use your house at Weaver's Peak so you don't have to pay any money!).
+
+At any rate, your SNES vocation line-up should look something like this at the end...
+
+{| {{prettytable|notwide=1}}
+!Character || Vocation Layout
+|-
+|'''Rex (Dancer)'''
+|'''1✮ Martial Artist, 8✮ Gadabout, 5✮ Dancer'''
+|-
+|'''Carver (Martial Artist)'''
+|'''5✮ Warrior, 3✮ Martial Artist, 5✮ Priest'''
+|-
+|'''Milly & Nevan (Priest)'''
+|'''1✮ Martial Artist, 8✮ Mage, 3✮ Priest'''
+|-
+|'''Ashlynn (Thief)'''
+|'''6✮ Monster Master, 6-7✮ Thief'''
+|-
+|'''Amos (Martial Artist)'''
+|'''4✮ Warrior, 5✮ Martial Artist, 5✮ Priest'''
+|-
+|'''Healie (Priest)'''
+|'''8✮ Warrior, 2-3✮ Mage'''
+|-
+|'''Ressa (No Vocation)'''
+|'''1✮ Mage, 8✮ Priest'''
+|}
+
+And your Remake vocation line-up should look something like this...
+
+{| {{prettytable|notwide=1}}
+!Character || Vocation Layout
+|-
+|'''Rex (Dancer)'''
+|'''8✮ Gadabout, 5✮ Dancer'''
+|-
+|'''Carver (Martial Artist)'''
+|'''4✮ Warrior, 3✮ Martial Artist, 8✮ Priest'''
+|-
+|'''Milly & Nevan (Priest)'''
+|'''1✮ Martial Artist, 8✮ Mage, 3✮ Priest'''
+|-
+|'''Ashlynn (Thief)'''
+|'''6✮ Monster Master, 6-7✮ Thief'''
+|-
+|'''Amos (Martial Artist)'''
+|'''4✮ Warrior, 5✮ Martial Artist, 5✮ Priest'''
+|}
+
+
+{{sidebar|title=In case you wish to move on without doing all of this...|float=left|width=800px|contents=You can technically get by without doing any grinding whatsoever.  Mastering the Mage vocation now is more for the sake of convenience then necessity; random encounters will become significantly easier with spells like Boom and Kasizzle, and you will never have to deal with the HP penalty again.  However, you need to have the Buff spells on at least three of your party members if you are playing the SNES version; otherwise, it will be extremely hard to guarantee the survival of all of your party members in future boss battles.
+
+Of course, you can circumvent that step if you have acquired the Platinum Mail and Dragon Shield for Amos and Carver; those two pieces of equipment are powerful enough to carry you through the mid-game itself so long as Milly is there to cast Buff.  After all, she learns it naturally.
+
+For the sake of ease, however, it is highly recommended that you follow this guide; do this, and you should have no trouble surviving}}
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Scrimsley|nextpage=Arkbolt}}

@@ -29,3 +29,11 @@ Metal Slime 金属史莱姆 · Bubble Slime 泡泡史莱姆 · Ornery Onion 洋�
 Nevan 查莫罗 · Ghent 盖恩特村 · Underkeep 地下城 · Murdaw's Keep 穆德之城 · Flame/Fire Claw 火焰爪 · Knuckle Sandwich 正拳突刺 · Double Up 舍身攻击 · Amor Seco Essence 阿莫尔之水 · Ghent Cane/Staff 盖恩特之杖 · Chain Whip 锁链鞭 · Full Plate Armour 全身铠甲 · Iron Helmet 铁盔 · Iron Mask 铁面具 · Dancer's Costume 舞娘服 · Prayer Ring 祈祷戒指 · Cannibox 宝箱怪 · Healslime 治愈史莱姆 · Vocation 职业
 咒文：Sizzle 强化基拉 · Frizz 火球咒 · Frizzle 中火球咒 · Bang 爆炸咒 · Woosh 真空咒 · Swoosh 中真空咒 · Fuddle 混乱咒文 · Evac 脱出咒文 · Whack 即死咒 · Kasnooze 群体催眠 · Kasap 群体减防 · Fizzle 封咒 · Poof 驱逐 · Midheal 中回复咒 · Flame Breath 火焰吐息 · Chilly Breath 寒冷吐息 · Lightning 落雷 · Lullab-Eyes 催眠之眼 · War Cry 战吼 · Selflessness 舍身保护
 保留英文：Arrghgoyle, Guaardvark, Burning Man, Hermit Pixie, Grim Grinner, Bigg, Liddle, Boxer Shorts, Mudslinger, Hell Nino, Sculptrice, Urnexpected, Prickly Prankster, Harmour
+
+## 第 4 章新增
+Amos 阿莫斯 · Terry 泰瑞 · Jamirus 贾米拉斯 · Arkbolt 亚克波特 · Howcastle 霍尔斯托克 · Floating Island 浮岛 · Healie（保留）· Providence 号
+职业：Warrior 战士 · Fighter/Martial Artist 武斗家 · Mage 魔法使 · Priest 僧侣 · Thief 盗贼 · Monster Master 魔物使 · Merchant 商人 · Dancer 舞者 · Gadabout 游人 · Gladiator 战斗大师 · Armamentalist 魔法战士 · Paladin 圣骑士 · Sage 贤者 · Ranger 游侠 · Luminary 超级明星 · Hero 勇者 · Dragon 龙 · Liquid Metal Slime 液态金属史莱姆
+咒文/特技：Boom 中爆炸咒 · Kaboom 大爆炸咒 · Kasizzle 大基拉 · Kafrizzle 大火球咒 · Zap 雷电咒 · Fullheal 完全回复咒 · Multiheal 全体回复咒 · Kazing 完全复活咒 · Kabuff 群体加防 · Insulatle 防吐息咒文 · Tingle 解麻咒 · Kamikaze 自爆咒 · Kathwack 群体即死 · Ironize 金属化 · Whistle 口哨 · Leg Sweep 扫腿 · Sultry Dance 魅惑之舞 · Double-Edged Slash 双刃斩 · Wind Sickles 镰鼬 · Mercurial Thrust 疾风突刺 · Focus Strength 集中力量 · Roundhouse Kick 回旋踢 · Thin Air 真空波 · Multislice 乱斩 · Falcon Slash 隼斩 · Flying Knee 飞膝 · Dodgy Dance 闪避之舞 · Desperate Attack 拼死攻击 · Flame Slash 火焰斩
+作战：Back Me Up 支援
+装备：Battle Axe 战斧 · Silver Cuirass 银胸甲 · Magic Shield 魔法盾 · Pot Lid 锅盖 · Morning Star 流星锤 · Cloak of Evasion 闪避斗篷
+保留英文：Scrimsley, Hazy Heights, Seeds of Reason, Wayfarer's Pass, Aridea, Bronson, Brick, Brock, Brutus, Cautery Sword, Ressa, Hellstalker, Jumping Jackal, Fuddleguana, Pyre o' Fire, Scrimsley Terror, Stone Fangs

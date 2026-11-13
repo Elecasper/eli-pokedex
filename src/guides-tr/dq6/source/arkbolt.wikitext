@@ -1,0 +1,229 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== Path to Arkbolt ==
+
+The path to Arkbolt is very straightforward; just warp to Port Haven, then sail a bit to the upper-right.  You shouldn't even encounter that many monsters along the way.  Once you're there, make sure you have a Amos, Carver, Milly, and Nevan party.
+
+[[File:DQ6 Path to Arkbolt.jpg]]
+
+== Arkbolt ==
+
+[[File:DQ6 Arkbolt.png|thumb|float=right|Map of Arkbolt]]
+
+There are yet more doors that you cannot unlock yet, but that's fine; you can still get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">12-13th Mini Medals</span> as well as some new equipment here.  You'll want to buy the Battle Axe for Carver, one Silver Cuirass for Milly, and two Magic Shields for Nevan and Amos.    Also keep that in mind that Yggdrasil Leaf amounts will no longer be given, as they will vary depending on the player.
+
+{| {{prettytable|notwide=1}}
+|'''Amos (Level 17): Fire Claw, Full Plate Armour/Platinum Mail, Magic/Dragon Shield, Iron Mask'''
+|-
+|'''Carver (Level 17): Battle Axe, Full Plate Armour/Platinum Mail, Iron/Dragon Shield, Iron Mask, Agility Ring'''
+|-
+|'''Milly (Level 16): Cautery Sword, Silver Cuirass, Pot Lid, Bunny Ears, Gold Bracer'''
+|-
+|'''Nevan (Level 15): ''Ghent Staff'', Morning Star, Enchanted Armour, Magic Shield, Hardwood Headware, Gold Bracer''' 
+|}
+
+Rest up at the Inn, talk to the guard blocking the entrance to the 2nd Floor, and you will fight a mini-boss!
+
+== VS. Bronson ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Amos Lvl 17, Carver Lvl 17, Milly Lvl 16, Nevan Lvl 15
+|-
+!Recommended A.I. Settings (Both Versions):
+|Everyone: Follow Orders (Buff everyone up), then Show No Mercy
+|-
+!HP: 
+|1300
+|-
+!MP: 
+|0
+|- 
+!Item:
+|Seed of Strength (1/128 of dropping)
+|-
+!Attack:
+|105
+|-
+!Defense:
+|95
+|-
+!Agility:
+|65
+|-
+!EXP: 
+|310
+|-
+!Gold:
+|None
+|-
+!Attack Patterns:
+|Desperate Attack [2.5x Damage] (33.3%), Attack (16.66%), Flame Slash [can do 1.3x regular physical damage] (16.66%), Flying Knee [1.5x Damage to flying monsters] (16.66%), Dodgy Dance [gives 50% chance of evasion for 2-3 turns] (16.66%)
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|No resistance to Zap, 30% reduction of Frizz, Sizz, Bang, Crack, and Woosh, 15% resistance to Knuckle Sandwich, 50% to Sap, 100% resistance to everything else.
+|}
+
+This one is a fairly easy battle; Flame Slash is essentially just a physical attack that can do 1.3x regular damage to anyone who's not resistant.  On the other hand, those who have strong resistance or immunity to Frizz will only take 75% and 30% Damage respectively.  In other words, the elemental slashes are useful only to monsters, not to you.
+
+In any case, Bronson has nothing but physical attacks to throw at you, so Buff and Kabuff utterly trivialize the fight.  If you do not have those for whatever reason, you can simply heal everything off with the Ghent Staff.  Once you defeat him, heal up at Madame Luca's (or just use the Inn if you don't mind paying money), get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">12th Mini Medal</span> on the next floor, and hurry to the next battle.
+
+== VS. Brick & Brock ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Brick
+|The knight on the left
+|-
+!Recommended Level: 
+|Amos Lvl 17, Carver Lvl 17, Milly Lvl 16, Nevan Lvl 15
+|-
+!Recommended A.I. Settings (Remakes Only; SNES A.I. is bad):
+|Everyone: Follow Orders, then Show No Mercy once Brick is defeated
+|-
+!HP: 
+|1200
+|-
+!MP: 
+|0
+|- 
+!Item:
+|Seed of Wisdom (1/64 of dropping)
+|-
+!Attack:
+|85
+|-
+!Defense:
+|72
+|-
+!Agility:
+|20
+|-
+!EXP: 
+|120
+|-
+!Gold:
+|None
+|-
+!Attack Patterns:
+|Kasap -> Oomph -> Double Up [Double Damage in exchange for TAKING double damage.  Always goes first in the remakes, unless Ironize is cast] -> Multiheal -> Kasap -> Attack
+|-
+!A.I. Pecularities:
+|Inverted Targetting (SNES only) and Concentrated Targetting
+|-
+!Resistances:
+|No resistance to Frizz, Sizz, Bang, Crack, Woosh, Zap, Fire, Ice, or Knuckle Sandwich, 15% resistance to Poison, 50% resistance to Dazzle, 100% resistance to everything else
+|}
+
+
+
+{| {{prettytable|notwide=1|float=center}}
+!Brock
+|The knight on the right
+|-
+!Recommended Level: 
+|Amos Lvl 17, Carver Lvl 17, Milly Lvl 16, Nevan Lvl 15
+|-
+!Recommended A.I. Settings (Remakes Only; SNES A.I. is bad):
+|Amos and Carver: (Follow Orders), Milly: (Follow Orders, then Focus on Healing), Nevan: (Follow Orders, then Focus on Healing)
+|-
+!HP: 
+|1300
+|-
+!MP: 
+|0
+|- 
+!Item:
+|Seed of Resilience (1/64 of dropping)
+|-
+!Attack:
+|115
+|-
+!Defense:
+|83
+|-
+!Agility:
+|8
+|-
+!EXP: 
+|110
+|-
+!Gold:
+|None
+|-
+!Attack Patterns:
+|Attack -> Attack -> Selflesness -> Defend (80% Damage reduction) -> Mercurial Thrust (always goes first, unless Ironize or Remake!Double Up is used) -> Selflesness
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|No resistance to Frizz, Sizz, Bang, Crack, Woosh, Zap, Fire, Ice, or Knuckle Sandwich, 15% resistance to Poison, 50% resistance to Dazzle, 100% resistance to everything else
+|}
+
+This fight is mildly harder than Bronson, but still nowhere close to the level of Murdaw.  If you haven't gotten Buff on anyone but Milly, you may wish to remove Rex's vocation, and have him fight instead of Nevan  If you decide to do that, do the same for Milly, and be sure to give Rex the Fire Claw to use while he's Sapping Brick and Bronson (Amos, for his part, does well with a Ghent Staff and Cautery Sword).  If that's the route you decide to go, have Milly keep buffing people in order to stay ahead of Brick's Kasap.  
+
+None of this should be necessary, however, if you followed the walkthrough; you should be able to trivialize this fight just by spamming Kabuff and using Buff on Milly and Nevan.  Once you do that, you can essentially just pound the two into submission with Focus Strength + Knuckle Sandwich and Frizzle.  And use Boom every 3 turns; Brock will cover Brick, meaning that he'll take double the amount of Boom strikes he would've otherwise taken.
+
+Whatever you decide to do, kill Brock first; he may not have Kasap, Oomph, or Double Up, but he attacks more often than Brick does.  Talk to the king after you have swept those two aside, and then talk to Brutus.  He'll leave for the room marked by '''I'''.  Rest at Madame Luca's; once everyone is healed up, get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">13th Mini Medal</span> and fight Brutus!
+
+== VS. Brutus ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Amos Lvl 17, Carver Lvl 17, Milly Lvl 16, Nevan Lvl 15
+|-
+!Recommended A.I. Settings (Remakes Only; SNES A.I. is bad):
+|Amos: (Follow Orders), Carver: (Follow Orders), Nevan: (Focus on Healing), Milly: (Focus on Healing on Turns 4, 7, 10, 13, and Follow Orders on all the other turns in order to Buff).
+|-
+!HP: 
+|1800
+|-
+!MP: 
+|80
+|- 
+!Item:
+|Seed of Life (1/128 of dropping)
+|-
+!Attack:
+|140
+|-
+!Defense:
+|105
+|-
+!Agility:
+|75
+|-
+!EXP: 
+|450
+|-
+!Gold:
+|None
+|-
+!Attack Patterns:
+|Thin Air [36-44 Woosh Damage to all in the SNES, 54-66 Woosh Damage to all in the remakes] or Multislice -> Kasap or Knuckle Sandwich -> Falcon Slash or Roundhouse Kick
+|-
+!A.I. Pecularities:
+|Concentrated Targetting
+|-
+!Resistances:
+|No resistance to Zap, Fire, or Ice, 30% reduction of Crack, 70% reduction of all other attack spells, 50% resistance to Knuckle Sandwich and Sap, 100% resistance to everything else
+|}
+
+Brutus is one of the very few fights that are harder in the remakes than they are in the original SNES.  Thin Air only did (Level*2 + 30)* +/-10% in the SNES, but was increased to (Level*2 + 50)* +/-10% in all of the remakes.  Every monster in the game has an internal level, and Brutus's happens to be 5, hence the damage ranges listed in the Attack Patterns.
+
+In any case, you will want to use caution when fighting against him.  On the very 1st turn, Milly will want to use Buff on herself while Nevan Defends.  Then when the 2nd Round comes around, have Milly use Buff on Nevan as he uses the Ghent Staff on her. 
+
+Carver and Amos will want to use Kabuff twice.  After that, Amos and Carver should use Focus Strength + Double-Edged Slash, Milly should Midheal every time Brutus is about to use Thin Air or Multislice, and Buff on every other turn.  As for Nevan, he should just keep spamming the Ghent Staff.  You can occasionally use Frizzle with your mages if you wish to; but it will only do around ~30 Damage a pop with Brutus's resistances.
+
+This is assuming that you have followed the guide to the letter up until now.  If you do not have Buff on most of your characters, you will want to remove Rex's vocation, and have him fill in for Nevan; durability will be at a premium for parties who only have Milly to help with Buffing.  If this is you, let Rex land Sap on Brutus twice to help out Amos and Carver.  In addition, Amos will want the Ghent Staff since Rex and Milly will both be busy slinging their respective spells
+
+== Path to Wayfarer's Pass ==
+
+When all is said and done, talk to the King, then talk to the minister in order to receive an empty casket.  Then go to Wayfarer's Pass.
+
+[[File:DQ6 Path to Wayfarer's Pass.jpg]]
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Job Class Grinding|nextpage=Wayfarer's Pass}}

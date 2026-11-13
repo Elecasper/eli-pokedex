@@ -1,0 +1,142 @@
+<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#1f2a24"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; img-src https://cdn.wikimg.net; base-uri 'none'; object-src 'none'; form-action 'none'"><title>练职业 - 勇者斗恶龙6 幻之大地 · Eli</title><style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:#1f2a24;color:#f1f0e6}
+main{max-width:760px;margin:auto;padding:8px 16px max(32px,env(safe-area-inset-bottom))}
+a{color:#c9e265}.crumb{font-size:13px;color:#a9b5a6;margin:14px 0 4px}.crumb a{color:#a9b5a6}
+h1{font-size:25px;margin:6px 0 4px;line-height:1.4}.chap{font-size:13px;color:#a9b5a6;margin:0 0 16px}
+h2{font-size:19px;margin:28px 0 10px;padding-top:4px;border-top:1px solid #36463c}
+p,li{font-size:16px;line-height:1.85}ol,ul{padding-left:22px}b{color:#fff}
+.note{font-size:14px;color:#a9b5a6;background:#2a372f;border-radius:10px;padding:10px 14px}
+figure{margin:14px 0;text-align:center}figure img{max-width:100%;height:auto;border-radius:8px;background:#2a372f}
+figcaption{font-size:13px;color:#a9b5a6;margin-top:6px}
+.tip{background:#2a372f;border:1px solid #44574b;border-left:4px solid #c9e265;border-radius:10px;padding:4px 16px;margin:16px 0}
+.tip h4{margin:12px 0 0;font-size:15px;color:#c9e265}.tip p,.tip li{font-size:15px}
+table.data{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:#2a372f;border-radius:10px;overflow:hidden}
+table.data caption{text-align:left;font-weight:700;padding:0 0 8px;font-size:15px}
+table.data th,table.data td{padding:9px 12px;border-bottom:1px solid #36463c;text-align:left;vertical-align:top;line-height:1.6}
+table.data th{width:30%;color:#a9b5a6;font-weight:600;white-space:nowrap}table.data th small{font-weight:400}
+.medal{color:#c9e265;font-weight:700}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:32px 0 10px}
+.pager a{display:block;background:#2a372f;border:1px solid #44574b;border-radius:12px;padding:12px 14px;text-decoration:none;color:#f1f0e6;font-size:15px;min-height:64px}
+.pager a small{display:block;color:#a9b5a6;font-size:12px;margin-bottom:2px}.pager .next{text-align:right;grid-column:2}
+.toc{list-style:none;padding:0;margin:0}.toc li{border-bottom:1px solid #36463c}.toc a{display:flex;justify-content:space-between;padding:13px 4px;text-decoration:none;color:#f1f0e6}
+.toc a span{color:#a9b5a6;font-size:13px}.toc h3{font-size:14px;color:#a9b5a6;margin:20px 0 4px;font-weight:600}
+.src{font-size:12px;color:#a9b5a6;line-height:1.8;border-top:1px solid #36463c;margin-top:28px;padding-top:12px}.src a{color:#a9b5a6}
+@media(max-width:560px){h1{font-size:22px}p,li{font-size:15.5px}table.data th{white-space:normal;width:34%}}
+</style><style id="eli-theme">:root{color-scheme:dark;--paper:#1f2a24;--card:#2a372f;--ink:#f1f0e6;--muted:#a9b5a6;--line:#44574b;--soft:#34443a;--green:#c9e265;--accent:#ff7b6b;--rust:#ff7b6b;color:#f1f0e6;background:#1f2a24}
+body{background:#1f2a24;color:#f1f0e6}
+a{color:#c9e265}
+h1{letter-spacing:.04em;text-shadow:2px 2px 0 #0f1713}
+button{border-width:2px;border-radius:10px;}
+button:active{transform:translateY(2px);}
+input,select{background:#2a372f;color:#f1f0e6;border-width:2px}
+::placeholder{color:#8a9a88}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline-color:#c9e265}
+.platforms button[aria-pressed=true],.scope-buttons button[aria-pressed=true]{background:#c9e265;border-color:#c9e265;color:#1f2a24;font-weight:700}
+.home-bar a,.home-links a:first-child{font-weight:700;letter-spacing:.04em}
+.eli-bar{position:sticky;top:0;z-index:30;background:#1f2a24;border-bottom:1px solid #2f3f35}
+.eli-bar-in{max-width:1120px;margin:auto;padding:0 16px;min-height:60px;display:flex;align-items:center;gap:18px}
+.eli-bar a{text-decoration:none;color:#f1f0e6;font-weight:700}
+.eli-bar .brand{font-size:20px;letter-spacing:.02em;white-space:nowrap}
+.eli-bar nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.eli-bar nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-size:15px;white-space:nowrap}
+.eli-bar nav a[aria-current=page]{color:#c9e265}
+.eli-bar nav a.cta{background:#c9e265;color:#1f2a24;border-radius:999px;padding:0 16px;min-height:40px;align-self:center}
+@media(max-width:560px){
+.eli-bar-in{min-height:52px;gap:8px;padding:0 10px 0 14px;flex-wrap:nowrap}
+.eli-bar .brand{font-size:17px}
+.eli-bar nav{gap:0;margin-left:auto;width:auto;padding:0}
+.eli-bar nav a{padding:0 9px;font-size:14px}
+.eli-bar nav a.cta{padding:0 12px}
+.appbar{min-height:52px!important}.brand h1{font-size:20px!important}
+h1{font-size:22px!important;margin:10px 0 6px!important}
+.top{min-height:44px!important}
+.tabs button{min-height:42px!important;font-size:13px!important;padding:6px 4px!important}
+.panel{padding:14px 12px!important}
+.steps li{font-size:14.5px!important;padding-bottom:8px!important}
+.chips li{font-size:12.5px;padding:5px 8px}
+.backup,.lookup{margin:10px 0!important}
+.card{padding:14px!important}
+.facts strong{font-size:18px!important}
+}
+@media(max-width:380px){.eli-bar nav a{padding:0 6px!important;font-size:13px!important}.eli-bar .brand{font-size:16px!important}.eli-bar-in{gap:4px!important;padding:0 6px 0 12px!important}}
+.platforms button,.scope-buttons button,.tabs button,.lookup-row button,#info-open{border-radius:999px}
+.actions a,a.continue{border-radius:999px}
+nav.top,header p,.lead,.foot{color:#a9b5a6}.tabs button{background:#2a372f;border-color:#44574b}.tabs button[aria-selected=true]{background:#c9e265;color:#1f2a24;border-color:#c9e265;font-weight:700}.panel{background:#2a372f;border:2px solid #44574b;}.steps li::marker{color:#ff7b6b}.actions a{background:#c9e265;color:#1f2a24;font-weight:700;}.actions a.secondary{background:#34443a;color:#f1f0e6}details{border-top-color:#44574b}code{background:#34443a}.tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.tabs button:first-child{grid-column:1/-1}@media(min-width:560px){.tabs{grid-template-columns:repeat(5,minmax(0,1fr))}.tabs button:first-child{grid-column:auto}}.sub{font-size:13px;letter-spacing:.12em;color:#a9b5a6;margin:18px 0 8px;font-weight:700}.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}.chips li{background:#34443a;border:1px solid #44574b;border-radius:8px;padding:6px 10px;font-size:13px;line-height:1.6}.backup{border-left:3px solid #c9e265;background:#25332b;padding:10px 12px;font-size:14px;line-height:1.8;margin:14px 0 4px;border-radius:0 8px 8px 0}.lookup{margin:14px 0;padding:14px;background:#25332b;border:2px solid #44574b;border-radius:12px}.lookup label{display:block;font-size:13px;color:#a9b5a6;line-height:1.7}.lookup label strong{display:block;color:#f1f0e6;font-size:15px}.lookup-row{display:flex;gap:8px;margin-top:10px}.lookup-row input{flex:1;min-width:0;min-height:46px;border-radius:10px;border:2px solid #44574b;padding:8px 12px;font-size:16px}.lookup-row button{min-width:72px;background:#c9e265;color:#1f2a24;border-color:#c9e265;font-weight:700}.trouble dt{font-weight:700;font-size:14px;margin-top:12px}.trouble dd{margin:4px 0 0;font-size:14px;line-height:1.8;color:#a9b5a6}@media(max-width:560px){.eli-bar nav a.home{display:none}}</style></head><body><header class="eli-bar"><div class="eli-bar-in"><a class="brand" href="https://eli-library.mysxl.cn/">Eli的杂货间</a><nav aria-label="站内导航"><a class="home" href="https://eli-library.mysxl.cn/">主页</a><a href="../../">图鉴</a><a href="../../save-types/index.html">存档类型</a><a href="../../handheld/">掌机指南</a><a href="../../guides/" aria-current="page">攻略</a></nav></div></header><main><p class="crumb"><a href="../">攻略大全</a> / <a href="./">勇者斗恶龙6 幻之大地</a></p><h1>练职业</h1><p class="chap">第 4 章 雷多克王子的旅程</p>
+<h2>前言</h2>
+<p>本攻略接下来默认你打算挑战通关后内容，也默认你按建议一直把等级压得较低。如果没有压等级，请参考原文的<a href="https://strategywiki.org/wiki/Dragon_Quest_VI:_Realms_of_Revelation/Area_level_caps" target="_blank" rel="noopener noreferrer">区域等级上限</a>页面来决定去哪里练。这一节要完成以下目标：</p>
+<ol>
+<li>（超任版）芭芭拉魔物使练到 2 星后收服 Healie，让他先精通战士，再练魔法使。</li>
+<li>米蕾优和查莫罗学会扫腿（Leg Sweep）。雷克已经有魅惑之舞（Sultry Dance），也能让敌人无法行动。</li>
+<li>米蕾优和查莫罗精通魔法使。</li>
+<li>阿莫斯学会双刃斩（Double-Edged Slash）、正拳突刺和群体加防（Kabuff）：战士 4 星、武斗家 5 星、僧侣 5 星。</li>
+<li>哈桑学会双刃斩、镰鼬（Wind Sickles）和疾风突刺（Mercurial Thrust）：战士 5 星、武斗家 3 星、僧侣 5 星。</li>
+<li>雷克立刻精通游人，并推进舞者（游人 8 星，舞者星数不限）。</li>
+<li>芭芭拉魔物使练到 6 星，盗贼能练多高练多高。</li>
+</ol>
+<p>所以练级时，各人的职业路线大致如下：</p>
+<table class="data">
+<caption>通关后内容全清（超任版）</caption>
+<tr><th>雷克</th><td>游人 → 舞者 → 超级明星 → 勇者</td></tr>
+<tr><th>哈桑</th><td>僧侣 5 星 → 战士 5 星 → 武斗家 8 星 → 战士 → 战斗大师 2 星 → 液态金属史莱姆</td></tr>
+<tr><th>米蕾优、查莫罗</th><td>武斗家 1 星 → 魔法使 → 僧侣 → 贤者</td></tr>
+<tr><th>芭芭拉</th><td>魔物使 6 星 → 盗贼 → 商人 → 游侠</td></tr>
+<tr><th>阿莫斯</th><td>武斗家 5 星 → 战士 4 星 → 僧侣 5 星 → 武斗家 → 僧侣 → 圣骑士</td></tr>
+</table>
+<table class="data">
+<caption>通关后内容全清（DS 版）</caption>
+<tr><th>雷克</th><td>游人 → 舞者 → 超级明星 → 勇者</td></tr>
+<tr><th>哈桑</th><td>僧侣 5 星 → 战士 5 星 → 武斗家 8 星 → 战士 → 战斗大师 2 星 → 液态金属史莱姆</td></tr>
+<tr><th>米蕾优、查莫罗</th><td>武斗家 1 星 → 魔法使 → 僧侣 → 贤者</td></tr>
+<tr><th>芭芭拉</th><td>盗贼 → 僧侣 → 魔法使 → 贤者</td></tr>
+<tr><th>阿莫斯</th><td>武斗家 5 星 → 战士 4 星 → 僧侣 5 星 → 武斗家 → 僧侣 → 圣骑士</td></tr>
+</table>
+<p>理由如下。首先，魔法使的 HP 要减 40%，对想活得轻松点的人来说是致命的削弱。但它也有中爆炸咒（Boom）这类非常强的攻击咒文，而且转贤者必须先精通它，所以练魔法使是一个必要的麻烦。与其在后面怪物越来越强的时候边打边练，不如现在一次练完。</p>
+<p>至于阿莫斯，他现在是你最耐打的角色；而雷克练游人和舞者期间，耐久会一落千丈。所以在雷克很久以后学会雷电咒（Zap）之前，都用阿莫斯替换雷克上场。现在：雷克转游人，哈桑转僧侣，阿莫斯转武斗家，芭芭拉转魔物使，米蕾优转魔法使。</p>
+<p>魔法战士这个定位，最好留给之后加入的 Healie（重制版的话也是之后才招募）。</p>
+
+<h2>梦之洞窟（在这里练到哈桑 16 级）</h2>
+<table class="data">
+<tr><th>雷克（14 级）</th><td>刃之回旋镖、全身铠甲 / 白金铠甲、铁盾 / 龙之盾、铁面具、敏捷戒指</td></tr>
+<tr><th>阿莫斯（15 级）</th><td>刃之回旋镖、全身铠甲 / 白金铠甲、铁盾 / 龙之盾、铁面具</td></tr>
+<tr><th>查莫罗（11 级）</th><td>流星锤、王室礼服 / 全身铠甲、青铜盾、硬木帽、黄金腕轮</td></tr>
+<tr><th>芭芭拉（8 级）</th><td>锁链鞭、魔法铠甲、兔耳发箍、黄金腕轮</td></tr>
+</table>
+<figure><img src="https://cdn.wikimg.net/en/strategywiki/images/3/37/DQ6_Whistle.png" width="256" height="224" loading="lazy" alt="用口哨更快地刷战斗！"><figcaption>用口哨更快地刷战斗！</figcaption></figure>
+<p>首先，练之前记得去 2 楼，1 楼的区域等级上限只有 14。其次，雷克学会<b>口哨</b>（Whistle）后就开始用，一吹就会立刻遇敌！最后，把作战设成「全力进攻」或「不用 MP」，刷遇敌会快得飞起！</p>
+
+<h2>招募 Healie（仅超任版）</h2>
+<figure><img src="https://cdn.wikimg.net/en/strategywiki/images/6/6d/DQ6_Searching_for_Healie.png" width="256" height="224" loading="lazy" alt="找到治愈史莱姆之前，出战队伍里只放阿莫斯！"><figcaption>找到治愈史莱姆之前，出战队伍里只放阿莫斯！</figcaption></figure>
+<p>超任版收服怪物的机制很简单：能收就是能收，不能就是不能。超任版共有 18 种可收服的怪物，每种都要求魔物使达到一定星数；Healie 要 2 星，其他怪物要更高。达到之后就没有任何办法提高概率了：Healie 加入的概率只有 1/16，其他怪物有的低到 1/64，甚至 1/256！这一点无法改变，就算全队都是 8 星魔物使，运气也不会比只有一个 2 星魔物使的队伍更好。</p>
+<p>不过战斗结束时，魔物使必须在出战队伍里，否则就没有收服机会。好在打倒怪物的顺序<b>无所谓</b>，除非同一场战斗里有多只可收服的怪物，这时尝试加入的是你最后打倒的那只。</p>
+<p>当然，你得逃掉不少场才会遇到治愈史莱姆，通常还要打倒好几只才会有一只愿意加入。所以建议在遇到有治愈史莱姆的战斗之前，出战队伍里只放阿莫斯。这样挨打的只有最耐打的阿莫斯，每场战斗后要回的血少很多。</p>
+<p>收服 Healie 后，让他先精通战士，再转魔法使。原因后面就会明白。</p>
+
+<h2>地下城</h2>
+<p>到某个时候，哈桑会升到 16 级，职业不再有进展。这时就去地下城，按需要调整职业，组成这样的队伍：</p>
+<p class="note">第 1 位：雷克 · 第 2 位：（任意一个会中爆炸咒的人）· 第 3 位：芭芭拉</p>
+<p>只放三个人，能让 AI 在「全力进攻」时少浪费一点：不然它总爱一直放中火球咒，而不是中爆炸咒。这也是不放阿莫斯的原因：他的刃之回旋镖不够一击清掉整组敌人，中爆炸咒却可以。如果他抢在会中爆炸咒的人前面行动，只会浪费时间。</p>
+<p>中爆炸咒的 MP 用完后怎么办看版本。重制版的话，直接换阿莫斯上场，靠他、雷克和火焰吐息就能一回合清掉几乎所有遇敌。超任版的敌人 HP 太高，需要回去补给（用莱福柯德村自己家，免费！）。</p>
+<p>总之，练完时超任版的职业状况大致如下：</p>
+<table class="data">
+<caption>超任版</caption>
+<tr><th>雷克（舞者）</th><td>武斗家 1 星、游人 8 星、舞者 5 星</td></tr>
+<tr><th>哈桑（武斗家）</th><td>战士 5 星、武斗家 3 星、僧侣 5 星</td></tr>
+<tr><th>米蕾优、查莫罗（僧侣）</th><td>武斗家 1 星、魔法使 8 星、僧侣 3 星</td></tr>
+<tr><th>芭芭拉（盗贼）</th><td>魔物使 6 星、盗贼 6～7 星</td></tr>
+<tr><th>阿莫斯（武斗家）</th><td>战士 4 星、武斗家 5 星、僧侣 5 星</td></tr>
+<tr><th>Healie（僧侣）</th><td>战士 8 星、魔法使 2～3 星</td></tr>
+<tr><th>Ressa（无职业）</th><td>魔法使 1 星、僧侣 8 星</td></tr>
+</table>
+<table class="data">
+<caption>重制版</caption>
+<tr><th>雷克（舞者）</th><td>游人 8 星、舞者 5 星</td></tr>
+<tr><th>哈桑（武斗家）</th><td>战士 4 星、武斗家 3 星、僧侣 8 星</td></tr>
+<tr><th>米蕾优、查莫罗（僧侣）</th><td>武斗家 1 星、魔法使 8 星、僧侣 3 星</td></tr>
+<tr><th>芭芭拉（盗贼）</th><td>魔物使 6 星、盗贼 6～7 星</td></tr>
+<tr><th>阿莫斯（武斗家）</th><td>战士 4 星、武斗家 5 星、僧侣 5 星</td></tr>
+</table>
+<aside class="tip"><h4>如果你不想做这些就继续推进……</h4>
+<p>严格来说，完全不练级也能过。现在精通魔法使更多是为了方便而不是必要：有了中爆炸咒和大基拉（Kasizzle）之类的咒文，随机遇敌会轻松很多，以后也不用再忍受 HP 减成。不过超任版里，至少要有三个队员会加防咒，否则之后的头目战很难保证所有人都活下来。</p>
+<p>当然，如果哈桑和阿莫斯已经有白金铠甲和龙之盾，这一步也可以省掉：只要有米蕾优放加防咒，这两件装备就强到足以撑过游戏中期。毕竟她本来就会自然学会加防咒。</p>
+<p>不过为了轻松，强烈建议照本攻略做，这样就能稳稳活下来。</p></aside>
+<nav class="pager"><a href="scrimsley.html"><small>← 上一页</small>Scrimsley 镇（招募阿莫斯）</a><a class="next" href="arkbolt.html"><small>下一页 →</small>亚克波特城（三连头目战）</a></nav><p class="src">原文：StrategyWiki《<a href="https://strategywiki.org/wiki/Dragon_Quest_VI:_Realms_of_Revelation/Job_Class_Grinding" target="_blank" rel="noopener noreferrer">Dragon Quest VI: Realms of Revelation/Job Class Grinding</a>》（<a href="https://strategywiki.org/wiki/Dragon_Quest_VI:_Realms_of_Revelation/Job_Class_Grinding?oldid=860137" target="_blank" rel="noopener noreferrer">修订版本 860137</a>，2020-04-23），作者见<a href="https://strategywiki.org/wiki/Dragon_Quest_VI:_Realms_of_Revelation/Job_Class_Grinding?action=history" target="_blank" rel="noopener noreferrer">原文页面历史</a>。本页由 Eli 的杂货间翻译为中文，并有改动（重新排版、精简部分图注）。原文与译文均以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> 授权。配图来自原站，版权归原作者与游戏厂商。</p></main></body></html>

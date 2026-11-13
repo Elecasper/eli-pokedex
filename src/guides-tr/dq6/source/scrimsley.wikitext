@@ -1,0 +1,74 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+Note: Keep running from enemy encounters.  You have not recruited Amos yet, so it would be a waste to gain levels now.  If you do, you will lose your ability to grind at areas with very low level caps.  Scrimsely is technically an entirely optional area, but it contains a very useful optional character, Amos.  Plus, you get to keep the Providence, so you can sail on the high seas now!  
+
+[[File:DQ6 Path to Scrimsley.jpg]]
+
+== Scrimsley ==
+
+[[File:DQ6 Scrimsley.png|float=right|thumb|Map of Scrimsley]]
+
+Aside from the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">10-11th Mini Medal</span>, there is not much of interest here.  Scrimsley is a rather destitute place, and it shows in many of the findable items.  You will want to talk to Amos himself however; he is resting in bed in the northwest house.  You won't get to recruit him, but you will set off the next event flag; now we can get the Seeds of Reason when we go to Hazy Heights.  Speaking of which, here it is...
+
+[[File:DQ6 Path to Hazy Heights.jpg]]
+
+== Hazy Heights ==
+
+[[File:DQ6 Hazy Heights.png|float=right|thumb|Head to the Goal and talk to the green root!]]
+
+Here you will be introduced to a new game mechanic  Even if someone is not in your active party, they will still earn full EXP and Job Levels.  In fact, they can even use field spells on you!  If Nevan, for example, got left out of the active party, he will still be able to heal you while you're inside the dungeon.
+
+Aside from that however, there is not much to say on the monsters.  The only really dangerous monsters are the Cloudsurfers and the Slumbering Rams; however, Sleep works well on the Cloud Surfers, and the Slumbering Rams are generally more annoying than they are hard.  Finally, the rest of the monsters here, aside from the Undentured Servants and Malevolamps, are vulnerable to Sleep.  So while it is recommended that you run away from the battles here, you are perfectly capable of beating them if you are so inclined.
+
+As for the Seeds of Reason, talk to the green root, and it will yell at you for trying to yank it out.  Once it does so, search along the ground to find the Seeds of Reason (you may have to search in multiple spots before you find them.  At that, return to Scrimsley
+
+== VS. The Scrimsley Terror ==
+
+There's a mandatory fight that you have to go through, but you don't have to win it.  In fact, like the Garrett fight, it is far less tedious to just lose than it is to win.  You don't even lose any Gold if you lose!  So put everyone except Ashlynn in the reserves, and go to the Inn.  Answer "No", and then "Yes", and you will wake up to the sound of monster stomps in the middle of the night.  Go on the roof, fall down, and fight the Scrimsley Terror!
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Ashlynn: Level 8
+|-
+!Recommended A.I. Settings:
+|Ashlynn: (Follow Orders, and spam Flee to die quicker)
+|-
+!HP: 
+|800
+|-
+!MP: 
+|0
+|- 
+!Item:
+|Stone Fangs (1/16 of dropping)
+|-
+!Attack:
+|115
+|-
+!Defense:
+|90
+|-
+!Agility:
+|40
+|-
+!EXP: 
+|310
+|-
+!Gold:
+|170
+|-
+!Attack Patterns:
+|Attack -> Bites Character [1.25x Damage] -> Defend (80% Damage Reduction) -> Stomp [50-65 Woosh Damage to everyone, despite being an Earthquake type attack.  Has a 33.3% chance of failing] -> Attack -> Bites Character [1.25x Damage]
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|No resistance to Fizz, Sizz, Bang, Crack, Fire, or Ice, 70% reduction of Woosh, 50% resistance to Poison and Knuckle Sandwich, immunity to everything else. 
+|}
+
+This sub-boss isn't hard, but it is a slog.  Physical attacks are useless against it, it cannot be affected by Sap, it has good HP, and it can drag on the fight with Stomp and Defend.  On top of that, it gives only a little bit more EXP and Gold than what you would get from one random encounter.  You can kill it if you wish, but it's much faster to just throw the fight.
+
+Whatever you do, go and visit Amos again once morning comes.  Give him the Seeds, and he'll join you after another cutscene!  Get him an Edged Boomerang, and put him in, because now it's time for grinding!
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=All About Vocations|nextpage=Job Class Grinding}}
