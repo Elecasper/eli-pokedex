@@ -1,0 +1,45 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+NOTE: This guide will be calling the Hero character "Rex".  This is for convenience, and because his name was depicted as レック ("Rek") on the official Japanese website
+
+==The Prologue==
+[[File:DQ6_-_Milly_Summons_Dragon.png|thumb|right|Talk to Milly to fly to Murdaw's Keep]]
+
+The story begins with Rex laying down before being awoken by his companion, Milly.  Carver jumps onscreen and says the road is clear. It is time to take down Murdaw, and restore peace to the world.
+
+Walk up to the next screen, talk to Milly, and you will go through a cinematic.  After that's over, go north to Murdaw's throne room, and that's that!  
+
+...Except, Murdaw proves far more powerful than you ever thought possible.  He lifts you into the air, poofs you away one-by-one, and then...
+
+[[File:DQ6_-_Tania_Wakes_Rex.png|thumb|left|Rex's sister wakes him up]]
+
+Nothing!  It seems Rex is just a young lad living in the town of Weaver's Peak!  Rex's sister states that the town mayor is looking for him, and the cutscene ends.
+
+The first thing you'll want to do is check the right drawer, and then the group of barrels on the left side of the house.  Do this to receive 10 Gold, an Agility Seed, and a Leather Hat (press Start and equip this immediately; it will increase your Resilience).
+
+You will find many seeds like the Agility Seed on your journey through the Realms of Revelation.  They will boost one of your stats when used; but then disappear.  These stat boosts are not critical; but they will make your life easier.  In particular, Carver (who you will get again) makes fantastic use of the Seeds of Life, Resilience, & Wisdom, so definitely save those for him.  Apart from that...
+
+{| {{prettytable|float=middle|notwide=2}}
+!Stat Seed Recommendations
+|-
+|
+* '''Seeds of Life (boosts HP by 4-6)''' - 1st one you find on Rex, use the rest on Carver
+* '''Seeds of Magic (boosts MP by 3-5)''' - Use all of them on Rex if you're doing the post-game.  Otherwise, save them for a later character.
+* '''Seeds of Strength (boosts Strength by 1-3)''' - Depends on what you're after.  This guide recommends Carver, but, it will also discuss other choices as they come up.
+* '''Seeds of Agility (boosts Agility by 1-3)''' - Use these on Rex (or sell, if needed)
+* '''Seeds of Resilience (boosts Resilience by 3-5)''' - 1st one you find on Rex, use the rest on Carver
+* '''Seeds of Wisdom (boosts Wisdom by 1-3)''' - Use these on Carver
+* '''Pretty Betsy (boosts Style by 1)''' - Use these on Rex (or sell, if needed)
+|}
+
+'''About the Seeds of Life, Resilience, & Wisdom:''' Carver gets a move called "Forebearance". This technique lets him absorb every attack for one round of combat.  This, plus the Seeds of Life and Resilience, will allow him to trivialize many of the enemies you fight, including several bosses!
+
+But, you do not have him, yet.  So it's recommended that you use one Seed of Life and one Seed of Resilience on Rex to make the early game easier.  4 points of Resilience = 1 less Damage taken from melee attacks.  That may not sound like a lot, but it adds up over time.
+
+'''About the Seeds of Magic:''' Rex's MP is one of his weaker stats, but he will be getting access to very useful techniques.  Said techniques make the post-game boss much easier, but are otherwise not worth the wait.  Meanwhile, a character called Ashlynn has a super move called "Magic Burst"; an attack that drains all her MP, but does x2-3 the amount she has in damage to all enemies.  Hence, she's the next best candidate; No one else particularly benefits.
+
+'''About the Seeds of Strength:''' These are useful for just about anyone you plan on using as a dedicated melee attacker.  Carver makes great use of these in boss fights, but Rex & Ashlynn make good use of these during random encounters (more on that later).
+
+'''About the Seeds of Agility and the Pretty Betsies:''' The Agility and Style stats are useful only in large amounts, so they don't usually matter.  However, a faster Rex will come in handy in a few spots, and he's also the one who can boost his Style the highest in the post-game.  If you're going to use these on anyone, use these on him.
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Walkthrough|nextpage=Weaver's Peak}}

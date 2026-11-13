@@ -9,7 +9,8 @@
   "fandom": [
    "zelda",
    "The Legend of Zelda: The Minish Cap"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "GBA",
@@ -21,7 +22,8 @@
   "fandom": [
    "zelda",
    "The Legend of Zelda: A Link to the Past"
-  ]
+  ],
+  "swStage": 5
  },
  {
   "plat": "GBA",
@@ -33,7 +35,8 @@
   "fandom": [
    "metroid",
    "Metroid Fusion"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "GBA",
@@ -45,7 +48,8 @@
   "fandom": [
    "metroid",
    "Metroid: Zero Mission"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "GBA",
@@ -57,7 +61,8 @@
   "fandom": [
    "castlevania",
    "Castlevania: Aria of Sorrow"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "GBA",
@@ -69,7 +74,8 @@
   "fandom": [
    "castlevania",
    "Castlevania: Harmony of Dissonance"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "GBA",
@@ -81,7 +87,8 @@
   "fandom": [
    "castlevania",
    "Castlevania: Circle of the Moon"
-  ]
+  ],
+  "swStage": 5
  },
  {
   "plat": "GBA",
@@ -93,7 +100,8 @@
   "fandom": [
    "fireemblem",
    "Fire Emblem: The Binding Blade"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "GBA",
@@ -105,7 +113,8 @@
   "fandom": [
    "fireemblem",
    "Fire Emblem: The Blazing Blade"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "GBA",
@@ -117,7 +126,8 @@
   "fandom": [
    "fireemblem",
    "Fire Emblem: The Sacred Stones"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "GBA",
@@ -129,7 +139,8 @@
   "fandom": [
    "goldensun",
    "Golden Sun"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "GBA",
@@ -141,7 +152,8 @@
   "fandom": [
    "goldensun",
    "Golden Sun: The Lost Age"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "GBA",
@@ -153,7 +165,8 @@
   "fandom": [
    "advancewars",
    "Advance Wars"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "GBA",
@@ -165,7 +178,8 @@
   "fandom": [
    "advancewars",
    "Advance Wars 2: Black Hole Rising"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "GBA",
@@ -177,7 +191,8 @@
   "fandom": [
    "finalfantasy",
    "Final Fantasy Tactics Advance"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "GBA",
@@ -189,7 +204,8 @@
   "fandom": [
    "finalfantasy",
    "Final Fantasy I & II: Dawn of Souls"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "GBA",
@@ -201,7 +217,8 @@
   "fandom": [
    "finalfantasy",
    "Final Fantasy IV"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "GBA",
@@ -213,7 +230,8 @@
   "fandom": [
    "finalfantasy",
    "Final Fantasy V"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "GBA",
@@ -225,7 +243,8 @@
   "fandom": [
    "finalfantasy",
    "Final Fantasy VI"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "GBA",
@@ -237,7 +256,8 @@
   "fandom": [
    "mario",
    "Mario & Luigi: Superstar Saga"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "GBA",
@@ -249,7 +269,8 @@
   "fandom": [
    "mario",
    "Super Mario Advance 4: Super Mario Bros. 3"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "GBA",
@@ -261,7 +282,8 @@
   "fandom": [
    "kirby",
    "Kirby: Nightmare in Dream Land"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "GBA",
@@ -273,7 +295,8 @@
   "fandom": [
    "kirby",
    "Kirby & The Amazing Mirror"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "GBA",
@@ -285,7 +308,8 @@
   "fandom": [
    "mario",
    "Wario Land 4"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "GBA",
@@ -293,7 +317,8 @@
   "en": "Mother 3",
   "series": "其他",
   "sw": "Mother 3",
-  "swPages": 21
+  "swPages": 21,
+  "swStage": 1
  },
  {
   "plat": "GBA",
@@ -305,7 +330,8 @@
   "fandom": [
    "harvestmoon",
    "Harvest Moon: Friends of Mineral Town"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "GBA",
@@ -317,7 +343,8 @@
   "fandom": [
    "megaman",
    "Mega Man Zero"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "GBA",
@@ -329,7 +356,8 @@
   "fandom": [
    "megaman",
    "Mega Man Zero 2"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "GBA",
@@ -341,7 +369,8 @@
   "fandom": [
    "megaman",
    "Mega Man Zero 3"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "GBA",
@@ -353,7 +382,8 @@
   "fandom": [
    "megaman",
    "Mega Man Zero 4"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "GBA",
@@ -365,7 +395,8 @@
   "fandom": [
    "megaman",
    "Mega Man Battle Network"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "GBA",
@@ -377,7 +408,8 @@
   "fandom": [
    "megaman",
    "Mega Man Battle Network 3"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "GBA",
@@ -389,7 +421,8 @@
   "fandom": [
    "kingdomhearts",
    "Kingdom Hearts: Chain of Memories"
-  ]
+  ],
+  "swStage": 4
  },
  {
   "plat": "GBA",
@@ -397,7 +430,8 @@
   "en": "Boktai: The Sun Is in Your Hand",
   "series": "其他",
   "sw": "Boktai: The Sun is in Your Hand",
-  "swPages": 4
+  "swPages": 4,
+  "swStage": 1
  },
  {
   "plat": "GBA",
@@ -405,7 +439,8 @@
   "en": "Pokémon Mystery Dungeon: Red Rescue Team and Blue Rescue Team",
   "series": "宝可梦外传",
   "sw": "Pokémon Mystery Dungeon: Blue Rescue Team and Red Rescue Team",
-  "swPages": 57
+  "swPages": 57,
+  "swStage": 3
  },
  {
   "plat": "NDS",
@@ -417,7 +452,8 @@
   "fandom": [
    "dragonquest",
    "Dragon Quest IV"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "NDS",
@@ -429,7 +465,8 @@
   "fandom": [
    "dragonquest",
    "Dragon Quest V"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "NDS",
@@ -437,7 +474,8 @@
   "en": "Dragon Quest VI: Realms of Revelation",
   "series": "勇者斗恶龙",
   "sw": "Dragon Quest VI: Realms of Revelation",
-  "swPages": 56
+  "swPages": 56,
+  "swStage": 4
  },
  {
   "plat": "NDS",
@@ -449,7 +487,8 @@
   "fandom": [
    "dragonquest",
    "Dragon Quest IX"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "NDS",
@@ -461,7 +500,8 @@
   "fandom": [
    "dragonquest",
    "Dragon Quest Monsters: Joker"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "NDS",
@@ -487,7 +527,8 @@
   "fandom": [
    "dragonquest",
    "Rocket Slime"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "NDS",
@@ -499,7 +540,8 @@
   "fandom": [
    "finalfantasy",
    "Final Fantasy III"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "NDS",
@@ -511,7 +553,8 @@
   "fandom": [
    "finalfantasy",
    "Final Fantasy Tactics A2: Grimoire of the Rift"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "NDS",
@@ -523,7 +566,8 @@
   "fandom": [
    "kingdomhearts",
    "Kingdom Hearts 358/2 Days"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "NDS",
@@ -535,7 +579,8 @@
   "fandom": [
    "kingdomhearts",
    "Kingdom Hearts Re:coded"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "NDS",
@@ -543,7 +588,8 @@
   "en": "Chrono Trigger",
   "series": "其他",
   "sw": "Chrono Trigger",
-  "swPages": 68
+  "swPages": 68,
+  "swStage": 4
  },
  {
   "plat": "NDS",
@@ -551,7 +597,8 @@
   "en": "The World Ends with You",
   "series": "其他",
   "sw": "The World Ends with You",
-  "swPages": 16
+  "swPages": 16,
+  "swStage": 2
  },
  {
   "plat": "NDS",
@@ -559,7 +606,8 @@
   "en": "Radiant Historia",
   "series": "其他",
   "sw": "Radiant Historia",
-  "swPages": 10
+  "swPages": 10,
+  "swStage": 1
  },
  {
   "plat": "NDS",
@@ -571,7 +619,8 @@
   "fandom": [
    "zelda",
    "The Legend of Zelda: Phantom Hourglass"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "NDS",
@@ -583,7 +632,8 @@
   "fandom": [
    "zelda",
    "The Legend of Zelda: Spirit Tracks"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "NDS",
@@ -595,7 +645,8 @@
   "fandom": [
    "mario",
    "New Super Mario Bros."
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "NDS",
@@ -607,7 +658,8 @@
   "fandom": [
    "mario",
    "Super Mario 64 DS"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "NDS",
@@ -619,7 +671,8 @@
   "fandom": [
    "mario",
    "Mario & Luigi: Partners in Time"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "NDS",
@@ -631,7 +684,8 @@
   "fandom": [
    "mario",
    "Mario & Luigi: Bowser's Inside Story"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "NDS",
@@ -643,7 +697,8 @@
   "fandom": [
    "mario",
    "Mario Kart DS"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "NDS",
@@ -655,7 +710,8 @@
   "fandom": [
    "kirby",
    "Kirby Super Star Ultra"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "NDS",
@@ -667,7 +723,8 @@
   "fandom": [
    "layton",
    "Professor Layton and the Curious Village"
-  ]
+  ],
+  "swStage": 4
  },
  {
   "plat": "NDS",
@@ -679,7 +736,8 @@
   "fandom": [
    "layton",
    "Professor Layton and the Diabolical Box"
-  ]
+  ],
+  "swStage": 4
  },
  {
   "plat": "NDS",
@@ -691,7 +749,8 @@
   "fandom": [
    "layton",
    "Professor Layton and the Unwound Future"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "NDS",
@@ -703,7 +762,8 @@
   "fandom": [
    "layton",
    "Professor Layton and the Last Specter"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "NDS",
@@ -715,7 +775,8 @@
   "fandom": [
    "aceattorney",
    "Phoenix Wright: Ace Attorney"
-  ]
+  ],
+  "swStage": 5
  },
  {
   "plat": "NDS",
@@ -723,7 +784,8 @@
   "en": "Phoenix Wright: Ace Attorney − Justice for All",
   "series": "逆转裁判",
   "sw": "Phoenix Wright: Ace Attorney - Justice For All",
-  "swPages": 31
+  "swPages": 31,
+  "swStage": 5
  },
  {
   "plat": "NDS",
@@ -731,7 +793,8 @@
   "en": "Phoenix Wright: Ace Attorney − Trials and Tribulations",
   "series": "逆转裁判",
   "sw": "Phoenix Wright: Ace Attorney - Trials and Tribulations",
-  "swPages": 33
+  "swPages": 33,
+  "swStage": 4
  },
  {
   "plat": "NDS",
@@ -743,7 +806,8 @@
   "fandom": [
    "aceattorney",
    "Apollo Justice: Ace Attorney"
-  ]
+  ],
+  "swStage": 4
  },
  {
   "plat": "NDS",
@@ -755,7 +819,8 @@
   "fandom": [
    "aceattorney",
    "Ace Attorney Investigations: Miles Edgeworth"
-  ]
+  ],
+  "swStage": 4
  },
  {
   "plat": "NDS",
@@ -767,7 +832,8 @@
   "fandom": [
    "fireemblem",
    "Fire Emblem: Shadow Dragon"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "NDS",
@@ -779,7 +845,8 @@
   "fandom": [
    "advancewars",
    "Advance Wars: Dual Strike"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "NDS",
@@ -791,7 +858,8 @@
   "fandom": [
    "castlevania",
    "Castlevania: Dawn of Sorrow"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "NDS",
@@ -803,7 +871,8 @@
   "fandom": [
    "castlevania",
    "Castlevania: Portrait of Ruin"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "NDS",
@@ -815,7 +884,8 @@
   "fandom": [
    "castlevania",
    "Castlevania: Order of Ecclesia"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "NDS",
@@ -827,7 +897,8 @@
   "fandom": [
    "etrian",
    "Etrian Odyssey"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "NDS",
@@ -839,7 +910,8 @@
   "fandom": [
    "etrian",
    "Etrian Odyssey II: Heroes of Lagaard"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "NDS",
@@ -851,7 +923,8 @@
   "fandom": [
    "etrian",
    "Etrian Odyssey III: The Drowned City"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "NDS",
@@ -863,7 +936,8 @@
   "fandom": [
    "megamitensei",
    "Shin Megami Tensei: Strange Journey"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "NDS",
@@ -875,7 +949,8 @@
   "fandom": [
    "megamitensei",
    "Devil Survivor"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "NDS",
@@ -887,7 +962,8 @@
   "fandom": [
    "megamitensei",
    "Devil Survivor 2"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "NDS",
@@ -899,7 +975,8 @@
   "fandom": [
    "animalcrossing",
    "Animal Crossing: Wild World"
-  ]
+  ],
+  "swStage": 4
  },
  {
   "plat": "NDS",
@@ -907,7 +984,8 @@
   "en": "Rune Factory: A Fantasy Harvest Moon",
   "series": "牧场物语",
   "sw": "Rune Factory: A Fantasy Harvest Moon",
-  "swPages": 3
+  "swPages": 3,
+  "swStage": 0
  },
  {
   "plat": "NDS",
@@ -915,7 +993,8 @@
   "en": "Rune Factory 3: A Fantasy Harvest Moon",
   "series": "牧场物语",
   "sw": "Rune Factory 3: A Fantasy Harvest Moon",
-  "swPages": 2
+  "swPages": 2,
+  "swStage": 0
  },
  {
   "plat": "NDS",
@@ -927,7 +1006,8 @@
   "fandom": [
    "goldensun",
    "Golden Sun: Dark Dawn"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "NDS",
@@ -939,7 +1019,8 @@
   "fandom": [
    "megaman",
    "Mega Man ZX"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "NDS",
@@ -947,7 +1028,8 @@
   "en": "Nine Hours, Nine Persons, Nine Doors",
   "series": "其他",
   "sw": "999: Nine Hours, Nine Persons, Nine Doors",
-  "swPages": 11
+  "swPages": 11,
+  "swStage": 2
  },
  {
   "plat": "NDS",
@@ -955,7 +1037,8 @@
   "en": "Inazuma Eleven",
   "series": "其他",
   "sw": "Inazuma Eleven",
-  "swPages": 0
+  "swPages": 0,
+  "swStage": 0
  },
  {
   "plat": "NDS",
@@ -963,7 +1046,8 @@
   "en": "Pokémon Mystery Dungeon: Explorers of Time and Explorers of Darkness",
   "series": "宝可梦外传",
   "sw": "Pokémon Mystery Dungeon: Explorers of Time and Explorers of Darkness",
-  "swPages": 32
+  "swPages": 32,
+  "swStage": 3
  },
  {
   "plat": "NDS",
@@ -971,7 +1055,8 @@
   "en": "Pokémon Ranger",
   "series": "宝可梦外传",
   "sw": "Pokémon Ranger",
-  "swPages": 31
+  "swPages": 31,
+  "swStage": 5
  },
  {
   "plat": "3DS",
@@ -979,7 +1064,8 @@
   "en": "Dragon Quest VII: Fragments of the Forgotten Past",
   "series": "勇者斗恶龙",
   "sw": "Dragon Warrior VII",
-  "swPages": 2
+  "swPages": 2,
+  "swStage": 0
  },
  {
   "plat": "3DS",
@@ -991,7 +1077,8 @@
   "fandom": [
    "dragonquest",
    "Dragon Quest VIII"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "3DS",
@@ -1017,7 +1104,8 @@
   "fandom": [
    "zelda",
    "The Legend of Zelda: Ocarina of Time 3D"
-  ]
+  ],
+  "swStage": 4
  },
  {
   "plat": "3DS",
@@ -1029,7 +1117,8 @@
   "fandom": [
    "zelda",
    "The Legend of Zelda: A Link Between Worlds"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "3DS",
@@ -1041,7 +1130,8 @@
   "fandom": [
    "zelda",
    "The Legend of Zelda: Majora's Mask 3D"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "3DS",
@@ -1053,7 +1143,8 @@
   "fandom": [
    "zelda",
    "The Legend of Zelda: Tri Force Heroes"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "3DS",
@@ -1065,7 +1156,8 @@
   "fandom": [
    "mario",
    "Super Mario 3D Land"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "3DS",
@@ -1077,7 +1169,8 @@
   "fandom": [
    "mario",
    "New Super Mario Bros. 2"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "3DS",
@@ -1089,7 +1182,8 @@
   "fandom": [
    "mario",
    "Mario Kart 7"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "3DS",
@@ -1101,7 +1195,8 @@
   "fandom": [
    "mario",
    "Paper Mario: Sticker Star"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "3DS",
@@ -1113,7 +1208,8 @@
   "fandom": [
    "mario",
    "Mario & Luigi: Dream Team"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "3DS",
@@ -1125,7 +1221,8 @@
   "fandom": [
    "mario",
    "Luigi's Mansion: Dark Moon"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "3DS",
@@ -1137,7 +1234,8 @@
   "fandom": [
    "mario",
    "Donkey Kong Country Returns 3D"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "3DS",
@@ -1149,7 +1247,8 @@
   "fandom": [
    "fireemblem",
    "Fire Emblem Awakening"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "3DS",
@@ -1161,7 +1260,8 @@
   "fandom": [
    "fireemblem",
    "Fire Emblem Fates"
-  ]
+  ],
+  "swStage": 2
  },
  {
   "plat": "3DS",
@@ -1173,7 +1273,8 @@
   "fandom": [
    "fireemblem",
    "Fire Emblem Echoes: Shadows of Valentia"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "3DS",
@@ -1185,7 +1286,8 @@
   "fandom": [
    "monsterhunter",
    "Monster Hunter 3 Ultimate"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "3DS",
@@ -1197,7 +1299,8 @@
   "fandom": [
    "monsterhunter",
    "Monster Hunter 4 Ultimate"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "3DS",
@@ -1209,7 +1312,8 @@
   "fandom": [
    "monsterhunter",
    "Monster Hunter Generations"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "3DS",
@@ -1221,7 +1325,8 @@
   "fandom": [
    "monsterhunter",
    "Monster Hunter Stories"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "3DS",
@@ -1233,7 +1338,8 @@
   "fandom": [
    "animalcrossing",
    "Animal Crossing: New Leaf"
-  ]
+  ],
+  "swStage": 3
  },
  {
   "plat": "3DS",
@@ -1245,7 +1351,8 @@
   "fandom": [
    "kirby",
    "Kirby: Triple Deluxe"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "3DS",
@@ -1257,7 +1364,8 @@
   "fandom": [
    "kirby",
    "Kirby: Planet Robobot"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "3DS",
@@ -1269,7 +1377,8 @@
   "fandom": [
    "metroid",
    "Metroid: Samus Returns"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "3DS",
@@ -1277,7 +1386,8 @@
   "en": "Bravely Default",
   "series": "其他",
   "sw": "Bravely Default",
-  "swPages": 45
+  "swPages": 45,
+  "swStage": 2
  },
  {
   "plat": "3DS",
@@ -1285,7 +1395,8 @@
   "en": "Bravely Second: End Layer",
   "series": "其他",
   "sw": "Bravely Second: End Layer",
-  "swPages": 7
+  "swPages": 7,
+  "swStage": 1
  },
  {
   "plat": "3DS",
@@ -1297,7 +1408,8 @@
   "fandom": [
    "megamitensei",
    "Shin Megami Tensei IV"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "3DS",
@@ -1309,7 +1421,8 @@
   "fandom": [
    "megamitensei",
    "Shin Megami Tensei IV Apocalypse"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "3DS",
@@ -1321,7 +1434,8 @@
   "fandom": [
    "megamitensei",
    "Persona Q: Shadow of the Labyrinth"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "3DS",
@@ -1333,7 +1447,8 @@
   "fandom": [
    "etrian",
    "Etrian Odyssey IV: Legends of the Titan"
-  ]
+  ],
+  "swStage": 1
  },
  {
   "plat": "3DS",
@@ -1341,7 +1456,8 @@
   "en": "Xenoblade Chronicles 3D",
   "series": "其他",
   "sw": "Xenoblade Chronicles",
-  "swPages": 34
+  "swPages": 34,
+  "swStage": 2
  },
  {
   "plat": "3DS",
@@ -1377,7 +1493,8 @@
   "en": "Phoenix Wright: Ace Attorney − Dual Destinies",
   "series": "逆转裁判",
   "sw": "Phoenix Wright: Ace Attorney - Dual Destinies",
-  "swPages": 35
+  "swPages": 35,
+  "swStage": 4
  },
  {
   "plat": "3DS",
@@ -1385,7 +1502,8 @@
   "en": "Phoenix Wright: Ace Attorney − Spirit of Justice",
   "series": "逆转裁判",
   "sw": "Phoenix Wright: Ace Attorney - Spirit of Justice",
-  "swPages": 38
+  "swPages": 38,
+  "swStage": 4
  },
  {
   "plat": "3DS",
@@ -1397,7 +1515,8 @@
   "fandom": [
    "harvestmoon",
    "Story of Seasons"
-  ]
+  ],
+  "swStage": 0
  },
  {
   "plat": "3DS",
@@ -1405,7 +1524,8 @@
   "en": "Rune Factory 4",
   "series": "牧场物语",
   "sw": "Rune Factory 4",
-  "swPages": 13
+  "swPages": 13,
+  "swStage": 1
  },
  {
   "plat": "3DS",
@@ -1413,7 +1533,8 @@
   "en": "Kid Icarus: Uprising",
   "series": "其他",
   "sw": "Kid Icarus: Uprising",
-  "swPages": 35
+  "swPages": 35,
+  "swStage": 2
  },
  {
   "plat": "3DS",
@@ -1425,7 +1546,8 @@
   "fandom": [
    "kingdomhearts",
    "Kingdom Hearts 3D: Dream Drop Distance"
-  ]
+  ],
+  "swStage": 4
  },
  {
   "plat": "3DS",
@@ -1433,7 +1555,8 @@
   "en": "Yo-kai Watch",
   "series": "其他",
   "sw": "Yo-kai Watch",
-  "swPages": 2
+  "swPages": 2,
+  "swStage": 0
  },
  {
   "plat": "3DS",
@@ -1441,7 +1564,8 @@
   "en": "Pokémon Super Mystery Dungeon",
   "series": "宝可梦外传",
   "sw": "Pokémon Super Mystery Dungeon",
-  "swPages": 13
+  "swPages": 13,
+  "swStage": 1
  },
  {
   "plat": "3DS",
@@ -1449,6 +1573,7 @@
   "en": "Detective Pikachu",
   "series": "宝可梦外传",
   "sw": "Detective Pikachu",
-  "swPages": 1
+  "swPages": 1,
+  "swStage": 0
  }
 ]

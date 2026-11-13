@@ -1,0 +1,27 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+[[File:DQ6 redone Haggleton (SNES).png|thumb|right|Map for the SNES version]]
+[[File:DQ6 Rex Haggles.jpg|thumb|left|Localization Text - Buck: "[Huh?  Bill's gonna give you 390 gold coins now?  That overbidding bamboozler!]  Well, if he wants to play it rough, I'll break his bank.  How's 420 gold coins grab ya?"]]
+[[File:DQ6 Haggleton (Re-Releases).png|thumb|right|Map for the Re-Releases]]
+
+Your first priority is to sell our "Village Goods" (visible in your inventory) for as much gold as you can; and Buck and Bill are just the men for the job!  These two men are competing with each other; so if you talk to Bill and say no to his offer of 330G, Buck will offer you 360G when you go back to talk to him.  Then if you refuse THAT deal and talk to Bill AGAIN, Bill will offer you 390G.  Then if you talk to Buck again, he'll offer you 420G, and this keeps going until Buck's final offer of 480G.  
+
+So keep going back and forth between the two, and you'll get 150-180 more Gold than you otherwise would have.  Then once you have accomplished that, you will want to buy the Thief Key.  If you are playing the SNES version, you will need to buy it for '''470G''' from the shop located at point '''E'''.  
+
+But if you are playing the re-releases, you will need to haggle with the turban-wearing man at the leftmost grey dot (bottom map). First he'll offer to sell it for a ridiculous 2000G, and then he'll keep lowering his price every time you refuse his offer.  Eventually, he will drop to 200G, and THAT'S when you want to snag it from him.  Once that's done, you will be able to grab every single treasure available in this town, including the 250G.
+
+Buy 2x Chimaera Wings once you are done with that (and get the Big Book of Beasts if it's available).  Then be sure Rex has all of this..
+
+{| {{prettytable|notwide=1}}
+|'''Rex (Level 2-3): Club, Scale Armour, Scale Shield, Leather Hat'''
+|}
+
+You will enjoy more freedom in how to equip your party members as the game opens up more.  But for now, there is little you can do except get the strongest gear.  Anything less will get you killed in some of the boss fights coming very shortly.  So equip yourself with all of the following, be careful fighting Ornery Onions, and go into the hole in the ground marked in the map below...
+
+[[File:DQ6 Path to Wellshire.jpg|center]]
+
+Rescue Cliff from an acropetal demise, and you will end up near the town of Wellshire.  
+
+{{sidebar|title=About the "Big Book of Beasts"|float=center|width=850px|contents=You can actually skip ALL random encounters on the overworld; walk until you think you're going to get an encounter, then use it in the menu!  This will clear the game's  "step counter" before it has the opportunity to get as high as it needs to go.  This item does not work in dungeons, however; but it's still handy for those who want to go through the game faster.  Just remember that you will also be skipping some extra EXP and Gold by doing this!}}
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Weaver's Peak|nextpage=Wellshire}}

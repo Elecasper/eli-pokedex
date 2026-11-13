@@ -1,0 +1,43 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+[[File:DQ6 Weaver's Peak.png|thumb|right|Weaver's Peak Map]]
+
+Talk to Mayor Spindell inside the upper-right house. He will give some village goods to sell at the southern town of Haggleton; That way he can pay for the upcoming festival.
+
+But before you leave, look at those beautiful items!  Rex is poor, so you'll want to grab every one of them.  Buy a Leather Shield from the Weapons and Armour shop ('''Point D'''), and 2x Herbs from the Items shop (slightly up from '''Point E'''); The added safety will be a great boon.
+
+== Mountain Pass ==
+[[File:DQ6 Weaver's Peak Mountain Pass.png|thumb|right|Weaver's Peak Mountain Pass Map]]
+
+The Remakes' enemies give out 20% more EXP and Gold than they did in the original SNES version, and have had their HP reduced to 80% of their original amount.  However, the bosses were completely unchanged.  Aside from some hairy moments in the early-game, as well as inferior party A.I., the SNES version isn't usually harder... Just more time consuming.
+
+[[File:DQ6 Rex Jumps a Cliff.png|thumb|left|Walk into dirt slides to jump down!]]
+But in this specific place, SNES players will still take more damage than Remake players.  You can one-shot the enemies with just your starting weapon in the Remakes, but SNES players cannot do so until they get the Club.  Be careful to keep your HP above 8, even after you've gotten the Wayfarer's Clothes.  
+
+On that note, snag the Wayfarer's Clothes right away, get the 20 Gold, take the dirt slide to '''Point I''', and skip the Inn.  The Inn costs 10G to use, while Medical Herbs cost 8G.
+{{-}}
+== Path to Haggleton ==
+
+{{sidebar|title=About "random" encounters|float=left|width=200px|contents=Encounters in DQ6 aren't truly random.  You will always get an encounter at around a certain amount of steps.  Stay on the Plains, and you'll only fight one battle on the way to Haggleton, if at all.  That's why we don't need to get to Level 3 before making this trip.}}
+
+[[File:DQ6 Path to Haggleton.jpg|right]]
+
+Always have full HP here!  The Ornery Onions hit for upwards to 6 Damage, even with the highest possible Resilience!  What's more, you can encounter up to three of them!  
+
+Fortunately, Rex has a solid Agility lead over them, and can kill them in two hits.  If he's used the Seed of Agility, he'll outspeed each one 73% of the time, meaning he should be able to use an Herb before he's actually in danger.  Or, if you're playing on the SNES, you can simply run.  Each enemy has a 50% of not attacking when you Flee, in that version.  This does not apply to the Remakes.
+
+Speaking of which, you can get a zoomed in view of the world map by pressing X.  SNES players are not so lucky; They have to buy an expensive map at Haggleton to view the world.  This guide, therefore, will provide maps for each overworld segment to accommodate them.
+
+{{sidebar|title=Chances to Flee|float=left|width=880px|contents=There are three times you will always succeed in fleeing.
+---------------
+1) Rex's level is 1+ higher than the [[Dragon Quest VI: Realms of Revelation/Area level caps|Area Level Cap]].
+
+2) You catch the enemies by surprise (3% chance in most areas, but 12% in a few others).
+
+3) The enemies are unable to move for some reason (for example, if you put them all to sleep).
+---------------
+If those conditions are not satisfied, you will have a 50% chance of running the first two times you try.  The 3rd time you try will be 75%, and every time after will be 87.5%.  In addition, the SNES has it so that each enemy has about a 50% chance of not attacking you as you're fleeing... Hence, fleeing is almost always advantageous in the SNES.
+
+However, you also pass up on EXP & Gold, so be cautious.  Do not flee from too many battles, unless you know you can handle it...}}
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Murdaw's Keep|nextpage=Haggleton}}

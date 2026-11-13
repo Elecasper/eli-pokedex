@@ -1,0 +1,13 @@
+{
+ "slug": "dq6",
+ "game": "勇者斗恶龙6 幻之大地",
+ "en": "Dragon Quest VI: Realms of Revelation",
+ "plat": "NDS",
+ "source": "StrategyWiki",
+ "sourceBase": "https://strategywiki.org/wiki/",
+ "license": "CC BY-SA 4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans",
+ "intro": "依据 StrategyWiki 英文攻略翻译，适用于 DS 版和手机版，也注明了与超任（SNES）原版的差异。人名、地名用常见中文译名，第一次出现时括注英文版原名；没有通行译名的保留英文。汉化版里的用词可能不同。",
+ "pages": ["murdaw-s-keep", "weaver-s-peak", "haggleton", "wellshire", "somnia"],
+ "total": "原文共 6 章加尾声，已翻译第 1 章"
+}

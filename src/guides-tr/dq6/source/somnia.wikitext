@@ -1,0 +1,114 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+== Somnia ==
+
+[[File:DQ6 Somnia.png|thumb|left|Map of Somnia Town]]
+
+[[File:DQ6 Path to Gardsbane Tower.jpg|right]]
+
+There's a weapon called the Boomerang at the Weapon Shop, and you will definitely want that!  It's the strongest weapon available, and it hits ALL enemies, not just one!  So sell your Thief's Key for 150G/352G Gold (depends on the version), get the Boomerang, then make sure you have at least 12 Herbs before moving on.  If you have been following this guide up until now, you should have the following...
+
+{| {{prettytable|notwide=1}}
+|'''Rex (Level 3): Boomerang, Scale Armour, Scale Shield, Hardwood Headware'''
+|}
+
+Talk with the guard at point '''F''', say "Yes", go to the Church, see the guy with the purple mohawk walk out, go back to the castle, and head inside to get your next mission from a person call Captain Blade.  Go south into Gardsbane Tower.
+
+{{sidebar|title=The Antique Ring|width=850px|float=left|contents=You will fight an extremely powerful enemy called the Grim Grinner if you try to retrieve the Antique Ring (the woman by the well wants it back).  It hits much harder than even the two upcoming boss fights, and takes very little damage in return.  You MIGHT be able to win at Level 4, but any lower than that is virtually impossible.  Plus, the only reward for returning the ring is a single Seed of Strength.  It is therefore recommended that you wait until later before getting it.}}
+{{-}}
+== Gardsbane Tower ==
+
+[[File:DQ6 Gardsbane Tower.png|thumb|right|Map of Gardsbane Tower (the Restless Heart is the Victor's Prize)]]
+
+You must make a choice: win this challenge, or skip the optional boss fight.  You don't actually GET anything for winning though.  In addition, the optional boss fight will require you to be at least Level 5-7.
+
+But if you choose to throw the competition, you'll only be required to fight one boss fight.  Said boss fight is easily beatable at Level 4 (regardless of seed allocation).  The "losing option" is considerably faster and easier because of this; so if this option is for you, just go through the stairs at '''B''', fall down the tower, go onto the world map, go back into the tower (activates a sequence trigger), beat the mini-boss, talk to Carver (if playing the remakes), get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">2nd Mini Medal</span>, then proceed to the room with the Restless Heart.  Carver will have already beaten you, but you won't have to fight Garrett!
+
+The Tower Sentry, however, is mandatory:
+
+== VS. Tower Sentry ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|4, 5, or 7 (depends on whether or not you want to win the competition)
+|-
+!HP: 
+|150
+|-
+!MP: 
+|0
+|- 
+!Item:
+|Medical Herb (1/32 of dropping)
+|-
+!Attack:
+|34
+|-
+!Defense:
+|32
+|-
+!Agility:
+|22
+|-
+!EXP: 
+|95
+|-
+!Gold:
+|None
+|-
+!Attack Patterns:
+|Attack (66.6%), Muster Strength [1.5x Damage (SNES) or 2.3x Damage (Remakes) on the next attack] (33.3%)
+|-
+!Resistances:
+|No resistance to Sap
+|}
+
+Sometimes you'll go first, and sometimes he'll go first; There is no consistency as far as that goes.  Secondly, this man can up to 10 Damage to you even with max Resilience; and Muster Strength is much stronger in the remakes.  The Sentry can do up to 25 Damage in those versions, so be sure to plan accordingly!  Do not use any MP if you plan to win the competition!  You will just barely beat Garret at Levels 5-7, even with full HP!  This is why you were advised to have 12+ Herbs before coming.
+
+Be sure to get the Gold Ring and Mini Medal once you've defeated the Sentry.  The Gold Ring will act as a fourth piece of armour and boost your Defense by 5; you will need this boost if you wish to beat Garrett at Levels 5-7.  If this is what you want, here is the strategy for him.
+
+== VS. Garrett ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|5-7
+|-
+!HP: 
+|250
+|-
+!MP: 
+|0
+|- 
+!Item:
+|Seed of Strength (1/32 of dropping)
+|-
+!Attack:
+|40
+|-
+!Defense:
+|35
+|-
+!Agility:
+|35
+|-
+!EXP: 
+|120
+|-
+!Gold:
+|None
+|-
+!Attack Patterns:
+|Attack (33.3%), Slash [1.25x normal damage] (33.3%), Leg Sweep [Stun] (16.66%), Does Nothing [wastes the turn] (16.66%)
+|-
+!Resistances:
+|No resistance to Sap
+|}
+
+Garrett does upwards of 12 Damage with his Slash attack (assuming max Resilience), and only takes 7-9 Damage from your attacks at Level 5.  Use an Herb at 24 HP or less, and he'll (hopefully) do another 12~ Damage to you before the Herb actually activates.  You tend to be slower than him, so you're making your speed disadvantage work for your advantage.
+
+But, there is still a small chance that Rex will go first instead, so if you want to be 100%, grind to LVL 7.  Two Saps will drain Garrett's Resilience and neuter the fight's difficulty.
+
+== The Conclusion ==
+
+Go inside the room Garret was (or was not) guarding to complete the trial.  You will gain a Restless Heart from the chest if you fought him, and gain nothing if you did not.  Walk back to Somnia.
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Wellshire|nextpage=A new mission}}

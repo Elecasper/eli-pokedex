@@ -1,0 +1,23 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+[[File:DQ6 Wellshire.png|thumb|right|All the treasure here is valuable; be sure to snatch them!]]
+
+There is not much to this village, but you will definitely want to get the Life Seed, as well as your [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">1st Mini Medal</span>!  As you do so, you will want to note the following:
+
+# Talk to the Innkeeper if you're worried about Rex's health; you'll be able to stay for free since you're invisible.
+# You will want to get the Hardwood Headware and use the Seed of Life on Rex; he will be getting into at least one relatively tough fight before he finally gets someone to help him on his journey.
+# Mini Medals can be exchanged for valuable items at a place called "Medford's Medallion" later on.  These items are not so powerful as to be considered mandatory, but the prizes you get for 40, 50, 60, and 70 Medals are incredibly helpful to have. But don't stress too much if you're later in the game; none of them are permanently missable.
+
+Enter the northeast house at point '''A''' in order to progress the plot.  
+
+== Plot Progression ==
+
+[[File:DQ6 Path back to Dream World.jpg|left]]
+
+[[File:DQ6 Path to Somnia.jpg|right]]
+
+None of the enemies hit very hard so long as you have the armour recommended on the last page.  So just make sure you visited the northeast house in the village, travel to the building located on this map, and you should find your way back to your world.  Use a Chimaera Wing to return to Haggleton once you do so.
+
+Go into the northeast house just like you did in Wellshire.  Talk to Cliff, get the Crown from him, and use another Chimaera Wing to warp back to Weaver's Peak.  Go to your home, go to sleep, go through the ceremony, talk to the mayor, then go to sleep.  Talk to the mayor again to get the pass, go back to your house, talk to Tania, go to bed, fly to Haggleton, and head on south to Somnia!
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Haggleton|nextpage=Somnia}}
