@@ -1,0 +1,151 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+
+== Prison of Sorrow ==
+
+[[File:DQ6 Path to Sea of Nothingness.png|thumb|left|]]
+
+[[File:DQ6 Path to Prison of Sorrow & Mortamor's Dreadlair.png|thumb|right|]]
+
+There isn't much to this page.  Just use the exact same party as you did for Blackmar, use the Orb of Truth at the Sea of Nothingness, enter the Prison of Sorrow, witness Isaac's nightmares, Zoom back to Gallows Moor, talk to Benjamin, go back to the Prison of Sorrow, enter Isaac's nightmares, and initiate the boss fight.
+
+
+== VS. Belleau & Cabot ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Belleau
+|The stone creature on the left
+|-
+!Recommended Level: 
+|Lizzie Lvl 7, Carver Lvl 29, Terry Lvl 26-34, Rex Lvl 28
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Follow Orders
+|-
+!HP: 
+|2500
+|-
+!MP: 
+|Infinite
+|- 
+!Item:
+|Mini Medal (Always Drops, but only one is received at battle's end)
+|-
+!Attack:
+|250
+|-
+!Defense:
+|290
+|-
+!Agility:
+|50
+|-
+!EXP: 
+|3300
+|-
+!Gold:
+|850
+|-
+!Attack Patterns:
+|Attack -> Boulder Toss (90-130 Physical type Damage to All) -> Forbearance -> Midheal -> Stomp [1.25x Damage] -> Meditation [restores 500 HP]
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|15% resistance to Knuckle Sandwich, 70% reduction of Fire, Ice, and all attacking magic, Immunity to Everything Else
+|}
+
+
+{| {{prettytable|notwide=1|float=center}}
+!Cabot
+|The troll on the right
+|-
+!Recommended Level: 
+|Lizzie Lvl 7, Carver Lvl 29, Terry Lvl 26-34, Rex Lvl 28
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Follow Orders
+|-
+!HP: 
+|3500
+|-
+!MP: 
+|0
+|- 
+!Item:
+|Mini Medal (Always Drops, but only one is received at battle's end)
+|-
+!Attack:
+|300
+|-
+!Defense:
+|190
+|-
+!Agility:
+|20
+|-
+!EXP: 
+|4400
+|-
+!Gold:
+|550
+|-
+!Attack Patterns:
+|Attack -> Muster Strength -> Stomp [1.25x Damage] -> Bewildered [Skips Turn] -> Quake [50-65 Woosh Damage to All] -> Selflessness
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|No resistance to Sap, Knuckle Sandwich, Fire, Ice, or any attacking magic, 15% resistance to stun, Immunity to All Else
+|}
+
+Like the Gallows Giant, this is a boss fight that is unusually simple for an endgame fight.  These two rely almost exclusively on single target melee attacks, only go once per round, and operate by a completely fixed pattern.  In addition, Cabot has almost no crucial resistances, sporting vulnerabilities to Sap, Knuckle Sandwich, and even Leg Sweep/Sultry Dance.  
+
+The only way these two could kill you is if you're not prepared for Boulder Toss on Turn 2, and are not able to recover from that fast enough.  But if you know it's coming, and have Terry on Hela's Armour + Sage's Stone duty, even that shouldn't cause any problems.  Because of that, the battle tends to follow 6 relatively simple steps with the recommended party:
+
+# ''Carver and Lizzie use Focus Strength, Terry uses Sage's Stone, Rex Oomphs Carver.''
+# ''Carver and Lizzie attack Cabot with their strongest attacks, Terry keeps healing, Rex uses Sap on Cabot''
+# ''Carver and Lizzie use Focus Strength, Terry keeps healing, Rex uses Sap on Cabot.''
+# ''Carver and Lizzie attack Cabot with their strongest attacks, Terry keeps healing, Rex Oomphs himself.''
+# ''Rex, Carver, and Lizzie keep attacking Cabot until he dies''
+# ''Everyone dogpiles on Belleau until he crumbles.''
+
+Of course, there are other options.  One could choose to keep stunning Cabot with Leg Sweep instead of killing him in the first six turns, one could choose to nullify everything except Boulder Toss with Kabuff, or even choose to kill Belleau first if you so choose.  He takes longer to kill, but he's also the more dangerous one of the two, so that's not a bad option.
+
+== A New Way Back to the Real World ==
+
+Isaac and Benjamin will blast the energy barrier away from Mortamor's Dreadlair and then create a giant hole in the ground.  If you wish, you can take that hole back to the real world, so that you can finish up whatever unfinished business you have before fighting Mortamor.  However, you don't actually keep any items you acquire in Mortamor's Dreadlair after starting the post-game; you have to actually save once more after raiding his dungeon.  For this reason, there is no point in going back now.
+
+== Metal King Slime Grinding (Optional) ==
+
+Mortamor is arguably the 4th hardest final boss in all of Dragon Quest history, second only to the likes of Dragonlord, Malroth, and Milayou in Dragon Warrior Monsters.  You ''can'' defeat him with most of your party under Level 30, and with almost no Tier 3 job classes; but it's not easy by any stretch.  
+
+Fortunately, Metal King Slimes give '''30,010 EXP''' apiece; and you can find them right outside the Prison of Sorrow!  They have a 50% chance of running at the start of each round, but with two Hela's Hammers and two Hatchet Man users, killing them is easier than it's ever been before.  Plus, the Sands of Time can be used as many times as you wish in the Remakes; you can literally ''restart'' the battle if you fail!
+
+== Equipment Setup ==
+
+In any case, the monsters in the next page are leagues above the ones you have fought throughout the rest of the game.  Instead of giving the Sage's Stone to Terry, you will want to give it to Lizzie, who is relatively slow and has the least offensive skills.  In addition, your party should look something like this:
+
+{| {{prettytable|notwide=1}}
+! Character || Past Vocations || Current Vocation || Level || Equipment 	
+|-
+! Lizzie || 2✮ Warrior || 4✮ Dragon || Lvl 8 || ''Sage's Stone'', ''3x Yggdrasil Leaves'', Hela's Hammer, Dragon Robe, Shield of Max Wynne, Thinking Cap, Gold Bracer	
+|-
+! Carver  || 4✮ Warrior, 8✮ Fighter, 8✮ Priest || 3✮ Gladiator/?✮ Dragon || Lvl 29 || ''3x Yggdrasil Leaves'', Miracle Sword & Hela's Hammer, Sacred Armour, Silver Shield, Metal King Helmet, Raging Ruby
+|-
+! Rex || 8✮ Gadabout, 8✮ Dancer, 6✮ Luminary || ?✮ Warrior || Lvl 28 || Sword of Ramias, Armour of Orgo, Shield of Valora, Helm of Sebath, Meteorite Bracer		
+|-
+! Terry || Varies Between Versions || 3✮ Gladiator || Lvl 26-34 || ''Ghent Staff'', ''Yggdrasil Dew'', ''Sands of Time'', Sunderbolt Blade, Dragon Mail & Hela's Armour, Silver Shield, Platinum Mask, Meteorite Bracer
+|-
+! Goowain || 1✮ Fighter, 7✮ Priest || 2✮ Dragon || Lvl 24 || Dragon Killer, Platinum Mail, Dragon Shield, Platinum Mask, Gold Bracer & Kerplunk Bracer
+|-
+! Ashlynn || 8✮ Thief, 8✮ Merchant || 6✮ Monster Master || Lvl 24 || Gringham Whip, Princess's Robe, Magic Shield, Golden Tiara, Gold Bracer
+|-
+! Healie || 8✮ Warrior, 8✮ Mage || 3✮ Armamentalist || Lvl 23 || Flowing Dress, Silver Platter, Hat of Hermes, Gold Ring	
+|-
+! Amos || 4✮ Warrior, 8✮ Fighter, 8✮ Priest || 2✮ Paladin || Lvl 26 || Fire Claw, Enchanted Armour, Platinum Shield, Platinum Mask	
+|}
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Gallows Moor|nextpage=Mortamor's Dreadlair}}

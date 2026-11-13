@@ -1,0 +1,106 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== Greedmore Valley ==
+
+[[File:DQ6 Greedmore Valley.png|thumb|right|Remember the northwest house for later; that will have an incredible piece of armour later!  Also, this has the only casino worth using in the SNES version.]]
+
+First of all, be sure to collect the [[File:DQ3 SNES Book.png]] <span style="color:blue">15th Dreamscape</span>, if you're playing on iOS/Android.
+
+Secondly, the Greedmore Casino is the only casino worth bothering with, in the SNES version—that's because it has 50 Coin machines, instead of just 1 & 10 Coin variations.  That's helpful for if you need more Yggdrasil Leaves, and can't get enough through raw gold.
+
+As for the regular shops, you will want to buy 2x Hela's Hammers and 1-2x Silver Shields before moving on to the next page; the Yggdrasil Leaves can wait if you don't have the assets to sell.  The Silver Shields provide the second best set of resistances in the game (coming second only to the Metal King Shields), and the Yggdrasil Leaves are as useful as ever; but the Hela's Hammers are particularly interesting.
+
+These hammers are exorbitantly powerful, and have a 40-50% chance of dealing a critical hit with every attack; but they also have a 50-60% chance of missing completely.  However, the skill Focus Strength will always set the accuracy of the next attack to 100%; meaning that one is ''guaranteed'' to gain a critical hit every two rounds, so long as they are using Focus Strength.  Not only is that a tremendous boon; it is almost mandatory for Mortamor if you haven't gotten Disruptive Wave yet, or a lot of powerful offensive magic.
+
+Of course, the combined cost of all these purchases can range anywhere from 63,000-156,000G, depending on which version you are playing and whether or not you already have Coins.  It will take:
+
+# 66,000G for two Silver Shields (but you only need to purchase one in the remakes; those give you a free one soon)
+# 30,000G for two Hela's Hammers
+# Up to 60,000G to purchase 3000 Coins for purchasing 3x Yggdrasil Leaves from the Casino 
+
+Fortunately, you should have the following assets to sell right off the bat:
+
+# 18,750G from the Power Shield (it has become obsoleted by the Sage's Stone)
+# 8,550G from both Fire Claws (they no longer deal enough damage to use)
+# 7,500G from Kamikaze Bracer in Gainmore's Mansion.
+# 30,000G from all your recent Slimopolis winnings
+
+That's a total of 65,175G right off the bat.  Combine that with all the miscellaneous items you will have collected over the course of your journey, and you should have enough to make up the difference without selling any of the gear your eight party members are wearing.
+
+So wait for a free Silver Shield if you're playing the remakes and sell everything that's not included in the following table:
+
+{| {{prettytable|notwide=1}}
+|'''Lizzie: ''3x Yggdrasil Leaves'', ''Staff of Anti-Magic'', Platinum Mail, Shield of Max Wynne, Thinking Cap, Gold Bracer'''
+|-
+|'''Carver: Miracle Sword, Sacred Armour, Metal King Helmet, Agility Ring (Raging Ruby for bosses)'''
+|-
+|'''Terry: ''Yggdrasil Dew'', ''Sage's Stone'', Sunderbolt Blade, Dragon Mail & Hela's Armour, Platinum Mask, Gold Bracer'''
+|-
+|'''Rex: ''Ghent Staff'', Sword of Ramias, Armour of Orgo, Shield of Valora (Tempest Shield for Level 8 Best-Dressed Contest), Helm of Sebath, Meteorite Bracer (Agility Ring for bosses)'''
+|-
+|'''Milly: Platinum Sword, Flowing Dress, Silver Platter, Hat of Hermes'''
+|-
+|'''Ashlynn: Gringham Whip, Flowing Dress, Magic Shield, Hat of Hermes, Gold Bracer (Kerplunk Bracer for Mortamor)'''
+|-
+|'''Goowain: Dragon Shield, Platinum Mask, Gold Bracer'''
+|-
+|'''Amos: Spear of Gracos, Enchanted Armour, Platinum Shield, Iron Mask'''
+|}
+
+As for what to do in the town itself; there are no mandatory sequence triggers here.  The Mimics gives free Seeds of Life, and the Greedmore Mine also has a Seed of Strength; but apart from that, you can just skip the next section and go straight to Greedmore Forest.
+
+== Greedmore Mine ==
+
+[[File:DQ6 Greedmore Mine.png|thumb|right|In the remakes, you can kill the Mimic for a free Seed of Life.  But on SNES, the Seed of Strength is the only treasure of any value.  Gainmore's Message serves no purpose.]]
+
+This is another fairly easy, short dungeon; though it does have the Scytheborg.  They have a 33.33% chance of using Frenzy, which can deal a critical hit to either you, themselves, or one of their allies.  There isn't anything you can do to disable them, since they have high resistance to all status immunities; but that's alright.  They only have 218-270 HP, so you should be able to kill them before they accomplish anything.
+
+Bomboulders also make a return here, being the rock creatures who can revive their party with Kerplunk.  But, at this point, they're easily dealt with via AoE attacks and a Knuckle Punch from Carver; they're not particularly challenging either.
+
+In any case, get whatever you need from this place.  If you're playing the SNES, the Seed of Strength is the only reward awaiting you.  On the remakes, you can get a Seed of Life from the Mimic.  However, Gainmore's Message is worthless in both versions.
+
+
+
+
+== Greedmore Forest ==
+
+[[File:DQ6 Path to Greedmore Forest.png|thumb|right|The orange dot marks your entrance.]]
+
+The vignette in this forest is rather interesting.  To begin with, you have to answer '''Yes''' to the leftmost NPC, who asks if you'd be willing to sell your soul to get the sage's treasure.  This causes everyone at the lake to start fighting each other.  
+
+If you take the short way, everyone will massacre each other, and you will be made to fight a person named Averill.  But aside from posessing an unusually high amount of HP, he is hopelessly outclassed.  He has less than half of Dhuran's Attack, he only strikes once per round, he's vulnerable to Stun, Fuddle, Dazzle, Sap, Poison, and Knuckle Sandwich.  The only semi-threatening attacks he has are Double Up and Body Slam; but he's too weak to really capitalize on them.  Get Oomph on Carver, Sap away Averill's defense, and one Focus Strength + Knuckle Sandwich will be all that's needed.
+
+However, the game will then rewind back to the start, before the lake ever got drained.  So take the long way around this time, and the townsfolk will all leave.  But if you check the chest multiple times, you will find a secret passage!  We want to have our next destination on our Zoom list before going back to Greedmore Valley, so take those stairs!
+
+== Path to Gallows Moor ==
+[[File:DQ6 Lake Cavern.png|thumb|right|]]
+[[File:DQ6 Path to Gallows Moor.png|thumb|left]]
+
+This is another one of the few moments where the treasure contents differ between the SNES and the Remakes.  In the SNES, the treasure is a joke treasure meant to frustrate you.  It's only the remakes that offer something valuable, with arguably one of the best shields in the game.
+
+
+
+Other than that, there is nothing of note in the Lake Cavern; the enemies are just as easily dispatched as they were in previous areas.  But do be sure to stop by the Well Sanctuary; an old man at the bottom will heal all of your HP and MP, and there's also a priest that will provide all the traditional services of a church.  Take advantage of that, and then head to Gallows Moor before Zooming back to Greedmore Valley
+
+
+
+
+
+
+== Greedmore Valley (Revisited) ==
+
+Enter the house at point '''C''' and talk to the man inside.  He will give you permission to take the Dragon's Robe, arguably the best armour in the entire game!  It packs +95 Defense and 30 points of damage reduction to Frizz, Sizz, Bang, Fire, and Ice attacks!  Lizzie, Rex, Milly, Nevan, and Ashlynn are all capable of wearing it. However, Rex already has the Armour of Orgo.  So if you're following the guide, Lizzie will want it; otherwise, you may wish to give it to your most fragile Sage.  
+
+Either way, there's a boss fight coming up, and this one can critical hits that exceed 210 Damage.  So if Rex has less than 220 HP, he will want to sit this one out.  If that's the case, give Terry the Sword of Ramias so he can use it to cast Oomph on Carver.  Either way, try to have your party look something like this:
+
+{| {{prettytable|notwide=1}}
+|'''Lizzie (Level 7): ''Ghent Staff'', Hela's Hammer, Dragon Robe, Shield of Max Wynne, Thinking Cap, Gold Bracer'''
+|-
+|'''Carver (Level 28): Miracle Sword & Hela's Hammer, Sacred Armour, Silver Shield, Metal King Helmet, Raging Ruby'''
+|-
+|'''Terry (Level 25-34): ''Sage's Stone'', ''Yggdrasil Dew'', Sunderbolt Blade, Dragon Mail, Silver Shield, Platinum Mask, Meteorite Bracer'''
+|-
+|'''Rex (Level 27): Sword of Ramias, Armour of Orgo, Shield of Valora, Helm of Sebath, Agility Ring'''
+|}
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Despairia|nextpage=Gallows Moor}}

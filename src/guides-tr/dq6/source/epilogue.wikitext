@@ -1,0 +1,52 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+From a gameplay perspective, the Epilogue is mainly a long series of cutscenes, with some sequence triggers thrown in. 
+Here's the quickest way of getting it over with.
+
+== Cloudsgate Citadel ==
+
+Leave.
+
+== Somnia ==
+
+Go up to the throne room, talk to Captain Blade, then leave.
+
+== Sorceria ==
+
+Leave.
+
+== Weaver's Peak ==
+
+Talk to Tania in the upper-left house, then leave.
+
+== Madame Luca's ==
+
+Leave.
+
+== Port Haven ==
+
+Leave.
+
+== Ghent ==
+
+Leave.
+
+== Felonia ==
+
+Leave.
+
+== Weaver's Peak ==
+
+Leave.
+
+== Somnia ==
+
+Go up to the throne room, then talk to Ashlynn (she should be semi-transparent).
+
+== Credits ==
+
+[[File:DQ6 Liquid Metal Mind Scroll.png|thumb|right|Search the spot marked by the blue light for the Liquid Metal Mind scroll!]]
+
+Watch for when Terry shows up (it happens after Milly's scene), and pay careful attention to when a blue light shows up on the ground.  That spot has the Liquid Metal Mind scroll!  That's essential for the post-game!
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=VS. Mortamor|nextpage=Job class grinding for post-game}}

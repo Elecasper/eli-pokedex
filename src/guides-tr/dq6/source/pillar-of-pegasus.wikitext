@@ -1,0 +1,226 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+NOTE: Remember to change Goowain back into a Priest!
+
+== Recruiting Lizzie ==
+
+[[File:DQ6 Lizzie Recruited.png|thumb|right|Have Terry somewhere in your party to recruit Lizzie!]]
+
+Dragon Quest VI is designed in a way that's heavily biased toward melee fighters.  Many of the best skills cost little to no MP, spells like Midheal and Zap can be cast via items, everyone can take whatever vocations they want, your spellcasters learn very few of their spells naturally, and most importantly, your melee fighters have much higher HP.  And while these disadvantages aren't noticeable at the beginning, this is the point in the game where spellcasters really start to suffer.  This is the point where high HP tends to be the most important stat in surviving boss fights.
+
+So remove Milly from your party as well (put her back in once Healie reaches Armamentalist), Zoom to Arkbolt, and recruit Lizzie.  She will generally be your very first character with a Tier 3 job class, and it's a doozy.  30% HP and 20% Resilience on top of 240 HP, 130 Resilience, and natural resistances to Frizz, Sizz, Crack, Bang, Woosh, and Fire make Lizzie an extremely capable meatshield; and that's without adding equipment into the mix.  
+
+== Vocation Grinding ==
+
+First of all, remove Ashlynn's vocation or change her into a Monster Tamer once all the grinding is done; Magic Burst is excellent to have for the upcoming boss fight, and her default class has the best combination of HP and MP.  With that said, you have just gained the Sunderbolt Blade; a weapon that casts Zap for free.  Grinding will now be faster than it's ever been, and there are some skills that will be very helpful for the end.  
+
+Healie will want to reach Armamentalist before letting Milly back into the party.  Lizzie, for her part, will want Focus Strength before moving on to mastering her Dragon class, for reasons that will become clear in the [[Dragon Quest VI: Realms of Revelation/Greedmore Valley|Greedmore Valley]] page.  Rex should also be relatively close to learning Hustle Dance; a 0 MP move that restores 70-80 HP to everyone in your party.  And finally, Carver will want to reach the Paladin class.
+
+Furthermore, the main game is almost over, and the Luminary class's HP handicap is going to start becoming a real issue during the endgame; so it is recommended that you learn Hustle Dance, change Rex into a Fighter for the rest of the main game, and also get Falcon Slash for Carver (7✮ Paladin skill).  Then you can gain and master the Hero job class during the post-game, where you're already having to level up other Tier 3 classes anyway.
+
+So if all your party members are under Level 31 (41 if you're playing the iOS), go on ahead to Sorceria, and grind with Rex, Terry, Amos, and Milly until Carver's reached the Paladin class.
+
+{{Sidebar|title=If you Haven't Followed the Guide|contents=There's always the possibility that you are a new reader, and have not followed all the vocation setups recommended in [[Dragon Quest VI: Realms of Revelation/All About Vocations|All About Vocations]].  If that is you, take heart; there are plenty of other ways to beat this game.  In fact, you could technically beat it at Levels 24 and lower, without a single Tier 2-3 character besides Lizzie and Terry.  Strategy and knowledge of your foe is what truly rules the day in Dragon Quest VI, not raw stats and powerful skills. 
+
+That said, things become a lot more complicated and much more luck reliant without some of the nifty things the guide directs you to.  So if you're looking to grind vocations, here are some suggestions:
+
+'''Luminary:''' This may be a class with severe stat penalties and a lot of junk skills; but the skills that are useful are arguably the best in the game.  Kaclang at 2✮ is almost game-breakingly good in how much flexibility it gives you.  If you ever fight anyone with any kind of fixed pattern (which is every late-game boss), you can actually dodge all of their deadliest attacks.  Combine that with the way the user always goes first, and you've got dynamite on your hands. Hustle Dance at 6✮ is also extremely powerful, as it essentially acts as a free Sage's Stone.  Plus, Luminary is also the quickest way to the Hero class; so Luminary is a very good choice for Rex.
+
+'''Paladin:''' This is a far more useful physical attacker vocation than Gladiator, for a variety of reasons.  To begin with, the Figher and Priest skills have far more lasting value, with Zing, Kabuff, Fullheal, Leg Sweep, and Knuckle Sandwhich having far more lasting value than the likes of Boom, Kasizzle, Frizz, Double-Edged Slash, and Focus Strength.  Paladin itself also has a lot of very helpful support skills.  Selflessness at 1✮ is still amazing, Thin Air at 2✮ is a 0 MP spell that got a radical buff in the remakes, Magic Barrier at 5✮ is helpful for obvious reasons, Forebearance at 6✮ is also great, and Kerplunk at 7✮ allows one to revive the entire party without needing any Kerplunk Bracers!  
+
+Gladiator, in comparison, is mostly filled with single-target physical attack moves; ones that grant a mere 1.3x multiplier.  As for the few AoE attacks it does, they are only comparable to Thin Air and Zap; both of which can be acquired earlier.  
+
+'''Sage:''' This one is the perfect mage class; in fact, it all but invalidates both of the others (apart from Armamentalist getting Kafrizzle at 8✮).  Ranger is a class filled with status ailments and support skills of questionable value, and the Armamentalist has the same problem as the Gladiator class did.  
+
+Sage, meanwhile, gives Insulatle at 1✮ (halves Fire and Ice breath damage against all PC's), Oomph at 2✮, Multiheal at 5✮ (100-120 HP restoration to all PC's), Kazing at 6✮ (100% chance of reviving someone to 100% HP), Magic Barrier at 7✮, and Kaboom at 8✮ (130-150 Bang Damage to all enemies).  Magic characters in general may not be as good as physical characters; but the moves listed here are of very obvious value.  
+
+The only thing this misses, in comparison to Armamentalist, is Kafrizzle (180-200 Frizz Damage).  Evne still, it would be foolhardy to dedicate your mages to any other class, unless you're trying to unlock the postgame in the SNES version.
+
+'''Hero:''' Grinding to unlock this class is time consuming, and totally unnecessary for clearing the main game.  With that said, Disruptive Wave, at 2✮, will make a good chunk of the final boss easier.  And if you truly wish to go so far, 5✮ gives Gigaslash; this is a group attack that does 350-410 Zap Damage to all enemies for 20 MP.  That is also handy to have for Mortamor.
+}}
+{{-}}
+== Cloudsgate Citadel ==
+
+[[File:DQ6 Cloudsgate Citadel.png|thumb|right|Check behind the throne to get one of the '''82-83rd''' Mini Medals!]]
+
+One interesting thing about the Yggdrasil Dew; there isn't just one of them.  The kid making them will always have one to give you if you end up using the previous one.  The only catch is that he only allows you to have one at a time; so you have to use a Yggdrasil Dew to get another one.
+
+At any rate, be sure to get the [[File:DQ3 SNES Book.png]] <span style="color:blue">14th Dreamscape</span>, if you're on iOS/Android.  Then, get the '''82nd''' Mini Medal from behind the throne, talk to the King of Zenithia, raid the drawers nears the well, and then head down to reach a dead end.  Climb back out, and that will somehow take you to the Real World; where you will find the Pillar of Pegasus.  
+
+This dungeon actually allows you to use all your party members instead of just four; so be sure your party looks something like this before entering:
+
+{| {{prettytable|notwide=1}}
+|'''Lizzie (Level 5): Spear of Gracos, Dragon/Platinum Mail, Dragon Shield, Thinking Cap, Gold Bracer'''
+|-
+|'''Terry (Level 23-33): Sunderbolt Blade, Sacred Armour, Power Shield/Dragon Shield, Platinum Mask, Gold Bracer'''
+|-
+|'''Carver (Level 27): Miracle Sword, Platinum Mail, Platinum/Dragon Shield, Metal King Helmet, Agility Ring (Raging Ruby for boss)'''
+|-
+|'''Rex (Level 26): ''Ghent Staff'', Sword of Ramias, Armour of Orgo, Shield of Valora, Helm of Sebath, Meteorite Bracer (Gold Bracer for boss)'''
+|-
+|'''Milly (Level 25): ''Fire Claw'', Platinum Sword, Flowing Dress, Silver Platter, Hat of Hermes, Gold Bracer (Agility Ring for boss)'''
+|-
+|'''Ashlynn (Level 21): Flowing Dress, Magic Shield, Hat of Hermes, Nothing (Meteorite Bracer for boss)'''
+|-
+|'''Goowain (Level 20): Dream Blade, Spiked Armour, Iron Shield, Iron Mask, Gold Bracer'''
+|-
+|'''Amos (Level 24): Fire Claw, Spiked Armour, Magic Shield, Iron Mask'''
+|}
+{{-}}
+
+== Pillar of Pegasus ==
+
+[[File:DQ6 Pillar of Pegasus.png|thumb|right|The door at point '''P''' is very easily missed; so be sure you go through it if you're trying to get all the treasures (such as the '''84-85th''' Mini Medals).]]
+
+This should be a really easy dungeon so long as you're using a Lizzie, Terry, Carver, and Rex party; and also class changed Rex to Fighter.  The only monster that can potentially kill you is the Frighturn, which posesses Whack.  However, it only has 10 MP, and Whack costs 4; so if Rex (or anyone else) has Kaclang, you can just stall it out until it runs out of MP.  After that, it can't do anything to stop you.
+
+Whatever you decide to do, raid all the treasures, including Mini Medals No. '''84-85''', and be sure to switch to a Lizzie, Carver, Rex, and Ashlynn party before fighting the bosses.
+== VS. Silhouette, High Djinks, & Devilmoth ==
+
+{| {{prettytable|notwide=1}}
+!Silhouette
+|The ghost on the left
+|-
+!Recommended Level: 
+|Lizzie Lvl 6, Carver Lvl 27, Rex Lvl 26, Ashlynn Lvl 21, Milly Lvl 25, Goowain Lvl 21, Amos Lvl 24
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Follow Orders
+|-
+!HP: 
+|224-280
+|-
+!MP: 
+|0
+|- 
+!Item:
+|Flowing Dress (1/256)
+|-
+!Attack:
+|191
+|-
+!Defense:
+|90
+|-
+!Agility:
+|128
+|-
+!EXP: 
+|240-288
+|-
+!Gold:
+|60-72
+|-
+!Attack Patterns:
+|Attack (33.33%), Death Dance [Chance of Death for each PC] (33.33%), Closes the Wagon [Prevents Switching Out for the Rest of the Fight] (16.66%), Dark Haze [Neutralizes enemy and player magic for the Rest of the Fight] (16.66%)
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|No resistance to Frizz, Fire, Ice, or Call-to-Arms, 15% resistance to Ban Dance, 50% resistance to Poof and Stun, 60% reduction of Sizz, Bang, Crack, Woosh, and Zap, Immunity to All Else
+|}
+
+
+{| {{prettytable}}
+!High Djinks
+|The genie in the middle
+|-
+!Recommended Level: 
+|Lizzie Lvl 6, Carver Lvl 27, Rex Lvl 26, Ashlynn Lvl 21, Milly Lvl 25, Goowain Lvl 21, Amos Lvl 24
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Follow Orders
+|-
+!HP: 
+|696-870
+|-
+!MP: 
+|48
+|- 
+!Item:
+|Glombolero (1/256)
+|-
+!Attack:
+|350
+|-
+!Defense:
+|113
+|-
+!Agility:
+|114
+|-
+!EXP: 
+|920-1104
+|-
+!Gold:
+|250-300
+|-
+!Attack Patterns:
+|Kaswoosh [45-90 Woosh Damage to All] (33.33%), Attack (16.66%), Attack while Laughing [1.25x Damage] (16.66%), Backdraft [reflects Breath attacks] (16.66%), Multiheal [restores 100-120 HP to party] (16.66%)
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|No resistance to Frizz, Crack, Zap, Fire, Ice, or Call-to-Arms, 15% resistance to Knuckle Sandwich, 30% reduction of Sizz and Bang, 50% resistance to Dazzle, Snooze, Drain Magic, Fizzle, Poison, and Stun, Immunity to All Else
+|}
+
+
+{| {{prettytable}}
+!Devilmoth
+|The giant moth on the right
+|-
+!Recommended Level: 
+|Lizzie Lvl 6, Carver Lvl 27, Rex Lvl 26, Ashlynn Lvl 21, Milly Lvl 25, Goowain Lvl 21, Amos Lvl 24
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Follow Orders
+|-
+!HP: 
+|248-310
+|-
+!MP: 
+|0
+|- 
+!Item:
+|Poison Needle (1/64)
+|-
+!Attack:
+|189
+|-
+!Defense:
+|94
+|-
+!Agility:
+|118
+|-
+!EXP: 
+|282-338
+|-
+!Gold:
+|135-162
+|-
+!Attack Patterns:
+|Attack (50%), Venom Mist [envenomates one target] (50%)
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|No resistance to Frizz, Sizz, Bang, Woosh, Zap, Fire, or Knuckle Sandwich, 15% resistance to Dazzle, Fuddle, and Sap, 30% reduction of Crack and Ice, 50% resistance to Whack, Stun, and Call-to-Arms, Immunity to All Else
+|}
+
+The Silhouette can occasionally be troublesome, but it can't usually do anything really dangerous.  Macabre Dance is extremely low in accuracy compared to the Whack spell.  Furthermore, all PC's have moderate resistance to Death, so Macabre Dance only has a 10% chance of hitting anyone in your party (even less if wearing the Metal King Helm or Helm of Sebath).  As for "closing the wagon", that more than one turn to take full effect; and the Silhouette is far too weak to live for that long.
+
+In fact, you can cheese this fight entirely if you have Kaclang.  Just have the caster keep casting it until the Silhouette starts "clos[ing] the wagon door".  Once it does so, it will not do ''anything else'' for the rest of the battle.  It will always spend it's turns keeping the door closed; and the wagon door will reopen the instant you kill it.  
+
+Once it does that, you can simply form an Ashlynn + Carver only party, and have Ashlynn use Magic Burst while having Carver protect her with Forebearance; Ashlynn should kill everyone but the High Djink, and there should be almost no chance of anyone dying.  From there, you can swap out characters as you see fit, so the High Djinks should be simple to put down.
+
+If you do not have Kaclang, you could just have Carver use Forebearance instead.  Carver could technically die even with the Metal King Helm, but those chances are very low.
+
+== Cloudsgate Citadel Revisited ==
+
+Use the well to head back to Cloudsgate Citadel; a Ne'er-do-well will ambush you on the way, but it's far too weak to worry about.  Go talk to the King of Zenithia again, and he will give you the Celestial Reigns!  Now you can head to the Demon World at any time you wish! But first, there are a few more Mini Medals you can get.
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Stormsgate Citadel|nextpage=Item collection: Part 4}}

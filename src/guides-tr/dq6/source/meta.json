@@ -214,5 +214,65 @@
   "revid": 843380,
   "timestamp": "2019-12-31T20:45:24Z",
   "bytes": 16418
+ },
+ "pillar-of-pegasus": {
+  "title": "Dragon Quest VI: Realms of Revelation/Pillar of Pegasus",
+  "revid": 1010949,
+  "timestamp": "2022-12-23T09:50:19Z",
+  "bytes": 13965
+ },
+ "item-collection-part-4": {
+  "title": "Dragon Quest VI: Realms of Revelation/Item collection: Part 4",
+  "revid": 837529,
+  "timestamp": "2019-08-22T19:43:14Z",
+  "bytes": 8125
+ },
+ "the-item-retention-exploit-snes-only": {
+  "title": "Dragon Quest VI: Realms of Revelation/The Item Retention Exploit (SNES Only)",
+  "revid": 801939,
+  "timestamp": "2017-05-05T10:20:19Z",
+  "bytes": 1964
+ },
+ "despairia": {
+  "title": "Dragon Quest VI: Realms of Revelation/Despairia",
+  "revid": 801942,
+  "timestamp": "2017-05-05T10:21:58Z",
+  "bytes": 4494
+ },
+ "greedmore-valley": {
+  "title": "Dragon Quest VI: Realms of Revelation/Greedmore Valley",
+  "revid": 1010950,
+  "timestamp": "2022-12-23T10:01:17Z",
+  "bytes": 8826
+ },
+ "gallows-moor": {
+  "title": "Dragon Quest VI: Realms of Revelation/Gallows Moor",
+  "revid": 1095689,
+  "timestamp": "2024-10-03T20:26:48Z",
+  "bytes": 7234
+ },
+ "prison-of-sorrow": {
+  "title": "Dragon Quest VI: Realms of Revelation/Prison of Sorrow",
+  "revid": 837487,
+  "timestamp": "2019-08-22T07:51:24Z",
+  "bytes": 6891
+ },
+ "mortamor-s-dreadlair": {
+  "title": "Dragon Quest VI: Realms of Revelation/Mortamor's Dreadlair",
+  "revid": 801969,
+  "timestamp": "2017-05-06T06:19:59Z",
+  "bytes": 9858
+ },
+ "vs-mortamor": {
+  "title": "Dragon Quest VI: Realms of Revelation/VS. Mortamor",
+  "revid": 837488,
+  "timestamp": "2019-08-22T08:23:04Z",
+  "bytes": 9564
+ },
+ "epilogue": {
+  "title": "Dragon Quest VI: Realms of Revelation/Epilogue",
+  "revid": 837492,
+  "timestamp": "2019-08-22T09:54:15Z",
+  "bytes": 1144
  }
 }

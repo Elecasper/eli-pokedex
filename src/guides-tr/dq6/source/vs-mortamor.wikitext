@@ -1,0 +1,264 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+'''''Note: Because this Boss Fight is one of the hardest in the game, a link has been provided to demonstrate the instructions of this page:''''' {{YouTube|video=4jDiq-QiQzM|float=left|title=Dragon Quest VI - Mortamor with Luminary (StrategyWiki Guide)|duration=20:19}}{{YouTube|video=zSGfjbOBM6s|float=left|title=Dragon Quest VI - Mortamor without Luminary (StrategyWiki Guide)|duration=19:23}}
+{{-}}
+
+This fight is so long, Mortamor's attack patterns are so complicated, and his attacks are so wildly different between phases, that it's hard to really give a good strategy without going through it turn-by-turn.  This is why the two videos have been provided.  Use those as your primary "walkthrough".  Use the notes here only to remind yourself of the highlights.
+
+=== VS. Mortamor (Round 1) ===
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Lizzie Lvl 9, Carver Lvl 30, Terry Lvl 27-35, Rex Lvl 29
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Follow Orders
+|-
+!HP: 
+|2000
+|-
+!MP: 
+|Infinite
+|- 
+!Item:
+|N/A
+|-
+!Attack:
+|290
+|-
+!Defense:
+|250
+|-
+!Agility:
+|150
+|-
+!EXP: 
+|N/A
+|-
+!Gold:
+|N/A
+|-
+!Attack Pattern A:
+|Searing Flames [168-188 Fire Damage to All; bypasses Insulatle and cannot be reduced below 103 by Defend or resistances] or Frigid Ice [124-134 Ice Damage to All; bypasses Insulatle and cannot be reduced below 64 by Defend or resistances] → Attack or Attack while Laughing [1.25x Damage] → Bounce or '''Proceed to Pattern B'''
+|-
+!Attack Pattern B:
+|Venom Mist [induces "Envenomated" status] or Disruptive Wave [if you have buffs up] → Kaboom [95-115 Bang Damage to All] or Energy Balls [two hits that each deal (Attack/2 of blockable Damage + 67 of unblockable Damage)] → Meditation [restores 500 HP] or '''Proceed to Pattern A'''
+|-
+!A.I. Pecularities:
+|50% chance of attacking twice per round; but can attack up to three times when transitioning from one attack pattern to another.
+|-
+!Resistances:
+|No resistance to Frizz or Zap, 30% reduction of Bang and Woosh, 50% resistance to Drain Magic, 70% reduction of Sizzle and Fire, Immunity to Everything Else 
+|}
+
+'''CLIFF NOTES:'''
+# Use Sage's Stone at every opportunity, even if your party is at full health
+# Have Terry equip the Hela's Armour if the party is at, or close to, full health.  It will drop his Agility to 0, and guarantee he goes after Mortamor.
+# Have Terry ''remove'' the Hela's Armour if the party is hurt.  The Meteorite Bracer will max out his Agility, and ensure he goes before Mortamor.
+# Swap everyone out except one character out any time Mortamor ends his turn with "Bounce", "Disruptive Wave", or "Venom Mist".  Otherwise, you might eat two AoEs in a row.
+# Use Antidotal Herbs or Squelch if you are envenomed.
+# This form is practically immune to Knuckle Sandwich.  Don't use it.
+
+=== VS. Mortamor (Round 2) ===
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Lizzie Lvl 9, Carver Lvl 30, Terry Lvl 27-35, Rex Lvl 29
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Follow Orders
+|-
+!HP: 
+|3000
+|-
+!MP: 
+|Infinite
+|- 
+!Item:
+|N/A
+|-
+!Attack:
+|410
+|-
+!Defense:
+|300
+|-
+!Agility:
+|90
+|-
+!EXP: 
+|N/A
+|-
+!Gold:
+|N/A
+|-
+!Attack Pattern A:
+|Charge [150-180 unblockable Damage] (33.33%), Attack (16.66%), Defending Champion [reduces most attacks to 10% Damage], Buff (16.66%), '''Proceed to Pattern B''' (16.66%)
+|-
+!Attack Pattern B:
+|Kasap or Oomph [even if he already has it up] → Roundhouse Kick or Mercurial Thrust → Scorching Flames [150-170 Fire Damage to All] or '''Proceed to Pattern A'''
+|-
+!A.I. Pecularities:
+|50% chance of attacking twice per round; but can attack up to three times when transitioning from one attack pattern to another.
+|-
+!Resistances:
+|No resistance to Knuckle Sandwich, Frizz, Bang, Woosh, or Zap, 30% reduction of Sizz, Fire and Ice, 70% reduction of Crack, Immunity to Everything Else 
+|}
+
+# Raise everyone's Defense as high as you can via Buff & Kabuff.
+# Buff & Oomph signal that he's entered Pattern B.
+# Mortamor will cast Buff & Oomph on himself, even when it's useless to do so.
+# Beware if Mortamor ends a turn with Buff or Oomph.  It means a potential double AoE turn.
+# On the flip side, be grateful if he ends a turn with Scorching Flames.  It means he can only attack you with Mercurial Thrust or Roundhouse Kick.
+# If on the SNES version, Carver should stay away from Focus Strength + Hela's Hammer.  A bug makes it so Oomph + Focus Strength + Hela's Hammer will overflow; causing it to wrap around to single or double digit damage, instead of what it should be.
+# Keep track of Mortamor's HP.  You don't want to be injured walking into Round 3.
+
+=== VS. Mortamor (Round 3) ===
+
+{| {{prettytable|notwide=1|float=center}}
+!Right Hand
+|The hand on the left side of the screen (from your perspective)
+|-
+!Recommended Level: 
+|Lizzie Lvl 9, Carver Lvl 30, Terry Lvl 27-35, Rex Lvl 29
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Follow Orders
+|-
+!HP: 
+|1700
+|-
+!MP: 
+|Infinite
+|- 
+!Item:
+|N/A
+|-
+!Attack:
+|330
+|-
+!Defense:
+|180
+|-
+!Agility:
+|70
+|-
+!EXP: 
+|N/A
+|-
+!Gold:
+|N/A
+|-
+!Attack Pattern:
+|Attack (16.66%), Slam [(Attack/2) of blockable Damage) + 150 of unblockable Damage] (16.66%), Knuckle Sandwich [2x Physical Damage] (16.66%), Disruptive Wave [if you have buffs up] (16.66%), Multiheal [only when low on HP] (16.66%), Zing [if Mortamor or Left Hand are dead] (16.66%)
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|No resistance to Knuckle Sandwich, Frizz, Bang, Zap, Fire, or Ice, 30% reduction of Sizz, Crack, and Woosh, Immunity to Everything Else 
+|}
+
+{| {{prettytable|notwide=1|float=center}}
+!Mortamor
+|The giant head in the center
+|-
+!Recommended Level: 
+|Lizzie Lvl 9, Carver Lvl 30, Terry Lvl 27-35, Rex Lvl 29
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Follow Orders
+|-
+!HP: 
+|2500
+|-
+!MP: 
+|254
+|- 
+!Item:
+|N/A
+|-
+!Attack:
+|300
+|-
+!Defense:
+|340
+|-
+!Agility:
+|120
+|-
+!EXP: 
+|N/A
+|-
+!Gold:
+|N/A
+|-
+!Attack Pattern A:
+|Lullab-Eye [Puts one PC to sleep; cannot be resisted] → Raging Roar [120-150 unblockable Damage to All] → Kafrizzle [120-140 Frizz Damage] → Disruptive Wave [if you have buffs up] → Freezing Blizzard [120-140 Ice Damage to All] → '''Proceed to Pattern B'''
+|-
+!Attack Pattern B:
+|Pyre o' Fire [170-190 Fire Damage, but has a 1/3 chance of failing] (16.66%), Kafrizzle [120-140 Frizz Damage] (16.66%), Kaboom [95-115 Bang Damage to All] (16.66%), Magic Burst [200-220 Fire Damage to All; used only at half HP.  Can be resisted by armour, but Insulatle has no effect on this move] (16.66%), Recover All MP [used only if at 0 MP] (16.66%), '''Proceed to Pattern A''' (16.66%)
+|-
+!A.I. Pecularities:
+|Attacks once per round in Pattern A; 50% chance of attacking twice in Pattern B
+|-
+!Resistances:
+|No resistance to Fire, 30% reduction of Frizz and Zap, 70% reduction of Sizz, Bang, Crack, Woosh, and Ice, Immunity to Everything Else 
+|}
+
+{| {{prettytable|notwide=1|float=center}}
+!Left Hand
+|The hand on the right side of the screen (from your perspective)
+|-
+!Recommended Level: 
+|Lizzie Lvl 9, Carver Lvl 30, Terry Lvl 27-35, Rex Lvl 29
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Follow Orders
+|-
+!HP: 
+|2000
+|-
+!MP: 
+|Infinite
+|- 
+!Item:
+|N/A
+|-
+!Attack:
+|270
+|-
+!Defense:
+|180
+|-
+!Agility:
+|180
+|-
+!EXP: 
+|N/A
+|-
+!Gold:
+|N/A
+|-
+!Attack Pattern:
+|Kazing [if Right Hand or Mortamor are dead] (33.33%), Attack (16.66%), Slash [1.25x Damage] (16.66%), Slam [(Attack/2) of blockable Damage) + 150 of unblockable Damage] (16.66%) (16.66%), Disruptive Wave [only if you have buffs on your party] (16.66%), Backdraft [reflects all breath attacks if they are used] (16.66%)
+|-
+!A.I. Pecularities:
+|Inverted Targeting (SNES only) and Concentrated Targeting
+|-
+!Resistances:
+|No resistance to Knuckle Sandwich, Zap, Fire, or Ice, 30% reduction of Frizz, Bang, Crack, and Woosh, 70% reduction of Sizz, Immunity to Everything Else 
+|}
+
+# Kaclang is the only way to make this fight 100% consistent, as it allows you to skip all of Pattern B, and everything nasty about Pattern A.  Otherwise, there will always be a small chance the fight goes off-script
+# Swap everyone out except one character on the 2nd Turn in Pattern A!  Raging Roar always comes that turn!
+# Carver should Focus Strength on the 3rd Turn in Pattern A, and Knuckle Sandwich the Left or Right Hands on the 4th Turn.
+# Oomph should be established on Carver on the 3rd Turn, as well.  It ensures that Mortamor uses Disruptive Wave instead of Freezing Blizzard on the 4th turn.
+# If Amos has it, he should cover Carver with Selflesness on the 4th Turn, so Disruptive Wave doesn't take Oomph off Carver.
+# Ashlynn, if at the recommended job class & level, will do ~298 Damage via Magic Burst on the SNES version, and ~447 Damage on the remakes.  Plan Magic Burst out accordingly; you only get one shot at it.
+# You should kill the Left Hand first, then the Right Hand, then Mortamor himself.  The hands have revival spells, while Mortamor does not.
+# Remember the Kerplunk Bracer!  It fully heals & revives everyone in the party once the wearer dies!  Use it strategically!
+# Healie should spam Omniheal on nearly every turn if he has it.  The beginning of this fight is by far the most dangerous.
+# Be wary of Mortamor's own version of "Magic Burst" once the head is the only one left.  It's 200-220 Fire Damage to the party, though armour will reduce the damage.  
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Mortamor's Dreadlair|nextpage=Epilogue}}

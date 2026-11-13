@@ -1,0 +1,84 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== How to Use the Wagon ==
+
+You gain access to the Wagon for this dungeon!  This means you can swap out your PC's inside the dungeon itself!  But make sure everyone in your party is topped off on HP before each fight; the monsters' stats have been launched sky-high to counter this new advantage.  For this reason, you will wish to note the following uses of the wagon:
+
+# '''Easier Fleeing:''' If you don't feel like fighting the difficult monsters present in this dungeon, you can simply remove most of your PC's from the active party.  Just put someone durable (like Lizzie or Carver) into the 1st slot, and they will take all the punishment as you attempt to Flee.
+# '''Tagging Out:''' If one of your PC's becomes heavily injured during a fight, you can simply swap them out for a fresh fighter.
+# '''Healing the Reserve Party:''' Hustle Dance and Multiheal will restore ''every'' member you have, not just those in your Active Party.  In addition, the Remakes give the Sage's Stone this property as well.  You can use this in conjuction with Tagging PC's out to safely heal your main fighters.
+
+== Mortamor's Dreadlair (1st) ==
+
+The monsters here are every bit as tough as you would expect from Dragon Quest VI's endgame; but fortunately, so are your PC's and items.  Hustle Dance + the Sage's Stone goes a long way in mitigating damage; and between that, the Sunderbolt Blade, Carver's offense, and Rex's Oomph, you shouldn't need to spend a lot of MP fighting these monsters.  Even still, there are two monsters to look out for.
+
+First and foremost is the most dangerous one, '''the Pudgedevil'''.  They have both Kaboom (95-115 Bang Damage to all) and Freezing Blizzard (120-140 Ice Damage to all); in addition, they each have 368-460 HP and possess immunity to every status spell except Fizzle and Sap.  To add further insult to injury, they will also summon Cureslimes (though they don't always have enough room to do so in the SNES version), and will respond to all spells by casting Magic Barrier on itself and it's brethren.   
+
+What makes them truly deadly, however, is that they often appear in groups of three, and operate by a fixed attack pattern.  They will always use:
+
+<blockquote>
+Kaboom → Magic Barrier (if hit with spells, and haven't cast it already) → Attack → Summon Cureslime (if there's enough room to do so) → Freezing Blizzard → Attack
+</blockquote>
+
+Before looping back to Kaboom.  If they appear in a "clumped group" (which means the game displays them as "3x Pudgedevil"), they will use this pattern as a group, from left to right.  The leftmost one will use Kaboom, the middle one will usually Attack (unless you cast a spell and caused them to use Magic Barrier), and the right one will Summon a Cureslime (if they have enough room to do so).  And then they will finish the pattern before looping around back on the 2nd or 3rd turns.
+
+If, however, they appear in a "non-clumped group" (meaning the game displays them as "1x Pudgedevil, 1x Pudgedevil, 1x Pudgedevil"), they will each use the same action every turn.  All three of them will use Kaboom on Turn 1, Attack on Turn 2, and use either "Summon Cureslime" or "Freezing Blizzard" on Turn 3.
+
+This made them especially notorious in the SNES version, where there was not enough space for them ''to'' summon Cureslimes when all three showed up.  They would use both Kaboom ''and'' Freezing Blizzard in the same turn; making it necessary to either cast Kaclang on every odd-numbered turn, spam healing spells, or outright flee in order to survive.  Fortunately, the Remakes solved this problem by allowing more enemies to occupy the screen at one time; the player would only suffer a Freezing Blizzard + Kaboom combo if they failed to kill a Pudgedevil by Turn 2.
+
+So if you're playing the SNES version, or facing a "non-clumped" group, you will want to use Kaclang or swap three of your PC's out of your active party on Turn 1.  Then you will want to Oomph Carver so he can kill a Pudgedevil with Knuckle Sandwich on Turn 2 (with Terry chipping in with the Sunderbolt Blade).  From there you can dismantle the rest of them.  Those playing the Remakes can simply do this on Turn 1.
+
+'''The Loss Leaders''' are the second most dangerous monsters here.  They pack a whopping 568-710 HP, are immune to Kasnooze, highly resistant to Knuckle Sandwich and Fizzle, also come in groups of three, and also operate by a mostly fixed attack pattern:
+
+<blockquote>
+Kafrizzle → Kazing (if an ally is dead) Attack → Multifists → Pyre o' Fire → Insulatle (if hit by a breath attack)
+</blockquote>
+
+Unlike the Pudgedevils, a clumped group will not consistently take turns with different spots on the chain.  Usually, all of them will use Kafrizzle on Turn 1, all of them will Attack on Turn 2, and etc.  The only exception comes on Turn 3, where the 1st one will use Multifists, the 2nd will use Pyre o' Fire, and then the 3rd will use Kafrizzle.  From them on, they will act like they did on Turns 1-2, with one or two always being behind the 1st one on the chain.  A non-clumped group, however, will simply copy each others moves on each and every round.
+
+Assuming you're fighting three at once, this means that you'll want to use at least one Breath attack before Turn 3.  This makes it so that one will waste a turn using Insulatle instead of using Kafrizzle.  In addition, you will also means that you'll want to try to kill at least one of them by Turn 3; this way, you can kill the other ones before they can start casting Kazing.  Fortunately, this can be accomplished via Oomphed Roundhouse Kick + Sunderbolt + Mercurial Thrust.
+
+[[File:DQ6 Mortamor's Dreadlair.png|thumb|right|The top right room's walls will be invisible, and will only show themselves for short intervals.]]
+
+Aside from those two, the rest will fall easily enough.  Other notable monsters include:
+
+# The Infernal Panes use Morph just like their previous recolors, but they're utterly trivialized by having access to the wagon.  Simply remove anyone with spells like Thwack from the active party so the Panes can't get any truly dangerous moves.  
+# The Dark Crawler has Dark Haze like the Gallows Giant, and Body Slam (does 80% of a target's HP); but it only uses the latter when under 1/3 HP, and can be oneshotted by an Oomphed Knuckle Sandwich.  Aside from that, it is utterly lacking in offensive capabilities.  Just don't try to use Zap; they are immune to that.
+# The Aggrosculptures also possess Freezing Blizzard, as well as an immunity to Knuckle Sandwich and Kasnooze.  However, they only have a 16.66% chance of using Freezing Blizzard, only have 208-260 HP, and possess no immunity to Zap.  They will often be dispatched before they can do anything.
+# Metal King Slimes can actually show up here, as can a band of Metal Slime+'s that merge into a Metal King Slime after one turn.  However, the encounter rate is lower here than it is outside the Prison of Sorrow.
+
+In any case, proceed through the Dreadlair while using the wagon; and use the free healing spot at point '''G'''.  It will restore all HP and MP.  And cast Evac once you reach the Scroll of Dragonic Diligence; the Dragon vocation's stat boosts are too good to not have for Mortamor.
+
+== Setting up the Item Retention Exploit (SNES players only) ==
+
+If you plan on taking advantage of this, you will want to save before using your 2nd Scroll of Dragonic Diligence on Rex.  This allows him the durability he needs to stand up to Mortamor's attacks.  
+
+If you're on the Remakes, you won't need to worry about this; you can enter the post-game dungeon whenever you wish once you have your post-game file.  You can enter in, buy a Scroll of Dragonic Diligence, and not worry about whether or not Rex gets it.
+
+== Mortamor's Dreadlair (2nd Visit) ==
+
+First of all, '''make sure you have 2-4 Antidotal Herbs'''.  Mortamor can envenom some of your party members, and that will do a lot of damage over the course of the match if not healed.  Not all of your PC's will likely have Squelch, so they will be wishing for some Antidotal Herbs to make up for it. 
+
+In any case, don't bother with the random encounters this time.  If you were strong enough to beat them on you're 1st visit, you're strong enough to beat their leader.  Besides that, SNES players won't keep the experience they get after their last save, so further fighting is useless for them.  
+
+Just remember; you cannot use Zoom or Evac inside Mortamor's chamber.  So make sure you're properly set-up before you take the door at point '''L'''.  In addition, make sure your party looks similar to this:
+
+{| {{prettytable|notwide=1}}
+|'''Lizzie (Level 9): ''Ghent Staff'', ''3x Yggdrasil Leaves'', ''1-2x Antidotal Herbs'', Hela's Hammer, Dragon Robe, Shield of Max Wynne, Thinking Cap, Gold Bracer'''
+|-
+|'''Carver (Level 30): ''3x Yggdrasil Leaves'', ''1-2x Antidotal Herbs'', Miracle Sword & Metal King Sword & Hela's Hammer, Sacred Armour, Silver Shield, Metal King Helmet, Raging Ruby'''
+|-
+|'''Terry (Level 27-35): ''Sage's Stone'', ''Yggdrasil Dew'', ''Sands of Time'', Sunderbolt Blade, Dragon Mail & Hela's Armour, Silver Shield, Platinum Mask, Meteorite Bracer
+|-
+|'''Rex (Level 29): Sword of Ramias, Armour of Orgo, Shield of Valora, Helm of Sebath, Gold Bracer & Agility Ring
+|-
+|'''Healie (Level 24): Flowing Dress, Silver Platter, Hat of Hermes, Gold Ring'''
+|-
+|'''Ashlynn (Level 25): Gringham Whip, Princess's Robe, Magic Shield, Golden Tiara, Gold Bracer'''
+|-
+|'''Goowain (Level 25): Dragon Killer, Platinum Mail, Dragon Shield, Platinum Mask, Gold Bracer & Kerplunk Bracer (used only in emergencies)'''
+|-
+|'''Amos (Level 27): Fire Claw, Enchanted Armour, Platinum Shield, Platinum Mask'''	
+|}
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Prison of Sorrow|nextpage=VS. Mortamor}}

@@ -1,0 +1,123 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== VS. Gallows Giant ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Lizzie Lvl 7, Carver Lvl 28, Terry Lvl 25-34, Rex Lvl 27
+|-
+!Recommended A.I. Settings for Party (Remakes Only): 
+|Carver: Show No Mercy
+Lizzie & Terry: Follow Orders
+|-
+!HP: 
+|2800
+|-
+!MP: 
+|0
+|- 
+!Item:
+|Mini Medal (Always Drops)
+|-
+!Attack:
+|220
+|-
+!Defense:
+|150
+|-
+!Agility:
+|115
+|-
+!EXP: 
+|6300
+|-
+!Gold:
+|580
+|-
+!Attack Patterns:
+|Desperate Attack [critical hit that deals 185-213 Damage with the Giant's Attack stat] (33.33%), Quick Attack [three 0.5x Attacks to random targets] (16.66%), Lightning [35-45 Bang Damage to All] (16.66%), Dark Haze [Neutralizes enemy and ally magic, and prevents further magic from being casted] (16.66%), War Cry [Stuns party] (16.66%)
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|15% resistance to Fizzle and Knuckle Sandwich, 30% reduction of Fire, Ice, and all attack magic, Immunity to Everything Else
+|}
+
+This is actually a really easy fight, thanks in no small part to the Giant's unusually weak AoE attack, a magic neutralizer that can't actually do anything to stop the Sword of Ramias, and a critical hit that can always be blocked by Carver and neutralized by the Ghent Staff, Sage's Stone, and Hustle Dance.
+
+So just have Lizzie alternate between Focus Strength + Attack/Defend/Ghent Staff (as needed), have Carver alternate between Knuckle Sandwich and Forbearance, have Terry spam Sage's Stone (switching armours as needed), and have Rex Oomph Carver before using Dance/Attack/Defend as appropriate.
+
+== Gallows Moor ==
+
+[[File:DQ6 Gallows Moor.png|thumb|right|You should have '''99''' Mini Medals and all '''16''' Dreamscapes by the end of this.]]
+
+The mini-boss may be defeated, but this place is far from over.  Go down the stairs at point '''A''', across the electric floor, and talk to the NPC to get the Guards' Garb.  Put that on by using it from the item menu, loot the treasures you come across, go up to the 1st floor, talk to the guard between points '''F''' and '''H''', talk to the Captain guarding Blackmar at point '''P''', loot the three treasure chests on the 1st floor, then remove the Gaurd's Garb and talk to the woman running the bar.  Also be sure to snag the [[File:DQ3 SNES Book.png]] <span style="color:blue">16th Dreamscape</span> while you're there, if you're on the iOS/Android version.
+
+Go talk to everyone you are told to talk to, and the guards will eventually try to execute someone!  This triggers a forced battle, but there's nothing you can do to win.  The Prison Guards are easy enough to beat, but Zozagel and Dogmus are unbeatable encounters.  Dogmus has 7000 HP, and will always paralyze your entire party on the 6th turn, even if you happen to have Kaclang up on that turn. And even if you do somehow kill him before the 6th Turn, the game will just ignore your victory.  You will be thrown in your cell, and the game will go on as if you lost.
+
+{{Sidebar|title=If you wish to speed through this battle|float=left|width=505px|contents=This is the same situation as with Gardsbane Tower; you don't lose any Gold or anything if the Prison Guards beat you.  So if you really want to, you can have just one person in the active party after beating the Gallows Giant; then you can have them run inside the electric fields until they're at 1 HP.  Then Flee when you fight the Prison Guards wipe out her HP.  This is the fastest way of going through these fights.}}
+{{-}}
+
+== Waking Up ==
+
+Observe the fallen guard once you wake up in your cell; the townsfolk will begin their riot and free you from your prison.  On your way to the 1st floor, Erdrick will give you 4x Seeds of Strength!  Use these on Carver, give your Staff of Antimagic to Lizzie (buy it from Swanstone or Sorceria if you don't have it), and have your party look like this:
+
+Zozagel is collapsed right outside Blackmar's throne room.  He's immune to Sap, but relies on single-target physical attacks in a way that makes him even less of a threat than Terry; so feel free to beat him up if you like.  Whatever you do, get your gear in order and take on Blackmar!
+
+== VS. Blackmar ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Lizzie Lvl 7, Carver Lvl 28, Terry Lvl 25-34, Rex Lvl 27
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Follow Orders
+|-
+!HP: 
+|3300
+|-
+!MP: 
+|Infinite
+|- 
+!Item:
+|Silk Tuxedo (Always Drops)
+|-
+!Attack:
+|270
+|-
+!Defense:
+|230
+|-
+!Agility:
+|130
+|-
+!EXP: 
+|8500
+|-
+!Gold:
+|900
+|-
+!Attack Patterns:
+|Inferno [65-85 Fire Damage to All] or Stomp [50-65 Woosh Damage to All, with 1/3 chance of failing] -> Flame Slash [1.3x Damage] or Dragon Slash [1.3x Damage to Dragons] -> Kazing or Kasap
+|-
+!A.I. Pecularities:
+|Always attacks twice per round
+|-
+!Resistances:
+|30% reduction of Ice and all attack magic, 50% resistance to Fizzle, Sap, & Knuckle Sandwich, 70% reduction of Fire, Immunity to Everything Else
+|}
+
+Blackmar starts off with two Dragooners on his side, who each have 336-420 HP.  In addition to that, he attacks twice per round, makes frequent use of AoE's, likes to use Kasap, and will also revive both of his minions to 100% HP if given the chance.  Given all these factors, he can be a huge step up in difficulty if one is not adequately prepared.
+
+Fortunately, he has a critical vulnerability to Fizzle.  Land that on him with Lizzie, and there will be nothing he can do to stop you from spamming Kabuff and killing his minions.  And once you do that, and land two Saps on him, the match is basically over.  So the trick is surviving the first few rounds.
+
+But, that shouldn't be too hard either.  The Sage's Stone does more than it's fair share of healing with Terry using it, and his armour switching allows him to adjust to the situation however he needs to.  So just have Terry spam the Sage's Stone, have Lizzie (or someone else) seal Blackmar's magic with the Staff of Anti-Magic, have Carver (or someone else) max out the party's Resilience with Kabuff, and have Rex use Oomph and Sap as needed (if you didn't need to replace him with a Kabuff user).  Once your party is set up, you can just have Carver Focus Strength + Double-Edged Slash spam Blackmar into oblivion as Lizzie and Rex pitch in their respective attacks.
+
+== Aftermath ==
+
+Go down the stairs at point '''A''' to talk to Benjamin again.  The next cutscene will trigger, and you will wake up the next day with a new mission.  Go talk to Benjamin once again, and he will give you the Orb of Truth.  Leave Gallows Moor, try to purchase the Yggdrasil Leaves you need if you haven't already, and head to the Prison of Sorrow.
+
+{{Sidebar|title=iOS Players Should Now Have 16 Dreamscapes!|width=850px|contents=This means that one can finally receive a 2nd Meteorite Bracer and a Liquid Metal Slime named Mercury!  Mercury himself starts in the "Liquid Metal Mind" vocation, which means he can master the almighty Kaclang after just 9 battles!  So make absolutely certain you get him that if no one learned it yet; Kaclang's usefulness against Mortamor cannot be emphasized enough!}}
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Greedmore Valley|nextpage=Prison of Sorrow}}

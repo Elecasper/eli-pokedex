@@ -1,0 +1,41 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== The Demon World ==
+
+[[File:DQ6 Path to Despairia and Lotus Lagoon.png|thumb|right|Go to Despairia first, then Lotus Lagoon.]]
+
+If you are playing the remakes, you will notice a textbox saying that your party has been drastically weakened upon entry; otherwise, the game won't show you bad the news until you get into a battle.  Either way, everyone's HP will be permanently reduced to 1 until you can figure out a way to cure them; and their MP will be reduced to 0.  
+
+Naturally, you will want to head to Despairia as soon as you can; then Lotus Lagoon once you've done what you needed to do.  Fortunately, the walking distances are very short; there should be no chance of any monsters ambushing you before you get to either of these two places.
+
+== Despairia ==
+
+[[File:DQ6 Despairia.png|thumb|right|Talk to Max Wynne in the room at point '''D'''.  Do not fight the monster upstairs at point '''C''' unless you're absolutely sure you want to!]]
+
+First of all, don't be afraid to use the stat seeds on Carver; the game will still add the stat bonuses to your base stats, even though it's forcing your HP to be 1 right now.  That being said, be careful to not fight the monster found upstairs at point '''C'''.  You ''can'' defeat it with Leg Sweep and generous helpings of Sunderbolt Blade/Fire Claw/Wind Sickles/etc., but it gives very little EXP for how hard it is to kill.
+
+Also of note is the Mini Medal at the graveyard, for there will be a man who blocking it off in all versions of the game.  You ''can'' actually get it before getting him to move off of that spot in the remakes, via very careful positioning; but removing him is a hard requirement in the SNES version.  So remember him for later.
+
+For now, just enter the room at point '''D''' to talk to an old man named Max Wynne.  Then head to Lotus Lagoon once he gives you the Old Pipe. 
+
+== Lotus Lagoon ==
+[[File:DQ6 Lotus Lagoon.png|thumb|right|]]
+
+This place is actually very simple.  Just enter the bar, talk to the bunny girl, and get in the line to get into the pond.  Navigate your way to the well, and escape back to the Real World!
+
+== Dullerton Revisited ==
+
+Zoom back to Ghent via the Hat of Hermes or Chimaera Wing; or use the Celestial Reigns if you don't have either of those two.  Then fly back to Dullerton, walk up to the dog blocking the leftmost house, use the Old Pipe in front of it, and then talk to Max Wynne's wife.  Fly back to Despairia once she gives you his tools, talk to Max Wynne again, and he will offer to make you either a Helmet, a Shield, or some Armour.  
+
+The Shield of Max Wynne reduces all Frizz, Sizz, Bang, and Fire Damage by 15, and has a fair amount of defense to boot.  That may sound good; but it is completely and utterly outclassed by the Silver Shield (25 points off those same kinds of attacks, and available at the next town) and the Metal King Shield (30 points off those same attacks, plus all Ice danage).  The Armour of Max Wynne offers 15 points of damage reduction to Fire and Ice damage; but it is also completely outclassed by equipment such as the Mystic Armour, the Armour of Orgo, and others.  And finally, the Helm of Max Wynne is just a generic helmet; no resistances or anything.
+
+Out of all those pieces of armour, you will probably find the most use out of the Shield of Max Wynne.  The Silver Shields cost 33,000G apiece, the Metal King Shields are only winnable via the Rank B matches in the Slimopolis, and it's the only shield Lizzie can equip that's more useful than the Dragon Shield.  So unless you've gone out of your way to get two Metal King Shields and have +106,000G leftover, you will probably want the shield.  Otherwise, you may want the Helm; Nevan can equip it, and it has the highest Defense bonus out of any headgear in the game.
+
+Whatever you decide, you will get a free rest at the Inn, and have all your HP and MP restored once you walk out of the room!  Plus, the man at the gravestones will now have moved out of the way; SNES players can now finally get the Mini Medal he was standing on!  
+
+== Path to Greedmore Valley ==
+[[File:DQ6 Path to Greedmore Valley.png|thumb|right|]]
+
+The path to Greedmore may seem long, but you'll only actually fight about 2-3 battles; and not particularly hard ones either.  Go forth to your next destination!
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=The Item Retention Exploit (SNES Only)|nextpage=Greedmore Valley}}
