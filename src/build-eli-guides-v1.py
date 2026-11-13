@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Build guides/index.html: per-game guide hub for games playable on 3DS.
+"""Build guides/index.html: guide directory for GBA / NDS / 3DS games.
 
 Version exclusives come from data.json (same source as the pokedex).
 External links were checked to return HTTP 200 on 2026-11-13.
 Theme and top bar are copied from handheld/index.html so the pages match.
 """
-import html, json, re
+import html, json, re, urllib.parse
 from pathlib import Path
 
 SITE = Path(__file__).resolve().parent.parent
@@ -76,13 +76,54 @@ for title, plat, vids, wiki, sdir, pages in GAMES:
     ext = ''.join(f'<a href="{SEREBII}/{sdir}/{pages[k]}.shtml" target="_blank" rel="noopener noreferrer">{lab}</a>'
                   for k, lab in CAT if k in pages)
     wurl = WIKI + wiki.replace(' ', '_')
-    cards.append(f'''<article class="game" data-plat="{plat}" data-q="{e(title + ' ' + q)}">
+    cards.append(f'''<article class="game" data-plat="{plat}" data-series="宝可梦正作" data-q="{e(title + ' ' + q)}">
 <header><h3>{e(title)}</h3><span class="plat">{plat}</span></header>
 <div class="row"><b>本站</b><div class="links">{dex}<a href="../save-types/index.html#q={e(vname[vids[0]])}">存档类型</a><a href="../handheld/">掌机指南·{play}</a></div></div>
 <div class="row"><b>中文百科</b><div class="links"><a href="{e(wurl)}" target="_blank" rel="noopener noreferrer">神奇宝贝百科：剧情、地图、版本差异</a></div></div>
 <div class="row"><b>英文资料</b><div class="links"><a href="{SEREBII}/{sdir}/" target="_blank" rel="noopener noreferrer">Serebii 总览</a>{ext}</div></div>
 {exclusives(vids)}
 </article>''')
+
+# Other games: src/eli-guides-games-v1.json. Every sw / fandom title there was
+# confirmed to exist through each wiki's API; swPages counts walkthrough subpages.
+SERIES_ORDER = ['宝可梦正作', '勇者斗恶龙', '最终幻想', '塞尔达', '马里奥', '星之卡比', '火焰之纹章', '恶魔城', '银河战士',
+                '王国之心', '女神转生', '世界树迷宫', '怪物猎人', '逆转裁判', '雷顿教授', '牧场物语', '动物森友会',
+                '黄金太阳', '高级战争', '洛克人', '宝可梦外传', '其他']
+PLAT_ORDER = {'GBA': 0, 'NDS': 1, '3DS': 2}
+games = json.loads((SITE / 'src' / 'eli-guides-games-v1.json').read_text(encoding='utf-8'))
+assert all(g['series'] in SERIES_ORDER for g in games)
+
+
+def wiki_url(base, title):
+    return base + urllib.parse.quote(title.replace(' ', '_'), safe=":'()&,!/")
+
+
+def game_card(g):
+    links = []
+    if 'sw' in g:
+        n = g['swPages']
+        tag = f'{n} 章' if n >= 3 else '简略'
+        links.append(f'<a class="main" href="{e(wiki_url("https://strategywiki.org/wiki/", g["sw"]))}" target="_blank" rel="noopener noreferrer">StrategyWiki 攻略 <small>{tag}</small></a>')
+    if 'alt' in g:
+        links.append(f'<a class="main" href="{e(g["alt"][1])}" target="_blank" rel="noopener noreferrer">{e(g["alt"][0])}</a>')
+    if 'fandom' in g:
+        w, t = g['fandom']
+        links.append(f'<a href="{e(wiki_url(f"https://{w}.fandom.com/wiki/", t))}" target="_blank" rel="noopener noreferrer">系列百科</a>')
+    kw = urllib.parse.quote(g['zh'] + ' 攻略')
+    links.append(f'<a class="search" href="https://search.bilibili.com/all?keyword={kw}" target="_blank" rel="noopener noreferrer">B站视频</a>')
+    links.append(f'<a class="search" href="https://gamefaqs.gamespot.com/search?game={urllib.parse.quote_plus(g["en"])}" target="_blank" rel="noopener noreferrer">GameFAQs</a>')
+    return (f'<article class="game mini" data-plat="{g["plat"]}" data-series="{e(g["series"])}" data-q="{e(g["zh"] + " " + g["en"] + " " + g["series"])}">'
+            f'<header><h3>{e(g["zh"])}</h3><span class="plat">{g["plat"]}</span></header><p class="en">{e(g["en"])}</p>'
+            f'<div class="links">{"".join(links)}</div></article>')
+
+
+groups = {'宝可梦正作': cards}
+for g in sorted(games, key=lambda g: PLAT_ORDER[g['plat']]):
+    groups.setdefault(g['series'], []).append(game_card(g))
+sections = ''.join(f'<section class="series" data-series="{e(s)}"><h2>{e(s)} <span>{len(groups[s])}</span></h2><div class="grid{" small" if s != "宝可梦正作" else ""}">{"".join(groups[s])}</div></section>'
+                   for s in SERIES_ORDER if s in groups)
+series_opts = ''.join(f'<option value="{e(s)}">{e(s)}（{len(groups[s])}）</option>' for s in SERIES_ORDER if s in groups)
+total = len(GAMES) + len(games)
 
 hh = (SITE / 'handheld' / 'index.html').read_text(encoding='utf-8')
 head = hh[:hh.index('<title>')]
@@ -111,26 +152,34 @@ h1{font-size:26px;margin:18px 0 6px}.intro{color:#a9b5a6;font-size:14px;line-hei
 .ex h4{margin:6px 0;font-size:13px;color:#a9b5a6;font-weight:600}.ex h4 span{color:#f1f0e6}
 .chips{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
 .chip{font-size:12px;padding:4px 9px;border-radius:999px;border:1px solid #44574b;color:#f1f0e6;text-decoration:none}
+.bar select{min-height:42px;border-radius:999px;border:1px solid #44574b;background:#2a372f;color:#f1f0e6;padding:0 12px;font:inherit;font-size:14px}
+.plats{display:flex;gap:6px}.count{font-size:13px;color:#a9b5a6}
+.series{margin:0 0 22px}.series h2{font-size:18px;margin:0 0 10px;display:flex;align-items:center;gap:8px}.series h2 span{font-size:12px;color:#a9b5a6;font-weight:400}
+.grid.small{grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.mini{padding:12px 14px}.mini h3{font-size:16px}.mini .en{margin:-2px 0 8px;font-size:12px;color:#a9b5a6;line-height:1.5}
+.links a.main{background:#c9e265;color:#1f2a24;border-color:#c9e265;font-weight:700}.links a.main small{font-weight:400;opacity:.8;margin-left:4px}
+.links a.main:hover{color:#1f2a24;filter:brightness(1.08)}.links a.search::before{content:"⌕";margin-right:4px;color:#a9b5a6}
+.foot p{margin:6px 0}
 .note,.foot{font-size:12px;color:#a9b5a6;line-height:1.8}.foot{margin:18px 0 0}.foot a{color:#c9e265}
 .empty{color:#a9b5a6;padding:20px 0}
 a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #c9e265;outline-offset:2px}
-@media(max-width:560px){.grid{grid-template-columns:1fr}h1{font-size:22px;margin-top:12px}.game{padding:12px}.row{grid-template-columns:1fr;gap:4px}.row b{padding-top:0}}
+@media(max-width:560px){.grid,.grid.small{grid-template-columns:1fr}.bar select{flex:1}.plats{width:100%}.plats button{flex:1;padding:0 6px}h1{font-size:22px;margin-top:12px}.game{padding:12px}.row{grid-template-columns:1fr;gap:4px}.row b{padding-top:0}}
 [hidden]{display:none!important}
 </style>'''
 
-JS = '''<script>
-(()=>{const q=document.getElementById('q'),bs=[...document.querySelectorAll('[data-p]')],gs=[...document.querySelectorAll('.game')],em=document.getElementById('empty');let p='all';
-function run(){const t=q.value.trim().toLowerCase();let n=0;for(const g of gs){const ok=(p==='all'||g.dataset.plat===p)&&(!t||g.dataset.q.toLowerCase().includes(t)||g.textContent.toLowerCase().includes(t));g.hidden=!ok;if(ok)n++}em.hidden=n>0}
-bs.forEach(b=>b.onclick=()=>{p=b.dataset.p;bs.forEach(x=>x.setAttribute('aria-pressed',x===b));run()});q.oninput=run;})();
-</script>'''
+JS = """<script>
+(()=>{const q=document.getElementById('q'),sel=document.getElementById('series'),bs=[...document.querySelectorAll('[data-p]')],secs=[...document.querySelectorAll('.series')],em=document.getElementById('empty'),cnt=document.getElementById('count');let p='all';
+function run(){const t=q.value.trim().toLowerCase(),sv=sel.value;let n=0;for(const s of secs){let k=0;const sOk=!sv||s.dataset.series===sv;for(const g of s.querySelectorAll('.game')){const ok=sOk&&(p==='all'||g.dataset.plat===p)&&(!t||g.dataset.q.toLowerCase().includes(t)||g.textContent.toLowerCase().includes(t));g.hidden=!ok;if(ok)k++}s.hidden=!k;n+=k}em.hidden=n>0;cnt.textContent=n+' 个游戏'}
+bs.forEach(b=>b.onclick=()=>{p=b.dataset.p;bs.forEach(x=>x.setAttribute('aria-pressed',x===b));run()});q.oninput=run;sel.onchange=run;run();})();
+</script>"""
 
-page = f'''{head}<title>宝可梦攻略导航 · Eli</title>{CSS}{theme}</head><body>{bar}<main>
-<h1>宝可梦攻略导航</h1>
-<p class="intro">3DS 能玩的 12 组宝可梦正作（GBA / NDS / 3DS），每作汇总本站资料和靠谱的外部攻略。搜索框可以搜游戏名，也可以搜宝可梦名字，查它是哪个版本限定。</p>
-<div class="bar"><input id="q" type="search" placeholder="搜游戏或宝可梦，例如：心金、六尾" aria-label="搜索"><button data-p="all" aria-pressed="true">全部</button><button data-p="GBA" aria-pressed="false">GBA</button><button data-p="NDS" aria-pressed="false">NDS</button><button data-p="3DS" aria-pressed="false">3DS</button></div>
-<div class="grid">{''.join(cards)}</div>
+page = f'''{head}<title>掌机攻略大全 · Eli</title>{CSS}{theme}</head><body>{bar}<main>
+<h1>掌机攻略大全</h1>
+<p class="intro">{total} 个 GBA / NDS / 3DS 游戏的攻略入口，按系列分组。每个游戏优先给一份完整的图文攻略，再附系列百科和视频、论坛搜索。宝可梦正作另有本站图鉴、存档和版本限定名单。</p>
+<div class="bar"><input id="q" type="search" placeholder="搜游戏名或宝可梦，例如：勇者斗恶龙5、六尾" aria-label="搜索"><select id="series" aria-label="系列"><option value="">全部系列</option>{series_opts}</select><div class="plats"><button data-p="all" aria-pressed="true">全部</button><button data-p="GBA" aria-pressed="false">GBA</button><button data-p="NDS" aria-pressed="false">NDS</button><button data-p="3DS" aria-pressed="false">3DS</button></div><span id="count" class="count"></span></div>
+{sections}
 <p class="empty" id="empty" hidden>没有匹配的游戏。</p>
-<p class="foot">版本限定名单来自本站图鉴数据（PokéAPI 等），只算野外和固定遭遇，不含配信活动和交换。外部链接于 {CHECKED} 逐个核对可访问，内容版权归各站点所有。中文资料来自 <a href="https://wiki.52poke.com/" target="_blank" rel="noopener noreferrer">神奇宝贝百科</a>，英文资料来自 <a href="https://www.serebii.net/" target="_blank" rel="noopener noreferrer">Serebii</a>。</p>
+<div class="foot"><p><b>链接说明</b>：「StrategyWiki 攻略」后面的数字是攻略章节数，标「简略」的只有概要，建议配合视频看。「系列百科」是该系列的 Fandom 百科页面。「B站视频」和「GameFAQs」是搜索链接，结果由对方网站提供。</p><p>StrategyWiki、Fandom、神奇宝贝百科和 Serebii 的页面于 {CHECKED} 通过各站接口逐个核对存在。版本限定名单来自本站图鉴数据，只算野外和固定遭遇。攻略内容版权归各站点所有，本站只做导航，不提供游戏文件。</p></div>
 </main>{JS}</body></html>
 '''
 out = SITE / 'guides' / 'index.html'
