@@ -1,0 +1,90 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== Port Haven Casino ==
+
+[[File:DQ6 Casino Counter.png|right]]
+
+You may have noticed by now that the DS version is easier than the SNES version.  We now see one of the biggest reasons why.
+
+This place is not worth anything in the SNES version.  The slot machines only take 5 tokens at a time, and will only accept horizontal matches in the middle column.  Even a 777 will only net 1500 Coins.  Here are the prizes available, for an idea of how terrible that is... 
+
+{| {{prettytable|notwide=1}}
+|-
+! Item || Price || Description
+|-
+| Magic Water
+| 200 Coins
+| Restores 40-50 MP when used out-of-battle, and 10-15 MP when used in-battle.
+|-
+| Silk Tuxedo
+| 500 Coins
+| Not that great as armour, but sells for 2650 Gold.
+|-
+| Yggdrasil Leaf 
+| 1000 Coins
+| Revives one dead PC to full HP before disappearing.
+|-
+| Dragon Shield
+| 2000 Coins
+| Tenth strongest shield in the game, and reduces all fire-based and ice-based breath attacks (not the Frizz and Crack family of spells) by 15.
+|-
+| Platinum Mail
+| 3500 Coins
+| Ninth strongest armour in the game, and reduces ALL direct-damage spells by 15 points.
+|-
+| Kamikaze Bracer
+| 5000 Coins
+| Every enemy in the fight either dies or is reduced to 5% HP when the wearer dies...unless they're resistant to Kamikaze (like all bosses).
+|}
+
+All of these items are great...but require literal hours to get in the SNES version.  This all changes in the remakes.  They introduce a 100 coin slot machine in the center of the building, and allow you to invest up to 300 Tokens per row!  Plus, the maximum payout is now '''3,000,000 Coins'''!  
+
+No, that was not a typo; the payouts are that absurdly high.  6000 Coin payouts, for example, are relatively common! 
+
+The end result is this: It only takes around 14-38 minutes to get 27,000+ Coins, assuming optimal play.  So, it is recommended you purchase...
+
+* 2x Platinum Mails
+* 2x Dragon Shields
+* 6x Yggdrasil Leaves
+* 20x Silk Tuxedos
+* Up to 20x Magic Waters
+
+Firstly, the Platinum Mails and Dragon Shields are obscenely strong for this point in the game. Secondly, the Silk Tuxedos sell for 2625G apiece, guaranteeing that money will never be a problem.  Thirdly, the Magic Waters guarantee that you will never run out of MP again.  Finally, the Yggdrasil Leaves are an outstanding safety net, and you'll want at least 6x for the final boss 'anyway'.  You may as well get them now.
+
+Now, you likely don't have enough assets to sell to get more than 200 Coins, but that's alright.  Just follow Methods 1-2 below; they're where the "14-38 minute" benchmark originated from Methods 1 and 2.  It is unknown whether Methods 3 and 4 can deliver results as consistently as the former two.
+
+== Method 1  ==
+
+# Buy 210+ Coins, and keep betting 70 Coins per spin on the 10 Coin slot machines.  Save your game for every time you gain more Coins, and Reset if you ever run out.  Keep doing this until you have gotten 600 Coins.
+# Start betting 300 Coins per spin on the 100 Coin slot machine now.  Do the same thing as you did in step 1, and be sure to increase the amount of Coins you spend as you keep gaining more and more.  In general, you should always spend enough Coins so that you will run out after just 3 bad spins.  Do this until you have gotten to 6000 Coins.
+# Only save after you get 2000 more Coins than you had before, and start resetting every time you lose 6000 Coins or more. The "4 Blue Fruit" line-up is the last high paying line-up to have a reasonable chance of showing up per spin, and it gives that exact amount; if you've gotten to the point where even that cannot recoup your losses, you're better off just restarting.
+
+== Method 2 ==
+
+{{Quote|Get at least 200 Coins (300 is preferred), and keep betting it all, each and every spin.  Save after every time you get at least 900 more Coins than what you started with.  Once you get 6000 Coins or more, save whenever you win enough to increase your starting funds by 20%, and reset whenever you end up having 6000 Coins than you started with.  Do not let your Coins fall below 2700 before leaving; you start winning Coins much faster when you're able to bet 900 Coins three times before having to reset.|Made by HCBailly|Paraphrased by Fionordequester}}
+
+== Method 3 ==
+
+{{Quote|Afford 100 Tokens minimum (200 is preferred, but 100 is sufficient).  SAVE, then enter the Port Haven Slots and bet on the 1-Token slot machines.  Play until earnings hit 800 - 1,000 Tokens.  If everything is lost, reset.  If not, SAVE again.  Next, return to the Port Haven Casino and play the 10-Token Slots and play until 5,000 - 10,000 Tokens are won.  If everything is lost, reset.  If not, SAVE once more.  It is highly recommended to play while watching a movie, as luck can be poor and the process tedious, however this is usually not the case but luck can hold out for a bit and still be boring before big winnings come pouring in.  With that 5,000 to 10,000 Tokens, and the game SAVED, go back down to the Port Haven 100-Token slots.  This time watch a movie and play until winnings are at least 50k.  Save once more, return and play until satisfied.|Provided by "BehindtheWord's" Gamefaqs Guide|Paraphrased by Fionordequester}}
+
+== Method 4 ==
+
+{{Quote|
+* 5 Bet at 1 Coin slots: 0-300 tokens
+* 30 Bet at 10 Coin slots: 300+ Tokens
+* 60 Bet at 10 Coin slots: 600+ Tokens
+* 90 Bet at 10 Coin slots: 900+ Tokens
+* 300 Bet at 100 Coin slots: 2000-3000+ Tokens
+* 600 Bet : 6000+ Tokens
+* 900 Bet : 9000+ Tokens
+|Provided by "BehindtheWord's" Gamefaqs Guide|Paraphrased by Fionordequester}}
+
+== Enchanted Armour ==
+
+[[File:DQ6 DS - Enchanted Armour.png|right]]
+
+With all that done, you can also get the twelfth strongest armour in the game, at Weaver's Peak.  Milly can't wear the Platinum Mail, but she CAN equip the Enchanted Armour, which reduces all direct-damage spells by 10 points.  
+
+Of course, it's not convenient to get right now.  You'd have to warp to the Alltrade Ruins, go into the Dream World, warp to the Weaver's Peak weapon shop, warp to Somnia, then walk ''all'' the way back through the Cave to Alltrades before you finally get back to Port Haven.  It's more convenient to instead wait until after Moonmirror Tower, since you're required to go back to the Dream World after completing it.
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Lucid Grotto|nextpage=Somnia (Real World)}}

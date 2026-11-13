@@ -1,0 +1,48 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+[[File:DQ6 Alltrade Abbey Ruins.png|thumb|right|The orange dot by the well is where the World Map is located in the SNES version.]]
+
+SNES players can receive a free World Map by checking the dotted spot downstairs.  Head straight to Port Haven once you do.
+
+[[File:DQ6 Path to Port Haven.jpg|center]]
+
+== Port Haven ==
+
+[[File:DQ6 Port Haven.png|thumb|right|Map of Port Haven]]
+
+The Iron Claw is a significant upgrade for Carver; and the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">4th Mini Medal</span>, Pretty Betsy, and Fur Hood are all welcome additions to your assets.  But, like with Castle Somnia, we cannot get the two treasures at point '''T''' until much later in the game.
+
+To move on with the plot, go and overhear the two people talking southwest of point '''H''', go inside the house at point '''B''', talk to Ella, go upstairs, talk to Ella again, then try to leave the house to go through some cutscenes.  Then go to the port at point '''J''', talk to the blonde woman named Milly, and exit the village to follow her to Madame Luca's.
+
+
+
+
+
+
+
+
+== Madame Luca's ==
+
+[[File:DQ6 Madame Luca's.png|thumb|right|Map of Madame Luca's]]
+
+Do not check the well at Madame Luca's!  You will be attacked by a "Well Wisher", a monster with extremely high attack power for this point in the game.  It has Muster Strength, and will likely kill you even in the SNES version.  You can defeat it now, but there's no point.  Wait until later on.
+
+Go talk to Madame Luca and MAKE SURE to get the Lucida Shard and Seed of Magic.  Talk to her again, then go southwest to the Dream Grotto.  Be warned however; the enemies there are much harder than the ones you have faced so far.  Be sure your set up looks something like this...
+
+[[File:DQ6 Path to Lucid Grotto.jpg|thumb|right]]
+
+{| {{prettytable|notwide=1}}
+|'''Carver (Level 6-7): Iron Claw, Leather Kilt, Bronze Shield, Hardwood Headware(SNES only)'''''
+|-
+|'''Rex (Level 6-7): ''Lucida Shard'', Boomerang, Scale Armour, Scale Shield, Hardwood Headware, Gold Ring'''
+|}
+
+The Boomerang made everything easy up until now, but now we have Babygoyles and Goblin Pixies.  The Goblin Pixies each have a 50% chance of casting the Crack spell, which does 12-20 Damage to a single target, and the Babygoyles introduce the game's very first Multi-target attack spell, "Sizz".  This spell hits all of your party members for 10-18 Damage, and you can fight up to '''four''' Babygoyles at once!  
+
+Truthfully, it's better to just run from such encounters, but that's not a satisfying solution for some players.  So, if you want to fight them, Rex will want to use the Lucida Shard on at least one of any such enemies you find.  This should generally carry you to victory, so long as you keep both characters above half HP.  If you are in a Babygoyle fight, and you find that both Rex and Carver are two Sizzes away from dying, you'll generally want Carver to Defend while Rex heals himself; Rex has much higher Agility, so he's more likely to go before the Babygoyles.  
+
+Naturally, this is all assuming that you're playing the SNES version written for those playing the SNES version.  For those playing the Remakes...
+
+{{sidebar|title=About Milly|float=left|width=850px|contents=Milly actually fights with you in the remakes!  You can't control her directly, you can't change her equipment, and she does not gain any EXP; but she  still makes the Dream Grotto significantly easier in the remakes.  SNES players will need to be far more cautious.}}
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=A new mission|nextpage=Lucid Grotto}}

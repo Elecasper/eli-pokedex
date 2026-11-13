@@ -1,0 +1,71 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+Note: Keep your hit points above 54 outside of battle.
+
+[[File:DQ6 Lucid Grotto.png|thumb|right|You may want to save the Chimaera Wing, 270 Gold, and Bronze Knife until after the boss is defeated; this way you'll have more MP for the boss.]]
+
+Another enemy of note is the Metal Slime; it can actually give 1350 EXP for every one you defeat!  But, it also has 999 Defense, 5 HP, complete immunity to all offensive spells, and a 30% chance of running away per turn; killing it before it runs is extremely unlikely with just Rex and Carver.  You can do it, but it's recommended that you give it a miss for now; Rex and Carver do not need the help, and low levels are ideal for later Job Class grinding (more on that later).
+
+In any case, put Carver in the lead, and get the Seed of Resilience first before getting all of the chests on the 2nd and 3rd floors.  Go to the 4th floor, and you will see a red demon standing in front of a jar of Dream Dew.  Answer "Yes" to fight the next boss!
+
+
+
+
+
+
+== VS. Bloodcreeper ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Rex Lvl 7, Carver Lvl 7
+|-
+!HP: 
+|370
+|-
+!MP: 
+|18
+|- 
+!Item:
+|Seed of Resilience (1/16 of dropping)
+|-
+!Attack:
+|53
+|-
+!Defense:
+|50
+|-
+!Agility:
+|52
+|-
+!EXP: 
+|260
+|-
+!Gold:
+|370
+|-
+!Attack Patterns:
+|Attack (33.3%), Tail Whip [1.25x normal damage] (16.65%), Dazzleflash (16.65%), Sap (16.65%), Buff (16.65%)
+|-
+!Resistances:
+|No resistance to Sap, 50% resistance to Lucida Shard
+|}
+
+This guy is much stronger than Garret, but so are you.  The Lucida Shard works extremely well against against him, and you can strip his Resilience away with Sap.
+
+In fact, there's a powerful glitch to take advantage of in the SNES version.  Use the "Equip" command, and the game will nullify '''''all''''' Sap, Buff, & Oomph spells!  It doesn't even matter if you actually change anything; Just entering the menu is enough!
+
+The Remakes don't have this, but they do have Milly.  Walk out of the cave once you're done, and warp back to Madame Luca's to go through more cutscenes to have Milly join your party!  Now you finally have a spellcaster on your side!
+
+Now if you happen to be playing the Remakes, go and kill that Well Wisher for a Trailblazing Bandana (be sure to wait on Sap till Bounce wears off)! It's not useful to wear, but you can sell it for money; otherwise, you get nothing for your trouble.  Whatever you do, head back to Port Haven.
+
+== Port Haven ==
+
+[[File:DQ6 Port Haven.png|thumb|right|Map of Port Haven]]
+
+Talk to the Mayor inside the house at point '''B''' and say "Yes" to all of his questions, go up the stairs, and talk to Johan.  And to anyone who's horrified at the implications of this whole plot line, don't worry; the game never requires you to come back to this place, but the subplot will still advance after certain sequence triggers.  Johan WILL succeed, and nothing bad will happen to Ella; you can move on in peace.  
+
+SNES players will want to head straight to Somnia by taking that ship.  But Remake players have some scintillating options available to them in the next section...
+
+{{sidebar|title=Regarding the "Recommended Levels"|float=left|width=505px|contents=This guide was primarily written with the SNES version in mind, due to it's slightly higher difficulty.  Monsters give only 80% EXP and Gold compared to what they give in the Remakes; so Remake players should not be alarmed if their levels exceed the recommended levels provided in the guide.  That's just a natural consequence of the increased EXP gain per fight.}}
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Port Haven|nextpage=Optional PowerUps (Remakes Only)}}

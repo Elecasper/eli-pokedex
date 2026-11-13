@@ -34,5 +34,47 @@
   "revid": 861631,
   "timestamp": "2020-05-07T21:23:33Z",
   "bytes": 5141
+ },
+ "a-new-mission": {
+  "title": "Dragon Quest VI: Realms of Revelation/A new mission",
+  "revid": 859786,
+  "timestamp": "2020-04-21T02:05:16Z",
+  "bytes": 4273
+ },
+ "port-haven": {
+  "title": "Dragon Quest VI: Realms of Revelation/Port Haven",
+  "revid": 861633,
+  "timestamp": "2020-05-07T21:27:02Z",
+  "bytes": 3675
+ },
+ "lucid-grotto": {
+  "title": "Dragon Quest VI: Realms of Revelation/Lucid Grotto",
+  "revid": 861634,
+  "timestamp": "2020-05-07T21:31:03Z",
+  "bytes": 3720
+ },
+ "optional-powerups-remakes-only": {
+  "title": "Dragon Quest VI: Realms of Revelation/Optional PowerUps (Remakes Only)",
+  "revid": 861635,
+  "timestamp": "2020-05-07T21:33:18Z",
+  "bytes": 6416
+ },
+ "somnia-real-world": {
+  "title": "Dragon Quest VI: Realms of Revelation/Somnia (Real World)",
+  "revid": 861636,
+  "timestamp": "2020-05-07T21:34:35Z",
+  "bytes": 2470
+ },
+ "amor": {
+  "title": "Dragon Quest VI: Realms of Revelation/Amor",
+  "revid": 861679,
+  "timestamp": "2020-05-08T13:51:26Z",
+  "bytes": 6295
+ },
+ "moonmirror-tower": {
+  "title": "Dragon Quest VI: Realms of Revelation/Moonmirror Tower",
+  "revid": 801553,
+  "timestamp": "2017-04-27T07:40:21Z",
+  "bytes": 7542
  }
 }

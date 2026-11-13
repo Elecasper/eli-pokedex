@@ -1,0 +1,55 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== Somnia ==
+
+[[File:DQ6 Somnia Ground Floors.png|thumb|right|You can't get the two eastern chests until later]]
+
+Talk to Captain Blade and get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">3rd Mini Medal</span> before talking to the old man in the courtyard.  He'll ask for a horse, and you're giving him just that.  Forget the two eastern chests for now (you cannot get those until much later in the game).
+
+{{sidebar|title=Remember those Agility Seeds?|width=500px|float=left|contents=You're past the point where the Agility Seeds would hurt you; so now is a good chance to use them on Rex.  There's a tough dungeon coming up a few pages later, and the added Agility will help there.}}
+{{-}}
+== Overworld Travel ==
+
+[[File:DQ6 Path to Horse Pasture.jpg|thumb|right]]
+
+Carver joins your party!  Just take a few steps; Carver will come out, talk to you, and then join you on your quest!  Your strategy still consists of "hit things as hard as you can", but it's something.  In fact, you can now mess with the Tactics options.  Putting Carver on something besides Follow Orders essentially causes the game itself decide what Carver does for you.  Each A.I. has the following effects on your characters...
+
+[[File:DQ6 Somnia Throne Room.png|thumb|right|King Somnus's Throne Room]]
+
+{| {{prettytable|float=center|notwide=1}}
+|-
+|
+*Show No Mercy - Pure Offense
+*Watch My Back - Pure Defense (your allies will use healing spells, and use Defend even at full health)
+*Fight Wisely - A mix between attack, defense, and status effect spells like Sap.
+*Focus on Healing - Similar to "Watch My Back", except they won't constantly use Defend).
+*Use No MP - Basically "Show No Mercy", but without MP usage.
+|}
+
+Carver is a pure melee fighter, so Watch My Back is the only one that makes him act any differently.
+
+Noe go into the horse pasture (it's a green clearing surrounded by forests), chase the horse counter-clockwise until Carver comes up with a plan, chase the horse into a dead-end, then talk to Carver again to get the horse.  Warp back to Somnia and try to give it to the old man before talking to the king.  And when you do, be sure to get the Silver Tiara.
+
+{{sidebar|title=Speaking of Treasures...|float=left|width=800px|contents=Now's the perfect time to kill that creature at the bottom of the well for that Strength Seed.  But be careful; he's got Concentrated Targetting.  This means that whoever he targets in the 1st Round, he will keep attacking.  So if he hits Carver, have him spend the entire match using Defend.}}
+{{-}}
+
+== The Search for Ra's Mirror ==
+
+[[File:DQ6 Path to Another World.jpg]]
+
+That Secret Passage is your true destination...but the game forces you to go through a cutscene at the "House" before it will let you move on.  The Church is optional, but you can get a Holy Water and a Pretty Betsy from it, as well as a '''free''' healing service!
+
+[[File:DQ6 Secret Passage.png|thumb|right|Press A in this spot to find passage]]
+
+Go immediately south to the House, go inside, and you will find another piece of Hardwood Headware for Carver.  Break a pot for an Antidotal Herb; then say "No", "Yes", "Yes", and then "Yes" to the dwarf to go through some cutscenes.  Finish by talking to talk to him inside his new house, because it's only after all this that the game will allow you to discover that "Secret Passage" on the map.  Go in the middle of the clearing and press A to do so.
+{{-}}
+
+== Secret Passage Cave ==
+
+[[File:DQ6 Secret Passage Cave.png|thumb|right|Map of Secret Passage]]
+
+The enemies are still not hard enough to worry about, so it doesn't matter who you put the Bronze Shield on.  This cave DOES however introduce some new status ailments to you.  The Bubble Slimes have a good chance of inflicting Poison on whoever they attack, and the Mad Mollusks and Budding Sorcerors can put both Rex and Carver to sleep with their Snooze spell.  They alone are not a problem, however; Sleep only lasts a short time, and poison is easily cured with Antidotal Herbs. 
+
+[[File:DQ6 Path to Hole to Real World.jpg|thumb|left|Go to the hole in the ground!]]
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Somnia|nextpage=Port Haven}}

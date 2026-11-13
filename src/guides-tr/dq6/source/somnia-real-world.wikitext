@@ -1,0 +1,31 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== Path to Somnia ==
+
+[[File:DQ6 Path to Somnia (Real World).jpg]]
+
+== Somnia Village ==
+
+[[File:DQ6 Somnia (Real World).png||thumb|right]]
+
+Once you get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">5th Mini Medal</span>, you will want to note the following points...
+
+# The "hidden item shop merchant" arrives only after you go through every cutscene in this town.  This is important because he happens to sell of the most useful accesories in the game, the Gold Bracer.  It gives +15 Resilience compared to the Gold Ring's +5.
+# You will also wish to buy the Thief's Key from him in order to get the Poison Moth Knife for Milly; sell it in order to buy Milly a Thorn Whip.  Whips target entire groups of enemies; not quite as strong as the Boomerang's "hit-all" effect, but still very useful.
+# You need to enter the castle in order to progress the plot.  However, you cannot do so UNLESS you've bought the Royal Clothes from the armour shop.  As weird as it sounds, the programmers made it so that you have to be wearing them in order to progress with the game.
+{{-}}
+== Somnia Castle ==
+
+[[File:DQ6 Somnia Castle (Real World).png|thumb]]
+
+Get the Silk Robe from the Throne Room immediately after walking in; you will not have access to it again until the start of Chapter 3.  Also, there are yet two more chests you can't get until later on.
+
+Aside from getting the Silk Robe, there are no optional things to do here.  All you have to do is talk to Captain Rusty, talk to the prisoner in the jail at point '''M''', then talk to the person guarding the entrance to the throne room at point '''O'''.  Finish things off by getting the Silk Robe, talk to the woman watching over the King and Queen, then try and leave.  You will be accosted by Chancellor Keating right before getting kicked out (it doesn't matter how you answer Keating's question).
+
+== Path to Amor ==
+
+Note: Be sure to get 3x Gold Bracers and a Thief's Key from the Hidden Item Merchant!  Also, if you happen to be playing the SNES fan translation, ignore what it says about Milly not being able to equip the "Silver Bracelet"; that's just a bug in the translation patch.  Milly can equip it, and this will not be the last time that this bug occurs...
+
+[[File:DQ6 Path to Amor (Real World).jpg]]
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Optional PowerUps (Remakes Only)|nextpage=Amor}}
