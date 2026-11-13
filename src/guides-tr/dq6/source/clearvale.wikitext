@@ -1,0 +1,51 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== Path to Clearvale (Dream World) ==
+
+NOTE: Remember to change your Thief back to the Beastmaster class once you've mastered the Thief!
+
+[[File:DQ6 Clearvale (DW).png|thumb|right|Get the Mini Medal and buy a Dream Blade!]]
+
+In any case, the beginning of your next path is simple; go southwest of Howcastle, and you will come to a shrine with a well in it.  Try to go inside, and you will fight a Scarewell.  It can do some decent damage, but it's also vulnerable to Leg Sweep.  Just use that, Focus Strength + Knuckle Sandwhich + Ghent Staff, and it should go down without any issues.  Go southeast to Clearvale once you emerge.  The path is very linear, so you can't miss it.
+
+For now, there is not much to do except get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">25th Mini Medal</span> and buy the Dream Blade for Amos.  Keep in mind, though, that this is where you can finally recruit Healie in the remakes.  You can't do so just yet, but you can shortly after beating the upcoming dungeon.
+
+== Path to Clearvale (Real World) ==
+
+[[File:DQ6 Clearvale (RW).png|thumb|right|Go inside the Church at point '''D''' to see a cinematic.  You can't do anything about the couple's situation until you get the Crag of Courage from Destiny's Drop.  Once you get it, talk to them inside the house at point E.]]
+
+Follow the trail southwest of Dream World Clearvale to find another staircase.  Take it, then go northeast to the Real World version of Clearvale; use the pond as a landmark.  Get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">26th Mini Medal</span>, exit, rest up if need be, and go directly northeast to your next dungeon, Destiny's Drop!
+
+[[File:DQ6 Path to Clearvale (RW).jpg|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+== Destiny's Drop ==
+
+[[File:DQ6 Destiny's Drop.png|thumb|right|Red=Path to Golden Axe.  Yellow=Path to Mini Medal.  Blue=Path to Seed of Life and Crag of Courage]]
+
+Note that Point '''F''' has been moved about four spaces to the right in the remakes, so be careful not to follow the red path too literally if you're playing the remakes.  As for the rest of the dungeon, some colored lines have been added to assist you.  Red, Yellow, then Blue is the recommended path through this dungeon.  The 350 Gold is not that much anymore, and this dungeon is already long enough.  
+
+The enemies aren't too bad though; the only threat here are the Rockbombs and Metal Slime Knights.  Fortunately, the Rockbombs are weak to Poof, and the Metal Slime Knights are easily killed by Whack/Thwack.  So just use those spells, and you'll be fine.
+
+As for what you need to do, you should of course get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">27th Mini Medal</span>; and the Golden Pickaxe allows you to break down the stone walls littered about the caves.  Climb to the very top once you get it; then use the Golden Pickaxe on the slab of rock to get your Crag of Courage!
+
+[[File:DQ6 Finding Healie.jpg|thumb|left|Talk to Healie once you have followed all the other instructions on this page.  This is where he will finally join you in the remakes!]]
+
+Zoom back to Clearvale, watch the cinematics inside the Church, head to the house northeast of the Church, talk to the husband, and accept their offer to stay at their house.  More cinematics will play, and you will get the Flying Bed!
+
+In addition, you will also end up inside the Dream World, so head back inside, and get that [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">28th Mini Medal</span> from the northeast house!  Also, if you are playing the remakes, you can finally get Healie by going behind the Weapons, Armour, and Item shops!  He may be late in coming, but he's still very helpful to have around as a Sage later on.
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Howcastle|nextpage=Item collection: Part 1}}

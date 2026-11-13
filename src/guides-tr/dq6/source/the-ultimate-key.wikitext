@@ -1,0 +1,39 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+[[File:DQ6 Path to Pescado.jpg|thumb|right|Path to Pescado]]
+
+The world can be a confusing place when your horizons expand so drastically.  There are several new destinations for one to go to, but only Pescado will advance the plot.  Follow the map, and go to it.
+
+== Pescado ==
+
+[[File:DQ6 Pescado (Both Versions).png|thumb|right|Red Exclamations=Rod checks behind him.  Blue Dots=Where you should stand to remain hidden]]
+
+The town of Pescado is an interesting little diversion, in that it involves a stealth section.  Said stealth section, however, is much more complicated in the remakes than in the original SNES; this is why the map provided is different from most of what came before it.
+
+But first, there are some sequence triggers to activate.  Go to the Fish Shop, get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">37th Mini Medal</span>, and talk to the fishmonger; he will sprint towards Rod's House, where you will get a short cinematic.  Leave Rod's house, and he will start walking northwest towards the cave.  Go inside one of the houses to skip his long walking animations, then go inside the cave.
+
+Stop at all of the blue dots along the way; Rod will occasionally look around at the points specified by the red exclamations.  You will have to start the entire process again if he catches you, so take care not to get caught!  And don't try to be clever by running ahead of him!  He'll catch you automatically if you do so!
+
+Rod will eventually pull a hidden switch in the semi-final room; follow him into the hidden aclove and answer No, then Yes.  Zoom back to the entrance of Pescado, board your ship, and sail into the cave.  Sail up near Rod and Unda and press the action command to activate the next cutscene.  Unda should start following you after the end of it; warp to Port Haven and go north to a circle of shoals and crags.  Go into the center of it to find the resting place of Unda's sister mermaids.  You'll get Lorelei's Harp as the reward for your good deeds! 
+
+{{sidebar|title=Remake Players: Beware|float=left|width=506px|contents=Enemies under the sea are much stronger than the ones above it.  One enemy, the Finned Fatales, have 320-400 HP apiece!  But SNES players are fortunate; the encounter rate is low enough that they can go around 49 seconds before getting into a single fight.  Remake players are not so lucky; the encounter rate is exorbitantly high for them.  So be careful; the enemies aren't indomitable, but they just aren't worth the effort.}}
+
+
+
+
+
+
+
+
+
+== The Ultimate Key ==
+
+[[File:DQ6 Path to Sunken Ship.jpg|thumb|left|8 is the Sunken Ship]]
+
+[[File:DQ6 Sunken Ship.png|thumb|right|]]
+
+The Ultimate Key is a very important item grab because of all the treasure you can finally get with it.  Remember how many treasures you had to pass up throughout the game?  This key will allow you to finally grab every one of them!  So Zoom to Pescado, sail to the point marked '''8''', use Lorelei's Harp, grab the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">38th Mini Medal</span>, [[File:DQ3 SNES Book.png]] <span style="color:blue">4th Dreamscape</span>, and Thick Armor.  Evac once you do so, then get the Final Key! 
+
+Do be aware that the Thick Armour will soon be obsoleted; it's a good one to have on Carver if you don't have the Platinum Mail right now, but you'll be selling it very shortly to purchase much better equipment for three of your party members.
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Castle Swanstone|nextpage=Item collection: Part 2}}

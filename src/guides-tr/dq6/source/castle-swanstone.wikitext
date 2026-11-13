@@ -1,0 +1,87 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+[[File:DQ6 Swanstone Castle.png|thumb|right|]]
+
+There is not much to do here other than get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">34-35th Mini Medals</span>,  so this is another place that consists mostly of sequence triggers.  Talk to the minister on the 2nd floor, go down to the basement, try to enter the door at point '''G''', talk to the King in his throne room multiple times (eventually you'll show him the Mirror of Ra), go enter through the door at point '''G''', go through the cinematics, and then talk to him on the 2nd floor once again.  
+
+[[File:DQ6 Path to Spiegelspire.jpg|thumb|left]]
+
+If you have not gotten the Meteorite Bracer yet, go and get it at Real World Amor.  Otherwise, go back to the Dream World, warp to the Underkeep, fly directly south to the Spiegelspire, and make sure your party looks something like this:
+
+{| {{prettytable|notwide=1}}
+|'''Carver (Level 20): Platinum Sword, Full Plate Armour/Platinum Mail, Platinum/Dragon Shield, Iron Mask, Agility Ring (Raging Ruby for bosses)'''
+|-
+|'''Amos (Level 19): Dream Blade, Enchanted Armour/Platinum Mail, Iron/Dragon Shield, Iron Mask, Meteorite Bracer'''
+|-
+|'''Milly (Level 18): ''Fire Claw'', Cautery Sword, Silver Cuirass, Bunny Ears, Gold Bracer'''
+|-
+|'''Nevan (Level 18): ''Ghent Staff'', Morning Star, Enchanted Armour, Magic Shield, Hardwood Headware, Gold Bracer'''
+|}
+== The Spiegelspire ==
+
+[[File:DQ6 Spiegelspire.png|thumb|right|]]
+
+This is actually a fairly easy dungeon; just take the stairs at '''D''', then the stairs at '''G''', then get the two chests down the '''F''' stairs (this should be your [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">36th Mini Medal</span>).  Climb the tower, get the Magic Water, refill Milly's MP if you wish (this shouldn't be necessary; but bad luck can always happen), and then equip the Raging Ruby on Carver before fighting Spiegel!
+
+== VS. Spiegel ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Carver Lvl 21, Amos Lvl 19, Milly Lvl 19, Nevan Lvl 18
+|-
+!Recommended A.I. Settings (Remakes only; SNES A.I. is bad):
+|Carver, Amos, & Milly: (Follow Orders), Nevan: (Focus on Healing)
+|-
+!HP: 
+|2400
+|-
+!MP: 
+|Infinite
+|- 
+!Item:
+|Seed of Magic (1/128 of dropping)
+|-
+!Attack:
+|160
+|-
+!Defense:
+|120
+|-
+!Agility:
+|85
+|-
+!EXP: 
+|2000
+|-
+!Gold:
+|800
+|-
+!Attack Patterns:
+|Bound -> Call for Backup [Summon a Low Djinks] (40%), Attack (20%), Frizzle [52-62 Frizz Damage to one target] (20%), Kasizzle [60-80 Sizz Damage to All] (20%)
+|-
+!A.I. Pecularities:
+|Low HP Targetting (SNES only) and Concentrated Targetting; Also will always use Bound every two turns if you keep getting rid of his Bound barrier 
+|-
+!Resistances:
+|No resistance to Crack, Woosh, Zap, Fire, Ice, or Knuckle Sandwich, 30% reduction of Frizz, Sizz, and Bang, 100% resistance to everything else.
+|}
+
+This boss would be hard, except for one thing; he has the most easily exploitable A.I. in the entire game.  He will begin the fight by casting Bound on himself, and will cast it again if you get rid of it by the 3rd turn.  Bound will reflect one spell back at the cast, but will then disappear after it does so.  
+
+So if you keep getting rid of it with a non-damaging spell like Poof (which you should have), he will never be able to attack you more than once per 2 rounds; ever.  He basically cannot kill you, even if he uses Kasizzle.  You will have all of the next turn to heal the damage off, and nobody should be weak enough to get killed by one of those.
+
+The strategy, then, boils down to this:
+
+<blockquote>
+Odd-Numbered Turns: Cast Poof on Spiegel with Milly (she should be slow enough to go after Spiegel); and heal up if Kasizzle was cast on you last round.
+
+Even-Numbered Turns: Use Focus Strength with Carver and Amos; one powered up Knuckle Sandwich by Carver + 2x Frizzles (depending on the version) should take out a Low Djinks in one round.  Or stay on "Show No Mercy" if playing on the remakes; said Low Djinks will have only 80% of their original HP on those versions.
+</blockquote>
+
+That really is it for strategy; Spiegel has an extremely hard time getting that much damage on you when he's spending every other round doing nothing productive.
+
+== Aftermath ==
+
+Go back to Swanstone (the stairs near Clearvale is the quickest way if you're playing SNES), solve the King's problem, and then get the Watergate key from him.  Zoom back to Real World Somnia, board your ship (which should be parked to the east), and then sail south while hugging the coast.  You should discover a metal gate barring the progress of your ship; you could not get past it before, but now you can!  Sail into it to open it, and you will now be able to explore a whole other section of the ocean!
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Item collection: Part 1|nextpage=The Ultimate Key}}

@@ -1,0 +1,45 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== Mt. Snowhere ==
+
+[[File:DQ6 Path to Mt. Snowhere.jpg|thumb|left|]]
+
+[[File:DQ6 Mt. Snowhere.png|thumb|right|You must unfreeze the village and talk to Ali Kazam before you can go through the Everfrost Grotto.]]
+
+By now, your party should be amply equipped to destroy most overworld encounters; so you can pretty much just use "Go All Out" or "Fight Wisely" for these next two pages.
+
+In any case, Zoom to Pescado, use Lorelei's Harp to sail to the Church near Mt. Snowhere.  Raid one of the barrels for your [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">66th Mini Medal</span>, and enter the town of Mt. Snowhere.  Go to the house at point '''G''', get your [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">67th Mini Medal</span> Mini Medal, and talk to the old man.  As you leave, he'll tell you to stay away from the Shrine near Everfrost Grotto.
+
+Naturally, this means you must go there to progress.  Talk to the woman inside, and then talk to Coleburn once again.  Go back, talk to the woman once again, and tell her "Yes".  This should cause her to change her sprite and unfreeze the village.  Return to the village once again, and go to the Church at point '''A'''.  You should find a man named Ali Kazam in there; talk to him, and you will finally be able to go through the Everfrost Grotto.
+
+== Everfrost Grotto ==
+
+[[File:DQ6 Everfrost Grotto.png|thumb|right|Make sure to manually pick up the Sword of Ramias!  The game doesn't do that for you!]]
+
+Choose Option 1, Option 3, and Option 2 in that order ("I come possessing a heart of truth.  The blade that bears untold power...Unleash it from the icy depths!").  For the ice puzzle in the 2nd room, you will want to slide up, left, up, right, down, right, then up again.  Let yourself fall through the thin ice on the 3rd floor; this will allow you to get your [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">68th Mini Medal</span> as well as some Gold.
+
+For the final puzzle, you will want to immediately run into the eastern wall, then go up until you are horizontal to the northern switch.  Walk on top of it, go left until you're vertical to the western switch, walk on top of it, go right in order to trip the eastern switch, then go down and left to trip the southern switch.  The doors should open, and you should have enough uncracked tiles to go through them.
+
+'''YOU MUST PICK UP THE SWORD OF RAMIAS AFTER TERRY TALKS TO YOU!!  THE GAME WILL ''NOT'' PUT IT IN YOUR INVENTORY FOR YOU!  PICK IT UP BEFORE CASTING EVAC!'''
+
+== Mt. Snowhere Revisited ==
+
+Now that you have the Sword of Ramias, you will want to talk to Ali Kazam again.  He will tell you that you need Welda in order to repair the sword; and she lives in Turnscote.  Ali Kazam will then give you the Turnscote Pendant; now you can finally enter that town!
+
+== Turnscote ==
+
+[[File:DQ6 Turnscote.png|thumb|right|Talk to Mo' on the roof at point '''O''', then find him at the Church, the Theater, and behind the bar to win his little game.]]
+
+Now that the guards are out of your way, you will want to buy the Bunny Suit from the armour shop, and save the Fishnet Stockings you get here for later.  As odd as this may seem, you will want them for a later minigame called the "Best-Dressed Contest".  
+
+In any case, through the door at point '''O''', talk to the bunny girl to get a +5 Style Boost for your lead character (recommended for Rex), and go onto the roof.  Talk to Mo' the Mole, say "Yes", go downstairs, say "Yes" again, and then talk to the yellow-helmeted thug blocking the passage between points '''A''' and '''Q'''.  This will prompt him to lead you to the northern weapon shop.  Once he does, get the 2500G and Wisdom Seed in the southeast corner, then leave.
+
+Re-enter the town, enter the Church at point '''N''', and talk to the pastor.  Mo' the Mole will run to hide inside the Theater at points '''H''' and '''I'''.  Take the stairs at either '''J''' or '''K''', get the Pretty Betsy and Fishnet Stockings (don't sell this), then talk to the bunny girl.  Say "Yes", and Mo' the Mole will run off again.  Go get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">69th Mini Medal</span>; and also get the [[File:DQ3 SNES Book.png]] <span style="color:blue">10th Dreamscape</span> from the bookcase if you're playing the bookcase.  
+
+Walk down from that point to get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">70th Mini Medal</span>.  Talk to the bartender you find there, say "No", say "No" again, and then say "Yes" in order to win the game!  Mo' the Mole will tell you to listen to what the customers are saying; do this by walking a few steps down.  If you did it right, some textboxes should automatically pop-up, with exposition on where Cole went.
+
+Enter the well at point '''D''', and you will find Mo' the Mole's house.  Enter it, pay him his 2000G, and he will activate the next sequence trigger by telling you where Welda is.  Leave the town and walk to the Graveyard north of town.  Say "Yes" to her twice, and she will run back to town.  Follow her back, go into the house at point '''Q''', say "Yes" once again, and she will look into your eyes.  
+
+Do not press anything after closing the textbox! After a few seconds, she will deem you worthy and start working on the Sword of Ramias.  Unfortunately, she will not be done with your sword until the "Cloudsgate Citadel" section, so you still won't be able to use it yet.  However, you still need to do this at some point; and you do at least get the Fishnet Stockings, Bunny Suit, 2x Mini Medals, and a Dreamscape for taking care of this now.
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Helm of Sebath|nextpage=Item collection: Part 3}}

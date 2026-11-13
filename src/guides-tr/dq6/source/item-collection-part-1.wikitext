@@ -1,0 +1,118 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== Mini Medals & World Map! ==
+
+[[File:DQ6 Path to Cave East of Clearvale.jpg|thumb|right|]]
+
+[[File:DQ6 Cave East of Clearvale.png|thumb|left]]
+
+[[File:DQ6 Path to House South of Alltrades.jpg|thumb|right|]]
+
+There are a wide variety of places to go now that you have the Flying Bed!  Go fly to the cave shown here to get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">29th Mini Medal</span>; then warp to Alltrades Abbey and fly down to the house located just south of Alltrades.  This should be your [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">30th Mini Medal</span>; if it is not, try and find the one(s) you missed; they are going to be very important soon.  
+
+[[File:DQ6 Path to the 30th Mini Medal.jpg|thumb|left|]]
+
+That said, you can also collect the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">31st Mini Medal</span> on an island north of the Underkeep.  Go directly north past the cave, house, and church in order to get it!  Zoom to Haggleton afterwards.
+
+[[File:DQ6 Getting the Map.png|thumb|right|This merchant gives you the Dream World map for free!]]
+
+You can finally get the Dream World Map for free if you are playing the SNES version!  Getting the Flying Bed activates the sequence trigger needed to get the map free of charge!  You could have bought it from him before, but it would have cost 200G, and the game has been fairly linear up to this point anyway.
+
+Now, do you remember that giant hole in the ground west of Haggleton?  The one that led you into the Real World for the very first time, when you rescued Cliff?  And remember how Alltrades Abbey appeared immediately after Murdaw died?  Well, Jamirus recently died as well; that means that a place called Medford's Manor has appeared in place of that hole.  So ride that bed to the Manor, because the man in charge has some rewards for you!
+
+
+
+
+== Medford's Manor ==
+
+[[File:DQ6 Medford Tutorial.png|thumb|right|The more Mini Medals you give Medford, the more rewards he gives you!]]
+
+The Medal King will give you rewards based on how many Mini Medals you give him.  They are as follows:
+
+{| {{prettytable|notwide=1}}
+|-
+! Item || Price || Description
+|-
+| Staff of Divine Wrath
+| 15 Medals
+| Casts Woosh when used as an item
+|-
+| Raging Ruby
+| 25 Medals
+| Accessory that increases Attack by +20
+|-
+| Platinum Sword
+| 30 Medals
+| +60 Attack (7 more than even the Fire Claw, and Carver can use it)
+|-
+| Miracle Sword
+| 40 Medals
+| +100 Attack; drains 30% (remakes) or 50% (SNES) of all damage inflicted upon the enemy with the Attack command, and most physical attack skills.
+|-
+| Sands of Time
+| 50 Medals
+| Automatically restarts whatever fight you are in.  One-use-only in the SNES, infinite uses in the remakes.
+|-
+| Sacred Armour
+| 60 Medals
+| +75 Defense (9 more than even the Platinum Mail); automatically restores 30 HP (remakes) or 50 HP (SNES) per round.
+|-
+| Metal King Helmet
+| 70 Medals
+| +70 Defense (strongest helmet in the entire game); 75% resistance to status and instant death spells
+|-
+| Glombolero
+| 80 Medals
+| +40 Defense; may absorb 50% MP of whatever spell is used against the wearer (if someone uses Frizzle on them, for example, they have a 50% chance of absorbing 2 MP from it).
+|-
+| Scroll of Draconic Diligence
+| 90 Medals
+| Allows the one who has it to class change into a Dragon!  One-use-only.
+|-
+| Robust Lingerie
+| 100 Medals
+| +23 Defense (female only); Enemies may lose one turn.
+|}
+
+The Mini Medal prizes for 15 and 80 medals are rather useless, and the 100 Medal prize is more of a joke item than anything else; but everything else is very useful.  The Sacred Armour, Medal King Helmet, and Miracle Sword together make Carver virtually indestructable with proper set-up, and the Sands of Time more-or-less break the game if you are playing the remakes.  
+
+Now, use the Platinum Sword and Raging Ruby to power up Carver.  If you're playing the SNES version, change Ashlynn back into a Monster Tamer before Zooming back to Somnia; otherwise, you can just skip straight to Somnia.
+
+== Meteorite Bracer ==
+
+[[File:DQ6 Evgenya and Ilya.png|thumb|right|See this scene, and a hidden Meteorite Bracelet will be added to the town's Real World equivalent!]]
+
+Go south to Gardsbane Tower, then follow the narrow rivel channel west to Amor.  Enter it, rest at the Inn, and go in front of the Church; you should see a brief scene play out with Evgenya and Ilya choosing to bury a Meteorite Bracer (doubles the wearer's Agility!).  You can't get it in the Dream World, but you can in the Real World!  So be sure to come back here once you arrive at Swanstone (the last destination on this page)!
+
+This item is absolutely invaluable; it's one of the most useful in the entire game for manipulating turn orders!  In fact, it's one of the most important items to have for the final boss himself!  
+
+== Recruiting Pierre the Slime Knight (SNES Only) ==
+
+The Slime Knight may not be free in the SNES, but one can recruit him at 1/4 odds in the mountains just southwest of Dream World Amor, provided they have a 2✮ Monster Tamer in their active party.  
+
+Pierre is one of the few slimes that are both eligible and capable for the Slimopolis; an optional arena later on in the game.  Hence, it is highly recommended that you recruit him before making him a Priest.  He won't be useful for your active party until a long time later, but he'll gain plenty of EXP and Vocation Levels in the reserves.
+
+== Suite Dreams ==
+
+[[File:DQ6 Path to Swanstone and Suite Dreams.jpg|thumb|right|]]
+
+Fly south to Suite Dreams to set it as a Zoom point.  If you are playing on the iOS version, search both of the bookcases to get the [[File:DQ3 SNES Book.png]] <span style="color:blue">1st-2nd Dreamscapes</span>; otherwise, this place is only useful as a Zoom point.
+
+Instead of being able to manually recruit monsters like the SNES version, the remakes require you to collect "Dream Cards" in order to recruit certain ones.  iOS players can easily take advantage of this, but DS players have no such luck.  
+
+For them, obtaining Dream Cards can only be done through a multi-player feature called "Tag Mode" in the DS version.  The game requires you to get 10 Dream Cards from other random people before you can recruit a Cureslime named Curie, and 20 Dream Cards before you can obtain a Liquid Metal Slime called Mercury.  Said "Dream Cards" can only be obtained via "Tag Mode", an online feature in which you can receive Dream Cards from other players. 
+
+So unless you happen to know someone else with a DS and a copy of this game (or happen to have those yourself), you cannot take advantage of this.  You can, however, wait until the post-game; once you do, you will just find Curie and Mercury at Suite Dreams.  Once you get Curie, you can then recruit a slime called Shelley, who keeps moving to different locations as you go through the game.
+
+Fortunately, iOS players do not need to do any of that.  Instead, all they have to do is collect 16 Dream Cards by searching all the bookcases scattered throughout the game.  6 of them gets you Curie; and all 16 of them gets you Mercury, as well as a 2nd Meteorite Bracer!  After doing all of this, warp back to Amor, and head south into the well!
+
+
+== Path to Swanstone Castle ==
+
+[[File:DQ6 Well to Swanstone Castle.png|thumb|right|The dreamscapes are exclusive to the remakes, and only helpful in the iOS.]]
+
+First of all, the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">32nd Mini Medal</span> and [[File:DQ3 SNES Book.png]] <span style="color:blue">3rd Dreamscape</span> are not the only collectables to get on the way to Swanstone.  There's a 2nd located just to the north of Swanstone.  So dispatch the Scarewell waiting for you, raid the house, enter Swanstone to get it on your Zoom list, and get your [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">33rd Mini Medal</span> from inside the drawers, and Zoom to Swanstone.  After that, you can head to the next page.
+
+[[File:DQ6 Path to Swanstone and Mini Medal.jpg]]
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Clearvale|nextpage=Castle Swanstone}}

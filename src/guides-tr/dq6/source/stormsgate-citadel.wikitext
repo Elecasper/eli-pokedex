@@ -1,0 +1,315 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== Final Preparations ==
+
+[[File:DQ6 Welda Finishes the Sword of Ramias.png|thumb|right|You can't get this till you've gotten all the other pieces!]]
+
+Switch Rex and Carver into Warriors, remove Amos's vocation, and Goowain back into a Martial Artist if he's been working on Priest.  There's an entire boss gauntlet this page!  
+
+With that said, you've gathered all the other pieces of legendary gear; this means that you can finally get the Sword of Ramias from Turnscote.  And it's indeed a powerful one; it has one of the highest Attack totals in the game, but it also casts Oomph for free!  That will actually ''double'' one's Attack the same way Buff doubles Resilience; equip it right away!
+
+== Path to Stormsgate Citadel ==
+
+[[File:DQ6 Path to Stormsgate Citadel.jpg|thumb|right|This hole (located in the Dream World) leads to your next destination!]]
+
+Head back to the Dream World, restore your HP and MP at Sorceria if need-be, and be sure your party looks something like this:
+
+{| {{prettytable|notwide=1}}
+|'''Carver (Level 25): Miracle Sword, Sacred Armour, Platinum/Dragon Shield, Metal King Helmet, Raging Ruby'''
+|-
+|'''Rex (Level 24): Sword of Ramias, Armour of Orgo, Shield of Valora, Helm of Sebath, Gold Bracer'''
+|-
+|'''Amos (Level 23): Dream Blade, Enchanted Armour/Platinum Mail, Power/Dragon Shield, Iron Mask'''
+|-
+|'''Goowain (Level 19): ''Ghent Staff'', ''Fire Claw'', Platinum Sword, Platinum Mail & Hela's Armour (switch between these to manipulate turn order), Iron/Dragon Shield, Thinking Cap, Meteorite Bracer'''
+|}
+
+== Stormsgate Monolith ==
+
+[[File:DQ6 Stormsgate Monolith.png|thumb|right|Change the squares to EXACTLY what's presented here to activate the next boss fight!]]
+
+The puzzle here can be confusing if you missed various bits of relevant flavor text.  The symbols in the picture represent symbols found on each of the four pieces of legendary gear.  The Helm of Sebath has the sun, the Sword of Ramias has the bolt of lightning, the Shield of Valora has the cross, and the Armour of Orgo has the heart.  
+
+So one is suppose to equip Rex with all four pieces, and then arrange the panels the same way the gear would be arranged on a right-handed swordfighter.  Do that, and you activate your next boss fight!
+{{-}}
+== VS. Stormsgate Citadel ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Carver Lvl 25, Rex Lvl 24, Amos Lvl 23, Goowain Lvl 19
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Everyone: Back Me Up for 1st Turn, then Follow Orders
+|-
+!HP: 
+|3000
+|-
+!MP: 
+|Infinite
+|- 
+!Item:
+|Seed of Resilience (1/4096)
+|-
+!Attack:
+|240
+|-
+!Defense:
+|200
+|-
+!Agility:
+|65
+|-
+!EXP: 
+|2200
+|-
+!Gold:
+|0
+|-
+!Attack Patterns:
+|Crushes Party [0.5x Damage to All] (33.33%), Attack (16.66%), Thin Air [63-77 Woosh Damage to All in the SNES; 81-99 Woosh Damage to All in the remakes] (16.66%), Kaswoosh [45-90 Woosh Damage to All] (16.66%), Magic Barrier [Increased Resistance to Most Status and Direct Damage Spells] (16.66%)
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|No resistance to Woosh or Zap, 15% resistance to Knuckle Sandwich, 50% resistance to Sap, 60% reduction of Frizz, Sizz, Bang, and Crack, Immunity to All Else
+|}
+
+The Magic Barrier is the subject of a lot of misunderstanding.  It's rumored to cause a flat 50% reduction of all magic spells, but the truth is actually quite complicated.  The exact mechanics of how it works is covered in a footnote on the bottom of this page; but the short version is that it will not always give the same exact bonus.  It's effects vary depending on what the character's innate resistances are, and which specific spell they are facing.  However, it will always give 25% resistance to all direct damage spells (except Big Banga and Magic Burst), and 50% extra resistance to status spells (except Whack, Kasnooze, and Kamikazee) to anyone with no innate resistances.  In the case of the remakes, this is almost every human character.
+
+In any case, Stormsgate Citadel has it, and Knuckle Sandwich and Sap use the same resistance table as most status spells.  Do NOT try to use either of those if Stormsgate gets it up!
+
+Fortunately, Stormsgate is a pretty simple boss.  Just spend the first two turns spamming Kabuff while having Rex cast Sap; then have Rex switch to casting Oomph on Carver, himself, and Amos.  Carver should use Focus Strength + Double-Edged Slash, Amos should alternate between attacking and healing with the Ghent Staff, and Rex should alternate between attacking and casting Sap.  Stormsgate's Woosh type attacks hurt, but your healers should be fast enough to keep up with the damage; and Kabuff will nerf it's physical damage as badly as it has every other boss up to this point.  
+
+== Interlude ==
+
+[[File:DQ6 Stormsgate Citadel.png|thumb|right|Make sure you're ready before entering the throne room!]]
+
+NOTE: Dhuran will actually ''steal your legendary equipment'' if you lose any one of these fights.  So if you want to go back to an Inn and save, feel free to do so.  That said, the game also gives you a free HP and MP refill right before the final fight with the big man himself; so technically, your HP and MP only has to last you for two fights, not three.
+
+Whatever you decide, snag the two treasures (try to save the Yggdrasil Leaf for the final boss), and set your party up like so.
+
+{| {{prettytable|notwide=1}}
+|'''Carver (Level 25): Spear of Gracos, Sacred Armour, Power Shield, Metal King Helmet, Gold Bracer'''
+|-
+|'''Rex (Level 24): Sword of Ramias, Armour of Orgo, Shield of Valora, Helm of Sebath, Raging Ruby'''
+|-
+|'''Amos (Level 23): Miracle Sword, Enchanted Armour/Platinum Mail, Platinum/Dragon Shield, Iron Mask'''
+|-
+|'''Goowain (Level 19): ''Ghent Staff'', ''Fire Claw'', Dream Blade, Platinum Mail & Hela's Armour (switch between these to manipulate turn order), Iron/Dragon Shield, Thinking Cap, Meteorite Bracer'''
+|}
+{{-}}
+== VS. Überkilling Machine & Iron Tortoise ==
+
+{| {{prettytable}}
+!Überkilling Machine
+|The machine on the left
+|-
+!Recommended Level: 
+|Carver Lvl 25, Rex Lvl 24, Amos Lvl 23, Goowain Lvl 19
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Everyone: Follow Orders
+|-
+!HP: 
+|480-600
+|-
+!MP: 
+|0
+|- 
+!Item:
+|Miracle Sword (1/128)
+|-
+!Attack:
+|310
+|-
+!Defense:
+|235
+|-
+!Agility:
+|147
+|-
+!EXP: 
+|1100-1320
+|-
+!Gold:
+|123-147
+|-
+!Attack Patterns:
+|Metal Slash [1.5x to Metal Types] (33.33%), Attack (16.66%), Slash [1.25x Damage] (16.66%), Shoots Arrow [1.25x Damage] (16.66%), Dragon Slash [1.5x to Dragon Types] (16.66%)
+|-
+!A.I. Pecularities:
+|Always attacks twice per round, 1/4 chance of starting with Bounce status
+|-
+!Resistances:
+|No resistance to Fire, Ice, Zap, Knuckle Sandwich, or Call-to-Arms, 30% reduction of Frizz, Crack, and Woosh, 60% reduction of Sizz spells, Immunity to All Else
+|}
+
+
+
+{| {{prettytable}}
+!Iron Tortoise
+|The tortoise on the right
+|-
+!Recommended Level: 
+|Carver Lvl 25, Rex Lvl 24, Amos Lvl 23, Goowain Lvl 19
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Everyone: Follow Orders
+|-
+!HP: 
+|328-410
+|-
+!MP: 
+|30
+|- 
+!Item:
+|Seed of Resilience (1/256)
+|-
+!Attack:
+|225
+|-
+!Defense:
+|300
+|-
+!Agility:
+|60
+|-
+!EXP: 
+|420-504
+|-
+!Gold:
+|69-82
+|-
+!Attack Patterns:
+|Attack (33.33%), Selflessness [shield one ally from attacks] (33.33%), Defending Champion [reduce most attacks by 90%] (16.66%), Bounce (16.66%)
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|No resistance to Zap, Dazzle, Drain Magic, or Call-to-Arms, 15% resistance to Fuddle, 30% reduction of Frizz, Sizz, and Bang, 50% resistance to Snooze, Fizzle, Sap, Poison, Stun, and Knuckle Sandwich, 60% reduction of Crack, Fire, and Ice, Immunity to All Else
+|}
+
+The Überkilling machine is one of the deadliest enemies in the entire game; it's Attack power of 310 is obscenely high even by end-game standards, and it's supplemented by a guaranteed 2x attacks per round!  You can Buff a character's Resilience as high as it will go, and the Überkilling Machine would still do ~50 Damage per hit!  This is in contrast to Dhuran himself, who has 260 Attack, and will only go twice 50% of the time.  
+
+Fortunately, the Iron Tortoise is not nearly so deadly.  So all you have to do for the 1st round is have someone (preferably Amos) use Buff on Carver while everyone else defends.  Carver should then spend the rest of the time spamming Forebearance while someone else helps him with healing spells and a 2nd Buff.  And if you have the Sacred Armour equipped, that's even better.  30-50 HP regeneration goes a long way in surviving an enemy that does ~100 Damage per round!
+
+From there, Rex will want to use Oomph on himself and others before chipping away at the Überkilling Machine.  The Iron Tortoise will occasionally absorb attacks targeted at the Überkilling Machine, but there's nothing it can truly do to stop you.  Just don't try to use Zap; the Überkilling Machine sometimes starts with Bounce applied.
+
+== VS. Terry ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Carver Lvl 25, Rex Lvl 24, Amos Lvl 23, Goowain Lvl 19
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Everyone: Focus on Healing (then switch back to Follow Orders if Goowain runs out of MP on the SNES)
+|-
+!HP: 
+|2500
+|-
+!MP: 
+|50
+|- 
+!Item:
+|Trailblazing Bandana (1/4096)
+|-
+!Attack:
+|220
+|-
+!Defense:
+|180
+|-
+!Agility:
+|90
+|-
+!EXP: 
+|1300
+|-
+!Gold:
+|0
+|-
+!Attack Patterns:
+|Flame Slash [1.3x Damage] (16.66%), Gust Slash [1.3x Damage] (16.66%), Falcon Slash [Two 0.75x Hits] (16.66%), Multislice [1x Damage to 1st, 0.8x to 2nd, 0.7x to 3rd, 0.5x to 4th] (16.66%), Sunderbolt Blade [70-90 Zap Damage to All] (16.66%), Kasap (16.66%)
+|-
+!A.I. Pecularities:
+|None
+|-
+!Resistances:
+|30% reduction of Frizz, Sizz, Crack, Fire, and Ice, 50% resistance to Knuckle Sandwich, Immunity to All Else 
+|}
+
+Terry may be a powerful swordsman in the context of the story; but his boss fight does not live up to the hype.  He's a warrior who relies mainly on physical attacks, but only attacks once per round, and has 90 Attack less than the Überkilling Machine.  The only threatening move he has is the Sunderbolt Blade; but even that's a non-issue if you put your party on "Focus on Healing". 
+
+In fact, now's a good time to have Goowain equip Hela's Armour, so that his Agility can be dropped to 0.  Cursed equipment doesn't require a priest's services to remove like they did in previous Dragon Quest games; you can remove it in-battle!  So just drop Goowain's Agility to 0 for as long as he has at least 5 MP, and he'll help to heal off everything Terry does.  Then you can switch him back to the Platinum Mail so that he'll outspeed Terry (just be sure to switch back to Follow Orders if playing the SNES version; the A.I. doesn't use items).
+
+Alternatively, you could play a little risky and have Carver and Amos use Focus Strength + Double-Edged Slash.  Your fighters will take damage from their own attacks, but they'll also tear through Terry a bit faster; just be aware that things can get dicey if you get unlucky with Zap.
+
+== VS. Dhuran ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Carver Lvl 26, Rex Lvl 24, Amos Lvl 23, Goowain Lvl 19
+|-
+!Recommended A.I. Settings for Party (Remakes Only; SNES A.I. is bad): 
+|Focus on Healing: Focus on Healing/Follow Orders 
+Everyone Else: Follow Orders
+|-
+!HP: 
+|3000
+|-
+!MP: 
+|Infinite
+|- 
+!Item:
+|Seed of Strength (1/32)
+|-
+!Attack:
+|260
+|-
+!Defense:
+|200
+|-
+!Agility:
+|120
+|-
+!EXP: 
+|5500
+|-
+!Gold:
+|2300
+|-
+!Attack Patterns:
+|Harvest Moon [(3/No. of Targets)x Damage to All] (16.66%), Stab [1.25x Damage] (16.66%), Wind Sickles [85-115 Woosh Damage to One Target] (16.66%), Quick Attack [Three 0.5x Hits to Random Targets] (16.66%), Disruptive Wave [dispels ALL buffs and debuffs from party] (16.66%), Bound (16.66%)
+|-
+!A.I. Pecularities:
+|50% chance of attacking twice
+|-
+!Resistances:
+|No resistance to Frizz, Bang, or Zap, 30% reduction of Sizz, Crack, Fire, and Ice, 50% resistance to Knuckle Sandwich, 60% reduction of Woosh, Immunity to All Else
+|}
+
+Dhuran is yet another boss that would've been a lot tougher if not for Forebearance.  As things stand, he has no AoE spells; only a random chance of sometimes hitting more than one person with physical attacks.  So once again, Carver can tank everything he has with Buff on him.  
+
+That said, Dhuran also the first boss to have Disruptive Wave.  It will normally dispel ALL buffs and debuffs from your party, but Forebearance will make it so that only Carver will lose his stats.  Even so, Dhuran is not a tough boss; just a tedious one.  
+
+For the 1st turn, have Goowain switch to the Platinum Mail and cast Buff on Carver while he spams Forebearance; and have Amos use Midheal on Carver while Rex casts Oomph on Amos and himself.  If you got through that with Carver at full HP, and without Dhuran using Disruptive Wave, then have Goowain switch to Hela's Armour while spamming Ghent's Staff on Carver.  Meanwhile, Amos can join in with Double-Edged Slash.
+
+After that fight, Terry will join your party!  He may not have served his duty as a boss fight, but he is extremely useful as a party member.  Whether it's the SNES version (Level 23 Gladiator who skipped the Martial Artist vocation), the DS version (Level 28, and has NOT skipped Martial Artist), or the iOS version (Level 33, and has mastered the Mage and Priest vocations as well), he is an outstanding crutch character.  His sky-high Agility is especially valuable, as it's one of the main reasons why defeating Mortamor is feasible even with Tier 1-2 classes and relatively low levels.  It is recommended that you use him in your main party (provided he's at least relatively close to where your party is). 
+
+Unfortunately, the game only allows you 8 party members at once, and Ashlynn cannot be deposited at Patty's; so you may need to deposit someone.  If this is the case, and you've followed this guide thus far, it is recommended that you get rid of either Milly or Nevan.  They are both incredibly fragile by this point, we don't want two Sages, and Milly has always been much faster than Nevan.
+
+{{Sidebar|title=How Magic Barrier Really Works|contents=There are six resistance tables that are used to determine just how susceptable humans and monsters are to different skills and spells.  And each of those six tables have four levels of "protection" determining how likely status spells are to hit the target, or how much different damage spells are reduced.  
+
+For example, most status spells (like Thwack) use Table #0.  And those with Thwack resistance will have 0% resistance, 15% resistance, 50% resistance, or 100% resistance based on whether they have "no protection", "little protection", "moderate protection", or "immunity".  
+
+However, certain spells will use different tables.  Kasnooze and Kamikazee, for example, both use Table #4 instead.  In THAT table, the four resistances are 0% for "no protection", 0% for "little protection" (not a typo), 25% for "moderate protection", and 100% for "immunity".  These two spells are far more accurate than all the other status spells, which is why they've been so deadly to your party.
+
+On the other end of the spectrum, we have Table #2, which is used for Poof, Bazoom, Death Dance, and other miscellaneous spells.  It's corresponding percentages are 50%, 80%, 90%, and 100%.  Clearly, spells that are stuck in this category are at a great disadvantage compared to spells in the previous two tables.
+
+This is where Magic Barrier comes in.  It will actually change which tables are used by certain spells.  Knuckle Sandwich will usually use Table #0; but if Stormsgate Citadel uses Magic Barrier, Knuckle Sandwich will use Table #2 instead.  And as you can see from Table #2, it's percentages are drastically higher than those found in Table #0.  And the same principle applies to damaging spells.  Goowain, for example, will go from having 60% resistance to Woosh to having 75% resistance.  But someone with no innate resistance to Woosh will go from 0% resistance to 50% resistance
+
+Spooky Aura also affects resistances in a similar way; except that one will downgrade them instead.  The enemies that use them are not generally dangerous enough to be worth worrying about, however.}}
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Shield of Valora|nextpage=Pillar of Pegasus}}

@@ -1,0 +1,94 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== Path to Gracos's Castle ==
+
+[[File:DQ6 Path to Gracos Castle.jpg|thumb|right|'''5''' is the Underwater Inn, '''12''' is Gracos's Castle]]
+
+In addition to collecting the legendary equipment, you will also have to destroy the Dread Fiend Gracos at some point in the story.  You could have done it the moment you get Lorelei's Harp, and Gracos himself is a fairly simple battle; but his dungeon is much longer than most of the other dungeons you have been going through lately.  This is also partially why the recommended party lay-out excludes Nevan from the party; you can't afford to run through your MP like you can in most areas. 
+
+Still, the enemies themselves tend to be relatively weak compared to others at this point in the game; one can still attempt this dungeon early if they wish.  So prepare yourself as thoroughly as you see fit, rest at the Inn at point '''5''' if necessary, and enter Gracos's Castle at point '''12'''
+{{-}}
+== Gracos Castle ==
+
+[[File:DQ6 Gracos Castle.png|thumb|right|Any switches tripped will stay tripped even upon leaving.  You can do this dungeon in 2 parts by lowering the waterby point '''I''', then resting at the Inn]]
+
+This is a very odd dungeon in terms of enemy design.  The enemies have low HP compared to other enemies you have been fighting thus far, but they make up for it with durability and status ailments.  The Sinisculpture's, for example, can inflict Stun with Burning Breath, and have 30-70% resistance to every type of offense spell except Frizzle.  So have Rex use Fuddle Dance instead of Zap. 
+
+The real problem, however, is the Gryphon.  They show up in pairs, and come with the ever-troublesome Bazoom spell.  This will literally ''remove a character from your party'' if it lands!  The only way to get them back is via Patty's Party Planning Place at Port Haven, Alltrades Abbey, or the Slimopolis.  Moreover, Rex and Ashlynn are the only ones who are immune; the rest of your PC's only have 50% resistance.  
+
+Fortunately, Gryphon's have no resistance to Fizzle; so dealing with them is simple.  If Amos or Goowain know Fizzle, just put a Meteorite Bracer on them and Fizzle the Gryphons before they can move.  If those two do NOT know Fizzle, then just purchase a Staff of Antimagic at Castle Swanstone.  And if you do not know where to get the Meteorite Bracer, just follow the relevant steps in [[Dragon Quest VI: Realms of Revelation/Item collection: Part 1|Item collection: Part 1]].  
+
+Finally, there are the Haunted Mirrors, who all have a 50% chance of Morphing into one of your party members.  This can get troublesome if you happen to know abilities like Thwack, Zap, Knuckle Sandwich, and other various moves; but these enemies also retain their HP, MP, and Agility while changing forms.  In other words, you can easily trounce them by the 2nd Round so long as you kill at least one of them in the 1st round.  Just don't try to use Knuckle Sandwich; they have 50% resistance to that.  You'll want to use Double-Edged Slash instead.
+
+Aside from those three, the rest of the enemies are fairly weak.  In fact, the Octavian Pirates, Helldorados, and Yabby's have HP totals that barely enter the triple digits; and none of them have great Bang resistance.  So if you have followed this guide's Vocation suggestions, and already have Lightning for Rex, you can just use that on them instead of Zap.  This way, Rex will always have MP in reserve for the more annoying encounters.
+
+In any case, get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">73rd-74th Mini Medals</span> and go through the dungeon until you've drained the water at point '''I'''; once you have done so, you will want to leave the dungeon, rest at the Inn, and reform your party like so:
+
+{| {{prettytable|notwide=1}}
+|'''Carver (Level 23): Miracle Sword, Sacred Armour (Hela's Armour for some bosses), Magic/Dragon Shield, Metal King Helm, Raging Ruby'''
+|-
+|'''Amos (Level 21): Dream Blade, Platinum Armour, Power/Dragon Shield, Iron Mask'''
+|-
+|'''Rex (Level 22): ''Staff of Antimagic'', ''Ghent Staff'', Enchanted/Platinum Armour, Magic/Dragon Shield, Helm of Sebath, Agility Ring'''
+|-
+|'''Goowain (Level 17): ''Flame Claw'', Platinum Sword, Thick Armour, Platinum Shield, Iron Mask, Meteorite Bracer'''
+|}
+
+Head back inside, solve the puzzles, '''BE SURE TO GET THE SAND URN''', and challenge Gracos when able.
+
+== VS. Gracos ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Carver Lvl 24, Amos Lvl 22, Rex Lvl 23
+|-
+!Recommended A.I. Settings ('''Remakes only; SNES A.I. is bad):'''):
+|Everyone: (Back Me Up until Resilience is maxed via Buff/Kabuff; then Focus on Healing) 
+|-
+!HP: 
+|3000
+|-
+!MP: 
+|50
+|- 
+!Item:
+|Gracos's Trident (Always Drops)
+|-
+!Attack:
+|210
+|-
+!Defense:
+|210
+|-
+!Agility:
+|80
+|-
+!EXP: 
+|3700
+|-
+!Gold:
+|900
+|-
+!Attack Patterns (Only attacks once per round):
+|Chilly Breath [50-60 Ice Damage] (33.33%), Attack (16.66%), Fierce Attack [1.25x Damage] (16.66%), Clean Sweep [0.75x Damage to all characters] (16.66%), Kacrackle [60-70 Crack Damage] (16.66%)
+|-
+!A.I. Pecularities:
+|Low HP Targeting (SNES only), Concentrated Targeting
+|-
+!Resistances:
+|No resistance to Zap or Knuckle Sandwich, 15% resistance to Drain Magic, Ban Dance, and Call-to-Arms, 30% reduction of Frizz, Sizz, Bang, Woosh, and Fire, 50% resistance to Dazzle and Fizzle, Immunity to everything else
+|}
+
+Gracos is your 3rd Dread Fiend, and like the other two, his abilities are heavily weighted in a specific area.  Murdaw was a magician who slung many damage and debuff spells, Jamirus was a slugger that swung for the fences, and Gracos is a damage sponge.  His HP total is higher than that of even some late-game bosses! 
+
+And yet, he is incredibly easy.  He can take punishment, but he cannot dish it out.  He will never do more than 70 HP per round to any one character; at a point where you can have up to three sources of free healing.  On top of that, he's vulnerable to Fizzle; land that on him, and his offensive output lowers even more.  Finally, the Staff of Ghent and Power Shield both cast Midheal, and the Sacred Armour regenerates 30-50 HP (depending on the version) at the end of every round.  
+
+In other words, your PC's have nothing to fear so long as their max HP is above 140 (120 if you landed Fizzle).  To add further insult to injury, Gracos cannot do anything about Buff or Kabuff.  Max everyone's Resilience, and Gracos's physical damage falls to the single digits.  In fact, you could even just form a three-man party instead of the full four; beating Gracos is slightly more efficient that way.
+
+== Path to Sorceria ==
+
+[[File:DQ6 Path to Sorceria.jpg|thumb|right|Make sure Ashlynn is in your party!]]
+
+Get Ashlynn in your party now; Sorceria should be your next destination, and Ashlynn is needed for it's sequence triggers.  
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Item collection: Part 3|nextpage=Armour of Orgo}}

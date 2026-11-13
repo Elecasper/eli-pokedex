@@ -1,0 +1,95 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== Chateau de Sass ==
+
+[[File:DQ6 Path to Chateau de Sass.jpg|thumb|right|Use Lorelei's Harp at point '''10''' to access the Chateau]]
+
+[[File:DQ6 Chateau de Sass.png|thumb|right|Try to win the Plush Rug before you leave!]]
+
+Like with Turnscote, Weaver's Peak, and Mt. Snowhere, you do not need to go here immediately; but you will need to at some point.  Besides that, you will also find your [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">71st Mini Medal</span> here; which means you can now get the Medal King Helm (75% resistance to death and status spells)!  As for the "Best-Dressed Contest", it is a fashion contest with prizes for all eight levels of competition.  They are as follows:
+
+{| {{prettytable|notwide=1}}
+|-
+! Item || Contest Information || Description
+|-
+| Silver Platter
+| Level 1 (open-entry; must get 183+ points)
+| A shield; combine with Bunny Ears + Fishnet Stockings + Bunny Suit for 50+ extra points
+|-
+| Trailblazing Bandana
+| Level 2 (men-only; must get 206+ points)
+| An accessory that boosts Style by a bit (obsoleted by Turnscote Pendant)
+|-
+| Plush Rug
+| Level 3 (open-entry; must get 221+ points)
+| A key item that's mandatory for completing the game
+|-
+| Glass Slippers
+| Level 4 (women-only; must get 250+ points)
+| An accessory that lowers one's Agility; combine with Shimmering Dress + Silver Tiara for 45+ extra points
+|-
+| Platinum Headgear
+| Level 5 (men-only; must get 284+ points)
+| A high defense helmet; combine with other Platinum equipment for +50 extra points
+|-
+| Shimmering Dress
+| Level 6 (open-entry; must get 326+ points)
+| 50% chance of reflecting any magic spell away from wearer; combine with Glass Slippers + Silver Tiara for 45+ extra points
+|-
+| Sage's Stone
+| Level 7 (monsters-only; must get 271+ points)
+| Restores 50-60 HP to entire party; infinite uses!
+|-
+| Happy Hat
+| Level 8 (open-entry; must get 360+ points)
+| Restores MP for every step outside of battle; combine with Glombolero for 60+ extra points
+|}
+
+Most of them are not very useful, but you must clear the Level 3 contest in order to obtain a mandatory plot item.  And the Sage's Stone is every bit as useful as it sounds; in fact, it is almost mandatory for beating the final boss without high levels or the Hero job class.
+
+However, going past Level 4 is not feasible yet.  This is because there are hidden point bonuses that come with certain combinations of equipment; and unfortunately, the later levels rely heavily on bonuses that can only come from end-game weapons and armor.  For now, the only high-end point bonuses you can get are:
+
+<blockquote>
+50+ from Bunny Suit + Silver Platter + Bunny Ears + Fishnet Stockings
+
+40+ from Miracle Sword + Sacred Armour
+
+35+ from Lunar Fan + Dancer's Costume
+</blockquote>
+
+Fortunately, you can also equip the Turnscote Pendant for an incredibly high +40 boost in Style; combine that with the +133 total boost from the Miracle Sword + Sacred Armour, and that should be more than enough for Carver or Rex to sweep Levels 1-3.  And if you kept all of the Bunny equipment, you can sweep Level 4 with Milly as well.
+
+If you haven't been following the guide, and do not have the Miracle Sword or Sacred Armour, you can still win.  The Platinum Shield, Platinum Mail, Helm of Sebath, and Turnscote Pendant are all high Style items that are impossible to lose and easy to acquire, so just refer to the [[Dragon Quest VI: Realms of Revelation/Item collection: Part 2|Item collection: Part 2]], [[Dragon Quest VI: Realms of Revelation/Helm of Sebath|Helm of Sebath (VS. Man-at-Arms)]], and [[Dragon Quest VI: Realms of Revelation/Sword of Ramias|Sword of Ramias]] pages to find all those.
+
+== Well of Somnia (Real World) ==
+
+[[File:DQ6 Somnia's Well (RW).png|thumb|right|]]
+
+[[File:DQ6 Path to Somnian Well (RW).jpg|thumb|left|]]
+
+This is an optional excursion for the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">72nd Mini Medal</span> and a shield that casts Midheal upon use. To get in, sail your ship through the river to Somnia and dive underwater to find a cave opening. After that, you will want to stop by Medford Medallion's and get the Metal King Helm.  This powerful helm reduces the wearer 3/4 resistance to all status and death spells; so pick it up if you can. 
+
+
+
+
+== Extra Seed of Magic (Cole's Grave) ==
+
+[[File:DQ6 Seed of Magic at Cole's Grave.png|thumb|right]]
+
+[[File:DQ6 Path to Cole's Grave.jpg|thumb|left]]
+
+As the name of the section implies, this is the site of Cole's death.  There is no hope of closure for him and his family now; but you can still use the Seed of Magic in forging a future for his daughter.  Use it on Rex if you are following the guide's suggestions.
+
+Whatever you decide, this is the end of the Item Collection segments; it's now finally time to tackle the Seabed Shrine.  '''Change Goowain into a Martial Artist''', and make sure to reform your party to look something like the below before you do; this next dungeon is very long, so an all-melee party is more helpful in this case:
+
+{| {{prettytable|notwide=1}}
+|'''Carver (Level 23): Miracle Sword, Sacred Armour (Hela's Armour for some bosses), Magic/Dragon Shield, Metal King Helm, Raging Ruby'''
+|-
+|'''Amos (Level 21): Dream Blade, Platinum Armour, Power/Dragon Shield, Iron Mask'''
+|-
+|'''Rex (Level 22): ''Staff of Antimagic'', ''Ghent Staff'', Enchanted/Platinum Armour, Magic/Dragon Shield, Helm of Sebath, Agility Ring'''
+|-
+|'''Goowain (Level 17): ''Flame Claw'', Platinum Sword, Thick Armour, Platinum Shield, Iron Mask, Meteorite Bracer'''
+|}
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Sword of Ramias|nextpage=Seabed Shrine}}

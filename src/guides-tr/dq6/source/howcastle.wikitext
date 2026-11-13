@@ -1,0 +1,215 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+[[File:DQ6 Howcastle.png|thumb|right|Goowain can be recruited where the northwest Mini Medal is in the remakes!  Can't get to that section without the Magic Key though.]]
+
+As usual, there are treasures that you cannot get at this point.  The Mini Medal in the northwest corner can't be reached without the Magic Key, and the Mini Medal and Platinum Mail behind the barred doors can't be reached without the Ultimate Key.  Fortunately, we ''will'' at least get the Magic Key by the time we're done with Howcastle. 
+
+In any case, get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">19th Mini Medal</span> located inside the kitchen, talk to the King and say yes to his request.  Then go to prince's room, marked '''D'''.  Talk to the boy, then go back to the main room.  You will find Howard hiding within the six-pack of barrels, inside the lower-right one.  Talk to the king again, try to leave, and Howard will escape again.  Go exit through the passageway marked '''E''' and you will get him back in your party again.  Leave the castle, and head toward the Hallowed Hollow!
+
+[[File:DQ6 Finding Howie.png|thumb|left|Search this after talking to the King, and then the boy in Howard's room; you will find him hiding here!]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+== Running Around ==
+
+[[File:DQ6 Path to Hallowed Hallow & Howsworth.jpg|thumb|right|Go to Hallowed Hollow, then get Howard at Howsworth, then head back to Hallowed Hollow.]]
+
+The Hallowed Hollow is just due south of Howsworth.  But when you enter it, Howard will run away, back to Howsworth village.  Unfortunately, this is not anywhere on your Zoom list, so you will have to Zoom to Howcastle and walk east.  Once you do, get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">20-21st Mini Medals</span> and go to the northwest building.  Never fear; he will not run away this time.
+
+[[File:DQ6 Howsworth.png|thumb|left|Howard's sulking in a corner in the northwest building; get him, then go back to Hallowed Hollow.]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+== Hallowed Hollow ==
+
+[[File:DQ6 Hallowed Hollow.png|thumb|right|Make sure not to get the Chain Whip until you've defeated the first Miniboss; Howard will run there after you've beaten it.]]
+
+NOTE: Be sure to go in with ''only Milly'' if you are playing the SNES version.  1st Test constantly spams Fuddle, and Milly has an immunity to it in the SNES version.  All you have to do is give her the Cautery Sword and Ghent Staff, use Tiptoe, walk over to 1st Test, and she'll be practically immortal.  Then you can cast Outside and reform your party.
+
+This cave will be slightly more challenging than the softballs that the game has been throwing since Murdaw's death.  There are three straight minibosses in a row to deal with; if you do not have at least one Magic Water lying around, you will want to put your party on "Use No Magic" in order to conserve your MP.  Otherwise, you will probably be fine using "Fight Wisely", as there are the occasional Devil Glasses.  They only have 15% resistance to Leg Sweep, so you can stun lock them and absorb their MP if you ever find yourself running low.
+
+As for other notable enemies, Wayward Armours have Body Slam, which always does 80% of a character's max HP; but they only have 15% resistance to Fuddle.  Landing that on a group of them, or on a group of Slumbering Rams, will trivialize them as threats. 
+
+In conclusion, the cave has slightly harder random encounters than what you have been dealing with recently, but still nothing as tough as either of the dungeons Murdaw made you go through.  So once you are ready to move, go on the left path and fight the First Test.
+
+== VS. First Test ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Amos Lvl 17, Carver Lvl 18, Milly Lvl 17, Nevan Lvl 16
+|-
+!Recommended A.I. Settings (Both Versions):
+|Milly (SNES): Use No Magic
+Everyone (Remakes): Back Me Up until everyone's Resilience is increased a good deal.  Then Use No Magic
+|-
+!HP: 
+|1000
+|-
+!MP: 
+|Infinite
+|- 
+!Item:
+|Seed of Agility (1/64 of dropping)
+|-
+!Attack:
+|90
+|-
+!Defense:
+|20
+|-
+!Agility:
+|72
+|-
+!EXP: 
+|550
+|-
+!Gold:
+|220
+|-
+!Attack Patterns:
+|Fuddle Dance (Mostly), Frizz, Sizz, Bang, Woosh (Infrequently), Inferno [65-85 Fire Damage to all] (done only when First Test is under the influence of Ban Dance or Fizzle).
+|-
+!A.I. Pecularities:
+|Uses Inferno when under the influence of Ban Dance or Fizzle
+|-
+!Resistances:
+|No resistance to Crack, Woosh, Zap, Fizzle, Ban Dance, Ice, and Knuckle Sandwich, 50% resistance to Sap, 100% resistance to everything else
+|}
+
+This is yet another fight that is far more annoying than it is hard.  The enemy's only method of attack, under most circumstances, is to spam Fuddle on your entire party.  Even this, however, is a non-issue once you get Buff, so there is virtually no threat value to this fight.  It does, however, tend to be long; there is not much to be done about this fight except to Buff your Resilience so that your party members don't kill each other.  You can solo it with Milly if you are playing the SNES version, but otherwise, all you can do is hope that your PC's don't take too long to finally hit it while under the influence of Fuddle.
+
+After that, equip the Speed Ring to Milly.  Howard will run away after you dispatch First Trial, but he won't have run far this time.  You'll find him directly next to the chest with the Chain Whip.  Go to the next floor after finding him, fetch the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">22nd Mini Medal</span>, and go up to the next door to meet your next challenge.
+
+== VS. Second Test (Always starts the fight with Bounce) ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Amos Lvl 17, Carver Lvl 19, Milly Lvl 17, Nevan Lvl 16
+|-
+!Recommended A.I. Settings (Remakes only; SNES A.I. is bad):
+|Carver and Amos: (Follow Orders), Milly and Nevan: (Use No Magic)
+|-
+!HP: 
+|1500
+|-
+!MP: 
+|0
+|- 
+!Item:
+|Seed of Strength (1/128 of dropping)
+|-
+!Attack:
+|190
+|-
+!Defense:
+|120
+|-
+!Agility:
+|63
+|-
+!EXP: 
+|750
+|-
+!Gold:
+|380
+|-
+!Attack Patterns:
+|Attack (33.33%), Wind Sickles [47-63 Woosh Damage] (33.33%), Muster Strength [1.5x Damage (SNES) or 2.3x Damage (Remakes) on the next attack] (16.66%), Lullab-Eyes (16.66%)
+|-
+!A.I. Pecularities:
+|Concentrated and Low HP Targetting
+|-
+!Resistances:
+|30% reduction of Frizz, Sizz, Bang, and Fire, 15% resistance to Knuckle Sandwich, 70% reduction of Crack, Woosh, Zap, and Ice, 50% resistance to Sap, Poison, and Stun, 100% resistance to everything else.
+|}
+
+[[File:DQ6 Finding Howard Redux.png|thumb|right]]The first test was easy but annoying; this one is just easy.  His resistances, high damage attacks, and A.I. quirks would normally make him relatively challenging; but as you can see, he has a crippling weakness to Stun.  This is why the Leg Sweep was acquired for the magic users; it is a 0 MP move that stuns for an entire turn!  Second Test will spend the entire fight squirming as Carver and Amos grind him to dust!  But don't fret if you do not have Leg Sweep or Sultry Dance (another Stun technique); just be sure to Buff Nevan and Milly so that they won't take too much damage.
+
+Howard will run to the spot listed in the picture to the right.  This will be the last time he does so; after this, you can just head straight to the last floor.  Be sure to get the [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">23rd Mini Medal</span>!  And be sure that Milly has as much MP as possible, because she will be going through a lot of it in this fight!
+
+== VS. Third Test ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Amos Lvl 18, Carver Lvl 19, Milly Lvl 18, Nevan Lvl 17
+|-
+!Recommended A.I. Settings (Both Versions):
+|Everyone: (Follow Orders)
+|-
+!HP: 
+|1300
+|-
+!MP: 
+|Infinite
+|- 
+!Item:
+|Seed of Wisdom (1/256 of dropping)
+|-
+!Attack:
+|150
+|-
+!Defense:
+|100
+|-
+!Agility:
+|95
+|-
+!EXP: 
+|1250
+|-
+!Gold:
+|680
+|-
+!Attack Patterns (Always attacks twice!):
+|Kasap -> Horn Attack [1.25x Damage] (40%), Attack (20%), Strong Lightning [40-50 Bang type Damage] (20%), Bound (20%)
+|-
+!A.I. Pecularities:
+|Stops using Kasap once it has either drained all of the PC's Resilience, or has been Fizzled.  After that, it just starts using two attacks per round.
+|-
+!Resistances:
+|No resistance to Crack, 30% reduction of Woosh and Ice, 70% reduction of Frizz, Sizz, Bang, and Fire, 50% resistance to Knuckle Sandwich and Fizzle, 100% resistance to everything else.
+|}
+
+This is one of those fights that are incredibly easy to win...but incredibly ''tricky'' to keep everyone alive in.  The bosses's primary gimmick is that it casts Kasap every turn, beating your Resilience into the ground so that it can hit you for 90+ Damage per physical attack.  If you have followed the guide, this fight will not be so bad; all you have to do is use Kabuff six times.  After that, have Milly keep spamming Kabuff as Amos and Carver pound the Third Trial with Double-Edged Slash/Regular Physicals (depending on HP).  If anyone's HP seems like it will dip below 100 by the next turn, heal them with Nevan; otherwise, have Nevan keep healing himself, even if he's at full HP. 
+
+Do this, and you will win via brute force.  
+
+'''If you do not have Kabuff/Buff on most of your PC's (Remakes):''' You may still be able to keep everyone alive, even if Milly is the only one with Buff/Kabuff.  Put your Ghent Staff user on "Focus on Healing" to heal any damage that occurs, and have Milly take an occasional break to heal if Third Trial uses Lightning.  All your PC's have moderate resistance to Kasap in the remakes, and their Resilience should never drop too low so long as Milly is diligent with Buff/Kabuff
+
+'''If you do not have Kabuff/Buff on most of your PC's (SNES):''' You will need to let Amos have the Ghent Staff, and you will need to make very liberal use of the Equipment Glitch.  Carver and Amos can get away with forgoing it till they lose all their Resilience, but Milly will need to use the glitch on every single turn, ''especially'' if she is in the Mage or Priest classes.  Kabuff is useless under these circumstances, so Milly will wish to spend each turn either healing or using the Flame Claw.  
+
+If worse comes to worse, the fight may come down to Amos and Carver soloing the Third Test themselves.  But as long as they have the Ghent Staff, have max HP totals above 160, and are using the Equipment Glitch, they should not be in danger of dying; the Third Test just doesn't have the damage output to overpower them.
+
+== Aftermath ==
+
+Get Howard his baptism, and ''be sure to talk to him after he does so!''  This is yet another tricky sequence trigger; if you use Evac before getting Howard to join your party, you will have to go all the way back through the dungeon again!  Be sure this doesn't happen to you!
+
+Head back to Howcastle and go through the scenes before getting the Magic Key from the king.  When you do, go get that [[File:Dragon Warrior 3 SNES Small Medal.png]] <span style="color:green">24th Mini Medal</span> hidden in the grass; and if you are playing the remakes, get Goowain too!  Make him into a Priest, and head on to the next page.
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Aridea|nextpage=Clearvale}}

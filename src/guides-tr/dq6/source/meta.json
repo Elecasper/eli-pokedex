@@ -136,5 +136,83 @@
   "revid": 801566,
   "timestamp": "2017-04-27T09:04:44Z",
   "bytes": 6773
+ },
+ "howcastle": {
+  "title": "Dragon Quest VI: Realms of Revelation/Howcastle",
+  "revid": 860140,
+  "timestamp": "2020-04-23T23:59:37Z",
+  "bytes": 11369
+ },
+ "clearvale": {
+  "title": "Dragon Quest VI: Realms of Revelation/Clearvale",
+  "revid": 801568,
+  "timestamp": "2017-04-27T09:14:40Z",
+  "bytes": 3971
+ },
+ "item-collection-part-1": {
+  "title": "Dragon Quest VI: Realms of Revelation/Item collection: Part 1",
+  "revid": 801573,
+  "timestamp": "2017-04-27T09:44:32Z",
+  "bytes": 8261
+ },
+ "castle-swanstone": {
+  "title": "Dragon Quest VI: Realms of Revelation/Castle Swanstone",
+  "revid": 801646,
+  "timestamp": "2017-04-28T09:02:18Z",
+  "bytes": 4958
+ },
+ "the-ultimate-key": {
+  "title": "Dragon Quest VI: Realms of Revelation/The Ultimate Key",
+  "revid": 801574,
+  "timestamp": "2017-04-27T09:48:50Z",
+  "bytes": 3648
+ },
+ "item-collection-part-2": {
+  "title": "Dragon Quest VI: Realms of Revelation/Item collection: Part 2",
+  "revid": 837777,
+  "timestamp": "2019-08-29T04:56:58Z",
+  "bytes": 9729
+ },
+ "helm-of-sebath": {
+  "title": "Dragon Quest VI: Realms of Revelation/Helm of Sebath",
+  "revid": 867353,
+  "timestamp": "2020-07-24T03:35:22Z",
+  "bytes": 8536
+ },
+ "sword-of-ramias": {
+  "title": "Dragon Quest VI: Realms of Revelation/Sword of Ramias",
+  "revid": 865407,
+  "timestamp": "2020-06-20T09:50:32Z",
+  "bytes": 5864
+ },
+ "item-collection-part-3": {
+  "title": "Dragon Quest VI: Realms of Revelation/Item collection: Part 3",
+  "revid": 1095003,
+  "timestamp": "2024-09-29T20:34:36Z",
+  "bytes": 5740
+ },
+ "seabed-shrine": {
+  "title": "Dragon Quest VI: Realms of Revelation/Seabed Shrine",
+  "revid": 801762,
+  "timestamp": "2017-05-02T01:48:33Z",
+  "bytes": 7018
+ },
+ "armour-of-orgo": {
+  "title": "Dragon Quest VI: Realms of Revelation/Armour of Orgo",
+  "revid": 801581,
+  "timestamp": "2017-04-27T10:48:08Z",
+  "bytes": 4290
+ },
+ "shield-of-valora": {
+  "title": "Dragon Quest VI: Realms of Revelation/Shield of Valora",
+  "revid": 801772,
+  "timestamp": "2017-05-02T02:36:17Z",
+  "bytes": 5084
+ },
+ "stormsgate-citadel": {
+  "title": "Dragon Quest VI: Realms of Revelation/Stormsgate Citadel",
+  "revid": 843380,
+  "timestamp": "2019-12-31T20:45:24Z",
+  "bytes": 16418
  }
 }
