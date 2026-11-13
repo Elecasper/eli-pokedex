@@ -98,23 +98,34 @@ def wiki_url(base, title):
     return base + urllib.parse.quote(title.replace(' ', '_'), safe=":'()&,!/")
 
 
+ZH = json.loads((SITE / 'src' / 'eli-guides-zh-v1.json').read_text(encoding='utf-8'))
+assert all(k in {g['zh'] for g in games} for k in ZH)
+EXT = 'target="_blank" rel="noopener noreferrer"'
+
+
 def game_card(g):
-    links = []
+    zh, en = [], []
+    if g['zh'] in ZH:
+        z = ZH[g['zh']]
+        zh.append(f'<a class="main" href="{e(z["url"])}" title="{e(z["title"])}" {EXT}>游民星空：{e(z["title"])}</a>')
+    kw = urllib.parse.quote(g['zh'] + ' 攻略')
+    zh.append(f'<a class="search" href="https://search.bilibili.com/article?keyword={kw}" {EXT}>B站图文</a>')
+    zh.append(f'<a class="search" href="https://search.bilibili.com/all?keyword={kw}" {EXT}>B站视频</a>')
     if 'sw' in g:
         n = g['swPages']
         tag = f'{n} 章' if n >= 3 else '简略'
-        links.append(f'<a class="main" href="{e(wiki_url("https://strategywiki.org/wiki/", g["sw"]))}" target="_blank" rel="noopener noreferrer">StrategyWiki 攻略 <small>{tag}</small></a>')
+        en.append(f'<a href="{e(wiki_url("https://strategywiki.org/wiki/", g["sw"]))}" {EXT}>StrategyWiki <small>{tag}</small></a>')
     if 'alt' in g:
-        links.append(f'<a class="main" href="{e(g["alt"][1])}" target="_blank" rel="noopener noreferrer">{e(g["alt"][0])}</a>')
+        en.append(f'<a href="{e(g["alt"][1])}" {EXT}>{e(g["alt"][0])}</a>')
     if 'fandom' in g:
         w, t = g['fandom']
-        links.append(f'<a href="{e(wiki_url(f"https://{w}.fandom.com/wiki/", t))}" target="_blank" rel="noopener noreferrer">系列百科</a>')
-    kw = urllib.parse.quote(g['zh'] + ' 攻略')
-    links.append(f'<a class="search" href="https://search.bilibili.com/all?keyword={kw}" target="_blank" rel="noopener noreferrer">B站视频</a>')
-    links.append(f'<a class="search" href="https://gamefaqs.gamespot.com/search?game={urllib.parse.quote_plus(g["en"])}" target="_blank" rel="noopener noreferrer">GameFAQs</a>')
-    return (f'<article class="game mini" data-plat="{g["plat"]}" data-series="{e(g["series"])}" data-q="{e(g["zh"] + " " + g["en"] + " " + g["series"])}">'
+        en.append(f'<a href="{e(wiki_url(f"https://{w}.fandom.com/wiki/", t))}" {EXT}>系列百科</a>')
+    en.append(f'<a class="search" href="https://gamefaqs.gamespot.com/search?game={urllib.parse.quote_plus(g["en"])}" {EXT}>GameFAQs</a>')
+    has = ' has-zh' if g['zh'] in ZH else ''
+    return (f'<article class="game mini{has}" data-plat="{g["plat"]}" data-series="{e(g["series"])}" data-q="{e(g["zh"] + " " + g["en"] + " " + g["series"])}">'
             f'<header><h3>{e(g["zh"])}</h3><span class="plat">{g["plat"]}</span></header><p class="en">{e(g["en"])}</p>'
-            f'<div class="links">{"".join(links)}</div></article>')
+            f'<div class="row"><b>中文</b><div class="links">{"".join(zh)}</div></div>'
+            f'<div class="row"><b>英文</b><div class="links">{"".join(en)}</div></div></article>')
 
 
 groups = {'宝可梦正作': cards}
@@ -136,7 +147,7 @@ CSS = '''<style>
 main{max-width:960px;margin:auto;padding:8px 16px max(28px,env(safe-area-inset-bottom))}
 h1{font-size:26px;margin:18px 0 6px}.intro{color:#a9b5a6;font-size:14px;line-height:1.8;margin:0 0 14px}
 .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px}
-.bar input{flex:1 1 220px;min-height:42px;border-radius:999px;border:1px solid #44574b;background:#2a372f;color:#f1f0e6;padding:0 16px;font:inherit;font-size:15px}
+.bar input[type=search]{flex:1 1 220px;min-height:42px;border-radius:999px;border:1px solid #44574b;background:#2a372f;color:#f1f0e6;padding:0 16px;font:inherit;font-size:15px}
 .bar button{min-height:40px;border-radius:999px;border:1px solid #44574b;background:transparent;color:#f1f0e6;padding:0 14px;font:inherit;font-size:14px;cursor:pointer}
 .bar button[aria-pressed=true]{background:#c9e265;color:#1f2a24;border-color:#c9e265;font-weight:700}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:12px}
@@ -160,6 +171,9 @@ h1{font-size:26px;margin:18px 0 6px}.intro{color:#a9b5a6;font-size:14px;line-hei
 .links a.main{background:#c9e265;color:#1f2a24;border-color:#c9e265;font-weight:700}.links a.main small{font-weight:400;opacity:.8;margin-left:4px}
 .links a.main:hover{color:#1f2a24;filter:brightness(1.08)}.links a.search::before{content:"⌕";margin-right:4px;color:#a9b5a6}
 .foot p{margin:6px 0}
+.zhonly{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#f1f0e6;min-height:40px;cursor:pointer}.zhonly input{accent-color:#c9e265;width:18px;height:18px;margin:0;flex:none}.zhonly{white-space:nowrap}
+.links a.main{height:auto;min-height:34px;padding:6px 12px;line-height:1.4;white-space:normal}
+.mini .row{grid-template-columns:36px 1fr}
 .note,.foot{font-size:12px;color:#a9b5a6;line-height:1.8}.foot{margin:18px 0 0}.foot a{color:#c9e265}
 .empty{color:#a9b5a6;padding:20px 0}
 a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #c9e265;outline-offset:2px}
@@ -168,18 +182,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 </style>'''
 
 JS = """<script>
-(()=>{const q=document.getElementById('q'),sel=document.getElementById('series'),bs=[...document.querySelectorAll('[data-p]')],secs=[...document.querySelectorAll('.series')],em=document.getElementById('empty'),cnt=document.getElementById('count');let p='all';
-function run(){const t=q.value.trim().toLowerCase(),sv=sel.value;let n=0;for(const s of secs){let k=0;const sOk=!sv||s.dataset.series===sv;for(const g of s.querySelectorAll('.game')){const ok=sOk&&(p==='all'||g.dataset.plat===p)&&(!t||g.dataset.q.toLowerCase().includes(t)||g.textContent.toLowerCase().includes(t));g.hidden=!ok;if(ok)k++}s.hidden=!k;n+=k}em.hidden=n>0;cnt.textContent=n+' 个游戏'}
-bs.forEach(b=>b.onclick=()=>{p=b.dataset.p;bs.forEach(x=>x.setAttribute('aria-pressed',x===b));run()});q.oninput=run;sel.onchange=run;run();})();
+(()=>{const q=document.getElementById('q'),sel=document.getElementById('series'),bs=[...document.querySelectorAll('[data-p]')],secs=[...document.querySelectorAll('.series')],em=document.getElementById('empty'),cnt=document.getElementById('count'),zh=document.getElementById('zh');let p='all';
+function run(){const t=q.value.trim().toLowerCase(),sv=sel.value;let n=0;for(const s of secs){let k=0;const sOk=!sv||s.dataset.series===sv;for(const g of s.querySelectorAll('.game')){const ok=sOk&&(!zh.checked||!g.classList.contains('mini')||g.classList.contains('has-zh'))&&(p==='all'||g.dataset.plat===p)&&(!t||g.dataset.q.toLowerCase().includes(t)||g.textContent.toLowerCase().includes(t));g.hidden=!ok;if(ok)k++}s.hidden=!k;n+=k}em.hidden=n>0;cnt.textContent=n+' 个游戏'}
+bs.forEach(b=>b.onclick=()=>{p=b.dataset.p;bs.forEach(x=>x.setAttribute('aria-pressed',x===b));run()});q.oninput=run;sel.onchange=run;zh.onchange=run;run();})();
 </script>"""
 
 page = f'''{head}<title>掌机攻略大全 · Eli</title>{CSS}{theme}</head><body>{bar}<main>
 <h1>掌机攻略大全</h1>
-<p class="intro">{total} 个 GBA / NDS / 3DS 游戏的攻略入口，按系列分组。每个游戏优先给一份完整的图文攻略，再附系列百科和视频、论坛搜索。宝可梦正作另有本站图鉴、存档和版本限定名单。</p>
-<div class="bar"><input id="q" type="search" placeholder="搜游戏名或宝可梦，例如：勇者斗恶龙5、六尾" aria-label="搜索"><select id="series" aria-label="系列"><option value="">全部系列</option>{series_opts}</select><div class="plats"><button data-p="all" aria-pressed="true">全部</button><button data-p="GBA" aria-pressed="false">GBA</button><button data-p="NDS" aria-pressed="false">NDS</button><button data-p="3DS" aria-pressed="false">3DS</button></div><span id="count" class="count"></span></div>
+<p class="intro">{total} 个 GBA / NDS / 3DS 游戏的攻略入口，按系列分组。中文优先：有中文图文攻略的直接给链接（{len(ZH)} 个，另有 12 组宝可梦正作对应神奇宝贝百科），其余游戏用 B站图文和视频搜索找中文攻略，英文资料放在第二行备用。</p>
+<div class="bar"><input id="q" type="search" placeholder="搜游戏名或宝可梦，例如：勇者斗恶龙5、六尾" aria-label="搜索"><select id="series" aria-label="系列"><option value="">全部系列</option>{series_opts}</select><div class="plats"><button data-p="all" aria-pressed="true">全部</button><button data-p="GBA" aria-pressed="false">GBA</button><button data-p="NDS" aria-pressed="false">NDS</button><button data-p="3DS" aria-pressed="false">3DS</button></div><label class="zhonly"><input type="checkbox" id="zh"> 只看有中文图文攻略</label><span id="count" class="count"></span></div>
 {sections}
 <p class="empty" id="empty" hidden>没有匹配的游戏。</p>
-<div class="foot"><p><b>链接说明</b>：「StrategyWiki 攻略」后面的数字是攻略章节数，标「简略」的只有概要，建议配合视频看。「系列百科」是该系列的 Fandom 百科页面。「B站视频」和「GameFAQs」是搜索链接，结果由对方网站提供。</p><p>StrategyWiki、Fandom、神奇宝贝百科和 Serebii 的页面于 {CHECKED} 通过各站接口逐个核对存在。版本限定名单来自本站图鉴数据，只算野外和固定遭遇。攻略内容版权归各站点所有，本站只做导航，不提供游戏文件。</p></div>
+<div class="foot"><p><b>链接说明</b>：黄色按钮是逐个打开核对过的中文攻略，标题就是原文标题，部分只覆盖前期或某个模式。「B站图文 / B站视频 / GameFAQs」是搜索链接，结果由对方网站提供。StrategyWiki 后面的数字是攻略章节数，「简略」表示只有概要。</p><p>游民星空、StrategyWiki、Fandom、神奇宝贝百科和 Serebii 的页面于 {CHECKED} 通过各站接口逐个核对存在。版本限定名单来自本站图鉴数据，只算野外和固定遭遇。攻略内容版权归各站点所有，本站只做导航，不提供游戏文件。</p></div>
 </main>{JS}</body></html>
 '''
 out = SITE / 'guides' / 'index.html'
