@@ -48,6 +48,13 @@ DIV = {'First partner Pokémon': '最初的伙伴', 'Fishing': '钓鱼', 'Specia
        'Entrance': '入口', 'Second room': '第二个房间', 'Third room': '第三个房间'}
 METHOD.update({'Fish Old': '破旧钓竿', 'Fish Good': '好钓竿', 'Fish Super': '厉害钓竿', 'Hoenn': '丰缘音乐', 'Sinnoh': '神奥音乐',
                'Helix': '贝壳化石', 'Dome': '甲壳化石', 'Amber': '秘密琥珀', 'Root': '根状化石', 'Claw': '爪子化石', 'Skull': '头盖化石', 'Armor': '盾甲化石'})
+CELL = {'Yes': '是', 'No': '否', 'Unknown': '不明', 'None': '无', 'Monday': '星期一', 'Tuesday': '星期二', 'Wednesday': '星期三',
+        'Thursday': '星期四', 'Friday': '星期五', 'Saturday': '星期六', 'Sunday': '星期日', 'Day': '日期', 'Prize': '奖品',
+        'Morning': '早上', 'Night': '夜晚', 'Location': '地点', 'Pokémon': '宝可梦', 'Item': '道具', 'Items': '道具', 'Price': '价格',
+        'Level': '等级', 'Notes': '备注', 'Effect': '效果', 'Effect(s)': '效果', 'Reward': '奖励', 'Cost': '费用',
+        'TM Ghost': '', 'TM Steel': '', 'TM Electric': '', 'TM Fighting': '', 'TM Normal': '', 'TM Bug': '', 'TM Dragon': '',
+        'TM Fire': '', 'TM Water': '', 'TM Grass': '', 'TM Ice': '', 'TM Psychic': '', 'TM Rock': '', 'TM Ground': '',
+        'TM Poison': '', 'TM Flying': '', 'TM Dark': '', 'HM Normal': '', 'HM Water': '', 'HM Flying': '', 'HM Fighting': ''}
 RATE_KEY = {'all': '', 'morning': '早', 'day': '日', 'night': '夜'}
 
 
@@ -529,7 +536,9 @@ def render_wikitable(block, keys, cprefix='C'):
             for tag, span, content in r:
                 txt = inline(content)
                 plain = re.sub(r'<[^>]+>', '', txt).strip()
-                if plain.lower() in PM_EN:
+                if plain in CELL:
+                    txt = txt.replace(plain, CELL[plain])
+                elif plain.lower() in PM_EN:
                     txt = pm(plain)
                 elif plain in TYPE_ZH:
                     txt = TYPE_ZH[plain]
