@@ -1,0 +1,16 @@
+{
+ "slug": "pokemon-hgss-full",
+ "game": "心金 / 魂银（详细图文）",
+ "en": "Walkthrough:Pokémon HeartGold and SoulSilver",
+ "sourceTitle": "Walkthrough:Pokémon HeartGold and SoulSilver",
+ "plat": "NDS",
+ "source": "Bulbapedia",
+ "sourceBase": "https://bulbapedia.bulbagarden.net/wiki/",
+ "license": "CC BY-NC-SA 2.5",
+ "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/2.5/deed.zh",
+ "intro": "依据 Bulbapedia 英文图文攻略翻译，共 32 节：16 节主线、16 节通关后。宝可梦、道具、招式、地点都用官方简体中文译名；每个地点都附可遇到的宝可梦、道具、训练家和头目阵容表。普通训练家的名字保留英文。",
+ "pages": [
+  "part-1"
+ ],
+ "total": "已翻译 1 / 32 节"
+}

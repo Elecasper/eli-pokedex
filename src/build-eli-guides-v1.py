@@ -75,6 +75,9 @@ for title, plat, vids, wiki, sdir, pages in GAMES:
     dex = ''.join(f'<a href="../#v={v}">图鉴：{e(vname[v])}</a>' for v in vids)
     if title in TR:
         dex = f'<a class="main" href="{TR[title]["slug"]}/">本站中文流程 <small>无广告</small></a>' + dex
+    full = TR.get(title + '（详细图文）')
+    if full:
+        dex = f'<a class="main" href="{full["slug"]}/">详细图文攻略 <small>{e(full["total"])}</small></a>' + dex
     play, tab = PLAY[plat]
     ext = ''.join(f'<a href="{SEREBII}/{sdir}/{pages[k]}.shtml" target="_blank" rel="noopener noreferrer">{lab}</a>'
                   for k, lab in CAT if k in pages)
