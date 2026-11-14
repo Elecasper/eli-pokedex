@@ -297,12 +297,31 @@ def item_table(block, keys, prefix):
     return ('<table class="grid"><caption>道具</caption><tr><th>道具</th><th>版本</th><th>位置 / 获得方法</th></tr>' + ''.join(rows) + '</table>')
 
 
+SHOP_LABEL = {'Upper cashier': '上方收银台', 'Lower cashier': '下方收银台', 'Left cashier': '左侧收银台', 'Right cashier': '右侧收银台',
+              'Left Gentleman': '左边的绅士', 'Right Gentleman - TMs': '右边的绅士（招式学习器）', 'Right Gentleman - Held items': '右边的绅士（携带道具）'}
+
+
 def shop_table(block):
-    its = re.findall(r'\{\{shopitem\|([^|{}]+)\|([^|{}]+)', block)
-    if not its:
+    cap = re.search(r'SHOP:(.*)', block)
+    label = re.sub(r'<[^>]+>', '', inline(cap.group(1))).strip() if cap else ''
+    rows = []
+    for m in re.finditer(r'\{\{shop(item|mon)\|((?:[^{}]|\{\{[^{}]*\}\})*)\}\}', block):
+        pos, kw = split_params(m.group(2))
+        if m.group(1) == 'mon':
+            if len(pos) >= 3:
+                rows.append(f'<tr><td>{pm(pos[0])} Lv.{e(kw.get("lv", ""))}</td><td>{e(pos[2])} 代币</td></tr>')
+            continue
+        if len(pos) < 2:
+            continue
+        name, price = pos[0], pos[1]
+        cur = '代币' if len(pos) > 2 and pos[2] == 'C' else ''
+        tm = re.match(r'(TM|HM)(\d+)', name)
+        label_ = f'{"招式学习器" if tm.group(1) == "TM" else "秘传学习器"}{tm.group(2)}（{move(pos[-1])}）' if tm else item(kw.get('display') or name)
+        rows.append(f'<tr><td>{label_}</td><td>{"₽" if not cur else ""}{e(price)}{" " + cur if cur else ""}</td></tr>')
+    if not rows:
         return None
-    cells = ''.join(f'<tr><td>{item(n)}</td><td>₽{e(p)}</td></tr>' for n, p in its)
-    return f'<table class="grid"><caption>商店</caption><tr><th>商品</th><th>价格</th></tr>{cells}</table>'
+    cap_ = SHOP_LABEL.get(label, label) or '商店'
+    return f'<table class="grid"><caption>{e(cap_)}</caption><tr><th>商品</th><th>价格</th></tr>{"".join(rows)}</table>'
 
 
 CLASS = PEOPLE.get('_classes', {})
@@ -407,7 +426,84 @@ def parse(w):
     return blocks
 
 
+def split_top(s, sep):
+    out, depth, cur, i = [], 0, '', 0
+    while i < len(s):
+        if s.startswith('{{', i) or s.startswith('[[', i):
+            depth += 1; cur += s[i:i + 2]; i += 2; continue
+        if s.startswith('}}', i) or s.startswith(']]', i):
+            depth -= 1; cur += s[i:i + 2]; i += 2; continue
+        if depth == 0 and s.startswith(sep, i):
+            out.append(cur); cur = ''; i += len(sep); continue
+        cur += s[i]; i += 1
+    out.append(cur)
+    return out
+
+
+def render_wikitable(block, keys):
+    """Render plain wikitables (innermost ones) as HTML; English cells become C-keys."""
+    inner = []
+    def grab(b):
+        body = b[2:-2] if b.startswith('{|') else b
+        if re.search(r'(?m)^[ \t]*\{\|', body):
+            i = 0
+            while True:
+                m = re.search(r'(?m)^[ \t]*\{\|', body[i:])
+                if not m:
+                    break
+                st = i + m.start() + (len(m.group(0)) - 2)
+                en = take_block(body, st)
+                grab(body[st:en]); i = en
+        else:
+            inner.append(b)
+    grab(block)
+    html_out = []
+    for t in inner:
+        rows, cur = [], []
+        lines = t[2:-2].split('\n')[1:]
+        for line in lines:
+            ls = line.strip()
+            if ls.startswith('|-'):
+                if cur:
+                    rows.append(cur)
+                cur = []
+                continue
+            if ls.startswith('|+'):
+                continue
+            if ls.startswith('!') or ls.startswith('|'):
+                tag = 'th' if ls.startswith('!') else 'td'
+                for c in split_top(ls[1:], '!!' if tag == 'th' else '||'):
+                    parts = split_top(c, '|')
+                    attrs, content = (parts[0], '|'.join(parts[1:])) if len(parts) > 1 and '=' in parts[0] else ('', c)
+                    span = ''.join(f' {k}="{v}"' for k, v in re.findall(r'(colspan|rowspan)="?(\d+)', attrs))
+                    cur.append((tag, span, content.strip()))
+            elif cur:
+                tag, span, content = cur[-1]
+                cur[-1] = (tag, span, content + ' ' + ls)
+        if cur:
+            rows.append(cur)
+        trs = []
+        for r in rows:
+            cells = []
+            for tag, span, content in r:
+                txt = inline(content)
+                plain = re.sub(r'<[^>]+>', '', txt)
+                if re.search(r'[A-Za-z]{3,}', plain):
+                    k = f'C{len([x for x in keys if x.startswith("C")]) + 1}'
+                    keys[k] = txt
+                    txt = '{{' + k + '}}'
+                cells.append(f'<{tag}{span}>{txt}</{tag}>')
+            if any(re.sub(r'<[^>]+>', '', c) for c in cells):
+                trs.append('<tr>' + ''.join(cells) + '</tr>')
+        if trs:
+            html_out.append('<table class="grid">' + ''.join(trs) + '</table>')
+    return '\n'.join(html_out) or None
+
+
 def convert(w, keys):
+    w = re.sub(r'</?div[^>]*>', '', w)
+    w = re.sub(r'\{\{shop\|((?:[^{}]|\{\{(?:[^{}]|\{\{[^{}]*\}\})*\}\})*)\}\}(.*?)\{\{shopfooter[^{}]*\}\}',
+               lambda m: '\n{|\n! SHOP:' + m.group(1) + '\n' + m.group(2) + '\n|}\n', w, flags=re.S)
     out = []
     pc = hc = 0
     for b in parse(w):
@@ -429,7 +525,7 @@ def convert(w, keys):
                 html_ = catch_table(blk)
             elif 'itemlist' in low:
                 html_ = item_table(blk, keys, 'D')
-            elif 'shopitem' in low:
+            elif 'shopitem' in low or 'shopmon' in low:
                 html_ = shop_table(blk)
             elif 'walkthroughgym' in low or 'walkthroughboss' in low:
                 html_ = gym_table(blk)
@@ -438,6 +534,8 @@ def convert(w, keys):
             elif low.startswith('{{party'):
                 html_ = party_table(blk)
             if html_:
+                out.append(html_)
+            elif blk.startswith('{|') and (html_ := render_wikitable(blk, keys)):
                 out.append(html_)
             elif blk.startswith('{|'):
                 txt = inline(re.sub(r'^\{\||\|\}$|^[!|].*?\|(?=[^|])', '', blk, flags=re.M))
