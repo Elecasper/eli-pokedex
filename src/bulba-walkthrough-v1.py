@@ -217,16 +217,11 @@ def inline(s):
 def take_block(w, i):
     """Return end index of a {| ... |} or {{ ... }} block starting at i."""
     if w.startswith('{|', i):
-        depth, j = 0, i
-        while j < len(w):
-            if w.startswith('{|', j):
-                depth += 1; j += 2; continue
-            if w.startswith('|}', j):
-                depth -= 1; j += 2
-                if depth == 0:
-                    return j
-                continue
-            j += 1
+        depth = 0
+        for m in re.finditer(r'(?m)^[ \t]*(\{\||\|\})', w[i:]):
+            depth += 1 if m.group(1) == '{|' else -1
+            if depth == 0:
+                return i + m.end()
         return len(w)
     depth, j = 0, i
     while j < len(w):
@@ -315,8 +310,12 @@ CLASS = PEOPLE.get('_classes', {})
 
 def trainer_table(block):
     rows = []
-    for m in re.finditer(r'\{\{[Tt]rainerentry\|([^{}]*)\}\}', block):
-        pos, kw = split_params(m.group(1))
+    for m in re.finditer(r'\{\{[Tt]rainer(entry|div)\|([^{}]*)\}\}', block):
+        pos, kw = split_params(m.group(2))
+        if m.group(1) == 'div':
+            if len(pos) > 1 and pos[1]:
+                rows.append(f'<tr class="div"><th colspan="3">{e(inline(pos[1]))}</th></tr>')
+            continue
         if len(pos) < 6:
             continue
         cls, name, prize, n = pos[1], pos[2], pos[3], pos[4]
@@ -486,6 +485,13 @@ def build(slug, titles):
             m = re.match(r'^([A-Z]\d+):\s?(.*)$', line)
             if m:
                 zh[m.group(1)] = m.group(2)
+        kf = folder(slug) / 'source' / f'part-{n}.keys.json'
+        if kf.exists():
+            prev = json.loads(kf.read_text(encoding='utf-8'))
+            moved = [k for k in keys if k in prev and prev[k] != keys[k]]
+            if moved:
+                print(f'part {n}: WARNING source text changed for {moved[:5]} - check translations still line up')
+        kf.write_text(json.dumps(keys, ensure_ascii=False, indent=0), encoding='utf-8')
         missing = [k for k in keys if k not in zh]
         if missing:
             print(f'part {n}: {len(missing)} untranslated keys, e.g. {missing[:5]}')

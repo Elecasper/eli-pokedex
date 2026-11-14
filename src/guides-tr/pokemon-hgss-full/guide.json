@@ -10,7 +10,10 @@
  "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/2.5/deed.zh",
  "intro": "依据 Bulbapedia 英文图文攻略翻译，共 32 节：16 节主线、16 节通关后。宝可梦、道具、招式、地点都用官方简体中文译名；每个地点都附可遇到的宝可梦、道具、训练家和头目阵容表。普通训练家的名字保留英文。",
  "pages": [
-  "part-1"
+  "part-1",
+  "part-2",
+  "part-3",
+  "part-4"
  ],
- "total": "已翻译 1 / 32 节"
+ "total": "已翻译 4 / 32 节"
 }
