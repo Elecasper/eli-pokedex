@@ -179,6 +179,10 @@ def inline(s):
             return key
         if n in ('msp/3', 'msp') and len(pos) >= 2:
             return pm(pos[1])
+        if n == 'playerchoice' and len(pos) >= 2:
+            return f'如果你选了{pm(pos[1], False)}'
+        if n == 'tt' and len(pos) >= 2:
+            return f'{pos[0]}（{pos[1]}）'
         if n in ('sup/4', 'sup/3', 'sup', '-', 'roundy', 'shop', 'clear', 'tt', 'wp'):
             return ''
         if n == 'game' and pos:
@@ -241,14 +245,20 @@ def ver(hg, ss):
     return '心金 / 魂银' if hg and ss else '心金' if hg else '魂银' if ss else ''
 
 
-def catch_table(block):
+def catch_table(block, keys):
     rows, cur = [], ''
+    def tr(t):
+        t = DIV.get(t, METHOD.get(t, t))
+        if re.search(r'[A-Za-z]{3,}', re.sub(r'<[^>]+>', '', t)):
+            k = nk(keys, 'M'); keys[k] = t
+            return '{{' + k + '}}'
+        return e(t)
     for m in re.finditer(r'\{\{[Cc]atch/(div|entryhs)\|([^{}]*(?:\{\{[^{}]*\}\}[^{}]*)*)\}\}', block):
         pos, kw = split_params(m.group(2))
         if m.group(1) == 'div':
             cur = re.sub(r'<br\s*/?>', ' ', inline(pos[-1])) if pos else ''
             cur = re.sub(r'<[^>]+>', '', cur).strip()
-            rows.append(f'<tr class="div"><th colspan="5">{e(DIV.get(cur, METHOD.get(cur, cur)))}</th></tr>')
+            rows.append(f'<tr class="div"><th colspan="5">{tr(cur)}</th></tr>')
             continue
         if len(pos) < 6:
             continue
@@ -259,8 +269,9 @@ def catch_table(block):
         else:
             rates = ''
         meth = pos[4]
-        rows.append(f'<tr><td>{pm(pos[1])}</td><td>{ver(pos[2], pos[3])}</td><td>{e(METHOD.get(meth, meth))}</td>'
-                    f'<td>Lv.{e(pos[5])}</td><td>{e(rates.replace("One", "1 只"))}</td></tr>')
+        rt = re.sub(r'<[^>]+>', '', inline(rates)).replace('One', '1 只')
+        rows.append(f'<tr><td>{pm(pos[1])}</td><td>{ver(pos[2], pos[3])}</td><td>{tr(re.sub(r"<[^>]+>", "", inline(meth)))}</td>'
+                    f'<td>{tr(pos[5]) if re.search(r"[A-Za-z]{3,}", pos[5]) else "Lv." + e(pos[5])}</td><td>{tr(rt) if re.search(r"[A-Za-z]{3,}", rt) else e(rt)}</td></tr>')
     if not rows:
         return None
     return ('<table class="grid"><caption>可遇到的宝可梦</caption><tr><th>宝可梦</th><th>版本</th><th>方式</th><th>等级</th><th>出现率</th></tr>'
@@ -273,7 +284,7 @@ def item_table(block, keys, prefix):
         pos, kw = split_params(m.group(2))
         if m.group(1).lower() == 'catch/div':
             label = pos[-1] if pos else ''
-            k = f'{prefix}{len(keys) + 1}'; keys[k] = label
+            k = nk(keys, prefix); keys[k] = label
             rows.append(f'<tr class="div"><th colspan="3">{{{{{k}}}}}</th></tr>')
             continue
         name = pos[0] if pos else ''
@@ -283,13 +294,13 @@ def item_table(block, keys, prefix):
             label = re.sub(r'×\s*\d+', '', inline(disp)).strip()
             qty = re.search(r'×\s*(\d+)', disp)
             desc = pos[1] if len(pos) > 1 else ''
-            k = f'{prefix}{len(keys) + 1}'; keys[k] = inline(desc)
+            k = nk(keys, prefix); keys[k] = inline(desc)
             rows.append(f'<tr><td>{label}{" ×" + qty.group(1) if qty else ""}</td><td>{ver(kw.get("HG", ""), kw.get("SS", ""))}</td>'
                         f'<td>{{{{{k}}}}}</td></tr>')
             continue
         qty = re.search(r'×\s*(\d+)', disp)
         desc = pos[1] if len(pos) > 1 else ''
-        k = f'{prefix}{len(keys) + 1}'; keys[k] = inline(desc)
+        k = nk(keys, prefix); keys[k] = inline(desc)
         rows.append(f'<tr><td>{item(name)}{" ×" + qty.group(1) if qty else ""}</td><td>{ver(kw.get("HG", ""), kw.get("SS", ""))}</td>'
                     f'<td>{{{{{k}}}}}</td></tr>')
     if not rows:
@@ -327,7 +338,7 @@ def shop_table(block):
 CLASS = PEOPLE.get('_classes', {})
 
 
-def trainer_table(block):
+def trainer_table(block, keys):
     rows = []
     for m in re.finditer(r'\{\{[Tt]rainer(entry|div)\|([^{}]*)\}\}', block):
         pos, kw = split_params(m.group(2))
@@ -342,8 +353,14 @@ def trainer_table(block):
         rest = pos[5:]
         for i in range(0, len(rest) - 4, 5):
             mons.append(f'{pm(rest[i + 1])} Lv.{e(rest[i + 3])}')
+        pz = re.sub(r'<[^>]+>|-{4}', ' ', inline(prize)).split()
+        money = pz[0] if pz else ''
+        note = ' '.join(pz[1:])
+        if note:
+            k = nk(keys, 'M'); keys[k] = note
+            note = '<br><small>{{' + k + '}}</small>'
         rows.append(f'<tr><td><b>{e(CLASS.get(cls, cls))}</b><br><small>{e(PEOPLE.get(name, name))}</small></td>'
-                    f'<td>{"<br>".join(mons)}</td><td>₽{e(prize)}</td></tr>')
+                    f'<td>{"<br>".join(mons)}</td><td>₽{e(money)}{note}</td></tr>')
     if not rows:
         return None
     return '<table class="grid"><caption>训练家</caption><tr><th>训练家</th><th>宝可梦</th><th>奖金</th></tr>' + ''.join(rows) + '</table>'
@@ -368,13 +385,18 @@ def party_table(block):
     if not cards:
         return None
     who = f'{CLASS.get(cls, cls)} {PEOPLE.get(name, name)}'.strip()
-    return (f'<table class="grid party"><caption>{e(who)}　奖金 {e(prize)}</caption>'
+    if 'Silver' in kw.get('classlink', '') or 'Silver' in kw.get('name', ''):
+        who = '劲敌（西尔弗）'
+    if kw.get('caption'):
+        who += f'（{re.sub(r"<[^>]+>", "", inline(kw["caption"]))}）'
+    cap = f'<caption>{e(who)}{"　奖金 " + e(prize) if prize else ""}</caption>' if who else ''
+    return (f'<table class="grid party">{cap}'
             f'<tr><th>宝可梦</th><th>详情</th></tr>{"".join(cards)}</table>')
 
 
-def gym_table(block):
+def gym_table(block, keys):
     out = []
-    t = trainer_table(block)
+    t = trainer_table(block, keys)
     if t:
         out.append(t)
     p = party_table(block)
@@ -399,7 +421,12 @@ def parse(w):
             j = take_block(w, i)
             blk = w[i:j]
             head = blk[:60].lower()
-            if blk.startswith('{|') or re.match(r'\{\{(party|walkthroughgym|walkthroughboss)', head):
+            if re.match(r'\{\{party\s*\n?\|', head):
+                end = re.search(r'\{\{Party/end\}\}', w[j:], re.I)
+                if end:
+                    j = j + end.end()
+                    blk = w[i:j]
+            if blk.startswith('{|') or re.match(r'\{\{(party|walkthroughgym|walkthroughboss|pokémon\s*\n)', head):
                 flush()
                 blocks.append(('raw', blk))
                 i = j
@@ -426,6 +453,10 @@ def parse(w):
     return blocks
 
 
+def nk(keys, prefix):
+    return f'{prefix}{1 + sum(1 for k in keys if re.match(prefix + r"\d+$", k))}'
+
+
 def split_top(s, sep):
     out, depth, cur, i = [], 0, '', 0
     while i < len(s):
@@ -440,7 +471,7 @@ def split_top(s, sep):
     return out
 
 
-def render_wikitable(block, keys):
+def render_wikitable(block, keys, cprefix='C'):
     """Render plain wikitables (innermost ones) as HTML; English cells become C-keys."""
     inner = []
     def grab(b):
@@ -458,6 +489,16 @@ def render_wikitable(block, keys):
             inner.append(b)
     grab(block)
     html_out = []
+    m = re.match(r'\{\|[^\n]*\n\|-[^\n]*\n!([^\n]*)\n\|-[^\n]*\n\|(.*)\n\|\}\s*$', block, re.S)
+    if m and not re.search(r'(?m)^\s*\{\|', m.group(2)) and re.search(r'==|\n\n|----|\{\{Pokémon', m.group(2)):
+        head = re.sub(r'<[^>]+>', '', inline(split_top(m.group(1), '|')[-1])).strip()
+        body = m.group(2)
+        parts = split_top(body.split('\n', 1)[0], '|')
+        if len(parts) > 1 and '=' in parts[0]:
+            body = '|'.join(parts[1:]) + ('\n' + body.split('\n', 1)[1] if '\n' in body else '')
+        body = body.replace('----', '\n\n')
+        k = nk(keys, 'X'); keys[k] = head
+        return f'<div class="box"><h4>{{{{{k}}}}}</h4>' + convert(body, keys, nested=True) + '</div>'
     for t in inner:
         rows, cur = [], []
         lines = t[2:-2].split('\n')[1:]
@@ -487,9 +528,13 @@ def render_wikitable(block, keys):
             cells = []
             for tag, span, content in r:
                 txt = inline(content)
-                plain = re.sub(r'<[^>]+>', '', txt)
-                if re.search(r'[A-Za-z]{3,}', plain):
-                    k = f'C{len([x for x in keys if x.startswith("C")]) + 1}'
+                plain = re.sub(r'<[^>]+>', '', txt).strip()
+                if plain.lower() in PM_EN:
+                    txt = pm(plain)
+                elif plain in TYPE_ZH:
+                    txt = TYPE_ZH[plain]
+                elif re.search(r'[A-Za-z]{3,}', plain):
+                    k = nk(keys, cprefix)
                     keys[k] = txt
                     txt = '{{' + k + '}}'
                 cells.append(f'<{tag}{span}>{txt}</{tag}>')
@@ -500,49 +545,51 @@ def render_wikitable(block, keys):
     return '\n'.join(html_out) or None
 
 
-def convert(w, keys):
+def convert(w, keys, nested=False):
     w = re.sub(r'</?div[^>]*>', '', w)
     w = re.sub(r'\{\{shop\|((?:[^{}]|\{\{(?:[^{}]|\{\{[^{}]*\}\})*\}\})*)\}\}(.*?)\{\{shopfooter[^{}]*\}\}',
                lambda m: '\n{|\n! SHOP:' + m.group(1) + '\n' + m.group(2) + '\n|}\n', w, flags=re.S)
     out = []
-    pc = hc = 0
+    HP, PP = ('X', 'X') if nested else ('H', 'P')
     for b in parse(w):
         if b[0] == 'h':
             t = inline(b[2])
-            hc += 1; k = f'H{hc}'; keys[k] = t
+            k = nk(keys, HP); keys[k] = t
             out.append(f'<h{2 if b[1] <= 2 else 3}>{{{{{k}}}}}</h{2 if b[1] <= 2 else 3}>')
         elif b[0] in ('p', 'li'):
             t = inline(b[1])
             if not re.sub(r'<[^>]+>|\s', '', t):
                 continue
-            pc += 1; k = f'P{pc}'; keys[k] = t
+            k = nk(keys, PP); keys[k] = t
             out.append(f'<p>{{{{{k}}}}}</p>' if b[0] == 'p' else f'<ul><li>{{{{{k}}}}}</li></ul>')
         else:
             blk = b[1]
             low = blk.lower()
             html_ = None
             if 'catch/entryhs' in low:
-                html_ = catch_table(blk)
+                html_ = catch_table(blk, keys)
             elif 'itemlist' in low:
-                html_ = item_table(blk, keys, 'D')
+                html_ = item_table(blk, keys, 'X' if nested else 'D')
             elif 'shopitem' in low or 'shopmon' in low:
                 html_ = shop_table(blk)
             elif 'walkthroughgym' in low or 'walkthroughboss' in low:
-                html_ = gym_table(blk)
+                html_ = gym_table(blk, keys)
             elif 'trainerentry' in low:
-                html_ = trainer_table(blk)
+                html_ = trainer_table(blk, keys)
             elif low.startswith('{{party'):
                 html_ = party_table(blk)
+            elif low.startswith('{{pokémon'):
+                html_ = party_table('{{Party|class=|name=|prize=}}\n' + blk)
             if html_:
                 out.append(html_)
-            elif blk.startswith('{|') and (html_ := render_wikitable(blk, keys)):
+            elif blk.startswith('{|') and (html_ := render_wikitable(blk, keys, 'X' if nested else 'C')):
                 out.append(html_)
             elif blk.startswith('{|'):
                 txt = inline(re.sub(r'^\{\||\|\}$|^[!|].*?\|(?=[^|])', '', blk, flags=re.M))
                 txt = re.sub(r'\n\s*\|-.*', '', txt)
                 cells = [c.strip() for c in re.split(r'\n\s*[!|]+\s*', txt) if c.strip() and not c.strip().startswith(('style=', 'class='))]
                 if cells:
-                    pc += 1; k = f'P{pc}'; keys[k] = ' / '.join(cells)
+                    k = nk(keys, PP); keys[k] = ' / '.join(cells)
                     out.append(f'<p class="note">{{{{{k}}}}}</p>')
     return '\n'.join(out)
 

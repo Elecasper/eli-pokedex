@@ -18,6 +18,7 @@ table.data th{width:30%;color:#a9b5a6;font-weight:600;white-space:nowrap}table.d
 img.icon{width:24px;height:24px;vertical-align:-6px;margin-right:2px;image-rendering:pixelated}img.pm{width:40px;height:30px;vertical-align:-8px}
 li.loc{list-style:none;margin:18px 0 6px -22px}li.loc>span{display:block;font-size:17px;font-weight:700;color:#c9e265;border-bottom:1px solid #36463c;padding-bottom:4px;margin-bottom:4px}
 i{color:#a9b5a6}
+div.box{background:#2a372f;border:1px solid #44574b;border-left:4px solid #c9e265;border-radius:10px;padding:4px 16px;margin:16px 0}div.box h4{margin:12px 0 4px;color:#c9e265;font-size:15px}div.box h2,div.box h3{font-size:15px;border:0;margin:12px 0 4px}details.box{background:#2a372f;border:1px solid #44574b;border-radius:10px;padding:2px 14px;margin:14px 0}details.box>summary{cursor:pointer;min-height:42px;display:flex;align-items:center;font-weight:700;color:#c9e265}table.grid caption{text-align:left;font-weight:700;padding:4px 0 8px;font-size:15px;color:#f1f0e6}tr.div th{background:#1f2a24;color:#c9e265}
 table.grid{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:#2a372f;border-radius:10px;overflow:hidden}table.grid th,table.grid td{padding:8px 10px;border-bottom:1px solid #36463c;text-align:left;vertical-align:middle;line-height:1.6}table.grid th{color:#a9b5a6;font-weight:600}
 .pager{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:32px 0 10px}
 .pager a{display:block;background:#2a372f;border:1px solid #44574b;border-radius:12px;padding:12px 14px;text-decoration:none;color:#f1f0e6;font-size:15px;min-height:64px}
@@ -77,7 +78,7 @@ nav.top,header p,.lead,.foot{color:#a9b5a6}.tabs button{background:#2a372f;borde
 <p>你首先会看到的建筑是宝可梦中心。这座宝可梦医院能把你的队伍完全回复，并消除所有异常状态。每个中心都有一台电脑，训练家可以用它管理寄放的宝可梦、查看邮箱，或用印章装饰精灵球。训练家身上最多只能带六只宝可梦，再捕捉到的会直接传送到电脑里。每找到一个宝可梦中心，最好都回复一下并存档。</p>
 <h3>友好商店</h3>
 <p>宝可梦中心西边是另一家店，也就是本地的友好商店。这类商店出售各种精灵球、伤药和其他道具。有机会就多备点物资，因为谁也说不准旅途中会遇到什么。</p>
-<table class="grid"><caption>商店</caption><tr><th>商品</th><th>价格</th></tr><tr><td><img class="icon" src="../img/items/poke-ball.png" alt="" width="30" height="30" loading="lazy">精灵球</td><td>₽200</td></tr><tr><td><img class="icon" src="../img/items/potion.png" alt="" width="30" height="30" loading="lazy">伤药</td><td>₽300</td></tr><tr><td><img class="icon" src="../img/items/antidote.png" alt="" width="30" height="30" loading="lazy">解毒药</td><td>₽100</td></tr><tr><td><img class="icon" src="../img/items/paralyze-heal.png" alt="" width="30" height="30" loading="lazy">解麻药</td><td>₽200</td></tr><tr><td><img class="icon" src="../img/items/air-mail.png" alt="" width="30" height="30" loading="lazy">Air Mail</td><td>₽50</td></tr><tr><td><img class="icon" src="../img/items/heal-ball.png" alt="" width="30" height="30" loading="lazy">治愈球</td><td>₽300</td></tr></table>
+<table class="grid"><caption>下方收银台</caption><tr><th>商品</th><th>价格</th></tr><tr><td><img class="icon" src="../img/items/poke-ball.png" alt="" width="30" height="30" loading="lazy">精灵球</td><td>₽200</td></tr><tr><td><img class="icon" src="../img/items/potion.png" alt="" width="30" height="30" loading="lazy">伤药</td><td>₽300</td></tr><tr><td><img class="icon" src="../img/items/antidote.png" alt="" width="30" height="30" loading="lazy">解毒药</td><td>₽100</td></tr><tr><td>Parlyz Heal</td><td>₽200</td></tr><tr><td><img class="icon" src="../img/items/air-mail.png" alt="" width="30" height="30" loading="lazy">Air Mail</td><td>₽50</td></tr><tr><td><img class="icon" src="../img/items/heal-ball.png" alt="" width="30" height="30" loading="lazy">治愈球</td><td>₽300</td></tr></table>
 <h3>还有一件事</h3>
 <p>你走近北边去30号道路的出口时，向导老爷爷会拦住你。他忘了给你一样东西：一张装进宝可装置的<b>地图卡</b>。这张扩展卡相当于城镇地图，可以查看整个地区，还会显示你当前的位置！</p>
 <h2>30号道路</h2>
@@ -99,6 +100,9 @@ nav.top,header p,.lead,.foot{color:#a9b5a6}.tabs button{background:#2a372f;borde
 <h3>劲敌对战 1</h3>
 <p>对战时，双方每次各派出一只宝可梦；这两只都是 5 级，宝可梦旁边的「Lv5」就是等级。下面的血条显示宝可梦剩余的 HP。当一方没有还能战斗的宝可梦时，对战就分出胜负。</p>
 <p>选「战斗」可以向对手发动攻击。双方各有两个招式：一个造成伤害，另一个降低对手的某项能力。如果你的宝可梦 HP 快不够了，记得用伤药：打开「包包」，选择药品，用在宝可梦身上。</p>
+<table class="grid party"><caption>劲敌（西尔弗）（如果你选了菊草叶）　奖金 ₽500</caption><tr><th>宝可梦</th><th>详情</th></tr><tr><td><img class="pm" src="../img/pm/155.png" alt="" width="40" height="30">火球鼠<br><small>Lv.5 · 火</small></td><td>特性：猛火<br>招式：撞击、瞪眼</td></tr></table>
+<table class="grid party"><caption>劲敌（西尔弗）（如果你选了火球鼠）　奖金 ₽500</caption><tr><th>宝可梦</th><th>详情</th></tr><tr><td><img class="pm" src="../img/pm/158.png" alt="" width="40" height="30">小锯鳄<br><small>Lv.5 · 水</small></td><td>特性：激流<br>招式：抓、瞪眼</td></tr></table>
+<table class="grid party"><caption>劲敌（西尔弗）（如果你选了小锯鳄）　奖金 ₽500</caption><tr><th>宝可梦</th><th>详情</th></tr><tr><td><img class="pm" src="../img/pm/152.png" alt="" width="40" height="30">菊草叶<br><small>Lv.5 · 草</small></td><td>特性：茂盛<br>招式：撞击、叫声</td></tr></table>
 <p>打败他后，你会得到 ₽500 奖金，宝可梦也会获得宝贵的经验值。他离开后，又很快回来捡他掉下的训练家卡片，发现你看到了上面的名字，很不高兴。他再次离开，你就可以继续前往空木研究所了。</p>
 <h2>若叶镇</h2>
 <h3>空木研究所</h3>
