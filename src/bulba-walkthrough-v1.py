@@ -77,7 +77,12 @@ ITEM_FIX = {'Grn Apricorn': 'Green Apricorn', 'Blu Apricorn': 'Blue Apricorn', '
             'Red Apricorn': 'Red Apricorn', 'Wht Apricorn': 'White Apricorn', 'Blk Apricorn': 'Black Apricorn', 'Pnk Apricorn': 'Pink Apricorn',
             'Dowsing MCHN': 'Dowsing Machine'}
 ITEM_ZH_EXTRA = {'Pokégear': '宝可装置', 'Running Shoes': '跑步鞋', 'Sticker Case': '贴纸盒', 'Dowsing Machine': '探宝器',
-                 'Basement Key': '地下钥匙', 'Lost Item': '遗失物', 'Flower Mail': '花朵邮件', 'Apricorn Box': '球果盒'}
+                 'Basement Key': '地下钥匙', 'Lost Item': '遗失物', 'Flower Mail': '花朵邮件', 'Apricorn Box': '球果盒',
+                 'Alert Ribbon': '警觉缎带', 'Shock Ribbon': '震惊缎带', 'Downcast Ribbon': '沮丧缎带', 'Careless Ribbon': '粗心缎带',
+                 'Relax Ribbon': '放松缎带', 'Snooze Ribbon': '瞌睡缎带', 'Smile Ribbon': '笑容缎带', 'Effort Ribbon': '努力缎带',
+                 'Apriblender': '球果搅拌机', 'Jersey': '运动服', 'Map Card': '地图卡', 'Radio Card': '收音机卡',
+                 'Parlyz Heal': '解麻药', 'X Defend': '防御强化', 'X Special': '特攻强化', 'RageCandyBar': '愤怒馒头',
+                 'Turtwig Mask': '草苗龟面具', 'Chimchar Mask': '小火焰猴面具', 'Piplup Mask': '波加曼面具', 'Random Berry': '随机树果'}
 
 
 def item(name):
@@ -87,6 +92,10 @@ def item(name):
     if n in ITEM_ZH_EXTRA:
         return e(ITEM_ZH_EXTRA[n])
     sid = ITEM_SLUG.get(slugify(n))
+    if not sid:
+        n2 = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', n)
+        if ITEM_SLUG.get(slugify(n2)):
+            n, sid = n2, ITEM_SLUG.get(slugify(n2))
     if sid and sid in ITEM_ZH:
         USED_ITEM.add(slugify(n))
         return f'<img class="icon" src="../img/items/{slugify(n)}.png" alt="" width="30" height="30" loading="lazy">' + e(ITEM_ZH[sid])
@@ -97,7 +106,7 @@ def item(name):
 
 
 def move(n):
-    mid = MOVE_ID.get(slugify(n))
+    mid = MOVE_ID.get(slugify(n)) or MOVE_ID.get(slugify(re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', n)))
     return data['moves'][str(mid)]['n'] if mid and str(mid) in data['moves'] else n
 
 
@@ -299,6 +308,7 @@ def item_table(block, keys, prefix):
         if disp and re.match(r'(TM|HM) |None|unknown', name):
             k0 = None
             label = re.sub(r'×\s*\d+', '', inline(disp)).strip()
+            label = e(ITEM_ZH_EXTRA[label]) if label in ITEM_ZH_EXTRA else label
             qty = re.search(r'×\s*(\d+)', disp)
             desc = pos[1] if len(pos) > 1 else ''
             k = nk(keys, prefix); keys[k] = inline(desc)
@@ -340,6 +350,26 @@ def shop_table(block):
         return None
     cap_ = SHOP_LABEL.get(label, label) or '商店'
     return f'<table class="grid"><caption>{e(cap_)}</caption><tr><th>商品</th><th>价格</th></tr>{"".join(rows)}</table>'
+
+
+TUTOR_DISP = {'Top left': '左上', 'Top right': '右上', 'Bottom right': '右下', 'Bottom left': '左下'}
+CAT_ZH = {'Physical': '物理', 'Special': '特殊', 'Status': '变化'}
+
+
+def tutor_table(block):
+    cap = re.search(r'TUTOR:(.*)', block)
+    label = cap.group(1).strip() if cap else ''
+    rows = []
+    for m in re.finditer(r'\{\{tutormv\|([^{}]*)\}\}', block):
+        pos, kw = split_params(m.group(1))
+        if len(pos) < 2:
+            continue
+        rows.append(f'<tr><td>{move(pos[0])}</td><td>{TYPE_ZH.get(pos[1], pos[1])}</td>'
+                    f'<td>{CAT_ZH.get(kw.get("cat", ""), kw.get("cat", ""))}</td><td>{e(kw.get("bp", ""))} BP</td></tr>')
+    if not rows:
+        return None
+    cap_ = f'招式教学（{TUTOR_DISP.get(label, label)}的人）' if label else '招式教学'
+    return f'<table class="grid"><caption>{e(cap_)}</caption><tr><th>招式</th><th>属性</th><th>分类</th><th>价格</th></tr>{"".join(rows)}</table>'
 
 
 CLASS = PEOPLE.get('_classes', {})
@@ -558,6 +588,8 @@ def convert(w, keys, nested=False):
     w = re.sub(r'</?div[^>]*>', '', w)
     w = re.sub(r'\{\{shop\|((?:[^{}]|\{\{(?:[^{}]|\{\{[^{}]*\}\})*\}\})*)\}\}(.*?)\{\{shopfooter[^{}]*\}\}',
                lambda m: '\n{|\n! SHOP:' + m.group(1) + '\n' + m.group(2) + '\n|}\n', w, flags=re.S)
+    w = re.sub(r'\{\{tutormv/header\|[^{}]*?disp=([^{}|]*)\}\}(.*?)\n\|\}\s*\n\|\}',
+               lambda m: '\n{|\n! TUTOR:' + m.group(1) + '\n' + m.group(2) + '\n|}\n', w, flags=re.S)
     out = []
     HP, PP = ('X', 'X') if nested else ('H', 'P')
     for b in parse(w):
@@ -579,6 +611,8 @@ def convert(w, keys, nested=False):
                 html_ = catch_table(blk, keys)
             elif 'itemlist' in low:
                 html_ = item_table(blk, keys, 'X' if nested else 'D')
+            elif 'tutormv' in low:
+                html_ = tutor_table(blk)
             elif 'shopitem' in low or 'shopmon' in low:
                 html_ = shop_table(blk)
             elif 'walkthroughgym' in low or 'walkthroughboss' in low:
