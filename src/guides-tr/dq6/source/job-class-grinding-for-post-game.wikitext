@@ -1,0 +1,121 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== WARNING (SNES Only) ==
+
+Make '''sure''' you get Milly to 5✮ Sage at some point during this!  SNES players need 5✮ in all vocations (not all on the same person) to enter the post-game dungeon.  When it's convenient, put Amos away and train Milly!  Then part ways with her, and bring on Amos again.  He's far more helpful for actually fighting the superboss.
+
+== Preamble ==
+
+The goal of the post-game is to defeat Nokturnus, the optional superboss found in the "Fungeon"; a post-game area consisting of a mish-mash of every dungeon you've been to.  But, there's a twist.  This superboss must ''also'' be defeated in 20 Turns to get any reward!  Otherwise, nothing will happen, and you will be returned back to the start.
+
+Accomplishing this is part of what the walkthrough has been building up to this entire time.  You ''can'' beat Nokturnus without level grinding, but it requires Carver (or someone else with Forbearance) to be an 8✮ Liquid Metal Slime class.  Otherwise, Nokturnus will overwhelm you before you can do much to him.
+
+Additionally, SNES players will be required to get 5✮ in all vocations (not all on one person) to even enter the dungeon.  Remake players only need that to get the Gospel Ring... but regardless, Liquid Metal Slime still needs to be mastered.
+
+That takes 300 battles, at minimum.  A hefty amount, but it also allows you to master Dragon for three characters, Hero for Rex, and other vocations for other characters.  As a reminder, this guide recommends this for the old characters...
+
+{| {{prettytable}}
+! || Rex || Carver || Milly || Ashlynn || Amos 
+|-
+! SNES || 8✮ Luminary -> 4✮ Priest -> Hero || Liquid Metal Slime || 5✮ Sage || Monster Master -> Ranger -> Wizard || Paladin
+|-
+! Remakes || 8✮ Luminary -> 4✮ Priest -> Hero || Liquid Metal Slime || N/A || Sage || Paladin
+|}
+
+...And this for Goowain, Healie, Terry, & Lizzie... 
+
+{| {{prettytable}}
+! Goowain || Healie || Terry || Lizzie
+|-
+! Dragon || 5✮ Priest -> Armamentalist || 5✮ Gladiator -> Dragon || Dragon
+|}
+
+First of all, Tingle & Kabuff are learned at 4✮ & 5✮ Priest respectively, and those'll be helpful for Nokturnus.  Doesn't hurt to pick those up along the way.
+
+Dragons get a 0 MP ability called "C-C-Cold Breath" at 8✮.  This is a free 210-230 to all enemies on the battlefield, which is every bit as good as it sounds.  In addition, Armamentalists get Kafrizzle at 8✮.  That's only 180-200 Damage to a single target... but Healie can wear an item called the Duplic Hat.  That allows him to cast the same spell TWICE in a single turn!  Effectively, that's 360-400 Damage to whosoever he strikes with it... plus he can double-cast Kabuff & Multiheal, as needed.
+
+Nokturnus has 13,000 HP to grind down in only 20 turns, meaning you'll need to do ~650 Damage '''per turn'''.  You'll never reach those numbers without mastering vocations like these.
+
+In any case, here are the fastest places to grind for whatever situation you're in:
+
+== Hallowed Hollow (Mobile) ==
+
+{| {{prettytable|notwide=1}}
+|'''Lizzie: No Weapon, Dragon's Robe, Shield of Max Wynne, Thinking Cap, Meteorite Bracer'''
+|-
+|'''Terry: Sunderbolt Blade (UNEQUIPPED), Platinum Mail & Hela's Armour, Silver Shield, Platinum Mask, Gold Bracer'''
+|-
+|'''Amos: Metal King Sword, Enchanted Armour, Iron Mask, Platinum Shield'''
+|-
+|'''Goowain (once he learns Inferno): Dragonsbane, Dragon Mail, Dragon Shield, Platinum Mask, Gold Bracer'''
+|}
+
+The choice of equipment is mostly irrelevant.  Just set the party to "Show No Mercy" and watch everything die.  Be sure to put Rex in the most convenient slot for spamming Whistle!
+
+== Sorceria (Before Level 31) ==
+
+{| {{prettytable|notwide=1}}
+|'''Rex (SNES): Sword of Ramias, Armour of Orgo, Helm of Sebath, Shield of Valora, Agility Ring'''
+|-
+|'''Terry (DS): Sunderbolt Blade (UNEQUIPPED), Platinum Mail & Hela's Armour, Silver Shield, Platinum Mask, Gold Bracer'''
+|-
+|'''Lizzie: No Weapon, Dragon's Robe, Shield of Max Wynne, Thinking Cap, Meteorite Bracer'''
+|-
+|'''Amos: Metal King Sword, Enchanted Armour, Iron Mask, Platinum Shield'''
+|}
+
+Remake A.I. is smart enough to use items; SNES A.I. is not.  That's the deciding factor in whether to lead the party with Rex or Terry.  In any case, the monsters at Sorceria are unusually weak for where they are, so until Carver gets to LVL 31, they're a perfect place to grind out vocation skills.
+
+If you're Rex, use Zap on Darkgoyles, physical attacks on Arrghgoyles, and you're own discretion on everything else.
+
+== Sunken Ship (Level 31+) ==
+
+{| {{prettytable|notwide=1}}
+|'''Lizzie: No Weapon, Dragon's Robe, Shield of Max Wynne, Thinking Cap, Meteorite Bracer'''
+|-
+|'''Terry: Sunderbolt Blade, Platinum Mail & Hela's Armour, Silver Shield, Platinum Mask, Gold Bracer'''
+|-
+|'''Amos: Metal King Sword, Enchanted Armour, Iron Mask, Platinum Shield'''
+|-
+|'''Goowain: Dragonsbane, Dragon Mail, Dragon Shield, Platinum Mask, Gold Bracer'''
+|}
+
+The Sunken Ship has an Area Level Cap of 99... so basically '''no''' level cap.  Goowain should also be close to learning Inferno, if he hasn't already.  Be sure to change vocations as needed!  For example, now's a good time to swap Amos out for Milly real quickly, if on SNES!  With 300 battles to fight, you don't want any wasted opportunities!
+
+== Slimopolis ==
+
+When all's said and done, Goowain should be in the perfect position to finally clear the highest ranks!  Equip him like so...
+
+{| {{prettytable|notwide=1}}
+|'''Goowain: Miracle Sword, Dragon Mail, Dragon Shield, Metal King Helm, Meteorite Bracer'''
+|}
+
+Then equip the Metal King Shield once past Rank B.  Clear Rank B again, then equip the Gold Bracer over the Meteorite Bracer.  For Rank A, it's helpful to be much slower than the Demon Overlord; otherwise, he can potentially attack you twice in a row, due to Agility variance.
+
+== Final Equipment, Level, & Vocation Check ==
+
+Regardless, this is what you're party should generally look like, after all this grinding is completed:
+
+{| {{prettytable|notwide=1}}
+|'''Carver (Level 34, 8✮ Liquid Metal Slime): Spear of Gracos, Sacred Armour, Metal King Shield, Metal King Helm, Meteorite Bracer'''
+|-
+|'''Lizzie (Level 13, 8✮ Dragon): Dragonsbane, Dragon Robe, Shield of Max Wynne, Thinking Cap, Gold Bracer'''
+|-
+|'''Goowain (Level 33, 8✮ Dragon): Miracle Sword, Hela's Armour, Platinum Mask, Metal King Shield, Gold Bracer'''
+|-
+|'''Terry (Level 32-37, 8✮ Dragon): Sunderbolt Blade, Platinum Mail, Silver Shield, Platinum Mask, Gold Bracer'''
+|-
+|'''Rex (Level 29, 8✮ Hero): Sword of Ramia, Armour of Orgo, Shield of Valora, Helm of Sebath, Gold Bracer'''
+|-
+|'''Amos (Level 31, 8✮ Paladin -> 1✮ Dragon): Metal King Sword, Dragon Armour, Dragon Shield, Iron Mask'''
+|-
+|'''Healie (Level 30, 8✮ Armamentalist): Flowing Dress, Silver Shield, Hat of Hermes'''
+|-
+|'''Ashlynn [SNES] (Level 31, 8✮ Ranger -> 1✮ Wizard): Gringham Whip, Kerplunk Bracer'''
+|-
+|'''Ashlynn [Remakes] (Level 31, 8✮ Sage): Gringham Whip, Kerplunk Bracer'''	
+|}
+
+Be especially sure to have the Spear of Gracos & Meteorite Bracer on Carver.  Those two items allow him to trivialize the post-game dungeon without even needing MP.
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Epilogue|nextpage=The Fungeon}}

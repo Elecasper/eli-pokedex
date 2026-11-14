@@ -1,0 +1,88 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+'''''Note: This Boss Fight is one of the hardest in the game, so a link has been provided to demonstrate it:''''' {{YouTube|video=fGEIqTdUvk0|float=left|title=Dragon Quest VI - VS. Nokturnus (StrategyWiki Guide)|duration=13:14}}
+{{-}}
+== VS. Nokturnus ==
+
+{| {{prettytable|notwide=1|float=center}}
+!Recommended Level: 
+|Goowain Lvl 34, Rex Lvl 35, Ashlynn Lvl 33, Carver Lvl 35
+|-
+!Recommended A.I. Settings for Party (Both Versions): 
+|Follow Orders
+|-
+!HP: 
+|13000
+|-
+!MP: 
+|Infinite
+|- 
+!Item:
+|Liquid Metal Mind Scroll (1/8)
+|-
+!Attack:
+|410
+|-
+!Defense:
+|300
+|-
+!Agility:
+|210
+|-
+!EXP: 
+|5500
+|-
+!Gold:
+|880
+|-
+!Attack Pattern A:
+|Kazap [175-225 Zap Damage to All] or C-C-Cold Breath [210-230 Ice Damage to All] → Wind Sickles [136-184 Woosh Damage] or Stab Character [1.25x Damage] → Pearly Gates [180-210 Woosh Damage to All] or '''Proceed to Pattern B'''
+|-
+!Attack Pattern B:
+|Disruptive Wave [if you have buffs up] → Kafrizzle [120-140 Frizz Damage] → Scorch (Scorching Flames) (150-170 Fire Damage to All] → Raging Roar [120-150 unblockable Damage to All] → Quick Attack [Three 0.5x Hits to Random Targets] → '''Proceed to Pattern C'''
+|-
+!Attack Pattern C:
+|Metal Slash (16.66%) [1.0x Damage], Dragon Slash [1.0x Damage in SNES, 1.5x to Dragons in Remakes] (16.66%), Falcon Slash [Two 0.75x Hits] (16.66%), Lullab-Eye [Puts one PC to sleep; cannot be resisted] (16.66%), Oomph [if he doesn't have it already] (16.66%), '''Proceed to Pattern A''' (16.66%)
+|-
+!A.I. Peculiarities:
+|50% chance of attacking twice in Pattern A; Attacks twice per round in Patterns B & C<br>Can attack up to three times when transitioning from one attack pattern to another.<br>Resistance to Knuckle Sandwich is usually 15%, but drops to 0% in Pattern B
+|-
+!Resistances:
+|No resistance to Frizz, Bang, Zap, Fire, or Ice<br>30% reduction of Sizz, Crack and Woosh<br>0-15% to Knuckle Sandwich (see A.I. Peculiarities)<br>Immunity to Everything Else 
+|}
+
+=== Intro ===
+
+At first glance, Nokturnus is the most mechanically complicated enemy in the game, being the only one to sport three attack patterns.  8✮ Liquid Metal Slime + Forbearance covers most of Patterns A & B, but Pattern C consists mostly of physical attacks.  Dragon Slash & Metal Slash do ~50 Damage even to those with maxed Resilience, Oomph will boost those even higher, and Lullab-Eye can throw a serious wrench into your schemes.  
+
+In addition, Healie will need to double-cast Kabuff at the start.  This way, we can trigger Disruptive Wave in Pattern B (so Raging Roar & Quick Attack aren't on the same turn), and give the others a much needed Resilience boost.
+
+=== The Strategy ===
+
+The start is pretty straightforward.  The most important points are that Carver uses Forbearance, while Healie double-casts Kabuff.  Healie will then double-cast Kabuff again, once Nokturnus uses Disruptive Wave.  Beyond that, he'll double-cast Kafrizzle in the meanwhile.
+
+Goowain keeps using C-C-Cold Breath (or Fullheal on Carver, if he's hit before Kabuff), Ashlynn tags in for Rex (when convenient) to use Magic Burst, Rex uses Gigaslash, and Terry uses the Yggdrasil Dew with Hela's Armour when Nokturnus uses Raging Roar for the first time.
+
+After that is when you need to make some hard choices.  Carver can't consistently survive Quick Attack '''and''' whichever two attacks Nokturnus decides to start Pattern C with; You'll need to settle for him defending Healie with Selflessness.  
+
+From there, your best options vary depending on how lucky you are.  Generally speaking, you'll run across one of these three situations...
+
+'''Carver enters the round with 100+ HP:''' This is the ideal scenario.  Your heroes will keep pounding away while Carver shields them with Forbearance.  
+
+'''Carver enters Pattern C with less than 100 HP:''' Now Carver is likely to die.  Instead of Forbearance, you'll want to just use Selflessness on Healie, while Healie double-casts Multiheal.
+
+'''Nokturnus uses Oomph on himself:''' Same situation as Carver entering with less than 100 HP, except now Rex needs to use Disruptive Wave.  Healie might also use Kafrizzle, if Carver doesn't need healing.
+
+'''Nokturnus uses Lullab-Eye on someone other than Carver''': If it's only on Goowain, you might be able to get away with just replacing him with another Dragon.  Otherwise, you'll need to have someone use Tingle, as Rex & Healie are too important to leave napping.
+
+'''Nokturnus uses Lullab-Eye on Carver''': This is the worst case scenario.  Nokturnus can switch back to Pattern A at a moment's notice, so Carver needs to be awake for that.  This is when Ashlynn comes out with her Kerplunk Bracer (if she has it), and uses Tingle—otherwise the results could be devastating. 
+
+'''Nokturnus goes back to Pattern A (with Carver awake):''' This is an ideal scenario.  Goowain & Rex could be hurt if Carver's only shielding Healie, but they'll generally survive—Healie can just patch them up.
+
+'''Nokturnus goes back to Pattern B:''' Now you've already spent Terry's Yggdrasil Dew.  Healie must pick up the slack with Multiheal.  
+
+Beyond that, the battle comes down to your best judgment.  The sections written above are guidelines, not hard & fast rules.  You may need to go off-script if Nokturnus gets really crazy with his combos.  Amos may need to use Kerplunk.  You may even need the Sands of Time if you're '''''really''''' unlucky!
+
+But, you'll generally win.  Nokturnus is random, but not actually that tough; not with our preparations.  If you beat Murdaw & Mortamor, and you've watched the video at the top, you'll get him. 
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=The Fungeon|nextpage=}}

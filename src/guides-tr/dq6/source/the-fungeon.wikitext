@@ -1,0 +1,70 @@
+{{Header Nav|game=Dragon Quest VI: Realms of Revelation}}
+
+== The Fungeon, Part 1 ==
+
+[[File:DQ6 Fungeon, Part 1.png|thumb|float=right|Snag the Seed of Resilience, and nothing else!]]
+
+The Fungeon's battles are actually very easy.  Walk into them with a party of Dragons (to increase pre-emptives), put everyone but Carver away once you get one, use the Spear of Gracos (with Meteorite Bracer)... then have him spam Forbearance as the others spam C-c-cold Breath & Scorch.  You will be functionally immortal to everything but large Jackal Ripper groups, and you won't use a single drop of MP.
+
+As for said Jackal Ripper groups, they're nothing to fear either.  Jackal Rippers always use Muster Strength on their first turn, and are weak enough that they'll fall to 3x C-C-Cold Breaths.  They only deserve mentioning because Muster Strength also puts them beyond where Carver can safely tank.  Their Roundhouse Kick will devastate him.
+
+In any case, the Fungeon's items are pretty underwhelming, save for one in the "Reaper's Peak" section.  As for this part, the Seed of Resilience is the only item with any tangible value.  The Mini Medals could also be good if you still haven't gotten the Sands of Time at 50 Medals.  Beyond that, the rewards are either equally pointless, or can be bought or found in this page.
+
+Snag the Seed of Resilience for Carver, snag the Sacred Armour if you still don't have it, then move on to Reaper's Peak!
+{{-}}
+
+== Reaper's Peak ==
+
+[[File:DQ6 Reaper's Peak.png|thumb|float=right|You cannot proceed until you talk to the woman.  Get the Duplic Hat!]]
+
+The upper-right house has the entrance to the Fungeon's 2nd half, but there'll be an NPC blocking it.  You need to talk to the woman in the upper-left house and change the village in order to unblock the entrance.  Get the Duplic Hat for Healie (allows spells to be cast twice in a round at no additional MP cost), talk to the woman, and move on.
+
+You could also unlock the Orichalcum Fangs, here, if you felt like it.  You'd want to find the NPC that tells you about a "secret item" at Aridea, Zoom to Aridea, then search the spot listed in the screenshot.  But, like all weapons at this point, it is redundant.  Your spells & skills do far more damage than any weapons you might have.
+
+[[File:DQ6 Orichalcum Fangs.png|thumb|float=left|Search here after learning about the Fangs!]]
+{{-}}
+== Best Dressed Contest (Winning Level 8) ==
+
+This is completely pointless, and you have to spend 70000G to make it happen... But, completionists may wish to do it anyway.  
+
+Change Rex back to Luminary, Zoom to Fashion Forge, upgrade the Sword of Ramia twice ('''yes, TWICE'''), then upgrade the Helm of Sebath & Armour of Orgo.  Give Rex any Pretty Betsies you have, then equip him like so...
+
+{| {{prettytable|notwide=1}}
+|'''Rex: Sword of Ramia, Armour of Orgo, Shield of Valora, Helm of Sebath, Turnscote Pendant'''
+|}
+
+Then sweep the contest.  There's a small chance of losing, but Rex will generally win.  Change him back into a Hero once he does; Rex is going to need it.
+{{-}}
+== The Fungeon, Part 2 ==
+
+[[File:DQ6 Fungeon, Part 2.png|thumb|float=right|Get the Mimic's Seed of Life, if on the Remakes.  Skip everything else.]]
+
+The same battle strategies apply here.  Carver will want the Mimic's Seed of Life if you're on the Remakes.  Otherwise, you'll want to head straight to Nokturnus' room, snag the Angel Leotard for Healie, and set up your party like so...
+{{-}}
+== Final Preparations ==
+
+{| {{prettytable|notwide=1}}
+|'''Goowain (Level 34): Dragon Mail, Metal King Shield, Platinum Mask, Gold Bracer
+|-
+|'''Rex (Level 35): Sword of Ramias, Armour of Orgo, Shield of Valora, Helm of Sebath, Gold Bracer
+|-
+|'''Ashlynn (Level 33): Gringham Whip, Kerplunk Bracer'''
+|-
+|'''Carver (Level 35): Sacred Armour, Metal King Shield, Metal King Helmet, Gold Bracer'''
+|-
+|'''Lizzie (Level 15): Dragon Robe, Shield of Max Wynne, Thinking Cap, Gold Bracer'''
+|-
+|'''Terry (Level 34-37): ''Yggdrasil Dew'', ''Sands of Time'', Platinum Mail & Hela's Armour, Silver Shield, Platinum Mask, Meteorite Bracer
+|-
+|'''Healie (Level 31): Angel Leotard, Silver Shield, Duplic Hat, Gold Ring'''
+|-
+|'''Amos (Level 32): Enchanted Armour, Dragon Shield, Platinum Mask'''	
+|}
+
+You may not have the Kerplunk Bracer anymore, if on the Remakes... But Remake players will have noticeably higher levels & stats, as well as infinite Sands of Time uses.  Those advantages more than make up the difference.
+
+Regardless, Ashlynn's purpose is basically to use Magic Burst, then die when it's useful; hence the lack of armour.  Carver can only be killed by physicals, so high Resilience & HP Regeneration are necessities.  Goowain is going to spend more time than the other Dragons on the front lines, so he requires the best gear you can spare after Carver.  Healie has the Duplic Hat so he can double-cast Kabuff, Kafrizzle & Multiheal.  Amos is there for support, and may also use Kerplunk himself, if needed; hence, his gear doesn't need to be that good.  Finally, Terry is there to use the Yggdrasil Dew if Healie is unable to heal.  Plus, he can reset the battle if things really go wrong.
+
+Beyond that, it's just standard equipment.
+
+{{Footer Nav|game=Dragon Quest VI: Realms of Revelation|prevpage=Job class grinding for post-game|nextpage=VS. Nokturnus}}
