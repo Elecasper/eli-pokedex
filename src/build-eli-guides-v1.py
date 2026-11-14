@@ -68,10 +68,13 @@ def exclusives(vids):
     return f'<details class="block"><summary>版本限定宝可梦（野外与固定遭遇）</summary>{"".join(out)}<p class="note">点名字直接打开本站图鉴里这一作的记录。</p></details>'
 
 
+TR = json.loads((SITE / 'src' / 'guides-tr' / 'index.json').read_text(encoding='utf-8'))
 cards = []
 for title, plat, vids, wiki, sdir, pages in GAMES:
     q = ' '.join(vname[v] for v in vids)
     dex = ''.join(f'<a href="../#v={v}">图鉴：{e(vname[v])}</a>' for v in vids)
+    if title in TR:
+        dex = f'<a class="main" href="{TR[title]["slug"]}/">本站中文流程 <small>无广告</small></a>' + dex
     play, tab = PLAY[plat]
     ext = ''.join(f'<a href="{SEREBII}/{sdir}/{pages[k]}.shtml" target="_blank" rel="noopener noreferrer">{lab}</a>'
                   for k, lab in CAT if k in pages)
@@ -88,7 +91,7 @@ for title, plat, vids, wiki, sdir, pages in GAMES:
 # confirmed to exist through each wiki's API; swPages counts walkthrough subpages.
 SERIES_ORDER = ['宝可梦正作', '勇者斗恶龙', '最终幻想', '塞尔达', '马里奥', '星之卡比', '火焰之纹章', '恶魔城', '银河战士',
                 '王国之心', '女神转生', '世界树迷宫', '怪物猎人', '逆转裁判', '雷顿教授', '牧场物语', '动物森友会',
-                '黄金太阳', '高级战争', '洛克人', '宝可梦外传', '其他']
+                '黄金太阳', '高级战争', '洛克人', '宝可梦外传', '宝可梦改版', '其他']
 PLAT_ORDER = {'GBA': 0, 'NDS': 1, '3DS': 2}
 games = json.loads((SITE / 'src' / 'eli-guides-games-v1.json').read_text(encoding='utf-8'))
 assert all(g['series'] in SERIES_ORDER for g in games)
@@ -113,7 +116,7 @@ def game_card(g):
         zh.append(f'<a class="main" href="{t["slug"]}/">本站中文攻略 <small>无广告 · {e(t["total"])}</small></a>')
     if g['zh'] in ZH:
         z = ZH[g['zh']]
-        zh.append(f'<a class="ads" href="{e(z["url"])}" title="{e(z["title"])}" {EXT}>游民星空：{e(z["title"])} <small>广告多</small></a>')
+        zh.append(f'<a class="ads" href="{e(z["url"])}" title="{e(z["title"])}" {EXT}>{e(z.get("site", "游民星空"))}：{e(z["title"])} <small>广告多</small></a>')
     kw = urllib.parse.quote(g['zh'] + ' 攻略')
     zh.append(f'<a class="search" href="https://search.bilibili.com/article?keyword={kw}" {EXT}>B站图文</a>')
     zh.append(f'<a class="search" href="https://search.bilibili.com/all?keyword={kw}" {EXT}>B站视频</a>')
@@ -128,7 +131,7 @@ def game_card(g):
     return (f'<article class="game mini{cls}" data-plat="{g["plat"]}" data-series="{e(g["series"])}" data-q="{e(g["zh"] + " " + g["en"] + " " + g["series"])}">'
             f'<header><h3>{e(g["zh"])}</h3><span class="plat">{g["plat"]}</span></header><p class="en">{e(g["en"])}</p>'
             f'<div class="row"><b>中文</b><div class="links">{"".join(zh)}</div></div>'
-            f'<div class="row"><b>英文</b><div class="links">{"".join(en)}</div></div></article>')
+            + (f'<div class="row"><b>英文</b><div class="links">{"".join(en)}</div></div>' if en else '') + '</article>')
 
 
 groups = {'宝可梦正作': cards}

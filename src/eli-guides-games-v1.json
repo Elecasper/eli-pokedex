@@ -1575,5 +1575,11 @@
   "sw": "Detective Pikachu",
   "swPages": 1,
   "swStage": 0
+ },
+ {
+  "plat": "GBA",
+  "zh": "漆黑的魅影",
+  "en": "Pokémon Dark Phantom（民间改版，基于绿宝石）",
+  "series": "宝可梦改版"
  }
 ]

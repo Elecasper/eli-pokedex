@@ -1,0 +1,22 @@
+{
+ "slug": "pokemon-frlg",
+ "game": "火红 / 叶绿",
+ "en": "附录:寶可夢 火紅／葉綠流程",
+ "sourceTitle": "附录:寶可夢 火紅／葉綠流程",
+ "plat": "GBA",
+ "kind": "repost",
+ "source": "神奇宝贝百科",
+ "sourceBase": "https://wiki.52poke.com/wiki/",
+ "license": "CC BY-NC-SA 3.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh-hans",
+ "intro": "转载自神奇宝贝百科的剧情流程：每一步去哪、和谁对战、拿到什么。名称都是官方简体中文译名。这是简版，详细的图文攻略之后会逐个补上。",
+ "pages": [
+  "part-1",
+  "part-2",
+  "part-3",
+  "part-4",
+  "part-5",
+  "part-6"
+ ],
+ "total": "简版流程，6 页"
+}

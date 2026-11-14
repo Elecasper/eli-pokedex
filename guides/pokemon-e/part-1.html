@@ -1,0 +1,133 @@
+<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#1f2a24"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; img-src 'self' data: https://cdn.wikimg.net; base-uri 'none'; object-src 'none'; form-action 'none'"><title>开局 - 绿宝石 · Eli</title><style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:#1f2a24;color:#f1f0e6}
+main{max-width:760px;margin:auto;padding:8px 16px max(32px,env(safe-area-inset-bottom))}
+a{color:#c9e265}.crumb{font-size:13px;color:#a9b5a6;margin:14px 0 4px}.crumb a{color:#a9b5a6}
+h1{font-size:25px;margin:6px 0 4px;line-height:1.4}.chap{font-size:13px;color:#a9b5a6;margin:0 0 16px}
+h2{font-size:19px;margin:28px 0 10px;padding-top:4px;border-top:1px solid #36463c}
+p,li{font-size:16px;line-height:1.85}ol,ul{padding-left:22px}b{color:#fff}
+.note{font-size:14px;color:#a9b5a6;background:#2a372f;border-radius:10px;padding:10px 14px}
+figure{margin:14px 0;text-align:center}figure img{max-width:100%;height:auto;border-radius:8px;background:#2a372f}
+figcaption{font-size:13px;color:#a9b5a6;margin-top:6px}
+.tip{background:#2a372f;border:1px solid #44574b;border-left:4px solid #c9e265;border-radius:10px;padding:4px 16px;margin:16px 0}
+.tip h4{margin:12px 0 0;font-size:15px;color:#c9e265}.tip p,.tip li{font-size:15px}
+table.data{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:#2a372f;border-radius:10px;overflow:hidden}
+table.data caption{text-align:left;font-weight:700;padding:0 0 8px;font-size:15px}
+table.data th,table.data td{padding:9px 12px;border-bottom:1px solid #36463c;text-align:left;vertical-align:top;line-height:1.6}
+table.data th{width:30%;color:#a9b5a6;font-weight:600;white-space:nowrap}table.data th small{font-weight:400}
+.medal{color:#c9e265;font-weight:700}
+img.icon{width:24px;height:24px;vertical-align:-6px;margin-right:2px;image-rendering:pixelated}img.pm{width:40px;height:30px;vertical-align:-8px}
+li.loc{list-style:none;margin:18px 0 6px -22px}li.loc>span{display:block;font-size:17px;font-weight:700;color:#c9e265;border-bottom:1px solid #36463c;padding-bottom:4px;margin-bottom:4px}
+i{color:#a9b5a6}
+table.grid{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:#2a372f;border-radius:10px;overflow:hidden}table.grid th,table.grid td{padding:8px 10px;border-bottom:1px solid #36463c;text-align:left;vertical-align:middle;line-height:1.6}table.grid th{color:#a9b5a6;font-weight:600}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:32px 0 10px}
+.pager a{display:block;background:#2a372f;border:1px solid #44574b;border-radius:12px;padding:12px 14px;text-decoration:none;color:#f1f0e6;font-size:15px;min-height:64px}
+.pager a small{display:block;color:#a9b5a6;font-size:12px;margin-bottom:2px}.pager .next{text-align:right;grid-column:2}
+.toc{list-style:none;padding:0;margin:0}.toc li{border-bottom:1px solid #36463c}.toc a{display:flex;justify-content:space-between;padding:13px 4px;text-decoration:none;color:#f1f0e6}
+.toc a span{color:#a9b5a6;font-size:13px}.toc h3{font-size:14px;color:#a9b5a6;margin:20px 0 4px;font-weight:600}
+.src{font-size:12px;color:#a9b5a6;line-height:1.8;border-top:1px solid #36463c;margin-top:28px;padding-top:12px}.src a{color:#a9b5a6}
+@media(max-width:560px){h1{font-size:22px}p,li{font-size:15.5px}table.data th{white-space:normal;width:34%}}
+</style><style id="eli-theme">:root{color-scheme:dark;--paper:#1f2a24;--card:#2a372f;--ink:#f1f0e6;--muted:#a9b5a6;--line:#44574b;--soft:#34443a;--green:#c9e265;--accent:#ff7b6b;--rust:#ff7b6b;color:#f1f0e6;background:#1f2a24}
+body{background:#1f2a24;color:#f1f0e6}
+a{color:#c9e265}
+h1{letter-spacing:.04em;text-shadow:2px 2px 0 #0f1713}
+button{border-width:2px;border-radius:10px;}
+button:active{transform:translateY(2px);}
+input,select{background:#2a372f;color:#f1f0e6;border-width:2px}
+::placeholder{color:#8a9a88}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline-color:#c9e265}
+.platforms button[aria-pressed=true],.scope-buttons button[aria-pressed=true]{background:#c9e265;border-color:#c9e265;color:#1f2a24;font-weight:700}
+.home-bar a,.home-links a:first-child{font-weight:700;letter-spacing:.04em}
+.eli-bar{position:sticky;top:0;z-index:30;background:#1f2a24;border-bottom:1px solid #2f3f35}
+.eli-bar-in{max-width:1120px;margin:auto;padding:0 16px;min-height:60px;display:flex;align-items:center;gap:18px}
+.eli-bar a{text-decoration:none;color:#f1f0e6;font-weight:700}
+.eli-bar .brand{font-size:20px;letter-spacing:.02em;white-space:nowrap}
+.eli-bar nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.eli-bar nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-size:15px;white-space:nowrap}
+.eli-bar nav a[aria-current=page]{color:#c9e265}
+.eli-bar nav a.cta{background:#c9e265;color:#1f2a24;border-radius:999px;padding:0 16px;min-height:40px;align-self:center}
+@media(max-width:560px){
+.eli-bar-in{min-height:52px;gap:8px;padding:0 10px 0 14px;flex-wrap:nowrap}
+.eli-bar .brand{font-size:17px}
+.eli-bar nav{gap:0;margin-left:auto;width:auto;padding:0}
+.eli-bar nav a{padding:0 9px;font-size:14px}
+.eli-bar nav a.cta{padding:0 12px}
+.appbar{min-height:52px!important}.brand h1{font-size:20px!important}
+h1{font-size:22px!important;margin:10px 0 6px!important}
+.top{min-height:44px!important}
+.tabs button{min-height:42px!important;font-size:13px!important;padding:6px 4px!important}
+.panel{padding:14px 12px!important}
+.steps li{font-size:14.5px!important;padding-bottom:8px!important}
+.chips li{font-size:12.5px;padding:5px 8px}
+.backup,.lookup{margin:10px 0!important}
+.card{padding:14px!important}
+.facts strong{font-size:18px!important}
+}
+@media(max-width:380px){.eli-bar nav a{padding:0 6px!important;font-size:13px!important}.eli-bar .brand{font-size:16px!important}.eli-bar-in{gap:4px!important;padding:0 6px 0 12px!important}}
+.platforms button,.scope-buttons button,.tabs button,.lookup-row button,#info-open{border-radius:999px}
+.actions a,a.continue{border-radius:999px}
+nav.top,header p,.lead,.foot{color:#a9b5a6}.tabs button{background:#2a372f;border-color:#44574b}.tabs button[aria-selected=true]{background:#c9e265;color:#1f2a24;border-color:#c9e265;font-weight:700}.panel{background:#2a372f;border:2px solid #44574b;}.steps li::marker{color:#ff7b6b}.actions a{background:#c9e265;color:#1f2a24;font-weight:700;}.actions a.secondary{background:#34443a;color:#f1f0e6}details{border-top-color:#44574b}code{background:#34443a}.tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.tabs button:first-child{grid-column:1/-1}@media(min-width:560px){.tabs{grid-template-columns:repeat(5,minmax(0,1fr))}.tabs button:first-child{grid-column:auto}}.sub{font-size:13px;letter-spacing:.12em;color:#a9b5a6;margin:18px 0 8px;font-weight:700}.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}.chips li{background:#34443a;border:1px solid #44574b;border-radius:8px;padding:6px 10px;font-size:13px;line-height:1.6}.backup{border-left:3px solid #c9e265;background:#25332b;padding:10px 12px;font-size:14px;line-height:1.8;margin:14px 0 4px;border-radius:0 8px 8px 0}.lookup{margin:14px 0;padding:14px;background:#25332b;border:2px solid #44574b;border-radius:12px}.lookup label{display:block;font-size:13px;color:#a9b5a6;line-height:1.7}.lookup label strong{display:block;color:#f1f0e6;font-size:15px}.lookup-row{display:flex;gap:8px;margin-top:10px}.lookup-row input{flex:1;min-width:0;min-height:46px;border-radius:10px;border:2px solid #44574b;padding:8px 12px;font-size:16px}.lookup-row button{min-width:72px;background:#c9e265;color:#1f2a24;border-color:#c9e265;font-weight:700}.trouble dt{font-weight:700;font-size:14px;margin-top:12px}.trouble dd{margin:4px 0 0;font-size:14px;line-height:1.8;color:#a9b5a6}@media(max-width:560px){.eli-bar nav a.home{display:none}}</style></head><body><header class="eli-bar"><div class="eli-bar-in"><a class="brand" href="https://eli-library.mysxl.cn/">Eli的杂货间</a><nav aria-label="站内导航"><a class="home" href="https://eli-library.mysxl.cn/">主页</a><a href="../../">图鉴</a><a href="../../save-types/index.html">存档类型</a><a href="../../handheld/">掌机指南</a><a href="../../guides/" aria-current="page">攻略</a></nav></div></header><main><p class="crumb"><a href="../">攻略大全</a> / <a href="./">绿宝石</a></p><h1>开局</h1><p class="chap">剧情流程</p>
+<p class="note">斜体的步骤是支线剧情，不是必须进行的流程。名称用简体中文官方译名。</p><ul><li class="loc"><span>未白镇</span><ul><li>选择主角的性别并输入姓名。</li>
+<li>离开货车进入主角家中与妈妈对话，然后到二楼调整墙壁上的时钟。</li>
+<li><i>打开二楼的电脑，可以取走一个<img class="icon" src="../img/items/potion.png" alt="伤药" width="30" height="30" loading="lazy">伤药。</i></li>
+<li>离开家里前往劲敌的家，进入二楼后发现劲敌的精灵球，查看（或回到一楼）后遇到劲敌（如果玩家选择小悠作为主角时则为小遥，反之则为小悠）。</li>
+<li>离开劲敌的家走到１０１号道路，会发现被<img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAAuBAMAAABt+9zSAAAAKlBMVEUAAAAAAAAgIClBQUFSQTFaUkpqUjFzYlqUe2q0nIu9rJzFxb3m3s3///9/EoLbAAAAAXRSTlMAQObYZgAAAwtJREFUeNrNlF1oHFUYhp8zM8npZIXOFKQxqTBZtaINNrZIxRvjD4IF6dJSiw2ygUKXRGumlXSbuyhCOxXMkF7IaEWbuyQqaaFetLkV/EsRQVttGYaiSChkBpowOxl3x4vJJqmVXvfcfHDeh/d7+Tjng/vxHM1L21Relf/qspTrEw//HyANOQymQduENZlfaQAyAai6A3qtUErNyy8zYaWfTPF6Ezj2caxHcnfLp+/XOmeVy0uR/ClYmLDSdS2OwbuUFJ8b5jh7OGr17rWYXAPeAxSdxm5p1mY4v7lrEUjdJlAFC9mj0IIggsLU6ANfztIy9cUKINhAv23TmMEfbZ+dLRVOia5FKD7ebGHQOFdkei+39oNp4p+gUQImVzM0bp6irwg/Lo1C7aN4iL+A680MY9lNi2wTpB34Pg5VkRWmp4PHDjTnkFkgDNIL7YX9vPZC0anawuRK+j2gAtovvQB0Wbfnti1tefSfrdsXIdyhdHyVt1juOBsBCxZm8esDhjbpVyHcCaqRO4iHsqs7yNqA2pbuRBYe7P1g1zagEuUOm6BxFgFkju5m8x66I+aoz4UrGdoMyG5bgOh6bs+fZ8aJq8/qfmdH53eggDxuATfg2olgc1BwX4LjNhiwCxAwYnEpOFfeup3EGnHjv5MniH8TGx+pDxKCApciXlSPbMxAjrj1KtJG98ZOH1HLYT4o5YdXtOj60wAVVKBCHJHISuvKqBsBYfe+AEg8cEg8hoAknCfPoD5Tov6ZeojsjAu8o7jE5dV3rIFWAnWnCuJNqA9Wk4qnG1ETEEA79kwpbQHGT9pVGFsmWwUUYH4gfZWLkDmuLkkYPLymowJcu9X94SGy0x70LmrOlZ65GusdmP+dYSKhU/9Zd2jtX14zyIFswHHQo4qt1iutzp1/VQGQPZ7nSI+T9pOhdrifz9cBAkB+68fldiX2YsriGw6G6wAtL8VfeaMPf0iQHSS8qwWBGJJ9NCCE8A59xeEpGIYgju5eOCpAXXs7en7DAm/V7rGazD+umvdeXqbJ/Xr+BXiuDtmG31Q0AAAAAElFTkSuQmCC" alt="蛇纹熊" width="40" height="30">蛇纹熊追赶的小田卷博士。</li>
+<li>从博士的包包里选择<img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAA1BAMAAAAaIx45AAAAMFBMVEUAAAAAAAAxSik5ajlSczlanFqUtDmkgwCsOUqs3mrN9oveSmruYnv/pCD/5lL///+9QEmNAAAAAXRSTlMAQObYZgAAAhxJREFUeNq9lE1oE0EcxX/7kbRUCLttkdZD3LZIkfoRiUUQlBBTL6JNK4IXD4IXbx4LUrQoqMeepF48KpbSoIhKayyCoBQ1eBAPYVkCXqR0x4MhEmbjwU2yaafXzmU+3rz9v/m/x8KuDzPTsdWbxzn2Xu28GM7Zi/K6bwkFx5DOlo+HiJkvvWwwp6oDhpoDpATdlkIBRwwWxxWcG5CqL11RID0FnRVG51R1DHmUX4qXNiQGolpSdQca1W2qc3DPsdgXfwxALtNEzGmLiYxAfyQAzANTTUQaJvgg/cIycKpAJkT6ls4DhfrNxTxgXp65PRUisQuwQn722ZO6AFlivKVaJ7P2tHSSL8uQk7U7h2+FHf6zPmb3FmsjJ95/NLOXRjcOvhXNd2Ckx2GQWC6WR6+/EC1XquV3Z8ZqrydfDWWZKXZ9j/hVq374nShPx0Xl4WbN2+KgNrC6fte2FH1rCEs7nhdKF8BS58AGYpYyIeyYHVhTppeNVVLlcD0ceBHkb5pPnj5s8xk9Lb1IMs03+4uyZ8+Q3d3VPxD8iNY59AAHB0aObVKxooijfQvZp91tqmOeRxCgex3aeqXvQEAFAqfNMTNaCqCBm0wmIRBNzsS5uFNvCCafOx6AaNeZdTwQkPjvjt9CavcDx6MPtIQLuG3OGjL9FfgphO+6rh/Ra/cvWNrC2Wvz2zrqMyM0jJRUO2IPzls7mKVZu/+34x961qbfZQa3AAAAAABJRU5ErkJggg==" alt="木守宫" width="40" height="30">木守宫、<img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAzBAMAAADr1HzMAAAAJFBMVEUAAAAAAAB7ShiLUiCsQRCsiwDmWiDuvTH23mr/izH/rFL///9OoICqAAAAAXRSTlMAQObYZgAAAZdJREFUeNqtks1LG0EYh58xu5aCNLPYkiBC15SWgkgCwftSSg+C4EfsP2DJOf9Hzz20Fy96KgvxbjDQo4hLBEl60RIUL5ppoRASZ6eHZDeTnn0vMzzzfv7egcexjHXfedMGZizwqgngpMAtj86JzxZTxK0hMDbZzrklBsqOEjX4L08Go9wdaZHssdrfKkx8QnO3Hr/z7SgV0fIZqJSI3mvWYS/tuZop6fNlvilAAFTLACdhL8kz+94DWC2m/XwCCVBJyGxpSrEZwIACcIOxPrv0Rq86UfXZQx7057m8OeiPojp1YPi1bs+uGwBEaS3ZKjbFRzn2cWCp8odFxwv0UDGawvlyhBOgo+HeuFas1wo+nBH2k51eDd/CKd8VJLNX/vo6DnvW3lc+5AZPywsXaT9u6YeRksJGSrYFgPxZT0locKJ7kZFJh5j7gOxlV00yx3ODF7dPbnTb2rKOuOLMqv7Lk7E6Vba2wvPmNyezA8Z/eX1pKya8Qtfvblg+z4NuhbhhkYfYP6QzziwARPZ3jr6a/vtC8Mj2D338edRRk0usAAAAAElFTkSuQmCC" alt="火稚鸡" width="40" height="30">火稚鸡或<img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAyBAMAAAA+QZ/aAAAALVBMVEUAAAAAAAAxapQxc4tBpN5SOSl7i6x7ze6cveasWiC03u7F3vbugzH/rEH////4kAnkAAAAAXRSTlMAQObYZgAAAdpJREFUeNq9k79r1GAYxz9535xcXe68E6RKS3pSOnSJpoiCQxZBKGKg3uTSP6GD4npwy3W5uhYF3Y+TDhXcWhFxKsRRUBvbSYvk9Qc05zWJQy4ldxeHCvoub14++X7fJ0++D/z7paUPNfiYBfpgF/W+eKxyFHOh4U1tZYDIs80AcWsaRPkPCjghmD6hQnjDQCZb/LWkSvGhyreKvRwr9Tflohnj3RVlEHwfq0rMLk4GMBmpEauak5xmAGg1UiCWzMEtZaBlXTlWSFmQqb5oUVgegFkAC+ASNKGTvDPxcCXsbUNiVzTp1hMQXLvMIw+2oOAA/SU2Eit51vkBR8/gzk2aPE/LjR3QbTAp2nLd7DuhO/jA9szpg5KIqkHd4OLOp3Nu8CK53NxGl6G+C2hc3XdTqyoNOkpiF2zYvDF1HDLtQre6e7iiX3+zCUddAS0FOsSNwGdinZ05Yk2vKN6ptCW3F4EQ/Jc/FxSRkXbnvjpYJnSJX98rmkR7aynwiU/ddaHXtGzZ3jOyf1DOt52ONJlHGD2VHRxZqT1470UCWMuGYTBlcQSrajgl55/yysSl5w/FJ9oXn1eRVEJ/NFdW/M3hreGNRfSXAqIP/ug4f3kCYahUblzPlPm/6zdYYo+UWG9YDwAAAABJRU5ErkJggg==" alt="水跃鱼" width="40" height="30">水跃鱼其中之一打倒蛇纹熊。</li>
+<li>随后被博士带回研究所，并把主角选择的宝可梦送给主角作为冒险伙伴。</li>
+<li>离开未白镇，经１０１号道路前往古玫镇。</li></ul></li>
+<li class="loc"><span>古玫镇</span><ul><li><i>与在友好商店下方民居旁站着的商店员工对话，得到<img class="icon" src="../img/items/potion.png" alt="伤药" width="30" height="30" loading="lazy">伤药，商店员工还会带主角认识友好商店。</i></li>
+<li>继续向上前进来到１０３号道路。</li></ul></li>
+<li class="loc"><span>１０３号道路</span><ul><li>遇到劲敌，并展开第一次战斗。</li>
+<li>战胜后离开１０３号道路，经古玫镇返回未白镇。</li></ul></li>
+<li class="loc"><span>未白镇</span><ul><li>前往研究所，从博士那里得到宝可梦图鉴，并从劲敌手中获得<img class="icon" src="../img/items/poke-ball.png" alt="精灵球" width="30" height="30" loading="lazy">精灵球。</li>
+<li>经过家门时妈妈会赠送主角跑步鞋。</li>
+<li>离开未白镇经由１０１号道路至古玫镇再向左转入１０２号道路后抵达橙华市。</li></ul></li>
+<li class="loc"><span>橙华市</span><ul><li>前往橙华道馆，遇到主角的父亲千里和少年满充。</li>
+<li>主角会带领满充到１０２号道路捕捉一只<img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAuBAMAAAAipt8CAAAAJ1BMVEUAAAAQEBAxe0FzvXN7i7SDKUqL5ouclMW09pTNzebVSnP29v//e5TKsohjAAAAAXRSTlMAQObYZgAAAYhJREFUeNqtkD1r21AUhp+rDyPTobq0kIRAcKGkQzvkJ8jgIcGlhBiRn5GxgZYasrR06uChGTq0U6GBBjIZje3SIeBAISZDcpdAyBAJQvB1heQOV5Kd3We6vPc9zznvgflUuAmAGwLY4H5ZzIfgbm9FGhzzZ6vYewWAZdxWKB8wIxD+CDtvABDAQc74Evi2egg2UHuGlQD10bCAggL4e1Yw/jQASNd8I1g+Y4AjZOGwP7lAupbNjIVcMRBGeHrzHHL16xjhgwOZrb4GkBmnA2QnCdmgaLXBWpjEo6tJHYg1FtyoCpyY1fWo+1N4Ir+ItQknPsOHhNo4KdKytNfIFXqngMLd8Uv74VVXT88sliPp3zu8aJYvk8UJOqVBALTctmuQ4IATvOY89WRcdrWjvtzoLe3LCigl7X5z3yg2oLXTE4/etlq/dXX13GrEuyTV2AWF599OqtWdj+qJePHv/ffSkWGBd3rdLIV1AN6tbJbCIA3IYditoBlA2k2mq0X9pnw8G1/KgPnVf9f4deVXMqbpAAAAAElFTkSuQmCC" alt="拉鲁拉丝" width="40" height="30">拉鲁拉丝。</li>
+<li>往左准备前往１０４号道路时主角首次遇到亚希达。</li>
+<li>离开橙华市经１０４号道路下半部进入橙华森林。</li></ul></li>
+<li class="loc"><span>橙华森林</span><ul><li>在中间同时遇到得文公司的职员与海洋队手下，打败海洋队手下后职员会赠予<img class="icon" src="../img/items/great-ball.png" alt="超级球" width="30" height="30" loading="lazy">超级球。</li>
+<li>离开橙华森林，沿着１０４号道路上半部进入卡那兹市。</li></ul></li>
+<li class="loc"><span>卡那兹市</span><ul><li><i>进入训练家学校学习战斗相关的知识（与导师互动可获得<img class="icon" src="../img/items/quick-claw.png" alt="先制之爪" width="30" height="30" loading="lazy">先制之爪）。</i></li>
+<li>前往居合劈大叔的家可以获得秘传学习器０１（居合劈）。</li>
+<li>进入卡那兹道馆，和道馆馆主杜娟进行对战。（获胜后可以获得岩石徽章和招式学习器３９（岩石封锁）。）</li>
+<li>离开卡那兹道馆后遇到被抢走<img class="icon" src="../img/items/devon-parts.png" alt="得文的物品" width="30" height="30" loading="lazy">得文的物品的职员。</li>
+<li>经１１６号道路进入卡绿隧道，在卡绿隧道的入口处遇见被抢走小皮（即<img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAxBAMAAACczGK0AAAAKlBMVEUAAAAAAAApapQxMTExnNVBQUFSUlJzrP+LUhCUlJTVzebegwD/rDH////qiO+4AAAAAXRSTlMAQObYZgAAAfhJREFUeNrNlDFoE1Ecxn/JncZ0saehhBMxZilEq2dEUXQ4MVPtoIgiKBgtRMTB4NJBBDcVBxeXSEVcFIIVp06CQYiKcHBC6PZEBIkU4UII9K65Iw6BJk3uJWu/9X183/d/33t/2BpQAAoz9hja3pURh1GAIFYYoxERIi8/hKnz7TnDy8gYKqgLgJr+KZ+ldUoneHngT0M+bfWwvgjTX+WMVvXgXzg5YcuSQuSsYhyXhVUAcJKNPGrTlmqAVlIMwkW6Grgfz60m1aZNKWET3bdrZ2NQo6viZUq5J+1X07Pb2+9/beoFwLkV2LXbOT9WnFr257ddGHTpGpFIfb6yfqi+f4/7yB1yAbTnJwCvVjH//Zh4NuQCOO8AYvApYW5qrodvYFbAZK3YCWXsuItrEuDf6TRCNR6r5ofcQ6DdT+jLcbRmOgZg+/dfE8ZQbnrOl2txy0KdvR5y6xCN+0/vzf2GSiodt8I0sv738uWrFdbewkLo0z+2+4gGEW0SfUmIMIrWK7Ms+ikbOdweuZpNctq1hprroXVRp48SBn1JCCHSw81toB5A8OJSWuoC1WxyEbqfLFSDerAOSmE5P/CC+pPMGMo8eBmZC63U6gNAbdoSFzqWAp5lnRk1cVmIG9qkLClQL1p0nMbI1aWXV8ZtN/3NuF0b0dhC+A8H0qGTJp2BagAAAABJRU5ErkJggg==" alt="长翅鸥" width="40" height="30">长翅鸥）的哈奇老人。</li></ul></li>
+<li class="loc"><span>卡绿隧道</span><ul><li>在卡绿隧道里遇见海洋队手下，把他打败后获得<img class="icon" src="../img/items/devon-parts.png" alt="得文的物品" width="30" height="30" loading="lazy">得文的物品。</li>
+<li>在打败海洋队手下后，哈奇老人会答谢主角并让主角前往他在１０４号道路的住处。</li>
+<li>离开卡绿隧道，原路返回卡那兹市。</li></ul></li>
+<li class="loc"><span>卡那兹市</span><ul><li>把得文的物品归还给职员后会把主角带到得文公司的社长室，并遇到兹伏奇社长。</li>
+<li>兹伏奇社长会赠送主角宝可梦导航器，并将<img class="icon" src="../img/items/letter.png" alt="给大吾的信" width="30" height="30" loading="lazy">给大吾的信和<img class="icon" src="../img/items/devon-parts.png" alt="得文的物品" width="30" height="30" loading="lazy">得文的物品托付给主角。</li>
+<li><i>在友好商店附近看见劲敌，对话后展开第二次战斗。</i></li>
+<li>离开卡那兹市前往１０４号道路哈奇老人的家，并乘船前往武斗镇。</li></ul></li>
+<li class="loc"><span>武斗镇</span><ul><li><i>从海边一民居里的垂钓者处获得<img class="icon" src="../img/items/old-rod.png" alt="破旧钓竿" width="30" height="30" loading="lazy">破旧钓竿。</i></li>
+<li>进入武斗道馆，和道馆馆主藤树进行对战。（获胜后可以获得拳击徽章和 招式学习器０８（健美）。）</li>
+<li>离开武斗镇，前往位于１０６号水路的石之洞窟。</li></ul></li>
+<li class="loc"><span>石之洞窟</span><ul><li><i>从石之洞窟一名登山男处获得秘传学习器０５（闪光）</i></li>
+<li>在石之洞窟深处遇到大吾，并把<img class="icon" src="../img/items/letter.png" alt="给大吾的信" width="30" height="30" loading="lazy">给大吾的信交给他。</li>
+<li>离开石之洞窟，返回武斗镇的码头找哈奇老人乘船前往凯那市。</li></ul></li>
+<li class="loc"><span>凯那市</span><ul><li>前往库斯诺吉造船厂，被告知库斯诺吉馆长在海洋科学博物馆。</li>
+<li>前往海洋科学博物馆的二楼，找到库斯诺吉馆长，同时海洋队手下出现和主角对战。</li>
+<li>战胜后老大水梧桐出现把他的手下带走，接著将<img class="icon" src="../img/items/devon-parts.png" alt="得文的物品" width="30" height="30" loading="lazy">得文的物品交给库斯诺吉馆长。</li>
+<li>离开凯那市前往１１０号道路。</li></ul></li>
+<li class="loc"><span>１１０号道路</span><ul><li>途中遇到劲敌的挑战，第三次战斗胜利以后得到<img class="icon" src="../img/items/dowsing-machine.png" alt="探宝器" width="30" height="30" loading="lazy">探宝器。</li>
+<li>前往紫堇市。</li></ul></li>
+<li class="loc"><span>紫堇市</span><ul><li>前往风野自行车店领取<img class="icon" src="../img/items/mach-bike.png" alt="音速自行车" width="30" height="30" loading="lazy">音速自行车或<img class="icon" src="../img/items/acro-bike.png" alt="越野自行车" width="30" height="30" loading="lazy">越野自行车其中之一，随后的旅途中可以回到这里更换自行车。</li>
+<li>在一间房子里能获得秘传学习器０６（碎岩）。</li>
+<li>前往紫堇道馆，到门口满充会发起对战。</li>
+<li>进入紫堇道馆，和道馆馆主铁旋进行对战。（获胜后可以获得电力徽章和招式学习器３４（电击波）。）</li>
+<li>离开紫堇市经过１１７号道路进入绿茵镇。</li></ul></li>
+<li class="loc"><span>绿茵镇</span><ul><li><i>对战帐篷内的女孩会赠送玩家招式学习器４５（迷人）。</i></li>
+<li><i>在此处的对战帐篷胜利后可获得<img class="icon" src="../img/items/nest-ball.png" alt="巢穴球" width="30" height="30" loading="lazy">巢穴球。</i></li></ul></li>
+<li class="loc"><span>卡绿隧道</span><ul><li>打通隧道，随后阿满的男朋友会赠送主角秘传学习器０４（怪力）。</li>
+<li>离开卡绿隧道与绿茵镇返回紫堇市。</li></ul></li>
+<li class="loc"><span>１１１号道路</span><ul><li>从紫堇市向上行进来到１１１号道路。</li>
+<li><i>打败连胜家族后进屋和母亲安江对话可获得<img class="icon" src="../img/items/macho-brace.png" alt="强制锻炼器" width="30" height="30" loading="lazy">强制锻炼器。</i></li>
+<li>在尚未获得ＧＯＧＯ护目镜之前无法通过中央的沙漠，因此先往左转入１１２号道路。</li></ul></li>
+<li class="loc"><span>１１２号道路</span><ul><li>此时登山缆车的入口会有两名熔岩队手下挡住通道，只能先经过烈焰小径抵达１１１号道路北部。</li>
+<li><i>在沙漠北方一棵大树下的男孩会赠送招式学习器４３（秘密之力），可用来创造秘密基地。</i></li>
+<li>继续沿著道路走向１１３号道路。</li></ul></li>
+<li class="loc"><span>１１３号道路</span><ul><li><i>在琉璃工坊获得<img class="icon" src="../img/items/soot-sack.png" alt="集灰袋" width="30" height="30" loading="lazy">集灰袋后，透过行走草丛可收集火山灰制作家具。</i></li>
+<li>向左行进到秋叶镇。</li></ul></li>
+<li class="loc"><span>秋叶镇</span><ul><li><i>首次进入宝可梦中心会遇到真由美，对话完便离开返回家里。</i></li>
+<li><i>在此处的对战帐篷胜利后可获得<img class="icon" src="../img/items/hyper-potion.png" alt="厉害伤药" width="30" height="30" loading="lazy">厉害伤药。</i></li></ul></li></ul>
+<nav class="pager"><a class="next" href="part-2.html"><small>下一页 →</small>中局</a></nav><p class="src">原文：神奇宝贝百科《<a href="https://wiki.52poke.com/wiki/附录:寶可夢_綠寶石流程" target="_blank" rel="noopener noreferrer">附录:寶可夢 綠寶石流程</a>》（<a href="https://wiki.52poke.com/wiki/附录:寶可夢_綠寶石流程?oldid=2617260" target="_blank" rel="noopener noreferrer">修订版本 2617260</a>，2026-09-03），作者见<a href="https://wiki.52poke.com/wiki/附录:寶可夢_綠寶石流程?action=history" target="_blank" rel="noopener noreferrer">原文页面历史</a>。本页由 Eli 的杂货间转载，并有改动（重新排版、去掉站内链接）。原文与本页均以 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 3.0</a> 授权。配图来自原站，版权归原作者与游戏厂商。</p></main></body></html>

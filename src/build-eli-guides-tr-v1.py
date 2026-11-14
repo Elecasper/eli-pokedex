@@ -14,7 +14,7 @@ e = html.escape
 
 hh = (SITE / 'handheld' / 'index.html').read_text(encoding='utf-8')
 head = hh[:hh.index('<title>')]
-head = head.replace("connect-src 'none';", "connect-src 'none'; img-src https://cdn.wikimg.net;", 1)
+head = head.replace("connect-src 'none';", "connect-src 'none'; img-src 'self' data: https://cdn.wikimg.net;", 1)
 assert 'img-src' in head
 theme = re.search(r'<style id="eli-theme">.*?</style>', hh, re.S).group(0)
 bar = re.search(r'<header class="eli-bar">.*?</header>', hh, re.S).group(0)
@@ -38,6 +38,10 @@ table.data caption{text-align:left;font-weight:700;padding:0 0 8px;font-size:15p
 table.data th,table.data td{padding:9px 12px;border-bottom:1px solid #36463c;text-align:left;vertical-align:top;line-height:1.6}
 table.data th{width:30%;color:#a9b5a6;font-weight:600;white-space:nowrap}table.data th small{font-weight:400}
 .medal{color:#c9e265;font-weight:700}
+img.icon{width:24px;height:24px;vertical-align:-6px;margin-right:2px;image-rendering:pixelated}img.pm{width:40px;height:30px;vertical-align:-8px}
+li.loc{list-style:none;margin:18px 0 6px -22px}li.loc>span{display:block;font-size:17px;font-weight:700;color:#c9e265;border-bottom:1px solid #36463c;padding-bottom:4px;margin-bottom:4px}
+i{color:#a9b5a6}
+table.grid{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:#2a372f;border-radius:10px;overflow:hidden}table.grid th,table.grid td{padding:8px 10px;border-bottom:1px solid #36463c;text-align:left;vertical-align:middle;line-height:1.6}table.grid th{color:#a9b5a6;font-weight:600}
 .pager{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:32px 0 10px}
 .pager a{display:block;background:#2a372f;border:1px solid #44574b;border-radius:12px;padding:12px 14px;text-decoration:none;color:#f1f0e6;font-size:15px;min-height:64px}
 .pager a small{display:block;color:#a9b5a6;font-size:12px;margin-bottom:2px}.pager .next{text-align:right;grid-column:2}
@@ -75,8 +79,9 @@ def build(folder):
         return (f'<p class="src">原文：{g["source"]}《<a href="{e(url)}" target="_blank" rel="noopener noreferrer">{e(m["title"])}</a>》'
                 f'（<a href="{e(url)}?oldid={m["revid"]}" target="_blank" rel="noopener noreferrer">修订版本 {m["revid"]}</a>，{m["timestamp"][:10]}），'
                 f'作者见<a href="{e(url)}?action=history" target="_blank" rel="noopener noreferrer">原文页面历史</a>。'
-                f'本页由 Eli 的杂货间翻译为中文，并有改动（重新排版、精简部分图注）。原文与译文均以 '
-                f'<a href="{g["licenseUrl"]}" target="_blank" rel="noopener noreferrer">{g["license"]}</a> 授权。'
+                + (f'本页由 Eli 的杂货间转载，并有改动（重新排版、去掉站内链接）。原文与本页均以 ' if g.get('kind') == 'repost' else
+                   f'本页由 Eli 的杂货间翻译为中文，并有改动（重新排版、精简部分图注）。原文与译文均以 ')
+                + f'<a href="{g["licenseUrl"]}" target="_blank" rel="noopener noreferrer">{g["license"]}</a> 授权。'
                 f'配图来自原站，版权归原作者与游戏厂商。</p>')
 
     for i, (slug, info, body) in enumerate(pages):
@@ -102,12 +107,13 @@ def build(folder):
             last = info['chapter']
         toc += f'<li><a href="{slug}.html">{e(info["title"])}<span>→</span></a></li>'
     toc += '</ul>'
-    first = g['sourceBase'] + g['en'].replace(' ', '_')
+    srct = g.get('sourceTitle', g['en'])
+    first = g['sourceBase'] + srct.replace(' ', '_')
     (out / 'index.html').write_text(page_html(f'{g["game"]} 中文攻略',
         f'<p class="crumb"><a href="../">攻略大全</a></p><h1>{e(g["game"])} 中文攻略</h1>'
         f'<p class="chap">{e(g["plat"])} · {e(g["total"])}</p><p class="note">{e(g["intro"])}</p>{toc}'
-        f'<p class="src">原文：{g["source"]}《<a href="{e(first)}" target="_blank" rel="noopener noreferrer">{e(g["en"])}</a>》，'
-        f'以 <a href="{g["licenseUrl"]}" target="_blank" rel="noopener noreferrer">{g["license"]}</a> 授权；译文同样以 {g["license"]} 授权。'
+        f'<p class="src">原文：{g["source"]}《<a href="{e(first)}" target="_blank" rel="noopener noreferrer">{e(srct)}</a>》，'
+        f'以 <a href="{g["licenseUrl"]}" target="_blank" rel="noopener noreferrer">{g["license"]}</a> 授权；本站的{"转载" if g.get("kind") == "repost" else "译文"}同样以 {g["license"]} 授权。'
         f'每页底部注明对应的原文修订版本。</p>'), encoding='utf-8')
     print('built', out, len(pages), 'pages')
     return g

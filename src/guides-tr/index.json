@@ -2,5 +2,41 @@
  "勇者斗恶龙6 幻之大地": {
   "slug": "dq6",
   "total": "全部翻译完成：6 章主线和通关后尾声，共 48 页"
+ },
+ "黑2 / 白2": {
+  "slug": "pokemon-b2w2",
+  "total": "简版流程，4 页"
+ },
+ "黑 / 白": {
+  "slug": "pokemon-bw",
+  "total": "简版流程，4 页"
+ },
+ "绿宝石": {
+  "slug": "pokemon-e",
+  "total": "简版流程，5 页"
+ },
+ "火红 / 叶绿": {
+  "slug": "pokemon-frlg",
+  "total": "简版流程，6 页"
+ },
+ "心金 / 魂银": {
+  "slug": "pokemon-hgss",
+  "total": "简版流程，6 页"
+ },
+ "欧米伽红宝石 / 阿尔法蓝宝石": {
+  "slug": "pokemon-oras",
+  "total": "简版流程，3 页"
+ },
+ "白金": {
+  "slug": "pokemon-pt",
+  "total": "简版流程，4 页"
+ },
+ "究极之日 / 究极之月": {
+  "slug": "pokemon-usum",
+  "total": "简版流程，4 页"
+ },
+ "X / Y": {
+  "slug": "pokemon-xy",
+  "total": "简版流程，4 页"
  }
 }

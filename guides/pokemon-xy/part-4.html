@@ -1,0 +1,147 @@
+<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#1f2a24"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; img-src 'self' data: https://cdn.wikimg.net; base-uri 'none'; object-src 'none'; form-action 'none'"><title>登入名人堂后 - X / Y · Eli</title><style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:#1f2a24;color:#f1f0e6}
+main{max-width:760px;margin:auto;padding:8px 16px max(32px,env(safe-area-inset-bottom))}
+a{color:#c9e265}.crumb{font-size:13px;color:#a9b5a6;margin:14px 0 4px}.crumb a{color:#a9b5a6}
+h1{font-size:25px;margin:6px 0 4px;line-height:1.4}.chap{font-size:13px;color:#a9b5a6;margin:0 0 16px}
+h2{font-size:19px;margin:28px 0 10px;padding-top:4px;border-top:1px solid #36463c}
+p,li{font-size:16px;line-height:1.85}ol,ul{padding-left:22px}b{color:#fff}
+.note{font-size:14px;color:#a9b5a6;background:#2a372f;border-radius:10px;padding:10px 14px}
+figure{margin:14px 0;text-align:center}figure img{max-width:100%;height:auto;border-radius:8px;background:#2a372f}
+figcaption{font-size:13px;color:#a9b5a6;margin-top:6px}
+.tip{background:#2a372f;border:1px solid #44574b;border-left:4px solid #c9e265;border-radius:10px;padding:4px 16px;margin:16px 0}
+.tip h4{margin:12px 0 0;font-size:15px;color:#c9e265}.tip p,.tip li{font-size:15px}
+table.data{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:#2a372f;border-radius:10px;overflow:hidden}
+table.data caption{text-align:left;font-weight:700;padding:0 0 8px;font-size:15px}
+table.data th,table.data td{padding:9px 12px;border-bottom:1px solid #36463c;text-align:left;vertical-align:top;line-height:1.6}
+table.data th{width:30%;color:#a9b5a6;font-weight:600;white-space:nowrap}table.data th small{font-weight:400}
+.medal{color:#c9e265;font-weight:700}
+img.icon{width:24px;height:24px;vertical-align:-6px;margin-right:2px;image-rendering:pixelated}img.pm{width:40px;height:30px;vertical-align:-8px}
+li.loc{list-style:none;margin:18px 0 6px -22px}li.loc>span{display:block;font-size:17px;font-weight:700;color:#c9e265;border-bottom:1px solid #36463c;padding-bottom:4px;margin-bottom:4px}
+i{color:#a9b5a6}
+table.grid{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:#2a372f;border-radius:10px;overflow:hidden}table.grid th,table.grid td{padding:8px 10px;border-bottom:1px solid #36463c;text-align:left;vertical-align:middle;line-height:1.6}table.grid th{color:#a9b5a6;font-weight:600}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:32px 0 10px}
+.pager a{display:block;background:#2a372f;border:1px solid #44574b;border-radius:12px;padding:12px 14px;text-decoration:none;color:#f1f0e6;font-size:15px;min-height:64px}
+.pager a small{display:block;color:#a9b5a6;font-size:12px;margin-bottom:2px}.pager .next{text-align:right;grid-column:2}
+.toc{list-style:none;padding:0;margin:0}.toc li{border-bottom:1px solid #36463c}.toc a{display:flex;justify-content:space-between;padding:13px 4px;text-decoration:none;color:#f1f0e6}
+.toc a span{color:#a9b5a6;font-size:13px}.toc h3{font-size:14px;color:#a9b5a6;margin:20px 0 4px;font-weight:600}
+.src{font-size:12px;color:#a9b5a6;line-height:1.8;border-top:1px solid #36463c;margin-top:28px;padding-top:12px}.src a{color:#a9b5a6}
+@media(max-width:560px){h1{font-size:22px}p,li{font-size:15.5px}table.data th{white-space:normal;width:34%}}
+</style><style id="eli-theme">:root{color-scheme:dark;--paper:#1f2a24;--card:#2a372f;--ink:#f1f0e6;--muted:#a9b5a6;--line:#44574b;--soft:#34443a;--green:#c9e265;--accent:#ff7b6b;--rust:#ff7b6b;color:#f1f0e6;background:#1f2a24}
+body{background:#1f2a24;color:#f1f0e6}
+a{color:#c9e265}
+h1{letter-spacing:.04em;text-shadow:2px 2px 0 #0f1713}
+button{border-width:2px;border-radius:10px;}
+button:active{transform:translateY(2px);}
+input,select{background:#2a372f;color:#f1f0e6;border-width:2px}
+::placeholder{color:#8a9a88}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline-color:#c9e265}
+.platforms button[aria-pressed=true],.scope-buttons button[aria-pressed=true]{background:#c9e265;border-color:#c9e265;color:#1f2a24;font-weight:700}
+.home-bar a,.home-links a:first-child{font-weight:700;letter-spacing:.04em}
+.eli-bar{position:sticky;top:0;z-index:30;background:#1f2a24;border-bottom:1px solid #2f3f35}
+.eli-bar-in{max-width:1120px;margin:auto;padding:0 16px;min-height:60px;display:flex;align-items:center;gap:18px}
+.eli-bar a{text-decoration:none;color:#f1f0e6;font-weight:700}
+.eli-bar .brand{font-size:20px;letter-spacing:.02em;white-space:nowrap}
+.eli-bar nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.eli-bar nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-size:15px;white-space:nowrap}
+.eli-bar nav a[aria-current=page]{color:#c9e265}
+.eli-bar nav a.cta{background:#c9e265;color:#1f2a24;border-radius:999px;padding:0 16px;min-height:40px;align-self:center}
+@media(max-width:560px){
+.eli-bar-in{min-height:52px;gap:8px;padding:0 10px 0 14px;flex-wrap:nowrap}
+.eli-bar .brand{font-size:17px}
+.eli-bar nav{gap:0;margin-left:auto;width:auto;padding:0}
+.eli-bar nav a{padding:0 9px;font-size:14px}
+.eli-bar nav a.cta{padding:0 12px}
+.appbar{min-height:52px!important}.brand h1{font-size:20px!important}
+h1{font-size:22px!important;margin:10px 0 6px!important}
+.top{min-height:44px!important}
+.tabs button{min-height:42px!important;font-size:13px!important;padding:6px 4px!important}
+.panel{padding:14px 12px!important}
+.steps li{font-size:14.5px!important;padding-bottom:8px!important}
+.chips li{font-size:12.5px;padding:5px 8px}
+.backup,.lookup{margin:10px 0!important}
+.card{padding:14px!important}
+.facts strong{font-size:18px!important}
+}
+@media(max-width:380px){.eli-bar nav a{padding:0 6px!important;font-size:13px!important}.eli-bar .brand{font-size:16px!important}.eli-bar-in{gap:4px!important;padding:0 6px 0 12px!important}}
+.platforms button,.scope-buttons button,.tabs button,.lookup-row button,#info-open{border-radius:999px}
+.actions a,a.continue{border-radius:999px}
+nav.top,header p,.lead,.foot{color:#a9b5a6}.tabs button{background:#2a372f;border-color:#44574b}.tabs button[aria-selected=true]{background:#c9e265;color:#1f2a24;border-color:#c9e265;font-weight:700}.panel{background:#2a372f;border:2px solid #44574b;}.steps li::marker{color:#ff7b6b}.actions a{background:#c9e265;color:#1f2a24;font-weight:700;}.actions a.secondary{background:#34443a;color:#f1f0e6}details{border-top-color:#44574b}code{background:#34443a}.tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.tabs button:first-child{grid-column:1/-1}@media(min-width:560px){.tabs{grid-template-columns:repeat(5,minmax(0,1fr))}.tabs button:first-child{grid-column:auto}}.sub{font-size:13px;letter-spacing:.12em;color:#a9b5a6;margin:18px 0 8px;font-weight:700}.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}.chips li{background:#34443a;border:1px solid #44574b;border-radius:8px;padding:6px 10px;font-size:13px;line-height:1.6}.backup{border-left:3px solid #c9e265;background:#25332b;padding:10px 12px;font-size:14px;line-height:1.8;margin:14px 0 4px;border-radius:0 8px 8px 0}.lookup{margin:14px 0;padding:14px;background:#25332b;border:2px solid #44574b;border-radius:12px}.lookup label{display:block;font-size:13px;color:#a9b5a6;line-height:1.7}.lookup label strong{display:block;color:#f1f0e6;font-size:15px}.lookup-row{display:flex;gap:8px;margin-top:10px}.lookup-row input{flex:1;min-width:0;min-height:46px;border-radius:10px;border:2px solid #44574b;padding:8px 12px;font-size:16px}.lookup-row button{min-width:72px;background:#c9e265;color:#1f2a24;border-color:#c9e265;font-weight:700}.trouble dt{font-weight:700;font-size:14px;margin-top:12px}.trouble dd{margin:4px 0 0;font-size:14px;line-height:1.8;color:#a9b5a6}@media(max-width:560px){.eli-bar nav a.home{display:none}}</style></head><body><header class="eli-bar"><div class="eli-bar-in"><a class="brand" href="https://eli-library.mysxl.cn/">Eli的杂货间</a><nav aria-label="站内导航"><a class="home" href="https://eli-library.mysxl.cn/">主页</a><a href="../../">图鉴</a><a href="../../save-types/index.html">存档类型</a><a href="../../handheld/">掌机指南</a><a href="../../guides/" aria-current="page">攻略</a></nav></div></header><main><p class="crumb"><a href="../">攻略大全</a> / <a href="./">X / Y</a></p><h1>登入名人堂后</h1><p class="chap">剧情流程</p>
+<ul><li class="loc"><span>朝香镇</span><ul><li><i>用任意一只宝可梦和莎娜交换她所选择的最初拿到的宝可梦所生出来的蛋孵出来的宝可梦。</i></li></ul></li>
+<li class="loc"><span>密阿雷市</span><ul><li>在密阿雷车站，德克希欧和吉娜会将宝可梦图鉴升级为全国图鉴，与布拉塔诺博士对话后会赠送<img class="icon" src="../img/items/tmv-pass.png" alt="ＴＭＶ自由票" width="30" height="30" loading="lazy">ＴＭＶ自由票，可以前往奇楠市。</li>
+<li><i>在旭日咖啡馆，可以用任意一只宝可梦和卡露妮交换持有<img class="icon" src="../img/items/gardevoirite.png" alt="沙奈朵进化石" width="30" height="30" loading="lazy">沙奈朵进化石的<img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAuBAMAAAAipt8CAAAAJ1BMVEUAAAAQEBAxe0FzvXN7i7SDKUqL5ouclMW09pTNzebVSnP29v//e5TKsohjAAAAAXRSTlMAQObYZgAAAYhJREFUeNqtkD1r21AUhp+rDyPTobq0kIRAcKGkQzvkJ8jgIcGlhBiRn5GxgZYasrR06uChGTq0U6GBBjIZje3SIeBAISZDcpdAyBAJQvB1heQOV5Kd3We6vPc9zznvgflUuAmAGwLY4H5ZzIfgbm9FGhzzZ6vYewWAZdxWKB8wIxD+CDtvABDAQc74Evi2egg2UHuGlQD10bCAggL4e1Yw/jQASNd8I1g+Y4AjZOGwP7lAupbNjIVcMRBGeHrzHHL16xjhgwOZrb4GkBmnA2QnCdmgaLXBWpjEo6tJHYg1FtyoCpyY1fWo+1N4Ir+ItQknPsOHhNo4KdKytNfIFXqngMLd8Uv74VVXT88sliPp3zu8aJYvk8UJOqVBALTctmuQ4IATvOY89WRcdrWjvtzoLe3LCigl7X5z3yg2oLXTE4/etlq/dXX13GrEuyTV2AWF599OqtWdj+qJePHv/ffSkWGBd3rdLIV1AN6tbJbCIA3IYditoBlA2k2mq0X9pnw8G1/KgPnVf9f4deVXMqbpAAAAAElFTkSuQmCC" alt="拉鲁拉丝" width="40" height="30">拉鲁拉丝。</i></li></ul></li>
+<li class="loc"><span>奇楠市</span><ul><li>第一次到达，车站门口的NPC会给予<img class="icon" src="../img/items/vs-recorder.png" alt="对战记录器" width="30" height="30" loading="lazy">对战记录器。</li>
+<li>前往对战屋，并至少挑战任意模式一次。</li>
+<li>在北方的小水池旁，与莎莉娜/卡鲁穆进行宝可梦对战。（获胜时，对方会赠送<img class="icon" src="../img/items/absolite.png" alt="阿勃梭鲁进化石" width="30" height="30" loading="lazy">阿勃梭鲁进化石）</li></ul></li>
+<li class="loc"><span>百刻市</span><ul><li>在奇楠市打倒莎莉娜/卡鲁穆后，布拉塔诺博士会在日晷前为主角强化超级环。（之后每天的20:00 - 21:00在卡洛斯各个地方都可以找到不同宝可梦的超级石。）</li></ul></li>
+<li class="loc"><span>宝可梦村</span><ul><li>在无名洞窟里可以遇到野生的<img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABJBAMAAABldN2rAAAAJFBMVEUAAAAAAAA5IFI5OVJqMZyDe5yUQb20Su60rMXe1ebu5u7////IHWIfAAAAAXRSTlMAQObYZgAAA9hJREFUeNrVlk1oHGUcxn+zs2uSFuxsa2mgbVw3RZSadJcoWjB0E9ZQwcOGZtVbLahXUQ85CBK9GC/2plBFEESU+JGzQbtSg4dmsxP8IBp3M6TSJLDJvJEWN92ZeT3M7O7s7EevOqd533nm+X8+//eF/+6j+hez0QdXgezp34KwsH+xkv4AiKSpzrsfU1g5AELNf70EgPQoxuPxU+l2MAdACncxPrD29UY81eJb8bza9/CB0djt9wHCY38WdktHBvQgm4UVmXgZ4bhkTkEgF25orUYXM5qVck0TswUg9VbfrEwj9jCG+5JsgS364sQpALDTwpZJgQDI1IJum14OmQD05IDxomh8aGKLAFEr56bJqNdTC8AMUPgUiCQam0daIzWktv32C3DyQqD0TTBHt82ZeQDdv50MwK6fUS1116BqRDKuT23ZWFHU184I9LJdD0BJtMDsnBTAXBEMSp3zJoVuOxsD3xy1BJC82gF2Nm9thGILSsry7xYC/cbqJsvHtVLfRrGCDB3ercB9/dysBNi4FQ8N2sr0/uVueYOpiTjpaX4BKJF0AxNB3yIp0sAXf9GVbRgEVE892Sj6DoWgZKLJQdmH/FwLXexdRYa0mxUwRYBtchr2BGDQ+0N91wwYnTxvg67L7QHHYDaqYevJphkSSW6S7XtO3l789RBaXn6/+WM6PbrwzmnD8FUhciERM9Lwoa2rJ5y50BrSnJnpTXDYX6zIcHFsAuQbJ3WcEUKsgdrPlay444dNnVOArfmdHSBaxhLw7LkrWZYsf97WlW+BywWAY0BYA0PJki/daEqvufERW57a5q7BGAB5Ypofdn1uOWy6zT9ixU8knM1J1svvBoeq3Hzi4rXSFqC+uRfb18uXtOW9svIHTy33GP682Wc/NgCeP36Ayr3P0Gf/U33gaPHpoc8q/tJLIbz+8GQS/juGGgt2yHajCwX1KX7Q/KQZ5g3bKa/OwCigzGmiQ/fin+RRm44wxwAI656k2sC+RAAPeQPSFUEbnVrmiglcHdLr+mwHk3mMGOp3nkv5TtPSYNiAR1yLebOTspZRh0uoOcAumB0PSnlQc37CvOeOxoDeTfWEKBlK2egu56UE4JTWlwhr3dg8H2SuK9vjFN2XcveJ1HjGOsPUTO1sCVptgj0WtWPtuf2wyCV+nvT69/WOsOwUspawYzyqtR/42ZEo4vdVb6UPxfR2bOrIV8h90+uK/QSD7Y1WX5SiLp2ewElQh9nvmaJa6zDlVY0J35mK4pu83F9zp/8t65ZWeaVt95qY/psL4q7XNWVW65/V7n6ti6JE+Z88/wJ/ZGPj1/F7EAAAAABJRU5ErkJggg==" alt="超梦" width="40" height="30">超梦，捕获后，可以在洞窟内找到<img class="icon" src="../img/items/mewtwonite-x.png" alt="超梦进化石Ｘ" width="30" height="30" loading="lazy">超梦进化石Ｘ/<img class="icon" src="../img/items/mewtwonite-y.png" alt="超梦进化石Ｙ" width="30" height="30" loading="lazy">超梦进化石Ｙ。</li></ul></li>
+<li class="loc"><span>终结洞窟</span><ul><li>在洞窟的最深处可以遇到野生的<img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABgCAMAAAC9tQUyAAAAPFBMVEUICAgkGBM4MC49UyZPfx9WR0h/nx+vz0/P35////8ICAgkGBM4MC49UyZPfx9WR0h/nx+vz0/P35/+/v4EtEVnAAAACnRSTlMAAAAAAAAAAAAAc6AYaAAABKdJREFUeNrtmdu6oyAMRud2koChvv+7Tg6ACHhqvRz2Z7ttZfXPEWz//Pk/Xhl/bwzE62ueAHF5F4i03CA+AS6/AvFlYO+yF4C7+cqbELEL/TGwE+S8HojYv3QO3C7WMxqIOH7GTaCdUK9x5oVzH+6A1AOnXr0A5svlXyaVyPIS5FjMvXoJRP83JWVxSgYssEnYT31IBalAQfkj1JDTV8DFgKZNHjnzmOe8Y6CHgYSATjBJnAUKn2h5CpQpqQJtukJAz9T2Z0CdRNVpFZgFqnB/eABUr0kw5IAShIVaun0YdnWNp0DpN/q3AYvAxYGck3Kr62UPbDuHEgWGdtQsbs1PNcsrbgCWRC6FtyDpoUWSJ+zMz0mObdn0wMUFuVw5+dCCOcA45y3tmAFrMlMHJGiBB7wuyvltKQNEk/RRaNYtwBmPE7dl2EXZPS7xg2gmFmCQl4QIpYBanmYP1TIcgfJmSsBswFWv+3xYp4lIQGtiJgcssGRF2HTKGVAkAqeol6/KW9c1KVC8qBGnLcGL2KYK+8R2mwFTFBsX+ih0XT+W5TIdAAhp47UhnwNBnKJANoTGWHhr4JD1EJjAfXS8+x4BxThREdU3BhSLzYM5ddS1YnrL49S0iZlCBXLURWTV/VEIGUjmRItNm3zUChy7jRKBiKN2LwtySkHVmguJPDQtz+Iizj1qX6Bvi0TVtNrna8b4HHWipngD9JSEs34IJgUlkQWoZPZJlAdSSbyc4A1u3mDBJGpz+Cx1NhK1xCKOdrSjjg1StdYbPosnsplJvUTqxA3Apr/CAg6UWbSjNRIrLYQwAXoHx43ouTHiHFjFCU3CVpEViN3WAnJyVFxOEQdupirNRhgUdnsVjwtutJa4+awAYfQhbtsztQc2E3dZbAV9yOuWgNqc1UcTXgPMPjT/wXFi4zYL9ihfGvytCBCkHclj2Km7BPa8lKLxWHBcgrHnjQ0WPf0Bz4Ep3QSac8CjvIxAs5lZvSbDcHBrs6SXk28rG1xyicyw/+xrIHivz0tuwxNiZFPYVNsFUBoy5KiktBGr15hzRMI9YKlgtVmjUICxBeZiC2HUOVlGa7lIOGPWyNlaB9aITHROgZjLzzAVqEc0gZ4Fc+Jocu6K6E70JdIFViBbcF0kh5t7bCtnzkC11cy3EKsPQ06bEO7fBYiK6EZrcPIhQLI6Cc/u6G17IM8x9YNd+WMgeg3MgDAvkZtfswxEgt++t4m14F4FljQcmtW3wJiPt4BqcDaafwTGVGvOjw543RymAgtssDhcN4eDkGixcHoLWOtuBoTO8FvApk7qalJWeeh0ngJ7nkTageA98VegnMYNGAIEWwa0VcBXQC4mg3ZFuzlI/sT3gGOriRUITtLWGHahegTU5q+NTZ+5wEL6HihEyDcSIDdYsvrwG0DfnOnypPdtfXI+NrlsQvO2pxd4CoQJMBO3G9uLDeceyCNvAuQHQO5xGZg33LZGM9xvDlD3RbwNbHiy+Qnw9xlwGPWrpahjWE7Pu80xUXbacbo6fwFkvY+ZaLu1BMyI0W39ctWDOIGd8K5/8QGI4wD45Sck6JgA8PNvUtCOmwv9//HT+AdRfyFv4GXKLwAAAABJRU5ErkJggg==" alt="基格尔德" width="40" height="30">基格尔德。</li></ul></li>
+<li class="loc"><span>海神之穴</span><ul><li>在野外可遇到<img class="pm" src="data:image/png;base64,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" alt="急冻鸟" width="40" height="30"><img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAABCBAMAAACx5XU1AAAAJ1BMVEUAAAAQEBBSORBqamp7ahicexCcizHFahjVrAje3t72lBj/1UH////7NQAhAAAAAXRSTlMAQObYZgAABHtJREFUeNrdll1oHFUUx38zuzsxsaUzItWkD50uVrKG1rWhYsWH9sUiYlmUthhIGfoV7UNZEYwUCn0SNyBMEy1sUDO00Nb4YFuooAEFIW0Vloy0In4t64NJW7EzCs3uTp2MD/Oxk2ySDT72wsLM3vO7/3POvefMhft3iACoLax2x196VEC81GLVK3HGXpEj04dzsT+GgcwSxumG74dyC+bMxYliFOO6ics5QAAQJlTECXmhtQCkJy5FKtNIh1RAXjI7goyYLnI0llSkLZDcERg9HidSrk9kilQrEeJp8Hqafw/KAPtJxIk9+0BGyOgEIqEKFFWkHXLKy2dF3UVUQ0IzUFA6dahWQJEDZBpgWOag4KpIGRw7Y4cECChFHTiKoGD7iCD3A+2GJslrhn3t9/w87dFwLipKEaBaUWS8MBZ/Izq2cxIJR8fM1G1FRujSgA2dRX+vlOBwiAB23QXoQ5Jx2wH9e2UcocsA3HYdgNKYv3iAeOgmIFG3rwNs4+z47N9dBkBIOHZ4Av2MWb4MR8aNEXA0RtB8Ijg8JcYAK55k2585hW5AvwyzIVHKAiUcO3ArQjzdNYGOfsDBhiO+P7i+BmONwoi20p8s8iXuZ9uZDTRcMxHMRCIRcitItLaqOpjUOBZVQZaSCY6NZ7NQBReYzeuvvT2CuzcIJPgxFqvXEPF0X8YVtILpmlI+WCThgi/CQoRb4JoMYHbnjpkGewHXhE2mH4Znx5HU7t1Bw3BnO0ZJdb9DX0HK+6p+ST+l2PMqVPwCBkDSgN6q2X1c0Byp0HamFBklsgxQnlfUxSjWxEfi8RN/rtUMLV6ZvQADc5VgAcCafAncKYB6Kfns6p2Z9/fHKzPxKO7UTO/mrxsqkD4czZ/eeS5PXR9c2DVGCVUE5jNO99F8c5cZpRFKiPDQWt97Z/1MuPHZBlFu7vRw56ehJTumU2YxBO/OEMB5MzyFjSHlFkfgeQDONSNsbWq2Qcv6vATOxjfqwlsAdR2itF27EM959PTqppvgrr5sVW88A9A2VStNTj4HQOdXMSQZdet+k7reOR0epm/WoVhQgEFI5C40I6kDJgXP7owmfq3I6zybgNq6CPKKWcCCGQHEDFAf7wtNfKopFuGPSatGYv3Nh8WaoD4G7oZ7v0v/1AKrWq05yZ5lAdtOq1yElA6JHMKLy33ng/FDx8vTFeAF4AnJZgWItetJJDmtpnQ+rqAhplsizEgyQDlTOF8wcNYeTqvLI72KnNCQ58rwIJBCo/hBMyPEkvdtuXRmr/RJh6PeSN6VNBzl7IFsddcyiCB3Hv9O4tN3B237RFv9lOY84n5oW00q8Rqv/XW9B/ZdvWoLO0luueeuEjdfe6C2bPhzvxj+l8PToc0A2tfYLTI2d9vg2lj41j5EdrhVkvFu+61UxsHZ4o3Oc3xxJBw/A/l8mzUgqS0R70zwMGVw9035zsCKVeYMkyScFMqVlohwKYz+9tMYWKxA5W4sqzPtra6y0LjHbRTkHkXuUVeiEoj85oHHj//rln1/j/8A8BqSe1+UtGMAAAAASUVORK5CYII=" alt="闪电鸟" width="40" height="30"><img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF8AAABOBAMAAAC06Nf4AAAAMFBMVEUAAAAAAABSOSliYmJzQRCLYkq0i2LNzc3VCAjelBDuYjn/pEr/xUr/1WL/7mL///8nPj5uAAAAAXRSTlMAQObYZgAABNNJREFUeNrdl09oHFUcxz/zNoFhKzKbNFIE68tGS/Fgp42FHgrmUA/+KR0r0V7EWlHBUy/K2lQ6tBSWgtCbtQfZtgSWVukWLQgtJEIEpW4zYClV6Wb8A62h6Q6hXcds9j0Ps7vJbnbH5qhzmeG99/39/b7f7zfw338SMXvZ7ZOrA0zt6IAQDWkdACEm3QDmA/sQAUw37LTp4nYG9LisTsMOQrezhs4A4+XOwky6mLSuGutgxzV3RViTuaQru2iwO4Q1mYMhhel2ABjOV7SFNe8qkjkrzswWSUlhusaw1TGjAhKJl8S61tWUFH0MlsXKsCFgwLbZ27a1BZhRQNhy3m2YVGk9Xin/vj6oBX67qW6kweaa2Ra/vYGwfEUpzKyglgAokG/jmTVM4NON3jWEaNuTJQVp2eJuxBQBlxLICmI54gy6jEgJIBfRH0xkMw8H8ducUAEMahVCEki60jVzh5cSZ86armzNdQpDB35DiuzndB+iZ7IR1q2YbFx2/HXo38T1DPAqcEqkNxqGVCNeA5CYTKeWy8/5Yr3XtDJJCovj/BEGIGDRJdzXQqWzm5EzSwFSGp+HP1ywaktF4GRK72kCTg0DQ5s5W1eHj5qvmuO2Vwd4kD3emh2Bmq6H1E2GKtALJ9Iuh5boHe5trSqSaVRESUFe6Nm8w1AY1AG3qbla5bKN428ACsu/DmAOphblQv70FnxviRqJ7Oz8bNo1TUyg4qmrMwbpyLo+mc+N70aW+LwB0Fs9tqUnVfawjLTcnNF3CSIDc2gOHLEpEU42M60LEX1l5FGeAF/7ddLJn3cDJcKDAPQAUKSYODBFao4QkgJKQlExQ3K+8a65e6OveH86WAa4XaR2g6HHitGFkQqpPiC77r2+3/7Ouo4i3KmD5VVDj0Gtb4vfuD4IfBCPnhmUeRx8dpaD1jJzZwwgCKMLbqBKGfOYNOyfTjrCKZEpr6hLcwWU12dmoxuNBFcaonQii/TDzOWVhUxfAqSUbhYXLSAJn378p4tdqh283KlAL6bmbXxhYqLA57PJhT0HxoHa2GTHip5EqqsP5SQuoa9ILzrjtvkKxeJye5YDzgwnNL0v+GJxaocS+OOLDkWKhBOtZaanLv+CwC7+asGxbVky1/YreilSo3qorS4Z0euLp33JtA4YO+Yon2+/HBkAyHuNfLUBkj8qv2zdyjvV3lEokRktOJD3yt37g68J9BWOJgDCURzIT5S7NpSKlwb2z52zbZ8SR4FqZiK2UapApC/07zmCKlFzoPrRJ507a08j00Ky5uvmcvXokRtxrThpQ6VZODy46PYej+/dnnx7pP5Zo5pxus4aPY1DldCGWuaXQpFzvVn+BVDx0m8B4c5tmSKMxk0zdQ17nrp/08MJXuxtjmNBrA9rN6zxuH9HX3QfbCKDtRu4vwvje7NQXzgfD7CYeG5XwGD/M2YBClFsY3wwRqoj50FsGgiM767YRaerCw097wxYgHhk3z4LMFLPp61Yk55Y3B4AemRKB4Au/zCcivehPB0xKjjfuCY9VgzAePYbH0DP6qVGF6fBuHO3Pm0vHbsXxEz3xq16V9f3/oosei25fjpGg2pKq634eJDRFJ6cCvSqAGUIVgUAXbJW86NjzL+ZsFf1a9T/+OqcZm4t/+PnH89UzHtvEG2YAAAAAElFTkSuQmCC" alt="火焰鸟" width="40" height="30">传说的鸟宝可梦，当累计遇到11次时，传说的鸟宝可梦会回到海神之穴，此时可以捕获。</li></ul></li>
+<li class="loc"><span>密阿雷市</span><ul><li>在密阿雷市找到四个轮滑手，学习四种基础轮滑鞋技术。</li></ul></li>
+<li class="loc"><span>荒废酒店</span><ul><li>学会四种轮滑鞋的基础技术后可以在这里的深处学到终极招式。</li></ul></li></ul>
+<h3>帅哥任务</h3>
+<ul><li class="loc"><span>密阿雷市</span><ul><li>升级完超级环后，在密阿雷市会收到匿名的立体投影邮件，前往红色广场的帅哥办公室，进入第一章。</li></ul></li></ul>
+<h3>第一章 那个男人 帅哥</h3>
+<ul><li class="loc"><span>密阿雷市</span><ul><li>根据帅哥的提示在以下地点的闪光处获得<img class="icon" src="../img/items/looker-ticket.png" alt="帅哥券" width="30" height="30" loading="lazy">帅哥券。
+<ul><li>玫瑰广场附近的宝可梦中心（试衣间门口附近）。</li>
+<li>密阿雷道馆1层（向导左边闪闪发光的地方）。</li>
+<li>春天大道的中药局（东边。妙喵附近闪闪发光的地方）</li>
+<li>秀丽世大酒店1层（东边的墙边。闪闪发光的地方）</li>
+<li>密阿雷美术馆1层（东边靠近一名穿着绿色衣服的NPC。闪闪发光的地方）</li></ul></li>
+<li>回到帅哥办公室，与帅哥对话。</li>
+<li>离开帅哥办公室一段距离后接收到信息。</li>
+<li>回到办公室，在帅哥身后的记事本上接受第一个委托，进入第二章。</li></ul></li></ul>
+<h3>第二章 小巷里生活的东西</h3>
+<ul><li class="loc"><span>密阿雷市</span><ul><li>与帅哥对话。</li>
+<li>前往南侧街道朴桐餐馆右边的小巷同幼儿园小朋友和女学生以及一个男学生对战，在帅哥调查情况时遇到喵茸和玛琪艾儿。</li>
+<li>接受帅哥接近喵茸的委托。</li>
+<li>在北侧街道罗雀咖啡馆附近小巷找到喵茸，并选择<b>推它</b>和<b>抚摸它</b>之外的选项并且不得连续选择同一个选项。
+<ul><li>如果选择除跳舞之外的选项，则继续前往北侧街道密阿雷格雷派饼店附近小巷和密阿雷车站附近小巷寻找喵茸并重复动作。（此时不能完成任务）</li>
+<li>如果选择跳舞，则任务直接完成。</li></ul></li>
+<li>回到帅哥办公室继续剧情。</li>
+<li>离开帅哥办公室一段距离后接收到信息。</li>
+<li>回到办公室，与帅哥对话。</li>
+<li>进入第三章。</li></ul></li></ul>
+<h3>第三章 侦探、观光客和黑帮们</h3>
+<ul><li class="loc"><span>密阿雷市</span><ul><li>前往位于北侧街道的车站与两个坏女孩和一个坏男孩对战。</li>
+<li>对战完之后玛琪艾儿会过来。</li>
+<li>对话后回到帅哥办公室继续剧情。</li>
+<li>离开帅哥办公室一段距离后接收到信息。</li>
+<li>回到办公室，与帅哥对话。</li>
+<li>进入第四章。</li></ul></li></ul>
+<h3>第四章 不可原谅的犯罪行为</h3>
+<ul><li class="loc"><span>密阿雷市</span><ul><li>与帅哥对话时接到来自电台主播的立体投影邮件。</li>
+<li>前往位于北侧街道的密阿雷美术馆三楼中间与画前的男人对话。</li>
+<li>离开美术馆，依次收到两个来自电台主播和帅哥的立体投影邮件。</li>
+<li>返回帅哥的办公室。</li>
+<li>依指示前往密阿雷格雷派饼店对面左边的小巷，进去后会立刻接到帅哥的立体投影邮件。</li>
+<li>在深处与可疑的大人对战（这场对战结束后，同行宝可梦会自动回复状态）。</li>
+<li>前往罗雀咖啡馆旁的小巷（附近有个绿色衣服的NPC），进去后会立刻接到帅哥的立体投影邮件。</li>
+<li>在深处与可疑的女孩对战（这场对战结束后，同行宝可梦会自动回复状态）。</li>
+<li>前往密阿雷市车站对面左边的小巷，进去后会立刻接到帅哥的立体投影邮件。</li>
+<li>与位于巷子深处的空手道王对话。</li>
+<li>前往南侧街道朴桐餐馆旁边的小巷，进去后会立刻接到帅哥的立体投影邮件。</li>
+<li>在深处与可疑的姐姐对战。</li>
+<li>返回帅哥的办公室，与喵茸对话。</li>
+<li>离开帅哥的办公室一段距离后接到来自玛琪艾儿的立体投影邮件，要求主角返回帅哥的办公室。</li>
+<li>在办公室与玛琪艾儿对话，但她很快地离开。</li>
+<li>与进入办公室的阿卡马洛对战。</li>
+<li>进入第五章。</li></ul></li></ul>
+<h3>第五章 火焰之女和事件的真相</h3>
+<ul><li class="loc"><span>密阿雷市</span><ul><li>依指示前往秀丽世大酒店，在五楼左侧的房间遇到帕琦拉，与她对话。</li>
+<li>与帕琦拉对战。</li>
+<li>依指示前往弗拉达利研究所，随帕琦拉走进深处，搭电梯到隐藏楼层。</li>
+<li>前往北边中间的房间，与守门的坏男孩对战。</li>
+<li>在房间里的书架上找到一本强化服装的说明与五本秘密纪录，然后与房间里的坏男孩对话。</li>
+<li>坏男孩离开房间后，紧接著，库瑟洛斯奇进入房间自言自语。</li>
+<li>与艾丝普莉对战三次。</li>
+<li>帅哥跟喵茸过来后再跟艾丝普莉对战一次。</li>
+<li>来到办公室门口，出巷子后接到玛琪艾儿的立体投影邮件。</li>
+<li>进入第六章。</li></ul></li></ul>
+<h3>第六章 再见，帅哥</h3>
+<ul><li class="loc"><span>密阿雷市</span><ul><li>回到帅哥的办公室。</li>
+<li>去密阿雷美术馆，与三楼中间的老先生对话后离开。</li>
+<li>出美术馆后接到玛琪艾儿的立体投影邮件，前往弗拉达利咖啡厅。</li>
+<li>帅哥任务结束，离开了卡洛斯地区。</li>
+<li>此后每周的星期二、星期四和星期六，玛琪艾儿会在帅哥侦探事务所向主角以艾丝普莉的身份发起挑战。</li></ul></li></ul>
+<tr><th>不可思议迷宫系列流程</th><td>赤之救助队／青之救助队 • 时之探险队／暗之探险队／空之探险队<br>炎之冒险团／岚之冒险团／光之冒险团 • 极大之门与无限迷宫 • 超级不可思议迷宫 • 救助队DX</td></tr><tr><th>不可思议迷宫系列性格测试</th><td>赤之救助队／青之救助队 • 空之探险队 • 超级不可思议迷宫 • 救助队DX</td></tr>
+<nav class="pager"><a href="part-3.html"><small>← 上一页</small>终局</a><a class="next" href="./"><small>本章完</small>回到目录</a></nav><p class="src">原文：神奇宝贝百科《<a href="https://wiki.52poke.com/wiki/附录:寶可夢_Ｘ／Ｙ流程" target="_blank" rel="noopener noreferrer">附录:寶可夢 Ｘ／Ｙ流程</a>》（<a href="https://wiki.52poke.com/wiki/附录:寶可夢_Ｘ／Ｙ流程?oldid=2618230" target="_blank" rel="noopener noreferrer">修订版本 2618230</a>，2026-09-08），作者见<a href="https://wiki.52poke.com/wiki/附录:寶可夢_Ｘ／Ｙ流程?action=history" target="_blank" rel="noopener noreferrer">原文页面历史</a>。本页由 Eli 的杂货间转载，并有改动（重新排版、去掉站内链接）。原文与本页均以 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 3.0</a> 授权。配图来自原站，版权归原作者与游戏厂商。</p></main></body></html>

@@ -1,0 +1,115 @@
+<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#1f2a24"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; img-src 'self' data: https://cdn.wikimg.net; base-uri 'none'; object-src 'none'; form-action 'none'"><title>开局 - 黑 / 白 · Eli</title><style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;background:#1f2a24;color:#f1f0e6}
+main{max-width:760px;margin:auto;padding:8px 16px max(32px,env(safe-area-inset-bottom))}
+a{color:#c9e265}.crumb{font-size:13px;color:#a9b5a6;margin:14px 0 4px}.crumb a{color:#a9b5a6}
+h1{font-size:25px;margin:6px 0 4px;line-height:1.4}.chap{font-size:13px;color:#a9b5a6;margin:0 0 16px}
+h2{font-size:19px;margin:28px 0 10px;padding-top:4px;border-top:1px solid #36463c}
+p,li{font-size:16px;line-height:1.85}ol,ul{padding-left:22px}b{color:#fff}
+.note{font-size:14px;color:#a9b5a6;background:#2a372f;border-radius:10px;padding:10px 14px}
+figure{margin:14px 0;text-align:center}figure img{max-width:100%;height:auto;border-radius:8px;background:#2a372f}
+figcaption{font-size:13px;color:#a9b5a6;margin-top:6px}
+.tip{background:#2a372f;border:1px solid #44574b;border-left:4px solid #c9e265;border-radius:10px;padding:4px 16px;margin:16px 0}
+.tip h4{margin:12px 0 0;font-size:15px;color:#c9e265}.tip p,.tip li{font-size:15px}
+table.data{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:#2a372f;border-radius:10px;overflow:hidden}
+table.data caption{text-align:left;font-weight:700;padding:0 0 8px;font-size:15px}
+table.data th,table.data td{padding:9px 12px;border-bottom:1px solid #36463c;text-align:left;vertical-align:top;line-height:1.6}
+table.data th{width:30%;color:#a9b5a6;font-weight:600;white-space:nowrap}table.data th small{font-weight:400}
+.medal{color:#c9e265;font-weight:700}
+img.icon{width:24px;height:24px;vertical-align:-6px;margin-right:2px;image-rendering:pixelated}img.pm{width:40px;height:30px;vertical-align:-8px}
+li.loc{list-style:none;margin:18px 0 6px -22px}li.loc>span{display:block;font-size:17px;font-weight:700;color:#c9e265;border-bottom:1px solid #36463c;padding-bottom:4px;margin-bottom:4px}
+i{color:#a9b5a6}
+table.grid{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:#2a372f;border-radius:10px;overflow:hidden}table.grid th,table.grid td{padding:8px 10px;border-bottom:1px solid #36463c;text-align:left;vertical-align:middle;line-height:1.6}table.grid th{color:#a9b5a6;font-weight:600}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:32px 0 10px}
+.pager a{display:block;background:#2a372f;border:1px solid #44574b;border-radius:12px;padding:12px 14px;text-decoration:none;color:#f1f0e6;font-size:15px;min-height:64px}
+.pager a small{display:block;color:#a9b5a6;font-size:12px;margin-bottom:2px}.pager .next{text-align:right;grid-column:2}
+.toc{list-style:none;padding:0;margin:0}.toc li{border-bottom:1px solid #36463c}.toc a{display:flex;justify-content:space-between;padding:13px 4px;text-decoration:none;color:#f1f0e6}
+.toc a span{color:#a9b5a6;font-size:13px}.toc h3{font-size:14px;color:#a9b5a6;margin:20px 0 4px;font-weight:600}
+.src{font-size:12px;color:#a9b5a6;line-height:1.8;border-top:1px solid #36463c;margin-top:28px;padding-top:12px}.src a{color:#a9b5a6}
+@media(max-width:560px){h1{font-size:22px}p,li{font-size:15.5px}table.data th{white-space:normal;width:34%}}
+</style><style id="eli-theme">:root{color-scheme:dark;--paper:#1f2a24;--card:#2a372f;--ink:#f1f0e6;--muted:#a9b5a6;--line:#44574b;--soft:#34443a;--green:#c9e265;--accent:#ff7b6b;--rust:#ff7b6b;color:#f1f0e6;background:#1f2a24}
+body{background:#1f2a24;color:#f1f0e6}
+a{color:#c9e265}
+h1{letter-spacing:.04em;text-shadow:2px 2px 0 #0f1713}
+button{border-width:2px;border-radius:10px;}
+button:active{transform:translateY(2px);}
+input,select{background:#2a372f;color:#f1f0e6;border-width:2px}
+::placeholder{color:#8a9a88}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline-color:#c9e265}
+.platforms button[aria-pressed=true],.scope-buttons button[aria-pressed=true]{background:#c9e265;border-color:#c9e265;color:#1f2a24;font-weight:700}
+.home-bar a,.home-links a:first-child{font-weight:700;letter-spacing:.04em}
+.eli-bar{position:sticky;top:0;z-index:30;background:#1f2a24;border-bottom:1px solid #2f3f35}
+.eli-bar-in{max-width:1120px;margin:auto;padding:0 16px;min-height:60px;display:flex;align-items:center;gap:18px}
+.eli-bar a{text-decoration:none;color:#f1f0e6;font-weight:700}
+.eli-bar .brand{font-size:20px;letter-spacing:.02em;white-space:nowrap}
+.eli-bar nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.eli-bar nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-size:15px;white-space:nowrap}
+.eli-bar nav a[aria-current=page]{color:#c9e265}
+.eli-bar nav a.cta{background:#c9e265;color:#1f2a24;border-radius:999px;padding:0 16px;min-height:40px;align-self:center}
+@media(max-width:560px){
+.eli-bar-in{min-height:52px;gap:8px;padding:0 10px 0 14px;flex-wrap:nowrap}
+.eli-bar .brand{font-size:17px}
+.eli-bar nav{gap:0;margin-left:auto;width:auto;padding:0}
+.eli-bar nav a{padding:0 9px;font-size:14px}
+.eli-bar nav a.cta{padding:0 12px}
+.appbar{min-height:52px!important}.brand h1{font-size:20px!important}
+h1{font-size:22px!important;margin:10px 0 6px!important}
+.top{min-height:44px!important}
+.tabs button{min-height:42px!important;font-size:13px!important;padding:6px 4px!important}
+.panel{padding:14px 12px!important}
+.steps li{font-size:14.5px!important;padding-bottom:8px!important}
+.chips li{font-size:12.5px;padding:5px 8px}
+.backup,.lookup{margin:10px 0!important}
+.card{padding:14px!important}
+.facts strong{font-size:18px!important}
+}
+@media(max-width:380px){.eli-bar nav a{padding:0 6px!important;font-size:13px!important}.eli-bar .brand{font-size:16px!important}.eli-bar-in{gap:4px!important;padding:0 6px 0 12px!important}}
+.platforms button,.scope-buttons button,.tabs button,.lookup-row button,#info-open{border-radius:999px}
+.actions a,a.continue{border-radius:999px}
+nav.top,header p,.lead,.foot{color:#a9b5a6}.tabs button{background:#2a372f;border-color:#44574b}.tabs button[aria-selected=true]{background:#c9e265;color:#1f2a24;border-color:#c9e265;font-weight:700}.panel{background:#2a372f;border:2px solid #44574b;}.steps li::marker{color:#ff7b6b}.actions a{background:#c9e265;color:#1f2a24;font-weight:700;}.actions a.secondary{background:#34443a;color:#f1f0e6}details{border-top-color:#44574b}code{background:#34443a}.tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.tabs button:first-child{grid-column:1/-1}@media(min-width:560px){.tabs{grid-template-columns:repeat(5,minmax(0,1fr))}.tabs button:first-child{grid-column:auto}}.sub{font-size:13px;letter-spacing:.12em;color:#a9b5a6;margin:18px 0 8px;font-weight:700}.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}.chips li{background:#34443a;border:1px solid #44574b;border-radius:8px;padding:6px 10px;font-size:13px;line-height:1.6}.backup{border-left:3px solid #c9e265;background:#25332b;padding:10px 12px;font-size:14px;line-height:1.8;margin:14px 0 4px;border-radius:0 8px 8px 0}.lookup{margin:14px 0;padding:14px;background:#25332b;border:2px solid #44574b;border-radius:12px}.lookup label{display:block;font-size:13px;color:#a9b5a6;line-height:1.7}.lookup label strong{display:block;color:#f1f0e6;font-size:15px}.lookup-row{display:flex;gap:8px;margin-top:10px}.lookup-row input{flex:1;min-width:0;min-height:46px;border-radius:10px;border:2px solid #44574b;padding:8px 12px;font-size:16px}.lookup-row button{min-width:72px;background:#c9e265;color:#1f2a24;border-color:#c9e265;font-weight:700}.trouble dt{font-weight:700;font-size:14px;margin-top:12px}.trouble dd{margin:4px 0 0;font-size:14px;line-height:1.8;color:#a9b5a6}@media(max-width:560px){.eli-bar nav a.home{display:none}}</style></head><body><header class="eli-bar"><div class="eli-bar-in"><a class="brand" href="https://eli-library.mysxl.cn/">Eli的杂货间</a><nav aria-label="站内导航"><a class="home" href="https://eli-library.mysxl.cn/">主页</a><a href="../../">图鉴</a><a href="../../save-types/index.html">存档类型</a><a href="../../handheld/">掌机指南</a><a href="../../guides/" aria-current="page">攻略</a></nav></div></header><main><p class="crumb"><a href="../">攻略大全</a> / <a href="./">黑 / 白</a></p><h1>开局</h1><p class="chap">剧情流程</p>
+<p class="note">斜体的步骤是支线剧情，不是必须进行的流程。名称用简体中文官方译名。</p><ul><li>选择是否以全假名或汉字显示日语<b>（日本版）</b>。</li>
+<li class="loc"><span>鹿子镇</span><ul><li>选择主角的性别和姓名。</li>
+<li>在自家与劲敌打开红豆杉博士的礼物，选择最初拿到的宝可梦，白露选择被主角克制属性的宝可梦，黑连选择克制主角属性的宝可梦。</li>
+<li>与白露和黑连进行宝可梦对战。</li>
+<li>下楼，从妈妈处获得即时通讯器M（主角性别为男时）/即时通讯器F（主角性别为女时）。</li>
+<li>去白露的家与白露的爸爸对话。</li>
+<li>前往红豆杉博士的研究所，获得宝可梦图鉴。</li>
+<li>出门从妈妈处获得<img class="icon" src="../img/items/town-map.png" alt="城镇地图" width="30" height="30" loading="lazy">城镇地图。</li>
+<li>前往１号道路。</li></ul></li>
+<li class="loc"><span>１号道路</span><ul><li>观看红豆杉博士的捕获教学，获得<img class="icon" src="../img/items/poke-ball.png" alt="精灵球" width="30" height="30" loading="lazy">精灵球。</li>
+<li>前往唐草镇。</li></ul></li>
+<li class="loc"><span>唐草镇</span><ul><li>即时通讯器博士打来电话，前往宝可梦中心。</li>
+<li>出宝可梦中心后，遇到魁奇思演讲。</li>
+<li>遇到Ｎ并与其对战。</li>
+<li>前往２号道路。</li></ul></li>
+<li class="loc"><span>２号道路</span><ul><li>即时通讯器妈妈打来电话，获得跑步鞋。</li>
+<li>三曜市入口与白露对战。</li>
+<li>前往三曜市。</li></ul></li>
+<li class="loc"><span>三曜市</span><ul><li>在训练家学校与黑连对战。</li>
+<li>在三曜道馆，和道馆馆主天桐、伯特、寇恩三人中克制主角属性的进行宝可梦对战（获胜后可获得三元徽章和招式学习器８３（自我激励））。</li>
+<li>离开道馆后，遇到真菰博士会给予秘传学习器０１（居合劈）。</li>
+<li>前往梦的遗址。</li></ul></li>
+<li class="loc"><span>梦的遗址</span><ul><li><i>与遗迹旁的小女孩对话获得<img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAyBAMAAADo5EW/AAAAMFBMVEUAAAAAAAAIczEYSikYpFJSUlJzUiCDg4ODzZykezm0YnvFxcXNpFr2nKz/zXv////Vm5BLAAAAAXRSTlMAQObYZgAAAk5JREFUeNq9lD9oE1Ecxz93r9YYaPIugdpGCldT0IKQS1LQUaGCOKhjJ0mXTCpO4iASSgcnFxfpIKGDiKDg4lJQpw6FmLiIi9eroLZi7q4GMf2TO4fLxTvqqm+5x335fr+/7/u934N/v8RgV9zpaonuQUAkT/4oHbUOAKIwroyjprshRw2FMhZJEEXigJDo3AUpZBzwIMlYtKpQysKrV5KwHgJK/5vVdHgyh7fdiDN8D4s5wI1IiTJsp5sp8LCiOcpaalOK6SO0txxSmwOGkGRFWQe0balsaAOGOmlm0lsSzMzomlfOOd0+o+hV1yfug/fREqmySWlg/oX04zewNddC+FVLkZFy73yC/Veeb/zkavBnCGCvR/JmYlqPxEAFK+dxtv5UJ7mm+JXoWan1iUtuTV2zShaw3HP7QNurLDjUOPWaR/HTVetw+4wlDHTY1Zsh4DfzV1g8/LAGfN5d5k9VbWcPjOkxsHLDBBZBjsamNdRqgamoS32lfkD/gjm+appcbx1vuPEOaivAeUeRDhitaPO10VUtSCfOKUYoVQX35fDK/Gggnw095u9VOLbL0siHKlD0DS1o7fDzr5c7z05XTlx0Fp0GuZ2EH7T+hn3NtjcU+7tUbFsyMzM7GXos0CmAil/jHQ0HJwAeWHQKrgIvglBumAVNkzD11p7VbNuWlGTYQQcQ+i0Y6SZAOG7kilIEyBtAIXZ3gXYLsW908hknBni9pgOKKGqB9WA4vyn+r8yh93mta8bnemZKks0fnCh6bRdFkX9/DZQi/3X9Bt8TxbxpF9IHAAAAAElFTkSuQmCC" alt="花椰猴" width="40" height="30">花椰猴、<img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAzBAMAAAAnTUYnAAAAKlBMVEUAAAAAAABSUlJzUiB7MTGDg4Okezm9QTnFxcXNpFrmUkH2lEH/zXv///+TV9n1AAAAAXRSTlMAQObYZgAAAjVJREFUeNq9lD1oE2EYx3+XOxJClwQDUhAFl0IRPD2oBBxa+7aVgtjZL64UAtWhSMWCi5urV9CWBiqBQgdBEAQHFYxIEcoFT9rFyVvELuK7pCVpXs7hkvuoce073cP/+fg//+d5Do7n6UlDnPb7e4mXhYSViT+NyoHsj4ynM2SSJfN9swkBLCcQowdU2IZsQR6NMSpg1VI9dJHJo62FiBCROZuqY1RQNp4JYKKdMD9EDJRnwzBtG9AGHTr1brbJXeFBtroJMOg0vDCbBtO3S/utbvLV+Ybo/L7VjfFA7/rxXQnqKuK2S64WAm126VgpDYZCYN0pRqqEnbbm10FVN20FxAy0zVJrn4YFtPUSfFyRcczK9l1LeaDr9aQ6wWKdO1n03KOaDuxXZVznnBcAMy0b4N6rmMGvjUC7Ejqq0YevB8wICd5xaF48q41K9LfPPfw4W2cvuORx+Pg8VTNbS00742ESSB23cdNRqQFan0dc97JbhFPup/RsK2tzlls00Vx3OdIgfBd8Mk/aL/beICRL7aeRftaa8qBchqZkyTqIdkefb16F4YlrNK+Ts1jocdPLppAbDme+TQQSlWBddpoSDikEf4AQMgB0hxkY2PFn6wCdnS8y3vj3Jrpv9oh+7alThpoPJvlRgNxwpJsPWxh2d3vFopKJ+/khx9uoWv6kmBoZWogY/GRLws62l7VvZFkNEudaLIAxBtrU/bHiPzc//QAQhT4XfNAAbe7Z/34ppRLH/f4COg+2x+yku60AAAAASUVORK5CYII=" alt="爆香猴" width="40" height="30">爆香猴、<img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0BAMAAAA3VgbYAAAAJ1BMVEUAAAAAAAAAOXMYi6wgc5wptN5SUlJzUiCc5u6keznNpFr/zXv///8oB0VRAAAAAXRSTlMAQObYZgAAAntJREFUeNrFlD9ME2EYxn/ftaV/Fr8rMCgiR8GIE0VNXAxekxITJxwcTEhwMBonDQw1IQ4uJiYOyOCghGAcSHQhxjBAk3YyDBoTSRhMhMNIBxTuisaU/rlzuGspLa76Le+Xe/K97/M87/se/Lvjq7vHKBwOxVqjA4V6sAr5dV+fKiKnc/uY4sXuqCZACpVGSIk75gcq6co52fQKoZ7d/plcIdEEGQJ2Jf0YNcjvBtvsErYDhrNeg0Q1tvbnHRBfzGZdBVOEZGHNpJmGnZeYZh2CAviTupf1SL1RfiAhHaC7WjlJOeu9UuSa0IlJQCSgV1WjtYT2VeOX0hrTQGmTYmANoXkMe8t9J/eKfQhVlcS+nxhq38pZ+wxtmYp7OjcJGJaX0AI4hQ52yqgMDteT7yCwwhCbw2EmD+qylXkoLs08aGfIVoCSVoV27GFo4Rbi89KsgNKbcrUWBlhlNuAh1wkQ2E/ofJ0vUTFlBoesZQCZGo0fnZ8utEACzDilaikUwEljYLMA2dB27LVXypVsptczSvrywogO2djxTEOXn2kA5Wt56VgNXV482g25GxaFQtP0B1OqKus/iNqtB8nO+mHrMBbZCsqeXNM6hMcH9ZkzamD3fucyoFxUTG9Ew1MaOeMJ9pXV6eAj6Im224ara0zj951AKISd8ydTgI8BV3JQh4zl9tsiKekCy4WKYMwyBS04d+EFG1Q+ekZZrLpDKSELStzyeSPq3MQk7Pqdm9at8fff+uslT+iGxu93e5Nq5OloXpp164CzOmJFXp5P3X48ajnmAQvnJB2L6rFXc7LRqHuRjuXipbZ0+q3VaHxKhYnn8m9/paDKfzp/AE6E0glnhu3eAAAAAElFTkSuQmCC" alt="冷水猴" width="40" height="30">冷水猴其中一只（视最初的伙伴而定）。</i></li>
+<li>用居合劈砍掉树木，寻找<img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAnBAMAAAB+jUwGAAAALVBMVEUAAAAQEBBiSmqDQWKDWpSsKUGse83Ni73eKUHee73mrMX2i9X/xc3/1d7///9GVsK3AAAAAXRSTlMAQObYZgAAAVhJREFUeNq1kjFLw0AAhb801nRMcOiklLoIgrhIKSL4B4Q46ODUQVdJFalTB6e6FZyVuolQcHPt0kGkWudCCIgOghgES2rTxuEul+Kst9zdx3v33nEHfz+0eGE4DOpyPSXnStpmaJyKjS7Z1gLoi1Z7wm60pWG3C5AC4EiyYAYFDdsyATiZNxVc0VSLzThIb1oQAKw+aW4gK2kQAZDx0rG9aMY3CHJcqnTwRRADqdTrsRvIqXRfCoHUmSlh9CFR1fXyQlkUwHEgU0tu1AH4WgeoSuiN8l0Y3HoAGXeiEiEtAGoKzgKN5DmUcpoSAEMBXzQPSHdsAK59oRTqCrBNT9ojZ+lZHNHPXzXUa+rLsH8w1xxyo99Ja3vs9vbW7puk3JEdp0cbne5rCDxU+kmlt0YYjuE8Oi59+zFM7Vy8t2D0+Jn0huwhFMqgF8yJb2ZCtgxYv/+fyX+OH0oaXLJD+Eu1AAAAAElFTkSuQmCC" alt="食梦梦" width="40" height="30">食梦梦，与等离子队手下对战，<img class="pm" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABFBAMAAAAbXb2qAAAAJ1BMVEUAAAAQEBBKSmJSUlJqMUpqYqSUe96cWmKsUnO9c6zNnJTee73/xc1mpx56AAAAAXRSTlMAQObYZgAAAtNJREFUeNrVlj9oFEEUxn+3G8kGmzsUDNiE2KmR0WlSRkhxZVIJ1kLaEAi3hYcDK2QhhaW1lZBOUgkhFwjCNQOLsT4CIsFqFwWzkd2cxf7fu40pdTm4uZlvv/fme9+bOfh/Htct/WhNRYTuPjpUV4AsJWNPQtzNZsxJ0M4TjDuf5/Xde0fpzEyFAmxcAZhLWhYLJZDlCHCRAFrK6YnvinwYd11TaHuSySowDLEtlWMw6mnr9DssMCVQ6AFo25vcb50pnCZuDRQr+h5aNYGyxMO+tmtMrYpKpVJMZXJEsyWMajBTXQVyrjKXcR0Hpolb+6BN0ZB4Ubu4qLuxAFye1kFOXllgcWYFiI5yWMF0IiBWwOJqsrIaHZ5OS3wIbK3mUZ62J0FaK+g9D/KJG+vV3Tki9mxg9hMX74r39oISU9jHDAG2q5tfnybm7Bq0fL8I2K6CtEqJ3vR6QZUqs8ruUjfJCKCc1l6QMVluYoLtKwpsOTL2Goq7noEcwYlI0wbgdJLJEsSiYrcPVPZnJNU9qaR0MQ4arFJWq1dWHYw0Wh1WUepa9jVKvZtvrglUkilKT8GAoAA5YGoxzEHmQ/jVBo+oyjTt8HvAl4QwDxcXWp7fhhdAO1oBxqWcimjnz9JBcAwQDHJQrIDfAMy93wCfsQ/JBwzoJ1dFHu/md8APEILUoymT6cplxqlO52BiyqSfoiTx0ANk6dT5yFpLPu68roiZxGO5LHKnjSkBBvVu+TZKB5cu0OrIyfPJVDA6AEajHSBUdARRkIJCL07ugfHmpTwcjWBuS6GAWwxypv7Q9oBlzr7yCIC3ri2yvRWFspQEjST+kchwdjEP4augcrBKDaVLrsdAZZiSx6UnAG0sAGz8PDhq2Vk/ZEz97ALa2QQ2/OiAsR/UzGPtE5sQd2m107JO2je57RjC2Pf9pkboe2Zjt+Qr0fH9efTLv3WXVfl/8q8/fwDj5O1aFq91AQAAAABJRU5ErkJggg==" alt="梦梦蚀" width="40" height="30">梦梦蚀出现并获得梦的烟雾。</li>
+<li>与真菰博士回到三曜市，开启宝可梦梦境世界，并获得Ｃ装置及<img class="icon" src="../img/items/pal-pad.png" alt="朋友手册" width="30" height="30" loading="lazy">朋友手册。</li>
+<li>前往３号道路。</li></ul></li>
+<li class="loc"><span>３号道路</span><ul><li>与黑连对战。</li>
+<li><i>培育屋可以进行宝可梦培育。</i></li>
+<li><i>幼儿园可以进行回复。</i></li>
+<li>发生小女孩宝可梦被抢事件，前往泉源洞穴。</li></ul></li>
+<li class="loc"><span>泉源洞穴</span><ul><li>与等离子队手下对战。</li>
+<li>回到３号道路，获得<img class="icon" src="../img/items/heal-ball.png" alt="治愈球" width="30" height="30" loading="lazy">治愈球。</li>
+<li>前往七宝市。</li></ul></li>
+<li class="loc"><span>七宝市</span><ul><li>被黑连带到宝可梦中心并获得三个<img class="icon" src="../img/items/chesto-berry.png" alt="零余果" width="30" height="30" loading="lazy">零余果。</li>
+<li>在七宝道馆门口与Ｎ进行战斗。</li>
+<li>在七宝道馆，和道馆馆主芦荟进行宝可梦对战（获胜后可获得基础徽章和招式学习器６７（报仇））。</li>
+<li>发生等离子队窃取宝可梦化石事件，走出道馆，获得<img class="icon" src="../img/items/dowsing-machine.png" alt="探宝器" width="30" height="30" loading="lazy">探宝器。与亚堤前往矢车森林。</li></ul></li>
+<li class="loc"><span>矢车森林</span><ul><li>在森林内与等离子队战斗，之后遇到七贤人，返还宝可梦化石，之后通过天箭桥前往飞云市。</li></ul></li>
+<li class="loc"><span>飞云市</span><ul><li><i>在拇指码头，可获得<img class="icon" src="../img/items/fire-stone.png" alt="火之石" width="30" height="30" loading="lazy">火之石或<img class="icon" src="../img/items/leaf-stone.png" alt="叶之石" width="30" height="30" loading="lazy">叶之石或<img class="icon" src="../img/items/water-stone.png" alt="水之石" width="30" height="30" loading="lazy">水之石。</i></li>
+<li><i>在对战公司５５Ｆ，和社长展开宝可梦对战，获胜后能获得<img class="icon" src="../img/items/exp-share.png" alt="学习装置" width="30" height="30" loading="lazy">学习装置</i>。</li>
+<li>前往飞云道馆，遇到黑连和亚堤，来到第一码头，遇见一名等离子队手下，得知白露宝可梦被抢。</li>
+<li>前往道馆街，在飞云道馆对面的一幢大楼门口，与等离子队手下对战。</li>
+<li>在大楼内听取魁奇思讲述合众建国传说，并把宝可梦还给白露。</li>
+<li>在飞云道馆，和道馆馆主亚堤进行宝可梦对战（获胜后可获得昆虫徽章招式学习器７６（虫之抵抗））。</li>
+<li>即时通讯器白露打来电话，告知在４号道路的闸门对战。</li>
+<li>与白露对战获胜后，前往４号道路。</li></ul></li></ul>
+<nav class="pager"><a class="next" href="part-2.html"><small>下一页 →</small>中局</a></nav><p class="src">原文：神奇宝贝百科《<a href="https://wiki.52poke.com/wiki/附录:寶可夢_黑／白流程" target="_blank" rel="noopener noreferrer">附录:寶可夢 黑／白流程</a>》（<a href="https://wiki.52poke.com/wiki/附录:寶可夢_黑／白流程?oldid=2618084" target="_blank" rel="noopener noreferrer">修订版本 2618084</a>，2026-09-07），作者见<a href="https://wiki.52poke.com/wiki/附录:寶可夢_黑／白流程?action=history" target="_blank" rel="noopener noreferrer">原文页面历史</a>。本页由 Eli 的杂货间转载，并有改动（重新排版、去掉站内链接）。原文与本页均以 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 3.0</a> 授权。配图来自原站，版权归原作者与游戏厂商。</p></main></body></html>
