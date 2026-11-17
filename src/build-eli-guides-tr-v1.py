@@ -351,32 +351,37 @@ def cast_strip(cast):
 
 
 def mappins(body, pins, terms=None):
+    """overlay item icons on map figures (rows are looked up inside the same h2 section); returns (body, popup data)"""
     terms = terms or {}
-    """overlay item icons on map figures; returns (body, extra popup data)"""
     extra = {}
-    rows = {}
-    for m in re.finditer(r'<tr><td>(?:<img class="icon" src="\.\./img/([^"]+)"[^>]*>)?([^<]*?)(?:\s*×\d+)?</td><td>[^<]*</td><td>(.*?)</td></tr>', body):
-        rows.setdefault(m.group(2).strip(), (m.group(1), m.group(3)))
-    def fig(m):
-        inner, img = m.group(0), m.group(1)
-        lst = pins.get(img)
-        if not lst: return inner
-        btns = ''
-        for i, p in enumerate(lst):
-            if p['n'] not in rows: continue
-            ic, loc = rows[p['n']]
-            parts = [x for x in re.split(r'<br\s*/?>', loc)]
-            txt = re.sub(r'<[^>]+>', '', parts[p.get('l', 0)] if p.get('l', 0) < len(parts) else parts[0])
-            key = f'@{img}:{i}'
-            t = terms.get(p['n'])
-            ent = {'k': '道具', 'n': p['n'], 'a': '拾取位置：' + txt, 'd': t['d'] if t else ''}
-            if ic: ent['i'] = ic
-            elif t and t.get('i'): ent['i'] = t['i']
-            extra[key] = ent
-            btns += f'<button class="ip" type="button" style="left:{p["x"]}%;top:{p["y"]}%" data-t="{e(key)}" aria-label="{e(p["n"])}">' + (f'<img src="../img/{ic}" alt="">' if ic else '●') + '</button>'
-        if not btns: return inner
-        return re.sub(r'(<img src="[^"]*' + re.escape(img) + r'[^>]*>)', r'<div class="mw">\1' + btns.replace('\\', '\\\\') + '</div>', inner, count=1)
-    return re.sub(r'<figure class="map">(?:(?!</figure>).)*?maps/([^"/]+?)\.webp.*?</figure>', fig, body, flags=re.S), extra
+    rowrx = re.compile(r'<tr><td>(?:<img class="icon" src="\.\./img/([^"]+)"[^>]*>)?([^<]*?)(?:\s*×\d+)?</td><td>[^<]*</td><td>(.*?)</td></tr>')
+    def section(chunk):
+        rows = {}
+        for m in rowrx.finditer(chunk):
+            rows.setdefault(m.group(2).strip(), []).append((m.group(1), m.group(3)))
+        def fig(m):
+            inner, img = m.group(0), m.group(1)
+            lst = pins.get(img)
+            if not lst: return inner
+            btns = ''
+            for i, p in enumerate(lst):
+                cand = rows.get(p['n'])
+                if not cand: continue
+                ic, loc = cand[min(p.get('o', 0), len(cand) - 1)]
+                parts = re.split(r'<br\s*/?>', loc)
+                txt = re.sub(r'<[^>]+>', '', parts[p.get('l', 0)] if p.get('l', 0) < len(parts) else parts[0])
+                key = f'@{img}:{i}'
+                t = terms.get(p['n'])
+                ent = {'k': '道具', 'n': p['n'], 'a': '拾取位置：' + txt, 'd': t['d'] if t else ''}
+                if ic: ent['i'] = ic
+                elif t and t.get('i'): ent['i'] = t['i']
+                extra[key] = ent
+                btns += f'<button class="ip" type="button" style="left:{p["x"]}%;top:{p["y"]}%" data-t="{e(key)}" aria-label="{e(p["n"])}">' + (f'<img src="../img/{ic}" alt="">' if ic else '●') + '</button>'
+            if not btns: return inner
+            return re.sub(r'(<img src="[^"]*' + re.escape(img) + r'[^>]*>)', lambda mm: '<div class="mw">' + mm.group(1) + btns + '</div>', inner, count=1)
+        return re.sub(r'<figure class="map">(?:(?!</figure>).)*?maps/([^"/]+?)\.webp.*?</figure>', fig, chunk, flags=re.S)
+    parts = re.split(r'(?=<h2[ >])', body)
+    return ''.join(section(c) for c in parts), extra
 
 def autoterm(body, terms):
     """make plain-text item / TM / HM names tappable (first mention per h2 section)"""
