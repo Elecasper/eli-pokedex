@@ -59,6 +59,17 @@ BADGES = {  # name: (leader, text)
  '灰色徽章': ('小刚', ''), '蓝色徽章': ('小霞', ''), '橙色徽章': ('马志士', ''), '彩虹徽章': ('莉佳', ''),
  '粉红徽章': ('阿杏', ''), '金色徽章': ('娜姿', ''), '深红徽章': ('夏伯', ''), '绿色徽章': ('青绿', ''),
 }
+IDENT = {r['id']: r['identifier'] for r in load('items.csv')}
+TYPES = ['normal','fighting','flying','poison','ground','rock','bug','ghost','steel','fire','water','grass','electric','psychic','ice','dragon','dark']
+IMG = os.path.normpath(os.path.join(D, '..', '..', '..', 'guides', 'img'))
+SP = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/'
+def icon(rel, src):
+    dst = os.path.normpath(os.path.join(IMG, rel))
+    if not os.path.exists(dst):
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        try: urllib.request.urlretrieve(SP + src, dst)
+        except Exception: return None
+    return rel
 terms = {}
 used = set()
 for f in glob.glob(D + '/zh/part-*.txt'):
@@ -67,17 +78,23 @@ for t in sorted(used):
     m = re.match(r'^(招式|秘传)学习器(\d+)（(.+)）$', t)
     if m and m.group(3) in mnm:
         a, b, c = move_info(m.group(3))
-        terms[t] = {'k': m.group(1) + '学习器', 'a': a, 'b': b, 'd': c, 'n': f'{m.group(1)}学习器{m.group(2)} · 教会宝可梦「{m.group(3)}」'}
+        ty = int(mv[mnm[m.group(3)]]['type_id'])
+        ic = icon('tip/hm-normal.png', 'items/hm-normal.png') if m.group(1) == '秘传' else icon(f'tip/tm-{TYPES[ty-1]}.png', f'items/tm-{TYPES[ty-1]}.png') if ty <= 17 else None
+        terms[t] = {'k': m.group(1) + '学习器', 'a': a, 'b': b, 'd': c, 'n': f'{m.group(1)}学习器{m.group(2)} · 教会宝可梦「{m.group(3)}」', 'i': ic}
     elif t in BADGES:
         ld, tx = BADGES[t]
         terms[t] = {'k': '徽章', 'd': ('道馆徽章，由' + ('馆主' if ld != '大长老' else '') + ld + '授予。') + tx}
     elif t in HAND:
         terms[t] = {'k': HAND[t][0], 'd': HAND[t][1]}
     elif t in inm and inm[t] in ift:
-        terms[t] = {'k': '道具', 'd': ift[inm[t]]}
+        idn = IDENT.get(inm[t], '')
+        terms[t] = {'k': '道具', 'd': ift[inm[t]], 'i': icon(f'items/{idn}.png', f'items/{idn}.png') if idn else None}
     elif t in mnm:
         a, b, c = move_info(t)
-        terms[t] = {'k': '招式', 'a': a, 'b': b, 'd': c}
+        ty = int(mv[mnm[t]]['type_id'])
+        terms[t] = {'k': '招式', 'a': a, 'b': b, 'd': c, 'i': icon(f'tip/type-{ty}.png', f'types/generation-viii/sword-shield/{ty}.png')}
+for v in terms.values():
+    if not v.get('i'): v.pop('i', None)
 json.dump(terms, open(D + '/terms.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
 print(len(terms), 'terms;', len(used - set(terms)), 'unmatched')
 if '-v' in sys.argv: print(sorted(used - set(terms)))
