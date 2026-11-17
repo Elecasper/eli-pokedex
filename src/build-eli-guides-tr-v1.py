@@ -73,7 +73,7 @@ nav.tree a i{font-style:normal;color:#8fa592;font-size:11.5px;margin-left:4px}na
 @media(min-width:900px){main{max-width:900px}h1{font-size:28px}.mapgrid.n1 figure.map{max-width:640px}}
 @media(min-width:1400px){main{max-width:1000px}p,li{font-size:17px}}
 a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,226,101,.18)}
-.dock{display:none}
+.dock{display:none}.backmap{position:fixed;left:12px;bottom:18px;z-index:41;padding:11px 18px;border-radius:999px;background:#c9e265;color:#1f2a24;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 3px 12px rgba(0,0,0,.4)}@media(max-width:720px){.backmap{bottom:calc(76px + env(safe-area-inset-bottom))}}
 @media(max-width:720px){main{padding-bottom:calc(84px + env(safe-area-inset-bottom))}.crumb a{display:inline-block;padding:8px 2px}.pager a{min-height:72px;padding:14px}
 .dock{display:grid;grid-template-columns:1fr auto auto 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:8px 12px max(8px,env(safe-area-inset-bottom));background:rgba(31,42,36,.96);backdrop-filter:blur(8px);border-top:1px solid #36463c}
 .dock a{display:flex;align-items:center;justify-content:center;min-height:46px;padding:0 14px;border-radius:12px;background:#2a372f;border:1px solid #44574b;color:#f1f0e6;text-decoration:none;font-size:15px;font-weight:600;white-space:nowrap}.dock a.dis{opacity:.35;pointer-events:none}.dock a.hl{color:#c9e265}}
@@ -175,64 +175,94 @@ def write_map(folder, g, out, pages):
         A, B = by[a], by[b]
         svg += f'<path d="M{A["x"]} {A["y"]} Q{(A["x"] + B["x"]) // 2} {max(A["y"], B["y"]) + 120} {B["x"]} {B["y"]}" class="ed sea" fill="none"/>'
     x27 = next(m['x'] for m in wm['nodes'] if m['k'] == '27号')
+
+    def catof(n):
+        k = n['k']
+        return ('市' if k.endswith('市') else '镇' if k.endswith('镇') else '路' if n['t'] == 'r' else
+                '塔' if '塔' in k else '洞' if ('洞' in k or '之路' in k or '径' in k or k.endswith('林') and n['t'] == 'd' or '关口' in k) else
+                '山' if k.endswith('山') else '水' if (k.endswith('湖') or k.endswith('岛') or k.endswith('号') and n['t'] == 'd') else '其')
     for n in wm['nodes']:
         h, w = 30, n['w']
         post = n['p'] > 16
         cls = f'nd {n["t"]}{" post" if post else ""}'
         href = f'part-{n["p"]}.html#{n["id"]}'
         k = n['k']
-        cat = ('市' if k.endswith('市') else '镇' if k.endswith('镇') else '路' if n['t'] == 'r' else
-               '塔' if '塔' in k else '洞' if ('洞' in k or '之路' in k or '径' in k or k.endswith('林') and n['t'] == 'd' or '关口' in k) else
-               '山' if k.endswith('山') else '水' if (k.endswith('湖') or k.endswith('岛') or k.endswith('号') and n['t'] == 'd') else '其')
+        cat = catof(n)
         reg = 'k' if n['x'] >= x27 else 'j'
         svg += (f'<a href="{href}" data-k="{e(k)}" data-c="{cat}" data-r="{reg}" data-ph="{2 if post else 1}" data-p="{n["p"]}"><g class="{cls}"><title>{e(n["k"])} · 第 {n["p"]} 节：{e(titles["part-" + str(n["p"])])}</title>'
                 f'<rect x="{n["x"] - w // 2}" y="{n["y"] - h // 2}" width="{w}" height="{h}" rx="{15 if n["t"] != "r" else 8}"/>'
                 f'<text x="{n["x"]}" y="{n["y"] + 5}" text-anchor="middle">{e(n["k"])}</text></g></a>')
     css = """<style>main{max-width:none;padding:8px 12px 40px}.mapwrap{overflow:auto;border:1px solid #44574b;border-radius:12px;background:#18221d;max-height:78vh;max-height:78dvh;cursor:grab;-webkit-overflow-scrolling:touch}.mapwrap.dr{cursor:grabbing;user-select:none}
-.mapwrap svg{display:block;min-width:1100px;width:1900px}.ed{stroke:#5d7566;stroke-width:3}.ed.sea{stroke:#4a8fb0;stroke-dasharray:8 6}
+.mapwrap svg{display:block;width:1900px}.ed{stroke:#5d7566;stroke-width:3}.ed.sea{stroke:#4a8fb0;stroke-dasharray:8 6}
 .nd rect{fill:#2f4336;stroke:#c9e265;stroke-width:2}.nd text{fill:#f1f0e6;font-size:15px;font-weight:700;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif}
 .nd.r rect{fill:#26332b;stroke:#6e8575;stroke-width:1.5}.nd.r text{font-size:13px;font-weight:500;fill:#cdd6c8}.nd.d rect{fill:#3a2f45;stroke:#b79ae0}.nd.post rect{stroke:#6cc3f0}.nd.d.post rect{stroke:#6cc3f0}
 .nd:hover rect{fill:#c9e265}.nd:hover text{fill:#1f2a24}.leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:#a9b5a6;margin:6px 0 12px}.leg i{display:inline-block;width:14px;height:14px;border-radius:5px;vertical-align:-2px;margin-right:5px;border:2px solid}
-.fl{margin:0 0 12px;display:grid;gap:8px}.fl input{width:100%;padding:9px 14px;border-radius:10px;border:1px solid #44574b;background:#2a372f;color:#f1f0e6;font-size:15px}.fl .row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.fl .row>b{font-size:12.5px;color:#a9b5a6;font-weight:600;margin-right:2px}.fl button{background:#2a372f;border:1px solid #44574b;color:#d6dccf;border-radius:999px;padding:5px 12px;font-size:13.5px;cursor:pointer}.fl button.on{background:#c9e265;color:#1f2a24;border-color:#c9e265;font-weight:700}.fc{font-size:13px;color:#a9b5a6}.nd.off{opacity:.13;pointer-events:none}.res{display:none;flex-wrap:wrap;gap:6px;margin:0 0 10px}.res a{font-size:13.5px;padding:4px 10px;border:1px solid #44574b;border-radius:999px;text-decoration:none;background:#2a372f}.mapbox{position:relative}.zb{position:absolute;right:10px;bottom:10px;display:flex;flex-direction:column;gap:8px;z-index:3}.zb button{width:46px;height:46px;background:rgba(42,55,47,.94);border:1px solid #5d7566;color:#f1f0e6;border-radius:12px;font-size:22px;line-height:1;padding:0;box-shadow:0 2px 8px rgba(0,0,0,.35)}.zb button.fit{font-size:13px;font-weight:700}
+.fl{margin:0 0 12px;display:grid;gap:8px}.fl input{width:100%;padding:9px 14px;border-radius:10px;border:1px solid #44574b;background:#2a372f;color:#f1f0e6;font-size:15px}.fl .row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.fl .row>b{font-size:12.5px;color:#a9b5a6;font-weight:600;margin-right:2px}.fl button{background:#2a372f;border:1px solid #44574b;color:#d6dccf;border-radius:999px;padding:5px 12px;font-size:13.5px;cursor:pointer}.fl button.on{background:#c9e265;color:#1f2a24;border-color:#c9e265;font-weight:700}.fc{font-size:13px;color:#a9b5a6}.nd.off{opacity:.13;pointer-events:none}.res{display:none;flex-wrap:wrap;gap:6px;margin:0 0 10px}.res a{font-size:13.5px;padding:4px 10px;border:1px solid #44574b;border-radius:999px;text-decoration:none;background:#2a372f}.vt{display:flex;gap:8px;align-items:center;margin:0 0 10px}.vt button{background:#2a372f;border:1px solid #44574b;color:#d6dccf;border-radius:999px;padding:8px 18px;font-size:15px;cursor:pointer}.vt button.on{background:#c9e265;color:#1f2a24;border-color:#c9e265;font-weight:700}.vt span{font-size:12.5px;color:#8fa592;margin-left:4px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{display:inline-block;padding:10px 16px;border-radius:12px;border:1.5px solid #c9e265;background:#2f4336;color:#f1f0e6;text-decoration:none;font-size:15px;font-weight:600}.chip.post{border-color:#6cc3f0}.chip.d{border-color:#b79ae0;background:#3a2f45}.chip.r{border-color:#6e8575;background:#26332b;font-weight:500;color:#cdd6c8}.lst h2{font-size:16px;margin:18px 0 10px}svg.ov .nd.r{display:none}svg .nd{transform-box:fill-box;transform-origin:center;transform:scale(var(--ns,1))}.mapbox{position:relative}.zb{position:absolute;right:10px;bottom:10px;display:flex;flex-direction:column;gap:8px;z-index:3}.zb button{width:46px;height:46px;background:rgba(42,55,47,.94);border:1px solid #5d7566;color:#f1f0e6;border-radius:12px;font-size:22px;line-height:1;padding:0;box-shadow:0 2px 8px rgba(0,0,0,.35)}.zb button.fit{font-size:13px;font-weight:700}
 .mapwrap{touch-action:pan-x pan-y;overscroll-behavior:contain}.fdet>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:11px 14px;border:1px solid #44574b;border-radius:12px;background:#2a372f;font-weight:700;color:#c9e265;margin:0 0 10px}.fdet>summary::-webkit-details-marker{display:none}.fdet>summary span{font-size:13px;color:#a9b5a6;font-weight:500}.fdet[open]>summary{margin-bottom:10px}
-@media(max-width:720px){.mapwrap{max-height:none;min-height:320px}.fl button{padding:9px 14px;font-size:14.5px}.fl input{padding:12px 14px;font-size:16px}.res{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.res a{white-space:nowrap;padding:8px 14px;font-size:14.5px}.leg{font-size:12.5px;gap:4px 12px}h1{margin-bottom:2px}.chap{display:none}main{padding-bottom:40px!important}}</style>"""
+@media(max-width:720px){.zb{flex-direction:row;right:8px;bottom:8px}.zb button{width:42px;height:42px;font-size:20px}.mapwrap{max-height:none;min-height:320px}.fl button{padding:9px 14px;font-size:14.5px}.fl input{padding:12px 14px;font-size:16px}.res{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.res a{white-space:nowrap;padding:8px 14px;font-size:14.5px}.leg{font-size:12.5px;gap:4px 12px}h1{margin-bottom:2px}.chap{display:none}main{padding-bottom:40px!important}.vt span{display:none}}</style>"""
     legend = ('<div class="leg"><span><i style="border-color:#c9e265;background:#2f4336"></i>城镇（主线 1–16 节）</span>'
               '<span><i style="border-color:#6cc3f0;background:#2f4336"></i>城镇（通关后 17–32 节）</span>'
               '<span><i style="border-color:#b79ae0;background:#3a2f45"></i>洞窟 / 塔 / 特殊地点</span>'
               '<span><i style="border-color:#6e8575;background:#26332b"></i>道路</span>'
               '<span><i style="border:0;border-top:3px dashed #4a8fb0;height:0;width:18px;vertical-align:4px"></i>海路</span></div>')
-    js = ("<script>(function(){var s=document.querySelector('.mapwrap svg'),m=document.querySelector('.mapwrap'),w=0;"
-          "function set(v,cx,cy){var ox=(m.scrollLeft+cx)/w,oy=(m.scrollTop+cy)/(w*960/1900);w=Math.max(600,Math.min(3200,v));s.style.width=w+'px';m.scrollLeft=ox*w-cx;m.scrollTop=oy*(w*960/1900)-cy}"
-          "function ctr(){return[m.clientWidth/2,m.clientHeight/2]}function z(f){var c=ctr();set(w*f,c[0],c[1])}"
-          "function fit(){var c=m.clientWidth<700?1500:Math.min(1900,m.clientWidth-2);w=c;s.style.width=w+'px';m.scrollLeft=Math.max(0,.49*w-m.clientWidth/2);m.scrollTop=m.clientWidth<700?Math.max(0,w*.38-m.clientHeight/2):0}"
-          "document.getElementById('zi').onclick=function(){z(1.3)};document.getElementById('zo').onclick=function(){z(.77)};document.getElementById('zf').onclick=function(){w=m.clientWidth<700?1500:Math.min(1900,m.clientWidth-2);if(m.clientWidth>=700){s.style.width=w+'px';m.scrollLeft=0;m.scrollTop=0}else fit()};"
-          "function hz(){if(innerWidth<=720){m.style.height=Math.max(320,innerHeight-m.getBoundingClientRect().top-10)+'px'}else m.style.height=''}hz();addEventListener('resize',hz);document.getElementById('fd').addEventListener('toggle',hz);"
-          "fit();"
-          "function dist(t){return Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY)}var P=null;"
-          "m.addEventListener('touchstart',function(e){if(e.touches.length===2){P={d:dist(e.touches),w:w}}},{passive:true});"
-          "m.addEventListener('touchmove',function(e){if(e.touches.length===2&&P){e.preventDefault();var r=m.getBoundingClientRect(),t=e.touches;set(P.w*dist(t)/P.d,(t[0].clientX+t[1].clientX)/2-r.left,(t[0].clientY+t[1].clientY)/2-r.top)}},{passive:false});"
-          "m.addEventListener('touchend',function(e){if(e.touches.length<2)P=null});"
-          "['gesturestart','gesturechange','gestureend'].forEach(function(n){m.addEventListener(n,function(e){e.preventDefault()})});"
-          "var d=null;m.addEventListener('pointerdown',function(e){if(e.pointerType==='mouse'&&!e.target.closest('a'))d={x:e.clientX,y:e.clientY,l:m.scrollLeft,t:m.scrollTop}});"
-          "addEventListener('pointermove',function(e){if(!d)return;var dx=e.clientX-d.x,dy=e.clientY-d.y;if(Math.abs(dx)+Math.abs(dy)>3)m.classList.add('dr');m.scrollLeft=d.l-dx;m.scrollTop=d.t-dy});"
-          "addEventListener('pointerup',function(){d=null;m.classList.remove('dr')});"
-          "m.addEventListener('wheel',function(e){if(e.ctrlKey){e.preventDefault();var r=m.getBoundingClientRect();set(w*(e.deltaY<0?1.1:.91),e.clientX-r.left,e.clientY-r.top)}},{passive:false})})()</script>")
+    js = r"""<script>(function(){
+var s=document.querySelector('.mapwrap svg'),m=document.querySelector('.mapwrap'),w=0,RA=960/1900,KEY='hgssMapState';
+function ph(){return innerWidth<=720}
+function fitW(){return Math.min(1900,Math.max(300,m.clientWidth-2))}
+function hz(){if(w<=fitW()+2)m.style.height=Math.round(w*RA+2)+'px';else if(ph())m.style.height=Math.max(320,innerHeight-m.getBoundingClientRect().top-10)+'px';else m.style.height=''}
+function apply(){var ns=Math.max(1,Math.min(3.2,1393/w));s.style.setProperty('--ns',ns);s.classList.toggle('ov',ns>=1.5);s.style.width=w+'px';hz()}
+function set(v,cx,cy){var ox=(m.scrollLeft+cx)/w,oy=(m.scrollTop+cy)/(w*RA);w=Math.max(fitW(),Math.min(3200,v));apply();m.scrollLeft=ox*w-cx;m.scrollTop=oy*(w*RA)-cy}
+function ctr(){return[m.clientWidth/2,m.clientHeight/2]}
+function z(f){var c=ctr();set(w*f,c[0],c[1])}
+function fit(){w=fitW();apply();m.scrollLeft=0;m.scrollTop=0}
+var st=null;try{st=JSON.parse(sessionStorage.getItem(KEY))}catch(e){}
+if(st&&st.w){w=Math.max(fitW(),st.w);apply();m.scrollLeft=st.l;m.scrollTop=st.t}else fit();
+function save(){try{sessionStorage.setItem(KEY,JSON.stringify({w:w,l:m.scrollLeft,t:m.scrollTop}))}catch(e){}}
+addEventListener('pagehide',save);
+m.addEventListener('click',function(e){if(e.target.closest('a')){save();try{sessionStorage.setItem('hgssFromMap','1')}catch(x){}}});
+document.getElementById('zi').onclick=function(){z(1.3)};document.getElementById('zo').onclick=function(){z(.77)};document.getElementById('zf').onclick=fit;
+addEventListener('resize',function(){w=Math.max(fitW(),w);apply()});
+function dist(t){return Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY)}var P=null,lt=0,lx=0,ly=0;
+m.addEventListener('touchstart',function(e){if(e.touches.length===2){P={d:dist(e.touches),w:w}}},{passive:true});
+m.addEventListener('touchmove',function(e){if(e.touches.length===2&&P){e.preventDefault();var r=m.getBoundingClientRect(),t=e.touches;set(P.w*dist(t)/P.d,(t[0].clientX+t[1].clientX)/2-r.left,(t[0].clientY+t[1].clientY)/2-r.top)}},{passive:false});
+m.addEventListener('touchend',function(e){if(e.touches.length<2)P=null;if(e.touches.length===0&&e.changedTouches.length===1&&!e.target.closest('a')){var c=e.changedTouches[0],n=Date.now();if(n-lt<320&&Math.hypot(c.clientX-lx,c.clientY-ly)<30){var r=m.getBoundingClientRect();if(w<=fitW()*1.3)set(Math.max(1500,fitW()*2.2),c.clientX-r.left,c.clientY-r.top);else fit();lt=0}else{lt=n;lx=c.clientX;ly=c.clientY}}});
+['gesturestart','gesturechange','gestureend'].forEach(function(n){m.addEventListener(n,function(e){e.preventDefault()})});
+var d=null;m.addEventListener('pointerdown',function(e){if(e.pointerType==='mouse'&&!e.target.closest('a'))d={x:e.clientX,y:e.clientY,l:m.scrollLeft,t:m.scrollTop}});
+addEventListener('pointermove',function(e){if(!d)return;var dx=e.clientX-d.x,dy=e.clientY-d.y;if(Math.abs(dx)+Math.abs(dy)>3)m.classList.add('dr');m.scrollLeft=d.l-dx;m.scrollTop=d.t-dy});
+addEventListener('pointerup',function(){d=null;m.classList.remove('dr')});
+m.addEventListener('wheel',function(e){if(e.ctrlKey){e.preventDefault();var r=m.getBoundingClientRect();set(w*(e.deltaY<0?1.1:.91),e.clientX-r.left,e.clientY-r.top)}},{passive:false});
+document.querySelectorAll('.vt button').forEach(function(b){b.onclick=function(){document.querySelectorAll('.vt button').forEach(function(x){x.classList.toggle('on',x===b)});var l=b.dataset.v==='list';document.querySelector('.mapbox').style.display=l?'none':'';document.querySelector('.lst').style.display=l?'block':'none';if(!l){apply()}}});
+})()</script>"""
     ui = ('<details class="fdet" id="fd"><summary>筛选 / 搜索 <span id="fs"></span></summary><div class="fl"><input id="fq" type="search" placeholder="搜索地点，如：月见山、3号、塔" autocomplete="off">'
           '<div class="row" data-g="c"><b>类型</b><button data-v="市">市</button><button data-v="镇">镇</button><button data-v="路">道路</button><button data-v="洞">洞窟·径·关口</button><button data-v="塔">塔</button><button data-v="山">山</button><button data-v="水">湖·岛·船</button></div>'
           '<div class="row" data-g="r"><b>地区</b><button data-v="j">城都</button><button data-v="k">关都</button></div>'
           '<div class="row" data-g="ph"><b>阶段</b><button data-v="1">主线（1–16 节）</button><button data-v="2">通关后（17–32 节）</button><button id="fx">清除筛选</button><span class="fc" id="fc"></span></div></div></details>'
           '<div class="res" id="rs"></div>')
-    fjs = ("<script>(function(){var A=[].slice.call(document.querySelectorAll('.mapwrap a')),F={c:[],r:[],ph:[]},q=document.getElementById('fq'),rs=document.getElementById('rs'),fc=document.getElementById('fc');"
-           "if(innerWidth>720)document.getElementById('fd').open=true;function run(){var t=q.value.trim(),act=t||F.c.length||F.r.length||F.ph.length,n=0,h='';A.forEach(function(a){var d=a.dataset,ok=(!t||d.k.indexOf(t)>-1)&&(!F.c.length||F.c.indexOf(d.c)>-1)&&(!F.r.length||F.r.indexOf(d.r)>-1)&&(!F.ph.length||F.ph.indexOf(d.ph)>-1);"
-           "a.firstChild.classList.toggle('off',!ok);if(ok){n++;h+='<a href=\"'+a.getAttribute('href')+'\">'+d.k+'</a>'}});"
-           "fc.textContent=act?'共 '+n+' 个地点':'';document.getElementById('fs').textContent=act?'· '+n+' 个地点':'';rs.style.display=act&&n<=40?'flex':'none';rs.innerHTML=h}"
-           "document.querySelectorAll('.fl .row[data-g] button[data-v]').forEach(function(b){b.onclick=function(){var g=b.parentNode.dataset.g,v=b.dataset.v,i=F[g].indexOf(v);if(i<0)F[g].push(v);else F[g].splice(i,1);b.classList.toggle('on',i<0);run()}});"
-           "document.getElementById('fx').onclick=function(){F={c:[],r:[],ph:[]};q.value='';document.querySelectorAll('.fl button.on').forEach(function(b){b.classList.remove('on')});run()};q.oninput=run})()</script>")
+    fjs = r"""<script>(function(){var A=[].slice.call(document.querySelectorAll('.mapwrap a')),L=[].slice.call(document.querySelectorAll('.lst a')),F={c:[],r:[],ph:[]},q=document.getElementById('fq'),rs=document.getElementById('rs'),fc=document.getElementById('fc');
+if(innerWidth>720)document.getElementById('fd').open=true;
+function chk(d,t){return(!t||d.k.indexOf(t)>-1)&&(!F.c.length||F.c.indexOf(d.c)>-1)&&(!F.r.length||F.r.indexOf(d.r)>-1)&&(!F.ph.length||F.ph.indexOf(d.ph)>-1)}
+function run(){var t=q.value.trim(),act=t||F.c.length||F.r.length||F.ph.length,n=0,h='';
+A.forEach(function(a){var ok=chk(a.dataset,t);a.firstChild.classList.toggle('off',!ok);if(ok){n++;h+='<a href="'+a.getAttribute('href')+'">'+a.dataset.k+'</a>'}});
+L.forEach(function(a){a.style.display=chk(a.dataset,t)?'':'none'});
+fc.textContent=act?'共 '+n+' 个地点':'';document.getElementById('fs').textContent=act?'· '+n+' 个地点':'';rs.style.display=act&&n<=40?'flex':'none';rs.innerHTML=h}
+document.querySelectorAll('.fl .row[data-g] button[data-v]').forEach(function(b){b.onclick=function(){var g=b.parentNode.dataset.g,v=b.dataset.v,i=F[g].indexOf(v);if(i<0)F[g].push(v);else F[g].splice(i,1);b.classList.toggle('on',i<0);run()}});
+document.getElementById('fx').onclick=function(){F={c:[],r:[],ph:[]};q.value='';document.querySelectorAll('.fl button.on').forEach(function(b){b.classList.remove('on')});run()};q.oninput=run;
+L.forEach(function(a){a.addEventListener('click',function(){try{sessionStorage.setItem('hgssFromMap','1')}catch(e){}})})})()</script>"""
+    lst = '<div class="lst" style="display:none">'
+    for rg, rl in (('j', '城都地区'), ('k', '关都地区')):
+        lst += f'<h2>{rl}</h2><div class="chips">'
+        for n in sorted([n for n in wm['nodes'] if (n['x'] >= x27) == (rg == 'k')], key=lambda n: (n['t'] == 'r', n['p'], n['k'])):
+            k = n['k']; post = n['p'] > 16
+            cat = catof(n)
+            lst += (f'<a class="chip {n["t"]}{" post" if post else ""}" href="part-{n["p"]}.html#{n["id"]}" data-k="{e(k)}" data-c="{cat}" data-r="{rg}" data-ph="{2 if post else 1}">{e(k)}</a>')
+        lst += '</div>'
+    lst += '</div>'
     body = (f'<p class="crumb"><a href="../">攻略大全</a> / <a href="./">{e(g["game"])}</a></p><h1>地图总览</h1>'
             '<p class="chap">按城都和关都的地理位置排列，点任意地点跳到对应的攻略段落。左边是城都，右边是关都，两地由 27 号道路相连。</p>'
             f'{legend}{ui}'
+            '<div class="vt"><button class="on" data-v="map">地图</button><button data-v="list">列表</button><span>双指缩放 · 双击放大 · 点地点跳转</span></div>'
             f'<div class="mapbox"><div class="mapwrap"><svg viewBox="0 0 1900 960" xmlns="http://www.w3.org/2000/svg">{svg}</svg></div>'
-            f'<div class="zb"><button id="zi" aria-label="放大">＋</button><button id="zo" aria-label="缩小">－</button><button id="zf" class="fit">适应</button></div></div>{js}{fjs}')
+            f'<div class="zb"><button id="zi" aria-label="放大">＋</button><button id="zo" aria-label="缩小">－</button><button id="zf" class="fit">总览</button></div></div>{lst}{js}{fjs}')
     (out / 'map.html').write_text(page_html(f'地图总览 - {g["game"]}', css + body), encoding='utf-8')
 
 
@@ -264,6 +294,7 @@ def build(folder):
                 + f'<a href="{g["licenseUrl"]}" target="_blank" rel="noopener noreferrer">{g["license"]}</a> 授权。'
                 f'配图来自原站，版权归原作者与游戏厂商；地图截图来自 <a href="https://archives.bulbagarden.net/wiki/Category:HeartGold_and_SoulSilver_maps" target="_blank" rel="noopener noreferrer">Bulbagarden Archives</a>，游戏画面版权归 Nintendo / Game Freak / The Pokémon Company。</p>')
 
+    backjs = "<script>try{if(sessionStorage.getItem('hgssFromMap')){var a=document.createElement('a');a.className='backmap';a.href='map.html';a.textContent='\u2190 \u8fd4\u56de\u5730\u56fe';document.body.appendChild(a)}}catch(e){}</script>"
     tocs = {}
     for i, (slug, info, body) in enumerate(pages):
         body = re.sub(r'<figure data-img="([^"]+)">(.*?)</figure>', fig, body, flags=re.S)
@@ -287,7 +318,7 @@ def build(folder):
             body, items = treeify(body, nxt)
             tocs[slug] = items
         (out / f'{slug}.html').write_text(page_html(f'{info["title"]} - {g["game"]}',
-            f'{crumb}<h1>{e(info["title"])}</h1><p class="chap">{e(info["chapter"])}</p>{tree}{body}{pager}{credit(slug)}{dock}'), encoding='utf-8')
+            f'{crumb}<h1>{e(info["title"])}</h1><p class="chap">{e(info["chapter"])}</p>{tree}{body}{pager}{credit(slug)}{dock}{backjs if hasmap else ""}'), encoding='utf-8')
 
     toc, last = '', None
     for slug, info, _ in pages:
