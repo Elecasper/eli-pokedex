@@ -10,7 +10,7 @@ Tables (wild Pokémon, items, shops, trainers, boss parties) are converted autom
 with names from data.json and PokeAPI slugs; prose, item locations and headings come
 from the translation file. Untranslated keys fall back to the English text.
 """
-import html, json, re, sys
+import os, html, json, re, sys
 from pathlib import Path
 
 SITE = Path(__file__).resolve().parent.parent
@@ -609,7 +609,7 @@ def convert(w, keys, nested=False):
             if cap and not re.search(r'[\u4e00-\u9fff]', zh):
                 k = nk(keys, 'G'); keys[k] = cap; zh = f'{{{{{k}}}}}'
             url = 'https://bulbapedia.bulbagarden.net/wiki/File:' + b[1].replace(' ', '_')
-            out.append(f'<p class="maplink"><a href="{e(url)}" target="_blank" rel="noopener">{zh or "查看地图"}</a><span>Bulbapedia 原图</span></p>')
+            out.append(f'<p class="maplink"><a href="{e(url)}" target="_blank" rel="noopener">{zh or "查看地图"}</a></p>')
         elif b[0] in ('p', 'li'):
             t = inline(b[1])
             if not re.sub(r'<[^>]+>|\s', '', t):
@@ -648,6 +648,36 @@ def convert(w, keys, nested=False):
                     k = nk(keys, PP); keys[k] = ' / '.join(cells)
                     out.append(f'<p class="note">{{{{{k}}}}}</p>')
     return '\n'.join(out)
+
+
+MAP_A = r'<p class="maplink"><a href="([^"]*)" target="_blank" rel="noopener">([^<]*)</a></p>'
+
+
+def tidy_maps(body):
+    """Fold map links into the heading they belong to, or one compact line per run."""
+    def run(m):
+        links = re.findall(MAP_A, m.group(0))
+        caps = [c for _, c in links]
+        pre = ''
+        if len(caps) > 1:
+            pre = os.path.commonprefix(caps)
+            pre = pre[:max(pre.rfind(' '), pre.rfind('（'), 0)] if not all(c.startswith(pre + ' ') or c.startswith(pre + '（') or c == pre for c in caps) else pre
+            if any(c == pre for c in caps):
+                pre = ''
+        items = ' · '.join(f'<a href="{u}" target="_blank" rel="noopener">{c[len(pre):].strip(" ") or c}</a>' for u, c in links)
+        lead = f'{pre.strip()}：' if pre.strip() else ''
+        return f'<p class="maplink"><span>地图</span>{lead}{items}</p>'
+    body = re.sub(f'(?:{MAP_A}\\n?)+', run, body)
+    def swap(m):
+        t = re.sub(r'<[^>]+>', '', m.group(4)).strip()
+        return f'{m.group(2)}\n{m.group(1)}' if t and t in re.sub(r'<[^>]+>', '', m.group(1)) else m.group(0)
+    body = re.sub(r'(<p class="maplink">.*?</p>)\n?(<h([23])>(.*?)</h\3>)', swap, body)
+    def head(m):
+        h, t, u, c = m.group(1), m.group(2), m.group(3), m.group(4)
+        if c.split('（')[0].strip() == re.sub(r'<[^>]+>', '', t).strip():
+            return f'<h{h}>{t} <a class="hmap" href="{u}" target="_blank" rel="noopener">地图</a></h{h}>'
+        return m.group(0)
+    return re.sub(r'<h([23])>(.*?)</h\1>\n<p class="maplink"><span>地图</span><a href="([^"]*)" target="_blank" rel="noopener">([^<]*)</a></p>', head, body)
 
 
 def folder(slug):
@@ -698,6 +728,7 @@ def build(slug, titles):
             print(f'part {n}: {len(missing)} untranslated keys, e.g. {missing[:5]}')
         body = re.sub(r'\{\{([A-Z]\d+)\}\}', lambda m: zh.get(m.group(1), keys.get(m.group(1), '')), body)
         body = re.sub(r'<h([23])></h\1>|<p></p>|<ul><li></li></ul>|<th colspan="3"></th>', '', body)
+        body = tidy_maps(body)
         info = {'title': titles[n - 1][0], 'chapter': titles[n - 1][1]}
         (folder(slug) / f'part-{n}.html').write_text(f'<!--{json.dumps(info, ensure_ascii=False)}-->\n{body}\n', encoding='utf-8')
         pages.append(f'part-{n}')
