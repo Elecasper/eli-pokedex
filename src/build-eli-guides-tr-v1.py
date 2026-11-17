@@ -110,8 +110,8 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,
 #tip .ta{color:#6f675c;font-size:13px;margin:2px 0 6px}
 #tip .tx{position:absolute;right:6px;top:4px;border:0;background:none;font-size:22px;line-height:1;color:#6f675c;padding:4px 8px;cursor:pointer}
 .mw{position:relative;line-height:0}
-.ip{position:absolute;transform:translate(-50%,-50%);width:30px;height:30px;border-radius:50%;background:#fff;border:2px solid #d32f2f;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.35);cursor:pointer;display:flex;align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent}
-.ip img{width:24px;height:24px;image-rendering:pixelated;border:0!important;border-radius:0!important;background:none!important}
+.ip,.ip:active,.ip:hover{transform:none!important}.ip{position:absolute;margin:-15px 0 0 -15px;min-height:0;min-width:0;width:30px;height:30px;border-radius:50%;background:#fff;border:2px solid #d32f2f;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.35);cursor:pointer;display:flex;align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent}
+.ip img{pointer-events:none;-webkit-user-drag:none;width:24px;height:24px;image-rendering:pixelated;border:0!important;border-radius:0!important;background:none!important}
 .ip:focus-visible,.ip.on{outline:3px solid #ffd54f}
 </style>'''
 
