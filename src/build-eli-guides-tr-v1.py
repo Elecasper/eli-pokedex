@@ -169,12 +169,18 @@ def write_map(folder, g, out, pages):
     for a, b in (('浅葱市', '海王丸号'), ('海王丸号', '枯叶市')):
         A, B = by[a], by[b]
         svg += f'<path d="M{A["x"]} {A["y"]} Q{(A["x"] + B["x"]) // 2} {max(A["y"], B["y"]) + 120} {B["x"]} {B["y"]}" class="ed sea" fill="none"/>'
+    x27 = next(m['x'] for m in wm['nodes'] if m['k'] == '27号')
     for n in wm['nodes']:
         h, w = 30, n['w']
         post = n['p'] > 16
         cls = f'nd {n["t"]}{" post" if post else ""}'
         href = f'part-{n["p"]}.html#{n["id"]}'
-        svg += (f'<a href="{href}"><g class="{cls}"><title>{e(n["k"])} · 第 {n["p"]} 节：{e(titles["part-" + str(n["p"])])}</title>'
+        k = n['k']
+        cat = ('市' if k.endswith('市') else '镇' if k.endswith('镇') else '路' if n['t'] == 'r' else
+               '塔' if '塔' in k else '洞' if ('洞' in k or '之路' in k or '径' in k or k.endswith('林') and n['t'] == 'd' or '关口' in k) else
+               '山' if k.endswith('山') else '水' if (k.endswith('湖') or k.endswith('岛') or k.endswith('号') and n['t'] == 'd') else '其')
+        reg = 'k' if n['x'] >= x27 else 'j'
+        svg += (f'<a href="{href}" data-k="{e(k)}" data-c="{cat}" data-r="{reg}" data-ph="{2 if post else 1}" data-p="{n["p"]}"><g class="{cls}"><title>{e(n["k"])} · 第 {n["p"]} 节：{e(titles["part-" + str(n["p"])])}</title>'
                 f'<rect x="{n["x"] - w // 2}" y="{n["y"] - h // 2}" width="{w}" height="{h}" rx="{15 if n["t"] != "r" else 8}"/>'
                 f'<text x="{n["x"]}" y="{n["y"] + 5}" text-anchor="middle">{e(n["k"])}</text></g></a>')
     css = """<style>main{max-width:none;padding:8px 12px 40px}.mapwrap{overflow:auto;border:1px solid #44574b;border-radius:12px;background:#18221d;max-height:78vh;max-height:78dvh;cursor:grab;-webkit-overflow-scrolling:touch}.mapwrap.dr{cursor:grabbing;user-select:none}
@@ -182,7 +188,7 @@ def write_map(folder, g, out, pages):
 .nd rect{fill:#2f4336;stroke:#c9e265;stroke-width:2}.nd text{fill:#f1f0e6;font-size:15px;font-weight:700;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif}
 .nd.r rect{fill:#26332b;stroke:#6e8575;stroke-width:1.5}.nd.r text{font-size:13px;font-weight:500;fill:#cdd6c8}.nd.d rect{fill:#3a2f45;stroke:#b79ae0}.nd.post rect{stroke:#6cc3f0}.nd.d.post rect{stroke:#6cc3f0}
 .nd:hover rect{fill:#c9e265}.nd:hover text{fill:#1f2a24}.leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:#a9b5a6;margin:6px 0 12px}.leg i{display:inline-block;width:14px;height:14px;border-radius:5px;vertical-align:-2px;margin-right:5px;border:2px solid}
-.zb{display:flex;gap:8px;margin:0 0 10px}.zb button{background:#2a372f;border:1px solid #44574b;color:#f1f0e6;border-radius:8px;padding:6px 14px;font-size:15px}</style>"""
+.fl{margin:0 0 12px;display:grid;gap:8px}.fl input{width:100%;padding:9px 14px;border-radius:10px;border:1px solid #44574b;background:#2a372f;color:#f1f0e6;font-size:15px}.fl .row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.fl .row>b{font-size:12.5px;color:#a9b5a6;font-weight:600;margin-right:2px}.fl button{background:#2a372f;border:1px solid #44574b;color:#d6dccf;border-radius:999px;padding:5px 12px;font-size:13.5px;cursor:pointer}.fl button.on{background:#c9e265;color:#1f2a24;border-color:#c9e265;font-weight:700}.fc{font-size:13px;color:#a9b5a6}.nd.off{opacity:.13;pointer-events:none}.res{display:none;flex-wrap:wrap;gap:6px;margin:0 0 10px}.res a{font-size:13.5px;padding:4px 10px;border:1px solid #44574b;border-radius:999px;text-decoration:none;background:#2a372f}.zb{display:flex;gap:8px;margin:0 0 10px}.zb button{background:#2a372f;border:1px solid #44574b;color:#f1f0e6;border-radius:8px;padding:6px 14px;font-size:15px}</style>"""
     legend = ('<div class="leg"><span><i style="border-color:#c9e265;background:#2f4336"></i>城镇（主线 1–16 节）</span>'
               '<span><i style="border-color:#6cc3f0;background:#2f4336"></i>城镇（通关后 17–32 节）</span>'
               '<span><i style="border-color:#b79ae0;background:#3a2f45"></i>洞窟 / 塔 / 特殊地点</span>'
@@ -196,10 +202,21 @@ def write_map(folder, g, out, pages):
           "var d=null;m.addEventListener('pointerdown',function(e){if(e.pointerType==='mouse'&&!e.target.closest('a'))d={x:e.clientX,y:e.clientY,l:m.scrollLeft,t:m.scrollTop,mv:0}});"
           "addEventListener('pointermove',function(e){if(!d)return;var dx=e.clientX-d.x,dy=e.clientY-d.y;if(Math.abs(dx)+Math.abs(dy)>3)m.classList.add('dr');m.scrollLeft=d.l-dx;m.scrollTop=d.t-dy});"
           "addEventListener('pointerup',function(){d=null;m.classList.remove('dr')})})()</script>")
+    ui = ('<div class="fl"><input id="fq" type="search" placeholder="搜索地点，如：月见山、3号、塔" autocomplete="off">'
+          '<div class="row" data-g="c"><b>类型</b><button data-v="市">市</button><button data-v="镇">镇</button><button data-v="路">道路</button><button data-v="洞">洞窟·径·关口</button><button data-v="塔">塔</button><button data-v="山">山</button><button data-v="水">湖·岛·船</button></div>'
+          '<div class="row" data-g="r"><b>地区</b><button data-v="j">城都</button><button data-v="k">关都</button></div>'
+          '<div class="row" data-g="ph"><b>阶段</b><button data-v="1">主线（1–16 节）</button><button data-v="2">通关后（17–32 节）</button><button id="fx">清除筛选</button><span class="fc" id="fc"></span></div></div>'
+          '<div class="res" id="rs"></div>')
+    fjs = ("<script>(function(){var A=[].slice.call(document.querySelectorAll('.mapwrap a')),F={c:[],r:[],ph:[]},q=document.getElementById('fq'),rs=document.getElementById('rs'),fc=document.getElementById('fc');"
+           "function run(){var t=q.value.trim(),act=t||F.c.length||F.r.length||F.ph.length,n=0,h='';A.forEach(function(a){var d=a.dataset,ok=(!t||d.k.indexOf(t)>-1)&&(!F.c.length||F.c.indexOf(d.c)>-1)&&(!F.r.length||F.r.indexOf(d.r)>-1)&&(!F.ph.length||F.ph.indexOf(d.ph)>-1);"
+           "a.firstChild.classList.toggle('off',!ok);if(ok){n++;h+='<a href=\"'+a.getAttribute('href')+'\">'+d.k+'</a>'}});"
+           "fc.textContent=act?'共 '+n+' 个地点':'';rs.style.display=act&&n<=40?'flex':'none';rs.innerHTML=h}"
+           "document.querySelectorAll('.fl .row[data-g] button[data-v]').forEach(function(b){b.onclick=function(){var g=b.parentNode.dataset.g,v=b.dataset.v,i=F[g].indexOf(v);if(i<0)F[g].push(v);else F[g].splice(i,1);b.classList.toggle('on',i<0);run()}});"
+           "document.getElementById('fx').onclick=function(){F={c:[],r:[],ph:[]};q.value='';document.querySelectorAll('.fl button.on').forEach(function(b){b.classList.remove('on')});run()};q.oninput=run})()</script>")
     body = (f'<p class="crumb"><a href="../">攻略大全</a> / <a href="./">{e(g["game"])}</a></p><h1>地图总览</h1>'
             '<p class="chap">按城都和关都的地理位置排列，点任意地点跳到对应的攻略段落。左边是城都，右边是关都，两地由 27 号道路相连。</p>'
-            f'{legend}<div class="zb"><button id="zi">放大 +</button><button id="zo">缩小 −</button></div>'
-            f'<div class="mapwrap"><svg viewBox="0 0 1900 960" xmlns="http://www.w3.org/2000/svg">{svg}</svg></div>{js}')
+            f'{legend}{ui}<div class="zb"><button id="zi">放大 +</button><button id="zo">缩小 −</button></div>'
+            f'<div class="mapwrap"><svg viewBox="0 0 1900 960" xmlns="http://www.w3.org/2000/svg">{svg}</svg></div>{js}{fjs}')
     (out / 'map.html').write_text(page_html(f'地图总览 - {g["game"]}', css + body), encoding='utf-8')
 
 
