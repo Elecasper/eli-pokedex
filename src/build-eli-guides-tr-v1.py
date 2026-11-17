@@ -31,6 +31,7 @@ p,li{font-size:16px;line-height:1.85}ol,ul{padding-left:22px}b{color:#fff}
 .note{font-size:14px;color:#a9b5a6;background:#2a372f;border-radius:10px;padding:10px 14px}
 figure{margin:14px 0;text-align:center}figure img{max-width:100%;height:auto;border-radius:8px;background:#2a372f}
 figcaption{font-size:13px;color:#a9b5a6;margin-top:6px}
+.mapgrid{display:grid;gap:12px;margin:14px 0;grid-template-columns:1fr}.mapgrid.n2,.mapgrid.n3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.mapgrid figure.map{margin:0}.mapgrid.n1 figure.map{max-width:560px;margin:0 auto}figure.map a{display:block}figure.map img{width:100%;image-rendering:auto;border:1px solid #36463c}figure.map figcaption{font-size:13px;color:#a9b5a6;margin-top:6px}
 .maplink{margin:-2px 0 12px;font-size:13px;color:#a9b5a6;line-height:1.9}.maplink span{display:inline-block;margin-right:8px;padding:0 7px;border-radius:5px;background:#2a372f;color:#c9e265;font-size:12px}.maplink a{color:#a9b5a6;text-decoration:underline;text-decoration-color:#44574b;text-underline-offset:3px}.maplink a:hover{color:#c9e265}.hmap{margin-left:8px;padding:1px 8px;border-radius:5px;background:#2a372f;color:#c9e265;font-size:12px;font-weight:400;text-decoration:none;vertical-align:middle}
 .tip{background:#2a372f;border:1px solid #44574b;border-left:4px solid #c9e265;border-radius:10px;padding:4px 16px;margin:16px 0}
 .tip h4{margin:12px 0 0;font-size:15px;color:#c9e265}.tip p,.tip li{font-size:15px}
@@ -84,7 +85,7 @@ def build(folder):
                 + (f'本页由 Eli 的杂货间转载，并有改动（重新排版、去掉站内链接）。原文与本页均以 ' if g.get('kind') == 'repost' else
                    f'本页由 Eli 的杂货间翻译为中文，并有改动（重新排版、精简部分图注）。原文与译文均以 ')
                 + f'<a href="{g["licenseUrl"]}" target="_blank" rel="noopener noreferrer">{g["license"]}</a> 授权。'
-                f'配图来自原站，版权归原作者与游戏厂商。</p>')
+                f'配图来自原站，版权归原作者与游戏厂商；地图截图来自 <a href="https://archives.bulbagarden.net/wiki/Category:HeartGold_and_SoulSilver_maps" target="_blank" rel="noopener noreferrer">Bulbagarden Archives</a>，游戏画面版权归 Nintendo / Game Freak / The Pokémon Company。</p>')
 
     for i, (slug, info, body) in enumerate(pages):
         body = re.sub(r'<figure data-img="([^"]+)">(.*?)</figure>', fig, body, flags=re.S)

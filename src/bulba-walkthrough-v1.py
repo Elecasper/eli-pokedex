@@ -609,6 +609,16 @@ def convert(w, keys, nested=False):
             if cap and not re.search(r'[\u4e00-\u9fff]', zh):
                 k = nk(keys, 'G'); keys[k] = cap; zh = f'{{{{{k}}}}}'
             url = 'https://bulbapedia.bulbagarden.net/wiki/File:' + b[1].replace(' ', '_')
+            mslug = re.sub(r'[^a-z0-9]+', '-', b[1].rsplit('.', 1)[0].lower()).strip('-')
+            mfile = SITE / 'guides' / 'img' / 'maps' / f'{mslug}.webp'
+            if mfile.exists():
+                from PIL import Image
+                with Image.open(mfile) as im:
+                    mw, mh = im.size
+                out.append(f'<figure class="map"><a href="../img/maps/{mslug}.webp" target="_blank" rel="noopener">'
+                           f'<img src="../img/maps/{mslug}.webp" width="{mw}" height="{mh}" loading="lazy" alt="{zh or "地图"}"></a>'
+                           + (f'<figcaption>{zh}</figcaption>' if zh else '') + '</figure>')
+                continue
             out.append(f'<p class="maplink"><a href="{e(url)}" target="_blank" rel="noopener">{zh or "查看地图"}</a></p>')
         elif b[0] in ('p', 'li'):
             t = inline(b[1])
@@ -655,6 +665,15 @@ MAP_A = r'<p class="maplink"><a href="([^"]*)" target="_blank" rel="noopener">([
 
 def tidy_maps(body):
     """Fold map links into the heading they belong to, or one compact line per run."""
+    FIG = r'<figure class="map">.*?</figure>'
+    def grp(m):
+        figs = re.findall(FIG, m.group(0), re.S)
+        return f'<div class="mapgrid n{min(len(figs), 3)}">' + ''.join(figs) + '</div>'
+    body = re.sub(rf'(?:{FIG}\n?)+', grp, body, flags=re.S)
+    def swapg(m):
+        t = re.sub(r'<[^>]+>', '', m.group(4)).strip()
+        return f'{m.group(2)}\n{m.group(1)}' if t and t in re.sub(r'<[^>]+>', '', m.group(1)) else m.group(0)
+    body = re.sub(r'(<div class="mapgrid[^"]*">.*?</div>)\n?(<h([23])>(.*?)</h\3>)', swapg, body, flags=re.S)
     def run(m):
         links = re.findall(MAP_A, m.group(0))
         caps = [c for _, c in links]
