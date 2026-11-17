@@ -74,6 +74,11 @@ terms = {}
 used = set()
 for f in glob.glob(D + '/zh/part-*.txt'):
     used |= set(re.findall(r'<b>([^<]*)</b>', open(f, encoding='utf-8').read()))
+pp = os.path.join(D, 'item-pins.json')
+if os.path.exists(pp):
+    for lst in json.load(open(pp, encoding='utf-8')).values():
+        used |= {x['n'] for x in lst}
+HAND.setdefault('Pokédex', ('重要物品', '记录见过和捕获的宝可梦的图鉴。'))
 for t in sorted(used):
     m = re.match(r'^(招式|秘传)学习器(\d+)（(.+)）$', t)
     if m and m.group(3) in mnm:

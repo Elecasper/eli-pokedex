@@ -350,7 +350,8 @@ def cast_strip(cast):
     return ('<div class="cast"><b>本节人物</b>' + ''.join(f'<span class="ct">{av(n, "av")}<i>{n}</i></span>' for n in cast) + '</div>')
 
 
-def mappins(body, pins):
+def mappins(body, pins, terms=None):
+    terms = terms or {}
     """overlay item icons on map figures; returns (body, extra popup data)"""
     extra = {}
     rows = {}
@@ -367,7 +368,11 @@ def mappins(body, pins):
             parts = [x for x in re.split(r'<br\s*/?>', loc)]
             txt = re.sub(r'<[^>]+>', '', parts[p.get('l', 0)] if p.get('l', 0) < len(parts) else parts[0])
             key = f'@{img}:{i}'
-            extra[key] = {'k': '道具位置', 'n': p['n'], 'd': txt, 'i': ic} if ic else {'k': '道具位置', 'n': p['n'], 'd': txt}
+            t = terms.get(p['n'])
+            ent = {'k': '道具', 'n': p['n'], 'a': '拾取位置：' + txt, 'd': t['d'] if t else ''}
+            if ic: ent['i'] = ic
+            elif t and t.get('i'): ent['i'] = t['i']
+            extra[key] = ent
             btns += f'<button class="ip" type="button" style="left:{p["x"]}%;top:{p["y"]}%" data-t="{e(key)}" aria-label="{e(p["n"])}">' + (f'<img src="../img/{ic}" alt="">' if ic else '●') + '</button>'
         if not btns: return inner
         return re.sub(r'(<img src="[^"]*' + re.escape(img) + r'[^>]*>)', r'<div class="mw">\1' + btns.replace('\\', '\\\\') + '</div>', inner, count=1)
@@ -389,7 +394,7 @@ function esc(x){return String(x).replace(/[&<>]/g,function(c){return{'&':'&amp;'
 function hide(){T.classList.remove('on');cur=null}
 function show(el){var k=el.getAttribute('data-t'),d=D[k];if(!d)return;if(cur===el){hide();return}cur=el;
 var ic=d.i?'<img src="../img/'+d.i+'" alt="">':(SV[d.k]||'');
-T.innerHTML='<button class="tx" aria-label="关闭">×</button><div class="th">'+ic+'<div><span class="tk">'+esc(d.k)+'</span><h4>'+esc(d.n||k.replace(/（.*/,''))+'</h4></div></div>'+(d.a?'<div class="ta">'+esc(d.a)+(d.b?' ｜ '+esc(d.b):'')+'</div>':'')+'<div>'+esc(d.d)+'</div>';
+T.innerHTML='<button class="tx" aria-label="关闭">×</button><div class="th">'+ic+'<div><span class="tk">'+esc(d.k)+'</span><h4>'+esc(d.n||k.replace(/（.*/,''))+'</h4></div></div>'+(d.a?'<div class="ta">'+esc(d.a)+(d.b?' ｜ '+esc(d.b):'')+'</div>':'')+(d.d?'<div>'+esc(d.d)+'</div>':'');
 T.classList.add('on');place();var b=T.getBoundingClientRect().bottom,lim=innerHeight-(innerWidth<=700?80:12);if(b>lim)scrollBy({top:b-lim,behavior:'smooth'})}
 function place(){if(!cur)return;var r=cur.getBoundingClientRect(),w=T.offsetWidth,x=Math.min(Math.max(12,r.left),innerWidth-w-12);T.style.left=x+'px';T.style.top=(r.bottom+12)+'px';T.style.setProperty('--ax',Math.min(Math.max(20,r.left+r.width/2-x),w-20)+'px')}
 addEventListener('scroll',function(){requestAnimationFrame(place)},{passive:true});addEventListener('resize',place);
@@ -605,7 +610,7 @@ def build(folder):
         if NODEIDX['by']:
             body = link_maps(body, int(slug.split('-')[-1]))
         pins = json.loads((folder / 'item-pins.json').read_text(encoding='utf-8')) if (folder / 'item-pins.json').exists() else {}
-        body, pextra = mappins(body, pins)
+        body, pextra = mappins(body, pins, json.loads((folder / 'terms.json').read_text(encoding='utf-8')) if (folder / 'terms.json').exists() else {})
         body = compact(body)
         body, cast = npcify(body)
         tdata = json.loads((folder / 'terms.json').read_text(encoding='utf-8')) if (folder / 'terms.json').exists() else {}
