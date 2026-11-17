@@ -74,6 +74,15 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,
 .dock{display:grid;grid-template-columns:1fr auto auto 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:8px 12px max(8px,env(safe-area-inset-bottom));background:rgba(242,242,242,.96);backdrop-filter:blur(8px);border-top:1px solid #ddd3be}
 .dock a{display:flex;align-items:center;justify-content:center;min-height:46px;padding:0 14px;border-radius:12px;background:#ffffff;border:1px solid #ddd3be;color:#2a2623;text-decoration:none;font-size:15px;font-weight:600;white-space:nowrap}.dock a.dis{opacity:.35;pointer-events:none}.dock a.hl{color:#c62828}}
 @media(max-width:560px){h1{font-size:22px}p,li{font-size:15.5px}table.data th{white-space:normal;width:34%}}
+.tp{cursor:pointer;border-bottom:2px dotted #d32f2f;padding-bottom:1px;-webkit-tap-highlight-color:transparent}
+.tp:hover,.tp:focus-visible{background:#f3e6c9;outline:none}
+#tip{position:fixed;z-index:60;background:#fff;color:#2a2623;border:1px solid #ddd3be;border-top:4px solid #d32f2f;border-radius:10px;box-shadow:0 8px 28px rgba(0,0,0,.22);padding:12px 14px 14px;width:min(340px,calc(100vw - 24px));font-size:15px;line-height:1.6;display:none}
+#tip.on{display:block}
+#tip .tk{display:inline-block;background:#d32f2f;color:#fff;border-radius:999px;font-size:12px;padding:0 9px;margin-right:6px;font-weight:600}
+#tip h4{margin:0 0 4px;font-size:16px;padding-right:28px}
+#tip .ta{color:#6f675c;font-size:13px;margin:2px 0 6px}
+#tip .tx{position:absolute;right:6px;top:4px;border:0;background:none;font-size:22px;line-height:1;color:#6f675c;padding:4px 8px;cursor:pointer}
+@media(max-width:700px){#tip{left:12px!important;right:12px;bottom:76px;top:auto!important;width:auto}}
 </style><style id="eli-theme">:root{color-scheme:light;--paper:#f4efe4;--card:#ffffff;--ink:#2a2623;--muted:#6f675c;--line:#ddd3be;--soft:#e9e1cf;--green:#c62828;--accent:#c62828;--rust:#c62828;color:#2a2623;background:#f4efe4}
 body{background:#f4efe4;color:#2a2623}
 a{color:#c62828}

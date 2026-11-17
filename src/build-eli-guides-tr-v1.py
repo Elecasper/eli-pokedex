@@ -97,6 +97,15 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,
 .dock{display:grid;grid-template-columns:1fr auto auto 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:8px 12px max(8px,env(safe-area-inset-bottom));background:rgba(242,242,242,.96);backdrop-filter:blur(8px);border-top:1px solid #ddd3be}
 .dock a{display:flex;align-items:center;justify-content:center;min-height:46px;padding:0 14px;border-radius:12px;background:#ffffff;border:1px solid #ddd3be;color:#2a2623;text-decoration:none;font-size:15px;font-weight:600;white-space:nowrap}.dock a.dis{opacity:.35;pointer-events:none}.dock a.hl{color:#c62828}}
 @media(max-width:560px){h1{font-size:22px}p,li{font-size:15.5px}table.data th{white-space:normal;width:34%}}
+.tp{cursor:pointer;border-bottom:2px dotted #d32f2f;padding-bottom:1px;-webkit-tap-highlight-color:transparent}
+.tp:hover,.tp:focus-visible{background:#f3e6c9;outline:none}
+#tip{position:fixed;z-index:60;background:#fff;color:#2a2623;border:1px solid #ddd3be;border-top:4px solid #d32f2f;border-radius:10px;box-shadow:0 8px 28px rgba(0,0,0,.22);padding:12px 14px 14px;width:min(340px,calc(100vw - 24px));font-size:15px;line-height:1.6;display:none}
+#tip.on{display:block}
+#tip .tk{display:inline-block;background:#d32f2f;color:#fff;border-radius:999px;font-size:12px;padding:0 9px;margin-right:6px;font-weight:600}
+#tip h4{margin:0 0 4px;font-size:16px;padding-right:28px}
+#tip .ta{color:#6f675c;font-size:13px;margin:2px 0 6px}
+#tip .tx{position:absolute;right:6px;top:4px;border:0;background:none;font-size:22px;line-height:1;color:#6f675c;padding:4px 8px;cursor:pointer}
+@media(max-width:700px){#tip{left:12px!important;right:12px;bottom:76px;top:auto!important;width:auto}}
 </style>'''
 
 
@@ -334,6 +343,25 @@ def cast_strip(cast):
     return ('<div class="cast"><b>本节人物</b>' + ''.join(f'<span class="ct">{av(n, "av")}<i>{n}</i></span>' for n in cast) + '</div>')
 
 
+def tipify(body, terms):
+    used = {}
+    def rep(m):
+        t = m.group(1)
+        if t not in terms: return m.group(0)
+        used[t] = terms[t]
+        return f'<b class="tp" role="button" tabindex="0" data-t="{e(t)}">{t}</b>'
+    return re.sub(r'<b>([^<]*)</b>', rep, body), used
+
+TIPJS = """<div id="tip" role="dialog" aria-live="polite"></div><script>(function(){var D=JSON.parse(document.getElementById('tipdata').textContent),T=document.getElementById('tip'),cur=null;
+function esc(x){return String(x).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+function hide(){T.classList.remove('on');cur=null}
+function show(el){var k=el.getAttribute('data-t'),d=D[k];if(!d)return;if(cur===el){hide();return}cur=el;
+T.innerHTML='<button class="tx" aria-label="关闭">×</button><h4><span class="tk">'+esc(d.k)+'</span>'+esc(d.n||k.replace(/（.*/,''))+'</h4>'+(d.a?'<div class="ta">'+esc(d.a)+(d.b?' ｜ '+esc(d.b):'')+'</div>':'')+'<div>'+esc(d.d)+'</div>';
+T.classList.add('on');if(innerWidth>700){var r=el.getBoundingClientRect(),w=T.offsetWidth,h=T.offsetHeight,x=Math.min(Math.max(8,r.left),innerWidth-w-8),y=r.bottom+8;if(y+h>innerHeight-8)y=Math.max(8,r.top-h-8);T.style.left=x+'px';T.style.top=y+'px'}}
+document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('.tp');if(b){ev.preventDefault();show(b);return}if((ev.target.closest&&ev.target.closest('#tip .tx'))||!ev.target.closest('#tip'))hide()});
+document.addEventListener('keydown',function(ev){if(ev.key==='Escape')hide();if((ev.key==='Enter'||ev.key===' ')&&ev.target.classList&&ev.target.classList.contains('tp')){ev.preventDefault();show(ev.target)}});
+addEventListener('scroll',function(){if(innerWidth>700)hide()},{passive:true})})()</script>"""
+
 def link_maps(body, cur=99):
     """Make map images non-linking, exit pins clickable, and add neighbour chips under each map."""
     body = re.sub(r'<a href="\.\./img/maps/[^"]*" target="_blank" rel="noopener">(<img[^>]*>)</a>', r'\1', body)
@@ -544,6 +572,9 @@ def build(folder):
             body = link_maps(body, int(slug.split('-')[-1]))
         body = compact(body)
         body, cast = npcify(body)
+        tdata = json.loads((folder / 'terms.json').read_text(encoding='utf-8')) if (folder / 'terms.json').exists() else {}
+        body, tused = tipify(body, tdata)
+        tipblock = ('<script type="application/json" id="tipdata">' + json.dumps(tused, ensure_ascii=False).replace('</', '<\\/') + '</script>' + TIPJS) if tused else ''
         prev = pages[i - 1] if i else None
         nxt = pages[i + 1] if i + 1 < len(pages) else None
         pager = '<nav class="pager">'
@@ -564,7 +595,7 @@ def build(folder):
             body, items = treeify(body, nxt)
             tocs[slug] = items
         (out / f'{slug}.html').write_text(page_html(f'{short_title(info["title"])[0]} - {g["game"]}',
-            f'{crumb}<h1>{e(short_title(info["title"])[0])}</h1><p class="chap">第 {slug.split("-")[-1]} 节 · {e(info["chapter"])}'+(f' · 途经 {e(short_title(info["title"])[1])}' if short_title(info["title"])[1] else '')+f'</p>{cast_strip(cast)}{tree}{body}{pager}{credit(slug)}{dock}{backjs if hasmap else ""}'), encoding='utf-8')
+            f'{crumb}<h1>{e(short_title(info["title"])[0])}</h1><p class="chap">第 {slug.split("-")[-1]} 节 · {e(info["chapter"])}'+(f' · 途经 {e(short_title(info["title"])[1])}' if short_title(info["title"])[1] else '')+f'</p>{cast_strip(cast)}{tree}{body}{pager}{credit(slug)}{dock}{backjs if hasmap else ""}{tipblock}'), encoding='utf-8')
 
     toc, last = '', None
     for slug, info, _ in pages:
