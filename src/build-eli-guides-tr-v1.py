@@ -70,6 +70,8 @@ nav.tree a i{font-style:normal;color:#8fa592;font-size:11.5px;margin-left:4px}na
 .pt>ol{list-style:none;margin:0 0 12px;padding:0 0 0 14px;border-left:2px solid #36463c}.pt>ol a{display:block;padding:5px 8px;text-decoration:none;color:#d6dccf;font-size:15px}.pt>ol li+li::before{content:'\\2193';display:block;color:#6e8575;font-size:12px;padding-left:8px;line-height:1}
 .pt>ol a i{font-style:normal;color:#8fa592;font-size:12px;margin-left:6px}
 #tq{width:100%;box-sizing:border-box;margin:6px 0 10px;padding:10px 14px;border-radius:10px;border:1px solid #44574b;background:#2a372f;color:#f1f0e6;font-size:15px}
+@media(min-width:900px){main{max-width:900px}h1{font-size:28px}.mapgrid.n1 figure.map{max-width:640px}}
+@media(min-width:1400px){main{max-width:1000px}p,li{font-size:17px}}
 @media(max-width:560px){h1{font-size:22px}p,li{font-size:15.5px}table.data th{white-space:normal;width:34%}}
 </style>'''
 
@@ -175,7 +177,7 @@ def write_map(folder, g, out, pages):
         svg += (f'<a href="{href}"><g class="{cls}"><title>{e(n["k"])} · 第 {n["p"]} 节：{e(titles["part-" + str(n["p"])])}</title>'
                 f'<rect x="{n["x"] - w // 2}" y="{n["y"] - h // 2}" width="{w}" height="{h}" rx="{15 if n["t"] != "r" else 8}"/>'
                 f'<text x="{n["x"]}" y="{n["y"] + 5}" text-anchor="middle">{e(n["k"])}</text></g></a>')
-    css = """<style>main{max-width:none;padding:8px 12px 40px}.mapwrap{overflow:auto;border:1px solid #44574b;border-radius:12px;background:#18221d;max-height:78vh}
+    css = """<style>main{max-width:none;padding:8px 12px 40px}.mapwrap{overflow:auto;border:1px solid #44574b;border-radius:12px;background:#18221d;max-height:78vh;max-height:78dvh;cursor:grab;-webkit-overflow-scrolling:touch}.mapwrap.dr{cursor:grabbing;user-select:none}
 .mapwrap svg{display:block;min-width:1100px;width:1900px}.ed{stroke:#5d7566;stroke-width:3}.ed.sea{stroke:#4a8fb0;stroke-dasharray:8 6}
 .nd rect{fill:#2f4336;stroke:#c9e265;stroke-width:2}.nd text{fill:#f1f0e6;font-size:15px;font-weight:700;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif}
 .nd.r rect{fill:#26332b;stroke:#6e8575;stroke-width:1.5}.nd.r text{font-size:13px;font-weight:500;fill:#cdd6c8}.nd.d rect{fill:#3a2f45;stroke:#b79ae0}.nd.post rect{stroke:#6cc3f0}.nd.d.post rect{stroke:#6cc3f0}
@@ -186,9 +188,14 @@ def write_map(folder, g, out, pages):
               '<span><i style="border-color:#b79ae0;background:#3a2f45"></i>洞窟 / 塔 / 特殊地点</span>'
               '<span><i style="border-color:#6e8575;background:#26332b"></i>道路</span>'
               '<span><i style="border:0;border-top:3px dashed #4a8fb0;height:0;width:18px;vertical-align:4px"></i>海路</span></div>')
-    js = ("<script>(function(){var s=document.querySelector('.mapwrap svg'),w=1900;function z(f){w=Math.max(900,Math.min(3200,w*f));s.style.width=w+'px'}"
+    js = ("<script>(function(){var s=document.querySelector('.mapwrap svg'),m=document.querySelector('.mapwrap'),w=0;"
+          "function set(v){var c=(m.scrollLeft+m.clientWidth/2)/w;w=Math.max(700,Math.min(3200,v));s.style.width=w+'px';if(c)m.scrollLeft=c*w-m.clientWidth/2}"
+          "function z(f){set(w*f)}"
           "document.getElementById('zi').onclick=function(){z(1.25)};document.getElementById('zo').onclick=function(){z(.8)};"
-          "var m=document.querySelector('.mapwrap');m.scrollLeft=Math.max(0,(by('若叶镇')-m.clientWidth/2));function by(){return 935*(s.getBoundingClientRect().width/1900)}})()</script>")
+          "w=Math.max(1000,Math.min(1900,m.clientWidth-2));s.style.width=w+'px';m.scrollLeft=Math.max(0,.49*w-m.clientWidth/2);"
+          "var d=null;m.addEventListener('pointerdown',function(e){if(e.pointerType==='mouse'&&!e.target.closest('a'))d={x:e.clientX,y:e.clientY,l:m.scrollLeft,t:m.scrollTop,mv:0}});"
+          "addEventListener('pointermove',function(e){if(!d)return;var dx=e.clientX-d.x,dy=e.clientY-d.y;if(Math.abs(dx)+Math.abs(dy)>3)m.classList.add('dr');m.scrollLeft=d.l-dx;m.scrollTop=d.t-dy});"
+          "addEventListener('pointerup',function(){d=null;m.classList.remove('dr')})})()</script>")
     body = (f'<p class="crumb"><a href="../">攻略大全</a> / <a href="./">{e(g["game"])}</a></p><h1>地图总览</h1>'
             '<p class="chap">按城都和关都的地理位置排列，点任意地点跳到对应的攻略段落。左边是城都，右边是关都，两地由 27 号道路相连。</p>'
             f'{legend}<div class="zb"><button id="zi">放大 +</button><button id="zo">缩小 −</button></div>'
