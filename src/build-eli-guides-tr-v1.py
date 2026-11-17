@@ -289,8 +289,8 @@ def compact(body):
 NPC = {'阿速': 'falkner', '阿笔': 'bugsy', '阿蜜': 'whitney', '松叶': 'morty', '阿四': 'chuck', '小茜': 'jasmine', '柳伯': 'pryce', '小椿': 'clair',
        '小刚': 'brock', '小霞': 'misty', '马志士': 'lt-surge', '莉佳': 'erika', '阿杏': 'janine', '娜姿': 'sabrina', '夏伯': 'blaine', '青绿': 'blue',
        '坂木': 'giovanni', '一树': 'will', '阿桔': 'koga', '希巴': 'bruno', '梨花': 'karen', '阿渡': 'lance', '大木博士': 'oak', '西尔弗': 'silver',
-       '米纳奇': 'eusine', '阿波罗': 'proton', '兰斯': 'archer', '雅典娜': 'ariana', '拉姆达': 'petrel', '赤红': 'red'}
-NPC_RE = re.compile('|'.join(sorted(map(re.escape, NPC), key=len, reverse=True)) + r'(?!色)')
+       '米纳奇': 'eusine', '空木博士': 'elm', '钢铁': 'kurt', 'Bill': 'bill', 'Monica': 'monica', 'Wesley': 'wesley', 'Sunny': 'sunny', '阿波罗': 'proton', '兰斯': 'archer', '雅典娜': 'ariana', '拉姆达': 'petrel', '赤红': 'red'}
+NPC_RE = re.compile('|'.join((r'(?<![A-Za-z])' + re.escape(k) + r'(?![A-Za-z])') if k.isascii() else re.escape(k) for k in sorted(NPC, key=len, reverse=True)) + r'(?!色)')
 
 
 def av(name, cls='av'):
