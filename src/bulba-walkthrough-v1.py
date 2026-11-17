@@ -445,6 +445,7 @@ def gym_table(block, keys):
 def parse(w):
     """Yield ('h', level, text) / ('p', text) / ('t', html, kind) blocks."""
     w = re.sub(r'<!--.*?-->', '', w, flags=re.S)
+    w = re.sub(r'\{\{#switch:\s*\{\{#time:[^{}]*\}\}\|[^{}]*\|([^{}|=]*)\}\}', r'\1', w)
     blocks, i, para = [], 0, []
     def flush():
         if para:
@@ -478,6 +479,11 @@ def parse(w):
         nl = len(w) if nl < 0 else nl
         line = w[i:nl]
         i = nl + 1
+        maps = re.findall(r'\[\[(?:File|Image):([^|\]]+)\|([^\]]*)\]\]', line)
+        if maps and re.fullmatch(r'\s*(\[\[(?:File|Image):[^\]]*\]\]\s*)+', line) and any('thumb' in o.split('|') for _, o in maps):
+            for name, opts in maps:
+                blocks.append(('map', name.strip(), split_top(opts, '|')[-1].strip()))
+            continue
         m = re.match(r'^(={2,5})\s*(.*?)\s*\1\s*$', line)
         if m:
             flush(); blocks.append(('h', len(m.group(1)), m.group(2))); continue
@@ -597,6 +603,13 @@ def convert(w, keys, nested=False):
             t = inline(b[2])
             k = nk(keys, HP); keys[k] = t
             out.append(f'<h{2 if b[1] <= 2 else 3}>{{{{{k}}}}}</h{2 if b[1] <= 2 else 3}>')
+        elif b[0] == 'map':
+            cap = inline(b[2]) if b[2] and b[2] != 'thumb' and not re.fullmatch(r'\d+px', b[2]) else ''
+            zh = place(cap) if cap else ''
+            if cap and not re.search(r'[\u4e00-\u9fff]', zh):
+                k = nk(keys, 'G'); keys[k] = cap; zh = f'{{{{{k}}}}}'
+            url = 'https://bulbapedia.bulbagarden.net/wiki/File:' + b[1].replace(' ', '_')
+            out.append(f'<p class="maplink"><a href="{e(url)}" target="_blank" rel="noopener">{zh or "查看地图"}</a><span>Bulbapedia 原图</span></p>')
         elif b[0] in ('p', 'li'):
             t = inline(b[1])
             if not re.sub(r'<[^>]+>|\s', '', t):

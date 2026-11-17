@@ -1,5 +1,7 @@
 {
 "H1": "Route 32",
+"G1": "The Ruins of Alph",
+"G2": "Ruins of Alph, Interior",
 "P1": "32号道路 is a lengthy road that runs south along the shore from 桔梗市 to 互连洞. A path on the north end leads west to the mysterious 阿露福遗迹.",
 "D1": "Northeast part of the route, from the man north of the first grass patch",
 "D2": "Southwest of the hill, in the grass patch west of Picnicker Liz",
@@ -73,6 +75,9 @@
 "H8": "Fishing Guru 1",
 "P13": "Visit the Pokémon Center to rest your weary team and prepare for the upcoming cave. Speak to the Fisherman near the counter to receive an 破旧钓竿. With this fishing rod, you can now cast your line at any body of water to reel in 水 Pokémon. The Old Rod is a low-end model, and is often only able to hook 鲤鱼王.",
 "H9": "Union Cave",
+"G3": "Union Cave, 1F",
+"G4": "Union Cave, B1F",
+"G5": "Union Cave, B2F",
 "P14": "互连洞 is a small cave on the southern end of Johto's peninsula, located between Routes 32号道路 and 33号道路. The ground-level tunnel simply connects the two routes together. Seawater wells up from underground in several areas, initially blocking access to the deepest parts of the cave. Exploring the lower levels at a later point reveals two more exits that lead back to the 阿露福遗迹.",
 "D39": "1F",
 "D40": "Northwest area",

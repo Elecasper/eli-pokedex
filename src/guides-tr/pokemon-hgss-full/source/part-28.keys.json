@@ -1,5 +1,6 @@
 {
 "H1": "Viridian City",
+"G1": "Viridian Gym",
 "H2": "Viridian Gym",
 "C1": "<b>Viridian City Pokémon Gym<br>Leader: ...</b>",
 "P1": "The Viridian Gym has no type specialty, as 青绿 prefers to use the same Pokémon from his time as Champion.",
@@ -24,6 +25,7 @@
 "H10": "The Recluse",
 "P10": "The uneven terrain forces travelers to pass by the entrance to 白银山 in order to reach the route's northern area. Use 居合斩 to clear a path and visit the house on the hill. The woman inside is a retired Idol, and the celebrity now lives a quiet life in order to protect her privacy. She gives you 招式学习器47（钢翼） in the hope that you will keep her hideaway a secret.",
 "H11": "Mt. Silver",
+"G2": "Mt. Silver, Exterior",
 "P11": "The uneven road from 28号道路 leads directly to a Pokémon Center at the foot of the mountain. This gives anyone attempting to scale the mountain one last opportunity to make preparations. 冲浪, 碎岩, 攀瀑, and 攀岩 are required to fully explore the hallowed mountain.",
 "D4": "East of the Pokémon Center, above a ledge (hidden)",
 "D5": "On the southwest hill (requires 冲浪)"

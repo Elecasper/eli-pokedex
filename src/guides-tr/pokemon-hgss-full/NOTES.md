@@ -10,5 +10,7 @@
 - 改了转换脚本后如果 build 报 WARNING（键错位），运行 python3 -I src/bulba-remap-v1.py pokemon-hgss-full <parts>，按 git HEAD 的 keys.json 用英文原文对齐。
 - 人名对照：src/bulba-names-v1.json（普通训练家名字保留英文）。
 
-## 未做
-- 地图截图（205 张）需要在 Chrome 里允许「访问本地网络」才能转存。
+- G 前缀：地图/插图链接的说明文字。原文里单独一行的 [[File:…|thumb|…]] 会变成「🗺 地点名 · Bulbapedia 原图」链接（不转存图片：图库禁止直接下载，图片也是任天堂版权）。地点名能自动译出的不生成 G 键。
+
+## 地图
+- 2026-11-17：240 个地图链接，指向 Bulbapedia 的文件页。

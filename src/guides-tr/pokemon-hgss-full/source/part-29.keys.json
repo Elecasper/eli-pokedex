@@ -1,5 +1,11 @@
 {
 "H1": "Mt. Silver Cave",
+"G1": "Mt. Silver, 1F",
+"G2": "Mt. Silver, Lower Mountainside",
+"G3": "Mt. Silver, 2F",
+"G4": "Mt. Silver, Upper Mountainside",
+"G5": "Mt. Silver, 3F",
+"G6": "Mt. Silver, Summit",
 "P1": "Mt. Silver is a hallowed mountain that rises up between Johto and Kanto. These caves are home to powerful Pokémon, so only certain Trainers deemed up to the challenge are permitted to enter.",
 "D1": "1F",
 "D2": "Southern chamber; accessed via the cave opening near the middle of 1F (requires 冲浪, 攀瀑)",
