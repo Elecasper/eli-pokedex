@@ -31,6 +31,11 @@ p,li{font-size:16px;line-height:1.85}ol,ul{padding-left:22px}b{color:#fff}
 .note{font-size:14px;color:#a9b5a6;background:#2a372f;border-radius:10px;padding:10px 14px}
 figure{margin:14px 0;text-align:center}figure img{max-width:100%;height:auto;border-radius:8px;background:#2a372f}
 figcaption{font-size:13px;color:#a9b5a6;margin-top:6px}
+.pinbox{position:relative;display:block}.pin{position:absolute;z-index:2;font-size:12px;line-height:1;pointer-events:none}
+.pin.dot{width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:#c9e265;color:#1f2a24;font-weight:700;display:grid;place-items:center;border:2px solid #1f2a24;box-shadow:0 0 0 2px #c9e265}
+.pin.exit{background:rgba(31,42,36,.9);color:#c9e265;padding:5px 9px;border-radius:999px;border:1px solid #c9e265;white-space:nowrap;font-weight:600}
+.pin.exit.w{transform:translate(6px,-50%)}.pin.exit.e{transform:translate(calc(-100% - 6px),-50%)}.pin.exit.n{transform:translate(-50%,6px)}.pin.exit.s{transform:translate(-50%,calc(-100% - 6px))}
+.pinlist{list-style:none;margin:8px 0 0;padding:0;text-align:left;font-size:13px;color:#d6dccf}.pinlist li{padding:2px 0}.pinlist b{display:inline-grid;place-items:center;width:18px;height:18px;margin-right:8px;border-radius:50%;background:#c9e265;color:#1f2a24;font-size:11px}
 .mapgrid{display:grid;gap:12px;margin:14px 0;grid-template-columns:1fr}.mapgrid.n2,.mapgrid.n3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.mapgrid figure.map{margin:0}.mapgrid.n1 figure.map{max-width:560px;margin:0 auto}figure.map a{display:block}figure.map img{width:100%;image-rendering:auto;border:1px solid #36463c}figure.map figcaption{font-size:13px;color:#a9b5a6;margin-top:6px}
 .maplink{margin:-2px 0 12px;font-size:13px;color:#a9b5a6;line-height:1.9}.maplink span{display:inline-block;margin-right:8px;padding:0 7px;border-radius:5px;background:#2a372f;color:#c9e265;font-size:12px}.maplink a{color:#a9b5a6;text-decoration:underline;text-decoration-color:#44574b;text-underline-offset:3px}.maplink a:hover{color:#c9e265}.hmap{margin-left:8px;padding:1px 8px;border-radius:5px;background:#2a372f;color:#c9e265;font-size:12px;font-weight:400;text-decoration:none;vertical-align:middle}
 .tip{background:#2a372f;border:1px solid #44574b;border-left:4px solid #c9e265;border-radius:10px;padding:4px 16px;margin:16px 0}
@@ -51,12 +56,101 @@ table.grid{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;back
 .toc{list-style:none;padding:0;margin:0}.toc li{border-bottom:1px solid #36463c}.toc a{display:flex;justify-content:space-between;padding:13px 4px;text-decoration:none;color:#f1f0e6}
 .toc a span{color:#a9b5a6;font-size:13px}.toc h3{font-size:14px;color:#a9b5a6;margin:20px 0 4px;font-weight:600}
 .src{font-size:12px;color:#a9b5a6;line-height:1.8;border-top:1px solid #36463c;margin-top:28px;padding-top:12px}.src a{color:#a9b5a6}
+.node.l2{margin:30px 0 0}.node.l2>h2{margin-top:0}
+.node.l3{border-left:2px solid #36463c;margin:16px 0 0 5px;padding-left:16px}.node.l3>h3{position:relative}.node.l3>h3::before{content:'';position:absolute;left:-23px;top:.62em;width:10px;height:10px;border-radius:50%;background:#1f2a24;border:2px solid #c9e265}
+.nextstop{margin:22px 0 0;padding:9px 14px;border:1px dashed #44574b;border-radius:10px;font-size:14px;color:#a9b5a6;text-align:center}.nextstop a{color:#c9e265;text-decoration:none;font-weight:600}
+nav.tree{font-size:13.5px;background:#2a372f;border:1px solid #44574b;border-radius:12px;padding:8px 14px;margin:0 0 18px}nav.tree summary{cursor:pointer;font-weight:700;color:#c9e265;padding:4px 0}
+nav.tree ol{list-style:none;margin:0;padding:0}nav.tree ol ol{margin:2px 0 6px 10px;padding-left:10px;border-left:1px solid #44574b}
+nav.tree li{line-height:1.5}nav.tree a{display:block;padding:3px 6px;border-radius:6px;color:#d6dccf;text-decoration:none}nav.tree a:hover{background:#34443a}nav.tree a.on{background:#3b4d3f;color:#c9e265;font-weight:600}
+nav.tree ol.t2>li+li::before{content:'\\2193';display:block;color:#6e8575;font-size:12px;line-height:1;padding:1px 0 1px 8px}
+nav.tree a i{font-style:normal;color:#8fa592;font-size:11.5px;margin-left:4px}nav.tree ol ol a{color:#aebaa9}
+@media(min-width:1280px){nav.tree{position:fixed;top:70px;left:calc(50% + 396px);width:236px;max-height:calc(100vh - 92px);overflow:auto;margin:0}nav.tree summary{pointer-events:none}}
+.pt{border-bottom:1px solid #36463c}.pt>summary{cursor:pointer;display:flex;justify-content:space-between;gap:10px;padding:13px 4px;list-style:none}.pt>summary::-webkit-details-marker{display:none}.pt>summary b{color:#f1f0e6}.pt>summary span{color:#a9b5a6;font-size:13px;white-space:nowrap}
+.pt>ol{list-style:none;margin:0 0 12px;padding:0 0 0 14px;border-left:2px solid #36463c}.pt>ol a{display:block;padding:5px 8px;text-decoration:none;color:#d6dccf;font-size:15px}.pt>ol li+li::before{content:'\\2193';display:block;color:#6e8575;font-size:12px;padding-left:8px;line-height:1}
+.pt>ol a i{font-style:normal;color:#8fa592;font-size:12px;margin-left:6px}
+#tq{width:100%;box-sizing:border-box;margin:6px 0 10px;padding:10px 14px;border-radius:10px;border:1px solid #44574b;background:#2a372f;color:#f1f0e6;font-size:15px}
 @media(max-width:560px){h1{font-size:22px}p,li{font-size:15.5px}table.data th{white-space:normal;width:34%}}
 </style>'''
 
 
 def page_html(title, body):
     return f'{head}<title>{e(title)} · Eli</title>{CSS}{theme}</head><body>{bar}<main>{body}</main></body></html>\n'
+
+
+TAG = re.compile(r'<div[^>]*>|</div>|<h([23])>(.*?)</h\1>', re.S)
+
+
+def plain(t):
+    return re.sub(r'<[^>]+>', '', re.sub(r'<a class="hmap".*?</a>', '', t)).strip()
+
+
+def treeify(body, nxt):
+    """Split body at h2/h3 into nested <section class=node>; return (html, outline_items)."""
+    marks, depth = [], 0
+    for m in TAG.finditer(body):
+        t = m.group(0)
+        if t.startswith('<div'):
+            depth += 1
+        elif t == '</div>':
+            depth -= 1
+        elif depth == 0:
+            marks.append((m.start(), m.end(), int(m.group(1)), m.group(2)))
+    if not any(l == 2 for _, _, l, _ in marks):
+        return body, []
+    out, items, pos = [body[:marks[0][0]]], [], 0
+    ids = 0
+    segs = []
+    for i, (st, en, lvl, h) in enumerate(marks):
+        end = marks[i + 1][0] if i + 1 < len(marks) else len(body)
+        ids += 1
+        segs.append({'id': f'n{ids}', 'lvl': lvl, 'h': h, 'c': body[en:end]})
+    h2s = [x for x in segs if x['lvl'] == 2]
+    html_, open2, open3 = '', False, False
+    for x in segs:
+        maps = len(re.findall(r'<figure class="map">', x['c']))
+        if x['lvl'] == 2:
+            if open3:
+                html_ += '</section>'; open3 = False
+            if open2:
+                html_ += nextstop(h2s, cur, nxt) + '</section>'
+            cur = x
+            items.append({'id': x['id'], 'h': plain(x['h']), 'maps': maps, 'kids': []})
+            html_ += f'<section class="node l2" id="{x["id"]}"><h2>{x["h"]}</h2>{x["c"]}'
+            open2 = True
+        else:
+            if open3:
+                html_ += '</section>'
+            if items:
+                items[-1]['kids'].append({'id': x['id'], 'h': plain(x['h']), 'maps': maps})
+            html_ += f'<section class="node l3" id="{x["id"]}"><h3>{x["h"]}</h3>{x["c"]}'
+            open3 = True
+    if open3:
+        html_ += '</section>'
+    if open2:
+        html_ += nextstop(h2s, cur, nxt) + '</section>'
+    return out[0] + html_, items
+
+
+def nextstop(h2s, cur, nxt):
+    i = h2s.index(cur)
+    if i + 1 < len(h2s):
+        n = h2s[i + 1]
+        return f'<p class="nextstop">\u2193 下一站：<a href="#{n["id"]}">{plain(n["h"])}</a></p>'
+    if nxt:
+        return f'<p class="nextstop">\u2193 下一页：<a href="{nxt[0]}.html">{e(nxt[1]["title"])}</a></p>'
+    return ''
+
+
+def outline(items):
+    def li(x, sub=''):
+        mp = f'<i>\U0001F5FA{x["maps"]}</i>' if x['maps'] else ''
+        return f'<li><a href="#{x["id"]}">{e(x["h"])}{mp}</a>{sub}</li>'
+    lis = ''.join(li(x, ('<ol>' + ''.join(li(k) for k in x['kids']) + '</ol>') if x['kids'] else '') for x in items)
+    return ('<nav class="tree"><details open><summary>本节地点树</summary><ol class="t2">' + lis + '</ol></details></nav>'
+            "<script>(function(){var d=document.querySelector('nav.tree>details');if(!d)return;"
+            "if(innerWidth<1280)d.open=false;var L=[].slice.call(d.querySelectorAll('a[href^=\"#\"]')),H=L.map(function(a){return document.getElementById(a.getAttribute('href').slice(1))});"
+            "function f(){var k=0;for(var i=0;i<H.length;i++){if(H[i]&&H[i].getBoundingClientRect().top<110)k=i}L.forEach(function(a,i){a.classList.toggle('on',i==k)})}"
+            "addEventListener('scroll',f,{passive:true});f()})()</script>")
 
 
 def build(folder):
@@ -87,6 +181,7 @@ def build(folder):
                 + f'<a href="{g["licenseUrl"]}" target="_blank" rel="noopener noreferrer">{g["license"]}</a> 授权。'
                 f'配图来自原站，版权归原作者与游戏厂商；地图截图来自 <a href="https://archives.bulbagarden.net/wiki/Category:HeartGold_and_SoulSilver_maps" target="_blank" rel="noopener noreferrer">Bulbagarden Archives</a>，游戏画面版权归 Nintendo / Game Freak / The Pokémon Company。</p>')
 
+    tocs = {}
     for i, (slug, info, body) in enumerate(pages):
         body = re.sub(r'<figure data-img="([^"]+)">(.*?)</figure>', fig, body, flags=re.S)
         prev = pages[i - 1] if i else None
@@ -100,16 +195,35 @@ def build(folder):
             pager += f'<a class="next" href="./"><small>本章完</small>回到目录</a>'
         pager += '</nav>'
         crumb = f'<p class="crumb"><a href="../">攻略大全</a> / <a href="./">{e(g["game"])}</a></p>'
+        tree = ''
+        if g.get('tree'):
+            body, items = treeify(body, nxt)
+            if items:
+                tree = outline(items)
+            tocs[slug] = items
         (out / f'{slug}.html').write_text(page_html(f'{info["title"]} - {g["game"]}',
-            f'{crumb}<h1>{e(info["title"])}</h1><p class="chap">{e(info["chapter"])}</p>{body}{pager}{credit(slug)}'), encoding='utf-8')
+            f'{crumb}<h1>{e(info["title"])}</h1><p class="chap">{e(info["chapter"])}</p>{tree}{body}{pager}{credit(slug)}'), encoding='utf-8')
 
     toc, last = '', None
     for slug, info, _ in pages:
         if info['chapter'] != last:
             toc += ('</ul>' if last else '') + f'<h3>{e(info["chapter"])}</h3><ul class="toc">'
             last = info['chapter']
-        toc += f'<li><a href="{slug}.html">{e(info["title"])}<span>→</span></a></li>'
+        if g.get('tree') and tocs.get(slug):
+            its = tocs[slug]
+            nm = sum(x['maps'] + sum(k['maps'] for k in x['kids']) for x in its)
+            toc = toc.replace('<ul class="toc">', '<div class="toc">') if False else toc
+            toc += (f'<li><details class="pt"><summary><b>{e(info["title"])}</b><span>{len(its)} 个地点 · \U0001F5FA{nm}</span></summary><ol>'
+                    + ''.join(f'<li><a href="{slug}.html#{x["id"]}">{e(x["h"])}<i>' + (f'\U0001F5FA{x["maps"]}' if x['maps'] else '') + '</i></a></li>' for x in its)
+                    + f'</ol><p style="margin:0 0 10px 14px"><a href="{slug}.html">打开整节 →</a></p></details></li>')
+        else:
+            toc += f'<li><a href="{slug}.html">{e(info["title"])}<span>→</span></a></li>'
     toc += '</ul>'
+    if g.get('tree'):
+        toc = ('<input id="tq" type="search" placeholder="搜索地点，例如：铃铛塔、道馆、29号道路" autocomplete="off">' + toc +
+               "<script>(function(){var q=document.getElementById('tq');q.addEventListener('input',function(){var v=q.value.trim();"
+               "document.querySelectorAll('details.pt').forEach(function(d){var any=false;d.querySelectorAll('ol li').forEach(function(li){var m=!v||li.textContent.indexOf(v)>-1;li.style.display=m?'':'none';if(m&&v)any=true});"
+               "var t=d.querySelector('summary b').textContent.indexOf(v)>-1;d.style.display=(!v||any||t)?'':'none';d.open=!!v&&any})})})()</script>")
     srct = g.get('sourceTitle', g['en'])
     first = g['sourceBase'] + srct.replace(' ', '_')
     (out / 'index.html').write_text(page_html(f'{g["game"]} 中文攻略',

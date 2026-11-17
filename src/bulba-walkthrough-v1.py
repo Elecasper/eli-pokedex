@@ -615,9 +615,26 @@ def convert(w, keys, nested=False):
                 from PIL import Image
                 with Image.open(mfile) as im:
                     mw, mh = im.size
-                out.append(f'<figure class="map"><a href="../img/maps/{mslug}.webp" target="_blank" rel="noopener">'
-                           f'<img src="../img/maps/{mslug}.webp" width="{mw}" height="{mh}" loading="lazy" alt="{zh or "地图"}"></a>'
-                           + (f'<figcaption>{zh}</figcaption>' if zh else '') + '</figure>')
+                pins, legend, num = PINS.get(mslug, []), '', 0
+                ov = ''
+                for pn in pins:
+                    if pn['k'] == 'exit':
+                        d = pn['d']
+                        pos = {'w': f'left:0;top:{pn["p"] * 100:.1f}%', 'e': f'left:100%;top:{pn["p"] * 100:.1f}%',
+                               'n': f'left:{pn["p"] * 100:.1f}%;top:0', 's': f'left:{pn["p"] * 100:.1f}%;top:100%'}[d]
+                        arrow = {'w': '\u2190', 'e': '\u2192', 'n': '\u2191', 's': '\u2193'}[d]
+                        ov += f'<span class="pin exit {d}" style="{pos}">{arrow} {e(pn["t"])}</span>'
+                    else:
+                        num += 1
+                        ov += f'<span class="pin dot" style="left:{pn["x"] * 100:.1f}%;top:{pn["y"] * 100:.1f}%">{num}</span>'
+                        legend += f'<li><b>{num}</b>{e(pn["t"])}</li>'
+                inner = (f'<a href="../img/maps/{mslug}.webp" target="_blank" rel="noopener">'
+                         f'<img src="../img/maps/{mslug}.webp" width="{mw}" height="{mh}" loading="lazy" alt="{zh or "地图"}"></a>')
+                if ov:
+                    inner = f'<span class="pinbox">{inner}{ov}</span>'
+                out.append(f'<figure class="map">{inner}'
+                           + (f'<figcaption>{zh}</figcaption>' if zh else '')
+                           + (f'<ol class="pinlist">{legend}</ol>' if legend else '') + '</figure>')
                 continue
             out.append(f'<p class="maplink"><a href="{e(url)}" target="_blank" rel="noopener">{zh or "查看地图"}</a></p>')
         elif b[0] in ('p', 'li'):
@@ -673,7 +690,7 @@ def tidy_maps(body):
     def swapg(m):
         t = re.sub(r'<[^>]+>', '', m.group(4)).strip()
         return f'{m.group(2)}\n{m.group(1)}' if t and t in re.sub(r'<[^>]+>', '', m.group(1)) else m.group(0)
-    body = re.sub(r'(<div class="mapgrid[^"]*">.*?</div>)\n?(<h([23])>(.*?)</h\3>)', swapg, body, flags=re.S)
+    body = re.sub(r'(<div class="mapgrid[^"]*">(?:(?!</div>).)*</div>)\n?(<h([23])>(.*?)</h\3>)', swapg, body, flags=re.S)
     def run(m):
         links = re.findall(MAP_A, m.group(0))
         caps = [c for _, c in links]
@@ -690,7 +707,7 @@ def tidy_maps(body):
     def swap(m):
         t = re.sub(r'<[^>]+>', '', m.group(4)).strip()
         return f'{m.group(2)}\n{m.group(1)}' if t and t in re.sub(r'<[^>]+>', '', m.group(1)) else m.group(0)
-    body = re.sub(r'(<p class="maplink">.*?</p>)\n?(<h([23])>(.*?)</h\3>)', swap, body)
+    body = re.sub(r'(<p class="maplink">(?:(?!</p>).)*</p>)\n?(<h([23])>(.*?)</h\3>)', swap, body)
     def head(m):
         h, t, u, c = m.group(1), m.group(2), m.group(3), m.group(4)
         if c.split('（')[0].strip() == re.sub(r'<[^>]+>', '', t).strip():
@@ -720,7 +737,12 @@ def draft(slug, n):
             print(f'{k}: {re.sub(r"<[^>]+>", "", v)}')
 
 
+PINS = {}
+
+
 def build(slug, titles):
+    global PINS
+    PINS = json.loads((folder(slug) / 'pins.json').read_text(encoding='utf-8')) if (folder(slug) / 'pins.json').exists() else {}
     g = json.loads((folder(slug) / 'guide.json').read_text(encoding='utf-8'))
     meta, pages = {}, []
     for n in range(1, len(titles) + 1):
