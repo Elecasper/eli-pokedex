@@ -98,7 +98,7 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,
 .dock a{display:flex;align-items:center;justify-content:center;min-height:46px;padding:0 14px;border-radius:12px;background:#ffffff;border:1px solid #ddd3be;color:#2a2623;text-decoration:none;font-size:15px;font-weight:600;white-space:nowrap}.dock a.dis{opacity:.35;pointer-events:none}.dock a.hl{color:#c62828}}
 @media(max-width:560px){h1{font-size:22px}p,li{font-size:15.5px}table.data th{white-space:normal;width:34%}}
 .tp{cursor:pointer;border-bottom:2px dotted #d32f2f;padding-bottom:1px;-webkit-tap-highlight-color:transparent}
-.tp:hover,.tp:focus-visible{background:#f3e6c9;outline:none}
+.t2{border-bottom:1px dotted #8a7f6a}.tp:hover,.tp:focus-visible{background:#f3e6c9;outline:none}
 #tip{position:fixed;z-index:60;background:#fff;color:#2a2623;border:1px solid #ddd3be;border-top:4px solid #d32f2f;border-radius:10px;box-shadow:0 8px 28px rgba(0,0,0,.22);padding:12px 14px 14px;width:min(340px,calc(100vw - 24px));font-size:15px;line-height:1.6;display:none;text-align:left;font-weight:400}
 #tip.on{display:block}
 #tip:before{content:'';position:absolute;top:-11px;left:var(--ax,24px);width:14px;height:14px;background:#d32f2f;transform:translateX(-50%) rotate(45deg);border-radius:2px;z-index:-1}
@@ -378,6 +378,36 @@ def mappins(body, pins, terms=None):
         return re.sub(r'(<img src="[^"]*' + re.escape(img) + r'[^>]*>)', r'<div class="mw">\1' + btns.replace('\\', '\\\\') + '</div>', inner, count=1)
     return re.sub(r'<figure class="map">(?:(?!</figure>).)*?maps/([^"/]+?)\.webp.*?</figure>', fig, body, flags=re.S), extra
 
+def autoterm(body, terms):
+    """make plain-text item / TM / HM names tappable (first mention per h2 section)"""
+    names = sorted((n for n in terms if n not in ('大葱', '要害攻击') and len(n) >= 2 and terms[n].get('k') != '徽章'), key=len, reverse=True)
+    if not names: return body, {}
+    rx = re.compile('|'.join(re.escape(n) for n in names))
+    used, seen, skip = {}, set(), 0
+    out = []
+    for part in re.split(r'(<[^>]+>)', body):
+        if part.startswith('<'):
+            m = re.match(r'</?([a-zA-Z0-9]+)', part)
+            tag = m.group(1).lower() if m else ''
+            closing = part.startswith('</')
+            if tag == 'h2' and not closing: seen = set()
+            if tag in ('a', 'button', 'script', 'style', 'option', 'h1', 'h2', 'h3', 'h4', 'b', 'figcaption', 'summary', 'th'):
+                skip += -1 if closing else (0 if part.endswith('/>') else 1)
+                skip = max(skip, 0)
+            elif tag == 'span' and 'class="tp' in part and not closing:
+                skip += 1
+            out.append(part)
+        else:
+            if skip or not part.strip():
+                out.append(part); continue
+            def rep(m):
+                n = m.group(0)
+                if n in seen: return n
+                seen.add(n); used[n] = terms[n]
+                return f'<span class="tp t2" role="button" tabindex="0" data-t="{e(n)}">{n}</span>'
+            out.append(rx.sub(rep, part))
+    return ''.join(out), used
+
 def tipify(body, terms):
     used = {}
     def rep(m):
@@ -616,6 +646,8 @@ def build(folder):
         tdata = json.loads((folder / 'terms.json').read_text(encoding='utf-8')) if (folder / 'terms.json').exists() else {}
         body, tused = tipify(body, tdata)
         tused.update(pextra)
+        body, aused = autoterm(body, tdata)
+        tused.update(aused)
         tipblock = ('<script type="application/json" id="tipdata">' + json.dumps(tused, ensure_ascii=False).replace('</', '<\\/') + '</script>' + TIPJS) if tused else ''
         prev = pages[i - 1] if i else None
         nxt = pages[i + 1] if i + 1 < len(pages) else None

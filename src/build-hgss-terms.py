@@ -74,6 +74,14 @@ terms = {}
 used = set()
 for f in glob.glob(D + '/zh/part-*.txt'):
     used |= set(re.findall(r'<b>([^<]*)</b>', open(f, encoding='utf-8').read()))
+BLACK = {'大葱', '要害攻击'}
+HMS = ['冲浪', '怪力', '碎岩', '飞翔', '闪光', '潮旋', '攀瀑', '攀岩', '居合斩']
+alltxt = ''.join(open(f, encoding='utf-8').read() for f in glob.glob(D + '/zh/part-*.txt'))
+alltxt = re.sub(r'<[^>]+>', '', alltxt)
+names = sorted({n for n in inm if len(n) >= 2 and n not in BLACK}, key=len, reverse=True)
+used |= set(re.findall('|'.join(map(re.escape, names)), alltxt))
+used |= {h for h in HMS if h in alltxt}
+used |= set(re.findall(r'(?:招式|秘传)学习器\d+（[^）]+）', alltxt))
 pp = os.path.join(D, 'item-pins.json')
 if os.path.exists(pp):
     for lst in json.load(open(pp, encoding='utf-8')).values():
