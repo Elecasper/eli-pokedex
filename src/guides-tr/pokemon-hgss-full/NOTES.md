@@ -25,3 +25,7 @@
 - guides/pokemon-hgss-full/map.html 由 worldmap.json 生成（build-eli-guides-tr-v1.py 的 write_map）：城都在左、关都在右的地理示意图，节点 = 地点，点击跳到对应攻略节点（part-N.html#nX），目录页有入口按钮，每页面包屑也有「地图总览」。
 - worldmap.json 里每个节点：k 显示名、x/y 坐标、t 类型（c 城镇 / r 道路 / d 洞窟塔特殊）、p 所在节、id 该节里的节点 id；edges 为连线，sea 为海路虚线。改了攻略后节点 id 可能变，重新生成时按 h2 标题名匹配。
 - 每节右侧的「本节地点树」和目录页的逐节展开已去掉（2026-11-17 用户说不再需要），保留节点之间的「↓ 下一站」箭头。
+
+## 人物立绘（2026-11-17）
+- 36 张 Spr HGSS 人物图（馆主、四天王、劲敌、大木博士、火箭队干部等）在 guides/img/npc/，取自 Bulbagarden Archives（同地图的取图办法：在 archives 页内 fetch + 打 zip + 单次下载）。
+- build-eli-guides-tr-v1.py 的 NPC 表：中文名 → 文件名；每个 h2 小节里首次出现的名字变成带头像的小标签，馆主信息框/队伍卡片带头像，每节顶部「本节人物」只列有对战表的人物。没有的人物（空木博士、琴音/响等）素材库里没有立绘。

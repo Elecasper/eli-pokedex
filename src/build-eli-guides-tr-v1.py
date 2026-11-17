@@ -85,6 +85,11 @@ a.pin.exit{text-decoration:none;color:inherit;cursor:pointer}.spb{font-size:13px
 .tw{overflow-x:auto;margin:14px 0}.tw table.grid{margin:0;min-width:480px}
 .toc a{display:flex;align-items:center;gap:12px}.toc .no{font-style:normal;flex:none;width:30px;height:30px;border-radius:50%;background:#34443a;color:#c9e265;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}.toc .tt{flex:1;min-width:0}.toc .tt i{font-style:normal;font-weight:600;display:block;color:#f1f0e6;font-size:16px}.toc .tt small{display:block;color:#8fa592;font-size:12.5px;line-height:1.4;margin-top:2px;font-weight:400}
 .mapbtn.alt{background:#2a372f;color:#c9e265;border:1px solid #44574b}
+.av{image-rendering:pixelated;height:72px;width:auto;flex:none}.av.sm{height:34px;vertical-align:middle;margin:-6px 3px -6px 0}.av.md{height:56px}.av.lg{height:84px}
+.npc{display:inline-block;white-space:nowrap;background:#2f4336;border:1px solid #44574b;border-radius:999px;padding:1px 10px 1px 6px;color:#fff;font-weight:600}
+.cast{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin:6px 0 16px;padding:10px 12px;background:#2a372f;border:1px solid #36463c;border-radius:12px}.cast>b{width:100%;font-size:12.5px;color:#a9b5a6;font-weight:600}.ct{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:54px}.ct i{font-style:normal;font-size:12.5px;color:#d6dccf}
+.gymbox{display:flex;align-items:flex-end;gap:14px;background:#2a372f;border:1px solid #44574b;border-radius:12px;padding:10px 14px;margin:14px 0}.gymbox b{color:#fff}
+.cl.party>h4{display:flex;align-items:flex-end;gap:10px}
 a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,226,101,.18)}
 .dock{display:none}.backmap{position:fixed;left:12px;bottom:18px;z-index:41;padding:11px 18px;border-radius:999px;background:#c9e265;color:#1f2a24;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 3px 12px rgba(0,0,0,.4)}@media(max-width:720px){.backmap{bottom:calc(76px + env(safe-area-inset-bottom))}}
 @media(max-width:720px){main{padding-bottom:calc(84px + env(safe-area-inset-bottom))}.crumb a{display:inline-block;padding:8px 2px}.pager a{min-height:72px;padding:14px}
@@ -262,7 +267,8 @@ def compact(body):
                 li += f'<li><div class="tn"><span>{nm}</span><span class="pz">{c[2]}</span></div><div class="mm">{mons}</div></li>'
             return f'<div class="cl"><h4>{cap or "训练家"}</h4><ul class="il tl">{li}</ul></div>'
         if cls and 'party' in cls and head[:2] == ['宝可梦', '详情']:
-            out = f'<div class="cl party"><h4>{cap}</h4>'
+            mm = NPC_RE.search(re.sub(r'<[^>]+>', ' ', cap))
+            out = f'<div class="cl party"><h4>{av(mm.group(0), "av md") if mm else ""}<span>{cap}</span></h4>'
             for r in rest:
                 c = cells(r)
                 sm = re.search(r'<small>(.*?)</small>', c[0])
@@ -270,8 +276,61 @@ def compact(body):
                 info = ''.join(f'<div>{x}</div>' for x in re.split(r'<br\s*/?>', c[1]) if x.strip())
                 out += f'<div class="mon"><div class="mh"><span class="n">{nm}</span><small>{sm.group(1) if sm else ""}</small></div><div class="mi">{info}</div></div>'
             return out + '</div>'
+        if len(rows) == 1 and len(cells(rows[0])) == 1:
+            txt = re.sub(r'<[^>]+>', ' ', rows[0])
+            mm = NPC_RE.search(txt)
+            if mm:
+                return f'<div class="gymbox">{av(mm.group(0), "av lg")}<div>{cells(rows[0])[0]}</div></div>'
         return f'<div class="tw">{tb}</div>'
     return re.sub(r'<table class="grid(?: (party))?">.*?</table>', conv, body, flags=re.S)
+
+
+
+NPC = {'阿速': 'falkner', '阿笔': 'bugsy', '阿蜜': 'whitney', '松叶': 'morty', '阿四': 'chuck', '小茜': 'jasmine', '柳伯': 'pryce', '小椿': 'clair',
+       '小刚': 'brock', '小霞': 'misty', '马志士': 'lt-surge', '莉佳': 'erika', '阿杏': 'janine', '娜姿': 'sabrina', '夏伯': 'blaine', '青绿': 'blue',
+       '坂木': 'giovanni', '一树': 'will', '阿桔': 'koga', '希巴': 'bruno', '梨花': 'karen', '阿渡': 'lance', '大木博士': 'oak', '西尔弗': 'silver',
+       '米纳奇': 'eusine', '阿波罗': 'proton', '兰斯': 'archer', '雅典娜': 'ariana', '拉姆达': 'petrel', '赤红': 'red'}
+NPC_RE = re.compile('|'.join(sorted(map(re.escape, NPC), key=len, reverse=True)) + r'(?!色)')
+
+
+def av(name, cls='av'):
+    return f'<img class="{cls}" src="../img/npc/{NPC[name]}.png" alt="{name}" loading="lazy">'
+
+
+def npcify(body):
+    """Portraits: first mention per section as a chip, plus a cast strip for the page."""
+    cast = []
+    chunks = re.split(r'(?=<h2)', body)
+    out = []
+    for ch in chunks:
+        seen = set()
+
+        def para(m):
+            parts = re.split(r'(<[^>]+>)', m.group(2))
+            for i, t in enumerate(parts):
+                if i % 2 or not t:
+                    continue
+                def one(mm):
+                    n = mm.group(0)
+                    if n in seen:
+                        return n
+                    seen.add(n)
+                    return f'<span class="npc">{av(n, "av sm")}{n}</span>'
+                parts[i] = NPC_RE.sub(one, t)
+            return m.group(1) + ''.join(parts) + m.group(3)
+        out.append(re.sub(r'(<p[^>]*>)(.*?)(</p>)', para, ch, flags=re.S))
+    body = ''.join(out)
+    for m in re.finditer(r'<div class="cl party"><h4>(.*?)</h4>|<div class="gymbox">.*?</div></div>', body, re.S):
+        for n in NPC_RE.findall(re.sub(r'<[^>]+>', ' ', m.group(0))):
+            if n not in cast:
+                cast.append(n)
+    return body, cast
+
+
+def cast_strip(cast):
+    if not cast:
+        return ''
+    return ('<div class="cast"><b>本节人物</b>' + ''.join(f'<span class="ct">{av(n, "av")}<i>{n}</i></span>' for n in cast) + '</div>')
 
 
 def link_maps(body, cur=99):
@@ -474,7 +533,7 @@ def build(folder):
                 + (f'本页由 Eli 的杂货间转载，并有改动（重新排版、去掉站内链接）。原文与本页均以 ' if g.get('kind') == 'repost' else
                    f'本页由 Eli 的杂货间翻译为中文，并有改动（重新排版、精简部分图注）。原文与译文均以 ')
                 + f'<a href="{g["licenseUrl"]}" target="_blank" rel="noopener noreferrer">{g["license"]}</a> 授权。'
-                f'配图来自原站，版权归原作者与游戏厂商；地图截图来自 <a href="https://archives.bulbagarden.net/wiki/Category:HeartGold_and_SoulSilver_maps" target="_blank" rel="noopener noreferrer">Bulbagarden Archives</a>，游戏画面版权归 Nintendo / Game Freak / The Pokémon Company。</p>')
+                f'配图来自原站，版权归原作者与游戏厂商；地图截图和人物图来自 <a href="https://archives.bulbagarden.net/wiki/Category:HeartGold_and_SoulSilver_maps" target="_blank" rel="noopener noreferrer">Bulbagarden Archives</a>，游戏画面版权归 Nintendo / Game Freak / The Pokémon Company。</p>')
 
     backjs = "<script>try{if(sessionStorage.getItem('hgssFromMap')){var a=document.createElement('a');a.className='backmap';a.href='map.html';a.textContent='\u2190 \u8fd4\u56de\u5730\u56fe';document.body.appendChild(a)}}catch(e){}</script>"
     tocs = {}
@@ -483,6 +542,7 @@ def build(folder):
         if NODEIDX['by']:
             body = link_maps(body, int(slug.split('-')[-1]))
         body = compact(body)
+        body, cast = npcify(body)
         prev = pages[i - 1] if i else None
         nxt = pages[i + 1] if i + 1 < len(pages) else None
         pager = '<nav class="pager">'
@@ -503,7 +563,7 @@ def build(folder):
             body, items = treeify(body, nxt)
             tocs[slug] = items
         (out / f'{slug}.html').write_text(page_html(f'{short_title(info["title"])[0]} - {g["game"]}',
-            f'{crumb}<h1>{e(short_title(info["title"])[0])}</h1><p class="chap">第 {slug.split("-")[-1]} 节 · {e(info["chapter"])}'+(f' · 途经 {e(short_title(info["title"])[1])}' if short_title(info["title"])[1] else '')+f'</p>{tree}{body}{pager}{credit(slug)}{dock}{backjs if hasmap else ""}'), encoding='utf-8')
+            f'{crumb}<h1>{e(short_title(info["title"])[0])}</h1><p class="chap">第 {slug.split("-")[-1]} 节 · {e(info["chapter"])}'+(f' · 途经 {e(short_title(info["title"])[1])}' if short_title(info["title"])[1] else '')+f'</p>{cast_strip(cast)}{tree}{body}{pager}{credit(slug)}{dock}{backjs if hasmap else ""}'), encoding='utf-8')
 
     toc, last = '', None
     for slug, info, _ in pages:
