@@ -74,6 +74,17 @@ nav.tree a i{font-style:normal;color:#8fa592;font-size:11.5px;margin-left:4px}na
 @media(min-width:1400px){main{max-width:1000px}p,li{font-size:17px}}
 figure.map .nbr{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0 2px}.nbr b{font-size:12.5px;color:#a9b5a6;font-weight:600;margin-right:2px}.nbr a{display:inline-block;padding:8px 14px;border-radius:999px;border:1px solid #44574b;background:#2a372f;color:#f1f0e6;text-decoration:none;font-size:14.5px}
 a.pin.exit{text-decoration:none;color:inherit;cursor:pointer}.spb{font-size:13px;color:#a9b5a6;margin:6px 0 10px;padding:8px 12px;border:1px dashed #44574b;border-radius:10px}.spb button{background:#2a372f;border:1px solid #44574b;color:#c9e265;border-radius:999px;padding:5px 12px;font-size:13px;cursor:pointer;margin-left:4px}.toc li.lk a{opacity:.6}.toc a i{font-style:normal}
+.cl{margin:16px 0}.cl h4{margin:0 0 6px;font-size:15px;color:#c9e265}ul.il{list-style:none;margin:0;padding:0;background:#2a372f;border-radius:10px;overflow:hidden}
+.il li{padding:7px 12px;border-bottom:1px solid #36463c;font-size:15px;line-height:1.45}.il li:last-child{border-bottom:0}.il li.dv{background:#324238;font-size:12.5px;color:#a9b5a6;padding:5px 12px;font-weight:700}
+.il .n{display:flex;align-items:center;gap:8px;font-weight:600}.il img{width:26px;height:26px;object-fit:contain;flex:none}.il img.pm{width:36px;height:27px}
+.il .d{display:block;font-size:13px;color:#b9c4b5;line-height:1.5;margin-top:1px;padding-left:34px}.il img{align-self:center}
+.il em,.mi em{font-style:normal;font-size:11.5px;background:#3b4d3f;color:#c9e265;border-radius:6px;padding:1px 7px;font-weight:600;white-space:nowrap}
+.il.pl li.pr{display:flex;align-items:center;justify-content:space-between;gap:10px}.il.pl .n{flex:1;min-width:0}.il.pl .tg{font-size:12.5px;color:#a9b5a6;text-align:right}
+.tl .tn{display:flex;justify-content:space-between;gap:10px;font-weight:600}.tl .pz{color:#c9e265;font-size:13px;white-space:nowrap;font-weight:500}.tl .mm{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:3px;font-size:13.5px;color:#d6dccf}.tl .mc{display:inline-flex;align-items:center;gap:4px}.tl .mc img{width:30px;height:23px}
+.party .mon{background:#2a372f;border-radius:10px;margin:0 0 8px;padding:9px 12px}.party .mh{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.party .mh .n{font-weight:700}.party .mh small{color:#a9b5a6;font-size:12.5px}.party .mi{margin-top:4px;font-size:13.5px;color:#cdd6c8;line-height:1.6}
+.tw{overflow-x:auto;margin:14px 0}.tw table.grid{margin:0;min-width:480px}
+.toc a{display:flex;align-items:center;gap:12px}.toc .no{font-style:normal;flex:none;width:30px;height:30px;border-radius:50%;background:#34443a;color:#c9e265;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}.toc .tt{flex:1;min-width:0}.toc .tt i{font-style:normal;font-weight:600;display:block;color:#f1f0e6;font-size:16px}.toc .tt small{display:block;color:#8fa592;font-size:12.5px;line-height:1.4;margin-top:2px;font-weight:400}
+.mapbtn.alt{background:#2a372f;color:#c9e265;border:1px solid #44574b}
 a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,226,101,.18)}
 .dock{display:none}.backmap{position:fixed;left:12px;bottom:18px;z-index:41;padding:11px 18px;border-radius:999px;background:#c9e265;color:#1f2a24;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 3px 12px rgba(0,0,0,.4)}@media(max-width:720px){.backmap{bottom:calc(76px + env(safe-area-inset-bottom))}}
 @media(max-width:720px){main{padding-bottom:calc(84px + env(safe-area-inset-bottom))}.crumb a{display:inline-block;padding:8px 2px}.pager a{min-height:72px;padding:14px}
@@ -147,7 +158,7 @@ def nextstop(h2s, cur, nxt):
         n = h2s[i + 1]
         return f'<p class="nextstop">\u2193 下一站：<a href="#{n["id"]}">{plain(n["h"])}</a></p>'
     if nxt:
-        return f'<p class="nextstop">\u2193 下一页：<a href="{nxt[0]}.html">{e(nxt[1]["title"])}</a></p>'
+        return f'<p class="nextstop">\u2193 本篇到此结束：<a href="{nxt[0]}.html">继续下一页</a></p>'
     return ''
 
 
@@ -168,6 +179,12 @@ PLACES = {}
 NODEIDX = {'by': {}, 'nb': {}}
 
 
+def short_title(t):
+    ps = [x for x in t.split('、') if x != '介绍'] or [t]
+    main = ps[0] if len(ps) == 1 else ps[0] + ' → ' + ps[-1]
+    return main, '、'.join(ps[1:-1]) if len(ps) > 2 else ''
+
+
 def norm_place(t):
     t = re.sub(r'（.*?）|\(.*?\)', '', t).strip()
     t = re.sub(r'(\d+)号道路', r'\1号', t)
@@ -183,7 +200,81 @@ def disp(n):
     return n['k'] + '道路' if n['t'] == 'r' and n['k'].endswith('号') else n['k']
 
 
-def link_maps(body):
+
+HMRE = re.compile(r'需要(?:居合斩|冲浪|怪力|碎岩|攀瀑|潮旋|飞翔|闪光|剪断|挖洞|飞天|瞬间移动)(?:[、，,和及]\s*(?:居合斩|冲浪|怪力|碎岩|攀瀑|潮旋|飞翔|闪光|剪断|挖洞|飞天|瞬间移动))*')
+
+
+def clean_note(t):
+    return HMRE.sub('需要特殊能力', t)
+
+
+def cells(row):
+    return re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>', row, re.S)
+
+
+def vbadge(v):
+    v = re.sub(r'<[^>]+>', '', v).strip()
+    return '' if v in ('心金 / 魂银', '') else f'<em>仅{e(v)}</em>'
+
+
+def compact(body):
+    def conv(m):
+        tb = m.group(0)
+        cls = m.group(1)
+        cap = re.search(r'<caption>(.*?)</caption>', tb, re.S)
+        cap = cap.group(1) if cap else ''
+        rows = re.findall(r'<tr(?: class="div")?>.*?</tr>', tb, re.S)
+        if not rows:
+            return tb
+        head = [re.sub(r'<[^>]+>', '', c).strip() for c in cells(rows[0])]
+        rest = rows[1:]
+
+        def div(r):
+            return '<li class="dv">' + re.sub(r'<[^>]+>', '', cells(r)[0]) + '</li>' if 'class="div"' in r[:20] else None
+        if head == ['道具', '版本', '位置 / 获得方法']:
+            li = ''
+            for r in rest:
+                d = div(r)
+                if d:
+                    li += d; continue
+                c = cells(r)
+                li += f'<li><span class="n">{c[0]}{vbadge(c[1])}</span><span class="d">{clean_note(c[2])}</span></li>'
+            return f'<div class="cl"><h4>{cap or "道具"}</h4><ul class="il">{li}</ul></div>'
+        if head == ['宝可梦', '版本', '方式', '等级', '出现率']:
+            li = ''
+            for r in rest:
+                d = div(r)
+                if d:
+                    li += d; continue
+                c = cells(r)
+                tg = ' · '.join(x for x in (re.sub(r'<[^>]+>', '', c[2]).strip(), re.sub(r'<[^>]+>', '', c[3]).strip(), re.sub(r'<[^>]+>', '', c[4]).strip()) if x)
+                li += f'<li class="pr"><span class="n">{c[0]}{vbadge(c[1])}</span><span class="tg">{tg}</span></li>'
+            return f'<div class="cl"><h4>{cap or "可遇到的宝可梦"}</h4><ul class="il pl">{li}</ul></div>'
+        if head == ['训练家', '宝可梦', '奖金']:
+            li = ''
+            for r in rest:
+                d = div(r)
+                if d:
+                    li += d; continue
+                c = cells(r)
+                mons = ''.join(f'<span class="mc">{x}</span>' for x in re.split(r'<br\s*/?>', c[1]) if x.strip())
+                nm = re.sub(r'<small></small>', '', c[0]).replace('<br>', ' ')
+                li += f'<li><div class="tn"><span>{nm}</span><span class="pz">{c[2]}</span></div><div class="mm">{mons}</div></li>'
+            return f'<div class="cl"><h4>{cap or "训练家"}</h4><ul class="il tl">{li}</ul></div>'
+        if cls and 'party' in cls and head[:2] == ['宝可梦', '详情']:
+            out = f'<div class="cl party"><h4>{cap}</h4>'
+            for r in rest:
+                c = cells(r)
+                sm = re.search(r'<small>(.*?)</small>', c[0])
+                nm = re.sub(r'<small>.*?</small>', '', c[0]).replace('<br>', '')
+                info = ''.join(f'<div>{x}</div>' for x in re.split(r'<br\s*/?>', c[1]) if x.strip())
+                out += f'<div class="mon"><div class="mh"><span class="n">{nm}</span><small>{sm.group(1) if sm else ""}</small></div><div class="mi">{info}</div></div>'
+            return out + '</div>'
+        return f'<div class="tw">{tb}</div>'
+    return re.sub(r'<table class="grid(?: (party))?">.*?</table>', conv, body, flags=re.S)
+
+
+def link_maps(body, cur=99):
     """Make map images non-linking, exit pins clickable, and add neighbour chips under each map."""
     body = re.sub(r'<a href="\.\./img/maps/[^"]*" target="_blank" rel="noopener">(<img[^>]*>)</a>', r'\1', body)
 
@@ -191,6 +282,8 @@ def link_maps(body):
         h = place_href(m.group(4))
         if not h:
             return m.group(0)
+        if h[1] > cur:
+            return ''
         return f'<a class="pin exit {m.group(1)}" style="{m.group(2)}" href="{h[0]}" data-p="{h[1]}">{m.group(3)} {m.group(4)}</a>'
     body = re.sub(r'<span class="pin exit (\w)" style="([^"]*)">(.) (.*?)</span>', pin, body)
 
@@ -201,6 +294,8 @@ def link_maps(body):
             return inner
         chips = ''
         for o in NODEIDX['nb'].get(n['k'], []):
+            if o['p'] > cur:
+                continue
             dx, dy = o['x'] - n['x'], o['y'] - n['y']
             ar = ('→' if dx > 0 else '←') if abs(dx) >= abs(dy) * 0.8 else ('↓' if dy > 0 else '↑')
             chips += f'<a href="part-{o["p"]}.html#{o["id"]}" data-p="{o["p"]}">{ar} {e(disp(o))}</a>'
@@ -210,17 +305,29 @@ def link_maps(body):
     return re.sub(r'<figure class="map">(?:(?!</figure>).)*?<figcaption>([^<]*)</figcaption>.*?</figure>', fig, body, flags=re.S)
 
 
-SPJS = ("var SP={prog:function(){try{return +localStorage.getItem('hgssProg')||0}catch(e){return 0}},"
-        "off:function(){try{return localStorage.getItem('eliSpoilerOff')==='1'}catch(e){return false}},"
-        "toggle:function(){try{localStorage.setItem('eliSpoilerOff',SP.off()?'0':'1')}catch(e){}location.reload()},"
-        "lock:function(p){return !SP.off()&&p>SP.prog()+1}};")
+SPJS = "var SP={lock:function(){return false},off:function(){return true}};"
 
 
 def spoiler_bar():
-    return ('<p class="spb" id="spb"></p><script>(function(){' + SPJS +
-            "var b=document.getElementById('spb'),o=SP.off();b.innerHTML=o?'已显示全部地点和章节（含剧透）。 <button id=\"spt\">开启防剧透</button>':"
-            "'\U0001F6E1 防剧透已开：'+(SP.prog()?'只显示你读到第 '+SP.prog()+' 节，以及再往后一节的内容。':'从第 1 节开始，读到哪里才显示到哪里。')+' <button id=\"spt\">显示全部</button>';"
-            "document.getElementById('spt').onclick=SP.toggle})()</script>")
+    return ''
+
+
+
+def write_evo(folder, g, out):
+    d = json.loads((folder / 'evolutions.json').read_text(encoding='utf-8'))
+    h = '<p class="crumb"><a href="../">攻略大全</a> / <a href="./">' + e(g['game']) + '</a></p><h1>通讯进化改动一览</h1>'
+    h += '<p class="chap">' + e(d['games']) + '</p>'
+    for sec in d['sections']:
+        h += f'<div class="cl evo"><h4 style="background:{sec["color"]}">{e(sec["title"])}</h4><ul class="il">'
+        for r in sec['rows']:
+            if len(r) == 2:
+                h += f'<li><span class="n">{e(r[0])}</span><span class="d" style="padding-left:0">{e(r[1])}</span></li>'
+            else:
+                h += (f'<li><span class="n">{e(r[0])}<i class="ar">→</i>{e(r[1])}</span>'
+                      f'<span class="d" style="padding-left:0">{r[2]}<em>{e(r[3])}</em></span></li>')
+        h += '</ul></div>'
+    h += '<div class="cl"><h4>说明</h4><ul class="il">' + ''.join(f'<li class="note">{e(x)}</li>' for x in d['notes']) + '</ul></div>'
+    (out / 'evolutions.html').write_text(page_html('通讯进化改动一览 - ' + g['game'], h + '<style>.evo h4{color:#fff;padding:9px 14px;border-radius:10px;margin-bottom:6px}.ar{font-style:normal;color:#c9e265;margin:0 8px}li.note{font-size:14px;color:#cdd6c8}</style>'), encoding='utf-8')
 
 
 def write_map(folder, g, out, pages):
@@ -295,7 +402,7 @@ addEventListener('pointerup',function(){d=null;m.classList.remove('dr')});
 m.addEventListener('wheel',function(e){if(e.ctrlKey){e.preventDefault();var r=m.getBoundingClientRect();set(w*(e.deltaY<0?1.1:.91),e.clientX-r.left,e.clientY-r.top)}},{passive:false});
 document.querySelectorAll('.vt button').forEach(function(b){b.onclick=function(){document.querySelectorAll('.vt button').forEach(function(x){x.classList.toggle('on',x===b)});var l=b.dataset.v==='list';document.querySelector('.mapbox').style.display=l?'none':'';document.querySelector('.lst').style.display=l?'block':'none';if(!l){apply()}}});
 })()</script>"""
-    ui = ('<details class="fdet" id="fd"><summary>筛选 / 搜索 <span id="fs"></span></summary><div class="fl"><input id="fq" type="search" placeholder="搜索地点，如：月见山、3号、塔" autocomplete="off">'
+    ui = ('<div class="fl" style="margin:0 0 8px"><input id="fq" type="search" placeholder="搜索地点，如：月见山、3号、塔" autocomplete="off"></div><details class="fdet" id="fd"><summary>按类型 / 地区筛选 <span id="fs"></span></summary><div class="fl">'
           '<div class="row" data-g="c"><b>类型</b><button data-v="市">市</button><button data-v="镇">镇</button><button data-v="路">道路</button><button data-v="洞">洞窟·径·关口</button><button data-v="塔">塔</button><button data-v="山">山</button><button data-v="水">湖·岛·船</button></div>'
           '<div class="row" data-g="r"><b>地区</b><button data-v="j">城都</button><button data-v="k">关都</button></div>'
           '<div class="row" data-g="ph"><b>阶段</b><button data-v="1">主线（1–16 节）</button><button data-v="2">通关后（17–32 节）</button><button id="fx">清除筛选</button><span class="fc" id="fc"></span></div></div></details>'
@@ -305,7 +412,7 @@ if(innerWidth>720)document.getElementById('fd').open=true;
 function chk(d,t){return !SP.lock(+d.p)&&(!t||d.k.indexOf(t)>-1)&&(!F.c.length||F.c.indexOf(d.c)>-1)&&(!F.r.length||F.r.indexOf(d.r)>-1)&&(!F.ph.length||F.ph.indexOf(d.ph)>-1)}
 function run(){document.querySelectorAll('.fl button[data-v="1"],.fl button[data-v="2"],.leg span:nth-child(2)').forEach(function(x){x.style.display=SP.off()?'':'none'});var t=q.value.trim(),act=t||F.c.length||F.r.length||F.ph.length,n=0,h='';
 A.forEach(function(a){var ok=chk(a.dataset,t);a.style.display=SP.lock(+a.dataset.p)?'none':'';a.firstChild.classList.toggle('off',!ok);if(ok){n++;h+='<a href="'+a.getAttribute('href')+'">'+a.dataset.k+'</a>'}});
-var ln=0;L.forEach(function(a){var ok=chk(a.dataset,t);a.style.display=ok?'':'none';if(ok)ln++});document.querySelectorAll('.lst h2').forEach(function(h){var c=h.nextElementSibling;h.style.display=c.querySelector('a:not([style*=none])')?'':'none'});if(!A.length)n=ln;
+var ln=0;L.forEach(function(a){var ok=chk(a.dataset,t);a.style.display=ok?'':'none';if(ok)ln++});document.querySelectorAll('.lst h2').forEach(function(h){var c=h.nextElementSibling;h.style.display=c.querySelector('a:not([style*=none])')?'':'none'});if(!A.length){n=ln;var pl=document.getElementById('plc');if(pl)pl.style.display=act?'block':'none'}
 document.querySelectorAll('.mapwrap line[data-p],.mapwrap path[data-p]').forEach(function(x){x.style.display=SP.lock(+x.dataset.p)?'none':''});
 fc.textContent=act?'共 '+n+' 个地点':'';document.getElementById('fs').textContent=act?'· '+n+' 个地点':'';if(A.length){rs.style.display=act&&n<=40?'flex':'none';rs.innerHTML=h}}
 document.querySelectorAll('.fl .row[data-g] button[data-v]').forEach(function(b){b.onclick=function(){var g=b.parentNode.dataset.g,v=b.dataset.v,i=F[g].indexOf(v);if(i<0)F[g].push(v);else F[g].splice(i,1);b.classList.toggle('on',i<0);run()}});
@@ -327,7 +434,7 @@ L.forEach(function(a){a.addEventListener('click',function(){try{sessionStorage.s
             f'<div class="mapbox"><div class="mapwrap"><svg viewBox="0 0 1900 960" xmlns="http://www.w3.org/2000/svg">{svg}</svg></div>'
             f'<div class="zb"><button id="zi" aria-label="放大">＋</button><button id="zo" aria-label="缩小">－</button><button id="zf" class="fit">总览</button></div></div>{lst}{js}{fjs}')
     PLACES.update(css=css, ui=ui, lst=lst.replace('style="display:none"', ''), fjs=fjs)
-    (out / 'map.html').write_text(page_html(f'地图总览 - {g["game"]}', css + spoiler_bar() + body), encoding='utf-8')
+    (out / 'map.html').write_text(page_html(f'地图总览 - {g["game"]}', css + body), encoding='utf-8')
 
 
 def build(folder):
@@ -370,24 +477,19 @@ def build(folder):
                 f'配图来自原站，版权归原作者与游戏厂商；地图截图来自 <a href="https://archives.bulbagarden.net/wiki/Category:HeartGold_and_SoulSilver_maps" target="_blank" rel="noopener noreferrer">Bulbagarden Archives</a>，游戏画面版权归 Nintendo / Game Freak / The Pokémon Company。</p>')
 
     backjs = "<script>try{if(sessionStorage.getItem('hgssFromMap')){var a=document.createElement('a');a.className='backmap';a.href='map.html';a.textContent='\u2190 \u8fd4\u56de\u5730\u56fe';document.body.appendChild(a)}}catch(e){}</script>"
-    def progjs(slug):
-        n = int(slug.split('-')[-1])
-        return ("<script>(function(){" + SPJS + f"var n={n};try{{if(n>SP.prog())localStorage.setItem('hgssProg',n)}}catch(e){{}}"
-                "document.querySelectorAll('.nbr a[data-p],a.pin[data-p]').forEach(function(a){if(SP.lock(+a.dataset.p))a.style.display='none'});"
-                "document.querySelectorAll('.nbr').forEach(function(p){if(!p.querySelector('a:not([style*=none])'))p.style.display='none'})})()</script>")
-
     tocs = {}
     for i, (slug, info, body) in enumerate(pages):
         body = re.sub(r'<figure data-img="([^"]+)">(.*?)</figure>', fig, body, flags=re.S)
         if NODEIDX['by']:
-            body = link_maps(body)
+            body = link_maps(body, int(slug.split('-')[-1]))
+        body = compact(body)
         prev = pages[i - 1] if i else None
         nxt = pages[i + 1] if i + 1 < len(pages) else None
         pager = '<nav class="pager">'
         if prev:
             pager += f'<a href="{prev[0]}.html"><small>← 上一页</small>{e(prev[1]["title"])}</a>'
         if nxt:
-            pager += f'<a class="next" href="{nxt[0]}.html"><small>下一页 →</small>{e(nxt[1]["title"])}</a>'
+            pager += f'<a class="next" href="{nxt[0]}.html"><small>下一页 →</small>继续</a>'
         else:
             pager += f'<a class="next" href="./"><small>本章完</small>回到目录</a>'
         pager += '</nav>'
@@ -400,8 +502,8 @@ def build(folder):
         if g.get('tree'):
             body, items = treeify(body, nxt)
             tocs[slug] = items
-        (out / f'{slug}.html').write_text(page_html(f'{info["title"]} - {g["game"]}',
-            f'{crumb}<h1>{e(info["title"])}</h1><p class="chap">{e(info["chapter"])}</p>{tree}{body}{pager}{credit(slug)}{dock}{backjs if hasmap else ""}{progjs(slug) if hasmap else ""}'), encoding='utf-8')
+        (out / f'{slug}.html').write_text(page_html(f'{short_title(info["title"])[0]} - {g["game"]}',
+            f'{crumb}<h1>{e(short_title(info["title"])[0])}</h1><p class="chap">第 {slug.split("-")[-1]} 节 · {e(info["chapter"])}'+(f' · 途经 {e(short_title(info["title"])[1])}' if short_title(info["title"])[1] else '')+f'</p>{tree}{body}{pager}{credit(slug)}{dock}{backjs if hasmap else ""}'), encoding='utf-8')
 
     toc, last = '', None
     for slug, info, _ in pages:
@@ -409,19 +511,20 @@ def build(folder):
             toc += ('</ul>' if last else '') + f'<h3>{e(info["chapter"])}</h3><ul class="toc">'
             last = info['chapter']
         if True:
-            toc += f'<li data-p="{slug.split("-")[-1]}"><a href="{slug}.html" data-t="{e(info["title"])}"><i>{e(info["title"])}</i><span>→</span></a></li>'
+            mt, sb = short_title(info["title"])
+            toc += (f'<li><a href="{slug}.html"><em class="no">{slug.split("-")[-1]}</em><span class="tt"><i>{e(mt)}</i>'
+                    + (f'<small>{e(sb)}</small>' if sb else '') + '</span><span>→</span></a></li>')
     toc += '</ul>'
     if (folder / 'worldmap.json').exists():
         toc = ('<p><a class="mapbtn" href="map.html">\U0001F5FA 打开地图总览（点地点跳到攻略）</a></p>' + toc)
         write_map(folder, g, out, pages)
-        pl = ('<h3>地点速查</h3>' + PLACES['ui'].replace('<details class="fdet" id="fd">', '<details class="fdet" id="fd" open>', 1)
-              + '<div class="res" id="rs" style="display:none"></div>' + PLACES['lst'])
-        idxjs = ("<script>(function(){" + SPJS + "var lk=[];document.querySelectorAll('.toc li').forEach(function(li){if(SP.lock(+li.dataset.p)){li.classList.add('lk');li.style.display='none';lk.push(li)}});"
-                 "if(lk.length){var m=document.createElement('li');m.className='lkall';m.innerHTML='<a>\U0001F512 还有 '+lk.length+' 节，读到前面的才会解锁</a>';lk[0].parentNode.insertBefore(m,lk[0]);"
-                 "m.querySelector('a').style.opacity='.6'}"
-                 "document.querySelectorAll('h3').forEach(function(h){var u=h.nextElementSibling;if(u&&u.classList.contains('toc')&&!u.querySelector('li:not(.lk):not(.lkall)'))h.style.display='none'});"
-                 "var all=document.querySelectorAll('.toc li.lkall');for(var i=0;i<all.length-1;i++)all[i].remove()})()</script>")
-        toc = PLACES['css'] + spoiler_bar() + toc + pl + PLACES['fjs'] + idxjs
+        pl = (PLACES['ui']
+              + '<div class="res" id="rs" style="display:none"></div>' + PLACES['lst'].replace('class="lst"', 'class="lst" id="plc" style="display:none"'))
+        evo = ('<p><a class="mapbtn alt" href="evolutions.html">\U0001F501 通讯进化改动一览（3DS 关服后的替代进化方式）</a></p>'
+               if (folder / 'evolutions.json').exists() else '')
+        toc = PLACES['css'] + pl + PLACES['fjs'] + toc.replace('</p>', '</p>' + evo, 1)
+        if (folder / 'evolutions.json').exists():
+            write_evo(folder, g, out)
     srct = g.get('sourceTitle', g['en'])
     first = g['sourceBase'] + srct.replace(' ', '_')
     (out / 'index.html').write_text(page_html(f'{g["game"]} 中文攻略',
