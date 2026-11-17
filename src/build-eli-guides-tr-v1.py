@@ -31,6 +31,7 @@ p,li{font-size:16px;line-height:1.85}ol,ul{padding-left:22px}b{color:#fff}
 .note{font-size:14px;color:#a9b5a6;background:#2a372f;border-radius:10px;padding:10px 14px}
 figure{margin:14px 0;text-align:center}figure img{max-width:100%;height:auto;border-radius:8px;background:#2a372f}
 figcaption{font-size:13px;color:#a9b5a6;margin-top:6px}
+.mapbtn{display:block;text-align:center;padding:14px;border-radius:12px;background:#c9e265;color:#1f2a24;font-weight:700;text-decoration:none;font-size:16px;margin:4px 0 8px}
 .pinbox{position:relative;display:block}.pin{position:absolute;z-index:2;font-size:12px;line-height:1;pointer-events:none}
 .pin.dot{width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:#c9e265;color:#1f2a24;font-weight:700;display:grid;place-items:center;border:2px solid #1f2a24;box-shadow:0 0 0 2px #c9e265}
 .pin.exit{background:rgba(31,42,36,.9);color:#c9e265;padding:5px 9px;border-radius:999px;border:1px solid #c9e265;white-space:nowrap;font-weight:600}
@@ -153,6 +154,48 @@ def outline(items):
             "addEventListener('scroll',f,{passive:true});f()})()</script>")
 
 
+def write_map(folder, g, out, pages):
+    wm = json.loads((folder / 'worldmap.json').read_text(encoding='utf-8'))
+    by = {n['k']: n for n in wm['nodes']}
+    titles = {slug: info['title'] for slug, info, _ in pages}
+    sea = {tuple(x) for x in wm['sea']}
+    svg = ''
+    for a, b in wm['edges']:
+        A, B = by[a], by[b]
+        svg += f'<line x1="{A["x"]}" y1="{A["y"]}" x2="{B["x"]}" y2="{B["y"]}" class="ed{" sea" if (a, b) in sea else ""}"/>'
+    # long sea links drawn as curves dipping to the bottom
+    for a, b in (('浅葱市', '海王丸号'), ('海王丸号', '枯叶市')):
+        A, B = by[a], by[b]
+        svg += f'<path d="M{A["x"]} {A["y"]} Q{(A["x"] + B["x"]) // 2} {max(A["y"], B["y"]) + 120} {B["x"]} {B["y"]}" class="ed sea" fill="none"/>'
+    for n in wm['nodes']:
+        h, w = 30, n['w']
+        post = n['p'] > 16
+        cls = f'nd {n["t"]}{" post" if post else ""}'
+        href = f'part-{n["p"]}.html#{n["id"]}'
+        svg += (f'<a href="{href}"><g class="{cls}"><title>{e(n["k"])} · 第 {n["p"]} 节：{e(titles["part-" + str(n["p"])])}</title>'
+                f'<rect x="{n["x"] - w // 2}" y="{n["y"] - h // 2}" width="{w}" height="{h}" rx="{15 if n["t"] != "r" else 8}"/>'
+                f'<text x="{n["x"]}" y="{n["y"] + 5}" text-anchor="middle">{e(n["k"])}</text></g></a>')
+    css = """<style>main{max-width:none;padding:8px 12px 40px}.mapwrap{overflow:auto;border:1px solid #44574b;border-radius:12px;background:#18221d;max-height:78vh}
+.mapwrap svg{display:block;min-width:1100px;width:1900px}.ed{stroke:#5d7566;stroke-width:3}.ed.sea{stroke:#4a8fb0;stroke-dasharray:8 6}
+.nd rect{fill:#2f4336;stroke:#c9e265;stroke-width:2}.nd text{fill:#f1f0e6;font-size:15px;font-weight:700;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif}
+.nd.r rect{fill:#26332b;stroke:#6e8575;stroke-width:1.5}.nd.r text{font-size:13px;font-weight:500;fill:#cdd6c8}.nd.d rect{fill:#3a2f45;stroke:#b79ae0}.nd.post rect{stroke:#6cc3f0}.nd.d.post rect{stroke:#6cc3f0}
+.nd:hover rect{fill:#c9e265}.nd:hover text{fill:#1f2a24}.leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:#a9b5a6;margin:6px 0 12px}.leg i{display:inline-block;width:14px;height:14px;border-radius:5px;vertical-align:-2px;margin-right:5px;border:2px solid}
+.zb{display:flex;gap:8px;margin:0 0 10px}.zb button{background:#2a372f;border:1px solid #44574b;color:#f1f0e6;border-radius:8px;padding:6px 14px;font-size:15px}</style>"""
+    legend = ('<div class="leg"><span><i style="border-color:#c9e265;background:#2f4336"></i>城镇（主线 1–16 节）</span>'
+              '<span><i style="border-color:#6cc3f0;background:#2f4336"></i>城镇（通关后 17–32 节）</span>'
+              '<span><i style="border-color:#b79ae0;background:#3a2f45"></i>洞窟 / 塔 / 特殊地点</span>'
+              '<span><i style="border-color:#6e8575;background:#26332b"></i>道路</span>'
+              '<span><i style="border:0;border-top:3px dashed #4a8fb0;height:0;width:18px;vertical-align:4px"></i>海路</span></div>')
+    js = ("<script>(function(){var s=document.querySelector('.mapwrap svg'),w=1900;function z(f){w=Math.max(900,Math.min(3200,w*f));s.style.width=w+'px'}"
+          "document.getElementById('zi').onclick=function(){z(1.25)};document.getElementById('zo').onclick=function(){z(.8)};"
+          "var m=document.querySelector('.mapwrap');m.scrollLeft=Math.max(0,(by('若叶镇')-m.clientWidth/2));function by(){return 935*(s.getBoundingClientRect().width/1900)}})()</script>")
+    body = (f'<p class="crumb"><a href="../">攻略大全</a> / <a href="./">{e(g["game"])}</a></p><h1>地图总览</h1>'
+            '<p class="chap">按城都和关都的地理位置排列，点任意地点跳到对应的攻略段落。左边是城都，右边是关都，两地由 27 号道路相连。</p>'
+            f'{legend}<div class="zb"><button id="zi">放大 +</button><button id="zo">缩小 −</button></div>'
+            f'<div class="mapwrap"><svg viewBox="0 0 1900 960" xmlns="http://www.w3.org/2000/svg">{svg}</svg></div>{js}')
+    (out / 'map.html').write_text(page_html(f'地图总览 - {g["game"]}', css + body), encoding='utf-8')
+
+
 def build(folder):
     g = json.loads((folder / 'guide.json').read_text(encoding='utf-8'))
     meta = json.loads((folder / 'source' / 'meta.json').read_text(encoding='utf-8'))
@@ -194,12 +237,10 @@ def build(folder):
         else:
             pager += f'<a class="next" href="./"><small>本章完</small>回到目录</a>'
         pager += '</nav>'
-        crumb = f'<p class="crumb"><a href="../">攻略大全</a> / <a href="./">{e(g["game"])}</a></p>'
+        crumb = f'<p class="crumb"><a href="../">攻略大全</a> / <a href="./">{e(g["game"])}</a>' + (' / <a href="map.html">地图总览</a>' if (folder / 'worldmap.json').exists() else '') + '</p>'
         tree = ''
         if g.get('tree'):
             body, items = treeify(body, nxt)
-            if items:
-                tree = outline(items)
             tocs[slug] = items
         (out / f'{slug}.html').write_text(page_html(f'{info["title"]} - {g["game"]}',
             f'{crumb}<h1>{e(info["title"])}</h1><p class="chap">{e(info["chapter"])}</p>{tree}{body}{pager}{credit(slug)}'), encoding='utf-8')
@@ -209,21 +250,12 @@ def build(folder):
         if info['chapter'] != last:
             toc += ('</ul>' if last else '') + f'<h3>{e(info["chapter"])}</h3><ul class="toc">'
             last = info['chapter']
-        if g.get('tree') and tocs.get(slug):
-            its = tocs[slug]
-            nm = sum(x['maps'] + sum(k['maps'] for k in x['kids']) for x in its)
-            toc = toc.replace('<ul class="toc">', '<div class="toc">') if False else toc
-            toc += (f'<li><details class="pt"><summary><b>{e(info["title"])}</b><span>{len(its)} 个地点 · \U0001F5FA{nm}</span></summary><ol>'
-                    + ''.join(f'<li><a href="{slug}.html#{x["id"]}">{e(x["h"])}<i>' + (f'\U0001F5FA{x["maps"]}' if x['maps'] else '') + '</i></a></li>' for x in its)
-                    + f'</ol><p style="margin:0 0 10px 14px"><a href="{slug}.html">打开整节 →</a></p></details></li>')
-        else:
+        if True:
             toc += f'<li><a href="{slug}.html">{e(info["title"])}<span>→</span></a></li>'
     toc += '</ul>'
-    if g.get('tree'):
-        toc = ('<input id="tq" type="search" placeholder="搜索地点，例如：铃铛塔、道馆、29号道路" autocomplete="off">' + toc +
-               "<script>(function(){var q=document.getElementById('tq');q.addEventListener('input',function(){var v=q.value.trim();"
-               "document.querySelectorAll('details.pt').forEach(function(d){var any=false;d.querySelectorAll('ol li').forEach(function(li){var m=!v||li.textContent.indexOf(v)>-1;li.style.display=m?'':'none';if(m&&v)any=true});"
-               "var t=d.querySelector('summary b').textContent.indexOf(v)>-1;d.style.display=(!v||any||t)?'':'none';d.open=!!v&&any})})})()</script>")
+    if (folder / 'worldmap.json').exists():
+        toc = ('<p><a class="mapbtn" href="map.html">\U0001F5FA 打开地图总览（点地点跳到攻略）</a></p>' + toc)
+        write_map(folder, g, out, pages)
     srct = g.get('sourceTitle', g['en'])
     first = g['sourceBase'] + srct.replace(' ', '_')
     (out / 'index.html').write_text(page_html(f'{g["game"]} 中文攻略',
