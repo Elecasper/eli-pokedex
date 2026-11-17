@@ -109,6 +109,10 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,
 #tip .tk{display:inline-block;background:#d32f2f;color:#fff;border-radius:999px;font-size:12px;padding:0 9px;margin-bottom:2px;font-weight:600}
 #tip .ta{color:#6f675c;font-size:13px;margin:2px 0 6px}
 #tip .tx{position:absolute;right:6px;top:4px;border:0;background:none;font-size:22px;line-height:1;color:#6f675c;padding:4px 8px;cursor:pointer}
+.mw{position:relative;line-height:0}
+.ip{position:absolute;transform:translate(-50%,-50%);width:30px;height:30px;border-radius:50%;background:#fff;border:2px solid #d32f2f;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.35);cursor:pointer;display:flex;align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent}
+.ip img{width:24px;height:24px;image-rendering:pixelated;border:0!important;border-radius:0!important;background:none!important}
+.ip:focus-visible,.ip.on{outline:3px solid #ffd54f}
 </style>'''
 
 
@@ -346,6 +350,29 @@ def cast_strip(cast):
     return ('<div class="cast"><b>本节人物</b>' + ''.join(f'<span class="ct">{av(n, "av")}<i>{n}</i></span>' for n in cast) + '</div>')
 
 
+def mappins(body, pins):
+    """overlay item icons on map figures; returns (body, extra popup data)"""
+    extra = {}
+    rows = {}
+    for m in re.finditer(r'<tr><td>(?:<img class="icon" src="\.\./img/([^"]+)"[^>]*>)?([^<]*?)(?:\s*×\d+)?</td><td>[^<]*</td><td>(.*?)</td></tr>', body):
+        rows.setdefault(m.group(2).strip(), (m.group(1), m.group(3)))
+    def fig(m):
+        inner, img = m.group(0), m.group(1)
+        lst = pins.get(img)
+        if not lst: return inner
+        btns = ''
+        for i, p in enumerate(lst):
+            if p['n'] not in rows: continue
+            ic, loc = rows[p['n']]
+            parts = [x for x in re.split(r'<br\s*/?>', loc)]
+            txt = re.sub(r'<[^>]+>', '', parts[p.get('l', 0)] if p.get('l', 0) < len(parts) else parts[0])
+            key = f'@{img}:{i}'
+            extra[key] = {'k': '道具位置', 'n': p['n'], 'd': txt, 'i': ic} if ic else {'k': '道具位置', 'n': p['n'], 'd': txt}
+            btns += f'<button class="ip" type="button" style="left:{p["x"]}%;top:{p["y"]}%" data-t="{e(key)}" aria-label="{e(p["n"])}">' + (f'<img src="../img/{ic}" alt="">' if ic else '●') + '</button>'
+        if not btns: return inner
+        return re.sub(r'(<img src="[^"]*' + re.escape(img) + r'[^>]*>)', r'<div class="mw">\1' + btns.replace('\\', '\\\\') + '</div>', inner, count=1)
+    return re.sub(r'<figure class="map">(?:(?!</figure>).)*?maps/([^"/]+?)\.webp.*?</figure>', fig, body, flags=re.S), extra
+
 def tipify(body, terms):
     used = {}
     def rep(m):
@@ -366,7 +393,7 @@ T.innerHTML='<button class="tx" aria-label="关闭">×</button><div class="th">'
 T.classList.add('on');place();var b=T.getBoundingClientRect().bottom,lim=innerHeight-(innerWidth<=700?80:12);if(b>lim)scrollBy({top:b-lim,behavior:'smooth'})}
 function place(){if(!cur)return;var r=cur.getBoundingClientRect(),w=T.offsetWidth,x=Math.min(Math.max(12,r.left),innerWidth-w-12);T.style.left=x+'px';T.style.top=(r.bottom+12)+'px';T.style.setProperty('--ax',Math.min(Math.max(20,r.left+r.width/2-x),w-20)+'px')}
 addEventListener('scroll',function(){requestAnimationFrame(place)},{passive:true});addEventListener('resize',place);
-document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('.tp');if(b){ev.preventDefault();show(b);return}if((ev.target.closest&&ev.target.closest('#tip .tx'))||!ev.target.closest('#tip'))hide()});
+document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('.tp,.ip');if(b){ev.preventDefault();show(b);return}if((ev.target.closest&&ev.target.closest('#tip .tx'))||!ev.target.closest('#tip'))hide()});
 document.addEventListener('keydown',function(ev){if(ev.key==='Escape')hide();if((ev.key==='Enter'||ev.key===' ')&&ev.target.classList&&ev.target.classList.contains('tp')){ev.preventDefault();show(ev.target)}})})()</script>"""
 
 def link_maps(body, cur=99):
@@ -577,10 +604,13 @@ def build(folder):
         body = re.sub(r'<figure data-img="([^"]+)">(.*?)</figure>', fig, body, flags=re.S)
         if NODEIDX['by']:
             body = link_maps(body, int(slug.split('-')[-1]))
+        pins = json.loads((folder / 'item-pins.json').read_text(encoding='utf-8')) if (folder / 'item-pins.json').exists() else {}
+        body, pextra = mappins(body, pins)
         body = compact(body)
         body, cast = npcify(body)
         tdata = json.loads((folder / 'terms.json').read_text(encoding='utf-8')) if (folder / 'terms.json').exists() else {}
         body, tused = tipify(body, tdata)
+        tused.update(pextra)
         tipblock = ('<script type="application/json" id="tipdata">' + json.dumps(tused, ensure_ascii=False).replace('</', '<\\/') + '</script>' + TIPJS) if tused else ''
         prev = pages[i - 1] if i else None
         nxt = pages[i + 1] if i + 1 < len(pages) else None
