@@ -72,6 +72,8 @@ nav.tree a i{font-style:normal;color:#8fa592;font-size:11.5px;margin-left:4px}na
 #tq{width:100%;box-sizing:border-box;margin:6px 0 10px;padding:10px 14px;border-radius:10px;border:1px solid #44574b;background:#2a372f;color:#f1f0e6;font-size:15px}
 @media(min-width:900px){main{max-width:900px}h1{font-size:28px}.mapgrid.n1 figure.map{max-width:640px}}
 @media(min-width:1400px){main{max-width:1000px}p,li{font-size:17px}}
+figure.map .nbr{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0 2px}.nbr b{font-size:12.5px;color:#a9b5a6;font-weight:600;margin-right:2px}.nbr a{display:inline-block;padding:8px 14px;border-radius:999px;border:1px solid #44574b;background:#2a372f;color:#f1f0e6;text-decoration:none;font-size:14.5px}
+a.pin.exit{text-decoration:none;color:inherit;cursor:pointer}.spb{font-size:13px;color:#a9b5a6;margin:6px 0 10px;padding:8px 12px;border:1px dashed #44574b;border-radius:10px}.spb button{background:#2a372f;border:1px solid #44574b;color:#c9e265;border-radius:999px;padding:5px 12px;font-size:13px;cursor:pointer;margin-left:4px}.toc li.lk a{opacity:.6}.toc a i{font-style:normal}
 a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,226,101,.18)}
 .dock{display:none}.backmap{position:fixed;left:12px;bottom:18px;z-index:41;padding:11px 18px;border-radius:999px;background:#c9e265;color:#1f2a24;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 3px 12px rgba(0,0,0,.4)}@media(max-width:720px){.backmap{bottom:calc(76px + env(safe-area-inset-bottom))}}
 @media(max-width:720px){main{padding-bottom:calc(84px + env(safe-area-inset-bottom))}.crumb a{display:inline-block;padding:8px 2px}.pager a{min-height:72px;padding:14px}
@@ -161,6 +163,66 @@ def outline(items):
             "addEventListener('scroll',f,{passive:true});f()})()</script>")
 
 
+
+PLACES = {}
+NODEIDX = {'by': {}, 'nb': {}}
+
+
+def norm_place(t):
+    t = re.sub(r'（.*?）|\(.*?\)', '', t).strip()
+    t = re.sub(r'(\d+)号道路', r'\1号', t)
+    return t
+
+
+def place_href(name):
+    n = NODEIDX['by'].get(norm_place(name))
+    return (f'part-{n["p"]}.html#{n["id"]}', n['p'], n) if n else None
+
+
+def disp(n):
+    return n['k'] + '道路' if n['t'] == 'r' and n['k'].endswith('号') else n['k']
+
+
+def link_maps(body):
+    """Make map images non-linking, exit pins clickable, and add neighbour chips under each map."""
+    body = re.sub(r'<a href="\.\./img/maps/[^"]*" target="_blank" rel="noopener">(<img[^>]*>)</a>', r'\1', body)
+
+    def pin(m):
+        h = place_href(m.group(4))
+        if not h:
+            return m.group(0)
+        return f'<a class="pin exit {m.group(1)}" style="{m.group(2)}" href="{h[0]}" data-p="{h[1]}">{m.group(3)} {m.group(4)}</a>'
+    body = re.sub(r'<span class="pin exit (\w)" style="([^"]*)">(.) (.*?)</span>', pin, body)
+
+    def fig(m):
+        inner, cap = m.group(0), m.group(1)
+        n = NODEIDX['by'].get(norm_place(cap))
+        if not n:
+            return inner
+        chips = ''
+        for o in NODEIDX['nb'].get(n['k'], []):
+            dx, dy = o['x'] - n['x'], o['y'] - n['y']
+            ar = ('→' if dx > 0 else '←') if abs(dx) >= abs(dy) * 0.8 else ('↓' if dy > 0 else '↑')
+            chips += f'<a href="part-{o["p"]}.html#{o["id"]}" data-p="{o["p"]}">{ar} {e(disp(o))}</a>'
+        if not chips:
+            return inner
+        return inner.replace('</figure>', f'<p class="nbr"><b>相邻</b>{chips}</p></figure>')
+    return re.sub(r'<figure class="map">(?:(?!</figure>).)*?<figcaption>([^<]*)</figcaption>.*?</figure>', fig, body, flags=re.S)
+
+
+SPJS = ("var SP={prog:function(){try{return +localStorage.getItem('hgssProg')||0}catch(e){return 0}},"
+        "off:function(){try{return localStorage.getItem('eliSpoilerOff')==='1'}catch(e){return false}},"
+        "toggle:function(){try{localStorage.setItem('eliSpoilerOff',SP.off()?'0':'1')}catch(e){}location.reload()},"
+        "lock:function(p){return !SP.off()&&p>SP.prog()+1}};")
+
+
+def spoiler_bar():
+    return ('<p class="spb" id="spb"></p><script>(function(){' + SPJS +
+            "var b=document.getElementById('spb'),o=SP.off();b.innerHTML=o?'已显示全部地点和章节（含剧透）。 <button id=\"spt\">开启防剧透</button>':"
+            "'\U0001F6E1 防剧透已开：'+(SP.prog()?'只显示你读到第 '+SP.prog()+' 节，以及再往后一节的内容。':'从第 1 节开始，读到哪里才显示到哪里。')+' <button id=\"spt\">显示全部</button>';"
+            "document.getElementById('spt').onclick=SP.toggle})()</script>")
+
+
 def write_map(folder, g, out, pages):
     wm = json.loads((folder / 'worldmap.json').read_text(encoding='utf-8'))
     by = {n['k']: n for n in wm['nodes']}
@@ -169,11 +231,11 @@ def write_map(folder, g, out, pages):
     svg = ''
     for a, b in wm['edges']:
         A, B = by[a], by[b]
-        svg += f'<line x1="{A["x"]}" y1="{A["y"]}" x2="{B["x"]}" y2="{B["y"]}" class="ed{" sea" if (a, b) in sea else ""}"/>'
+        svg += f'<line x1="{A["x"]}" y1="{A["y"]}" x2="{B["x"]}" y2="{B["y"]}" data-p="{max(A["p"], B["p"])}" class="ed{" sea" if (a, b) in sea else ""}"/>'
     # long sea links drawn as curves dipping to the bottom
     for a, b in (('浅葱市', '海王丸号'), ('海王丸号', '枯叶市')):
         A, B = by[a], by[b]
-        svg += f'<path d="M{A["x"]} {A["y"]} Q{(A["x"] + B["x"]) // 2} {max(A["y"], B["y"]) + 120} {B["x"]} {B["y"]}" class="ed sea" fill="none"/>'
+        svg += f'<path d="M{A["x"]} {A["y"]} Q{(A["x"] + B["x"]) // 2} {max(A["y"], B["y"]) + 120} {B["x"]} {B["y"]}" class="ed sea" data-p="{max(A["p"], B["p"])}" fill="none"/>'
     x27 = next(m['x'] for m in wm['nodes'] if m['k'] == '27号')
 
     def catof(n):
@@ -238,15 +300,16 @@ document.querySelectorAll('.vt button').forEach(function(b){b.onclick=function()
           '<div class="row" data-g="r"><b>地区</b><button data-v="j">城都</button><button data-v="k">关都</button></div>'
           '<div class="row" data-g="ph"><b>阶段</b><button data-v="1">主线（1–16 节）</button><button data-v="2">通关后（17–32 节）</button><button id="fx">清除筛选</button><span class="fc" id="fc"></span></div></div></details>'
           '<div class="res" id="rs"></div>')
-    fjs = r"""<script>(function(){var A=[].slice.call(document.querySelectorAll('.mapwrap a')),L=[].slice.call(document.querySelectorAll('.lst a')),F={c:[],r:[],ph:[]},q=document.getElementById('fq'),rs=document.getElementById('rs'),fc=document.getElementById('fc');
+    fjs = r"""<script>(function(){""" + SPJS + r"""var A=[].slice.call(document.querySelectorAll('.mapwrap a')),L=[].slice.call(document.querySelectorAll('.lst a')),F={c:[],r:[],ph:[]},q=document.getElementById('fq'),rs=document.getElementById('rs'),fc=document.getElementById('fc');
 if(innerWidth>720)document.getElementById('fd').open=true;
-function chk(d,t){return(!t||d.k.indexOf(t)>-1)&&(!F.c.length||F.c.indexOf(d.c)>-1)&&(!F.r.length||F.r.indexOf(d.r)>-1)&&(!F.ph.length||F.ph.indexOf(d.ph)>-1)}
-function run(){var t=q.value.trim(),act=t||F.c.length||F.r.length||F.ph.length,n=0,h='';
-A.forEach(function(a){var ok=chk(a.dataset,t);a.firstChild.classList.toggle('off',!ok);if(ok){n++;h+='<a href="'+a.getAttribute('href')+'">'+a.dataset.k+'</a>'}});
-L.forEach(function(a){a.style.display=chk(a.dataset,t)?'':'none'});
-fc.textContent=act?'共 '+n+' 个地点':'';document.getElementById('fs').textContent=act?'· '+n+' 个地点':'';rs.style.display=act&&n<=40?'flex':'none';rs.innerHTML=h}
+function chk(d,t){return !SP.lock(+d.p)&&(!t||d.k.indexOf(t)>-1)&&(!F.c.length||F.c.indexOf(d.c)>-1)&&(!F.r.length||F.r.indexOf(d.r)>-1)&&(!F.ph.length||F.ph.indexOf(d.ph)>-1)}
+function run(){document.querySelectorAll('.fl button[data-v="1"],.fl button[data-v="2"],.leg span:nth-child(2)').forEach(function(x){x.style.display=SP.off()?'':'none'});var t=q.value.trim(),act=t||F.c.length||F.r.length||F.ph.length,n=0,h='';
+A.forEach(function(a){var ok=chk(a.dataset,t);a.style.display=SP.lock(+a.dataset.p)?'none':'';a.firstChild.classList.toggle('off',!ok);if(ok){n++;h+='<a href="'+a.getAttribute('href')+'">'+a.dataset.k+'</a>'}});
+var ln=0;L.forEach(function(a){var ok=chk(a.dataset,t);a.style.display=ok?'':'none';if(ok)ln++});document.querySelectorAll('.lst h2').forEach(function(h){var c=h.nextElementSibling;h.style.display=c.querySelector('a:not([style*=none])')?'':'none'});if(!A.length)n=ln;
+document.querySelectorAll('.mapwrap line[data-p],.mapwrap path[data-p]').forEach(function(x){x.style.display=SP.lock(+x.dataset.p)?'none':''});
+fc.textContent=act?'共 '+n+' 个地点':'';document.getElementById('fs').textContent=act?'· '+n+' 个地点':'';if(A.length){rs.style.display=act&&n<=40?'flex':'none';rs.innerHTML=h}}
 document.querySelectorAll('.fl .row[data-g] button[data-v]').forEach(function(b){b.onclick=function(){var g=b.parentNode.dataset.g,v=b.dataset.v,i=F[g].indexOf(v);if(i<0)F[g].push(v);else F[g].splice(i,1);b.classList.toggle('on',i<0);run()}});
-document.getElementById('fx').onclick=function(){F={c:[],r:[],ph:[]};q.value='';document.querySelectorAll('.fl button.on').forEach(function(b){b.classList.remove('on')});run()};q.oninput=run;
+document.getElementById('fx').onclick=function(){F={c:[],r:[],ph:[]};q.value='';document.querySelectorAll('.fl button.on').forEach(function(b){b.classList.remove('on')});run()};q.oninput=run;run();
 L.forEach(function(a){a.addEventListener('click',function(){try{sessionStorage.setItem('hgssFromMap','1')}catch(e){}})})})()</script>"""
     lst = '<div class="lst" style="display:none">'
     for rg, rl in (('j', '城都地区'), ('k', '关都地区')):
@@ -254,7 +317,7 @@ L.forEach(function(a){a.addEventListener('click',function(){try{sessionStorage.s
         for n in sorted([n for n in wm['nodes'] if (n['x'] >= x27) == (rg == 'k')], key=lambda n: (n['t'] == 'r', n['p'], n['k'])):
             k = n['k']; post = n['p'] > 16
             cat = catof(n)
-            lst += (f'<a class="chip {n["t"]}{" post" if post else ""}" href="part-{n["p"]}.html#{n["id"]}" data-k="{e(k)}" data-c="{cat}" data-r="{rg}" data-ph="{2 if post else 1}">{e(k)}</a>')
+            lst += (f'<a class="chip {n["t"]}{" post" if post else ""}" href="part-{n["p"]}.html#{n["id"]}" data-k="{e(k)}" data-c="{cat}" data-r="{rg}" data-ph="{2 if post else 1}" data-p="{n["p"]}">{e(k)}</a>')
         lst += '</div>'
     lst += '</div>'
     body = (f'<p class="crumb"><a href="../">攻略大全</a> / <a href="./">{e(g["game"])}</a></p><h1>地图总览</h1>'
@@ -263,7 +326,8 @@ L.forEach(function(a){a.addEventListener('click',function(){try{sessionStorage.s
             '<div class="vt"><button class="on" data-v="map">地图</button><button data-v="list">列表</button><span>双指缩放 · 双击放大 · 点地点跳转</span></div>'
             f'<div class="mapbox"><div class="mapwrap"><svg viewBox="0 0 1900 960" xmlns="http://www.w3.org/2000/svg">{svg}</svg></div>'
             f'<div class="zb"><button id="zi" aria-label="放大">＋</button><button id="zo" aria-label="缩小">－</button><button id="zf" class="fit">总览</button></div></div>{lst}{js}{fjs}')
-    (out / 'map.html').write_text(page_html(f'地图总览 - {g["game"]}', css + body), encoding='utf-8')
+    PLACES.update(css=css, ui=ui, lst=lst.replace('style="display:none"', ''), fjs=fjs)
+    (out / 'map.html').write_text(page_html(f'地图总览 - {g["game"]}', css + spoiler_bar() + body), encoding='utf-8')
 
 
 def build(folder):
@@ -272,6 +336,17 @@ def build(folder):
     imgs = json.loads((folder / 'source' / 'images.json').read_text(encoding='utf-8'))
     out = SITE / 'guides' / g['slug']
     out.mkdir(parents=True, exist_ok=True)
+    wmf = folder / 'worldmap.json'
+    if wmf.exists():
+        wm0 = json.loads(wmf.read_text(encoding='utf-8'))
+        NODEIDX['by'] = {n['k']: n for n in wm0['nodes']}
+        NODEIDX['nb'] = {}
+        for a_, b_ in wm0['edges']:
+            NODEIDX['nb'].setdefault(a_, []).append(NODEIDX['by'][b_])
+            NODEIDX['nb'].setdefault(b_, []).append(NODEIDX['by'][a_])
+        for a_, b_ in (('浅葱市', '海王丸号'), ('海王丸号', '枯叶市')):
+            NODEIDX['nb'].setdefault(a_, []).append(NODEIDX['by'][b_])
+            NODEIDX['nb'].setdefault(b_, []).append(NODEIDX['by'][a_])
     pages = []
     for slug in g['pages']:
         raw = (folder / f'{slug}.html').read_text(encoding='utf-8')
@@ -295,9 +370,17 @@ def build(folder):
                 f'配图来自原站，版权归原作者与游戏厂商；地图截图来自 <a href="https://archives.bulbagarden.net/wiki/Category:HeartGold_and_SoulSilver_maps" target="_blank" rel="noopener noreferrer">Bulbagarden Archives</a>，游戏画面版权归 Nintendo / Game Freak / The Pokémon Company。</p>')
 
     backjs = "<script>try{if(sessionStorage.getItem('hgssFromMap')){var a=document.createElement('a');a.className='backmap';a.href='map.html';a.textContent='\u2190 \u8fd4\u56de\u5730\u56fe';document.body.appendChild(a)}}catch(e){}</script>"
+    def progjs(slug):
+        n = int(slug.split('-')[-1])
+        return ("<script>(function(){" + SPJS + f"var n={n};try{{if(n>SP.prog())localStorage.setItem('hgssProg',n)}}catch(e){{}}"
+                "document.querySelectorAll('.nbr a[data-p],a.pin[data-p]').forEach(function(a){if(SP.lock(+a.dataset.p))a.style.display='none'});"
+                "document.querySelectorAll('.nbr').forEach(function(p){if(!p.querySelector('a:not([style*=none])'))p.style.display='none'})})()</script>")
+
     tocs = {}
     for i, (slug, info, body) in enumerate(pages):
         body = re.sub(r'<figure data-img="([^"]+)">(.*?)</figure>', fig, body, flags=re.S)
+        if NODEIDX['by']:
+            body = link_maps(body)
         prev = pages[i - 1] if i else None
         nxt = pages[i + 1] if i + 1 < len(pages) else None
         pager = '<nav class="pager">'
@@ -318,7 +401,7 @@ def build(folder):
             body, items = treeify(body, nxt)
             tocs[slug] = items
         (out / f'{slug}.html').write_text(page_html(f'{info["title"]} - {g["game"]}',
-            f'{crumb}<h1>{e(info["title"])}</h1><p class="chap">{e(info["chapter"])}</p>{tree}{body}{pager}{credit(slug)}{dock}{backjs if hasmap else ""}'), encoding='utf-8')
+            f'{crumb}<h1>{e(info["title"])}</h1><p class="chap">{e(info["chapter"])}</p>{tree}{body}{pager}{credit(slug)}{dock}{backjs if hasmap else ""}{progjs(slug) if hasmap else ""}'), encoding='utf-8')
 
     toc, last = '', None
     for slug, info, _ in pages:
@@ -326,11 +409,19 @@ def build(folder):
             toc += ('</ul>' if last else '') + f'<h3>{e(info["chapter"])}</h3><ul class="toc">'
             last = info['chapter']
         if True:
-            toc += f'<li><a href="{slug}.html">{e(info["title"])}<span>→</span></a></li>'
+            toc += f'<li data-p="{slug.split("-")[-1]}"><a href="{slug}.html" data-t="{e(info["title"])}"><i>{e(info["title"])}</i><span>→</span></a></li>'
     toc += '</ul>'
     if (folder / 'worldmap.json').exists():
         toc = ('<p><a class="mapbtn" href="map.html">\U0001F5FA 打开地图总览（点地点跳到攻略）</a></p>' + toc)
         write_map(folder, g, out, pages)
+        pl = ('<h3>地点速查</h3>' + PLACES['ui'].replace('<details class="fdet" id="fd">', '<details class="fdet" id="fd" open>', 1)
+              + '<div class="res" id="rs" style="display:none"></div>' + PLACES['lst'])
+        idxjs = ("<script>(function(){" + SPJS + "var lk=[];document.querySelectorAll('.toc li').forEach(function(li){if(SP.lock(+li.dataset.p)){li.classList.add('lk');li.style.display='none';lk.push(li)}});"
+                 "if(lk.length){var m=document.createElement('li');m.className='lkall';m.innerHTML='<a>\U0001F512 还有 '+lk.length+' 节，读到前面的才会解锁</a>';lk[0].parentNode.insertBefore(m,lk[0]);"
+                 "m.querySelector('a').style.opacity='.6'}"
+                 "document.querySelectorAll('h3').forEach(function(h){var u=h.nextElementSibling;if(u&&u.classList.contains('toc')&&!u.querySelector('li:not(.lk):not(.lkall)'))h.style.display='none'});"
+                 "var all=document.querySelectorAll('.toc li.lkall');for(var i=0;i<all.length-1;i++)all[i].remove()})()</script>")
+        toc = PLACES['css'] + spoiler_bar() + toc + pl + PLACES['fjs'] + idxjs
     srct = g.get('sourceTitle', g['en'])
     first = g['sourceBase'] + srct.replace(' ', '_')
     (out / 'index.html').write_text(page_html(f'{g["game"]} 中文攻略',
