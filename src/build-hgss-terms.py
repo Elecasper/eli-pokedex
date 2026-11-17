@@ -106,6 +106,10 @@ for t in sorted(used):
         a, b, c = move_info(t)
         ty = int(mv[mnm[t]]['type_id'])
         terms[t] = {'k': '招式', 'a': a, 'b': b, 'd': c, 'i': icon(f'tip/type-{ty}.png', f'types/generation-viii/sword-shield/{ty}.png')}
+SPN = {r['name'] for r in load('pokemon_species_names.csv') if r['local_language_id'] == '12'}
+for t, v in terms.items():
+    if v['k'] == '道具' and (t in mnm or t in SPN or any(sp.startswith(t) for sp in SPN if len(t) <= 3)):
+        v['amb'] = 1
 for v in terms.values():
     if not v.get('i'): v.pop('i', None)
 json.dump(terms, open(D + '/terms.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=0)

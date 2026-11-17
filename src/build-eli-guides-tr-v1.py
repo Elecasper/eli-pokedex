@@ -407,6 +407,9 @@ def autoterm(body, terms):
                 out.append(part); continue
             def rep(m):
                 n = m.group(0)
+                pc = part[m.start() - 1] if m.start() else ''
+                if (n == '怪力' and (not pc or pc not in '用要、使')) or (n == '碎岩' and pc == '敲'): return n
+                if terms[n].get('amb') and part.strip() not in (n,) and not re.match(r'^' + re.escape(n) + r'\s*×\d+$', part.strip()): return n
                 if n in seen: return n
                 seen.add(n); used[n] = terms[n]
                 return f'<span class="tp t2" role="button" tabindex="0" data-t="{e(n)}">{n}</span>'
