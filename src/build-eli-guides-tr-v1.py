@@ -376,7 +376,8 @@ def mappins(body, pins, terms=None):
                 if ic: ent['i'] = ic
                 elif t and t.get('i'): ent['i'] = t['i']
                 extra[key] = ent
-                btns += f'<button class="ip" type="button" style="left:{p["x"]}%;top:{p["y"]}%" data-t="{e(key)}" aria-label="{e(p["n"])}">' + (f'<img src="../img/{ic}" alt="">' if ic else '●') + '</button>'
+                ic2 = ic or (t.get('i') if t else None)
+                btns += f'<button class="ip" type="button" style="left:{p["x"]}%;top:{p["y"]}%" data-t="{e(key)}" aria-label="{e(p["n"])}">' + (f'<img src="../img/{ic2}" alt="">' if ic2 else '●') + '</button>'
             if not btns: return inner
             return re.sub(r'(<img src="[^"]*' + re.escape(img) + r'[^>]*>)', lambda mm: '<div class="mw">' + mm.group(1) + btns + '</div>', inner, count=1)
         return re.sub(r'<figure class="map">(?:(?!</figure>).)*?maps/([^"/]+?)\.webp.*?</figure>', fig, chunk, flags=re.S)
