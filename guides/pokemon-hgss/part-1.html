@@ -102,11 +102,28 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,
 #mmo.on{display:block}
 #mmo .box{padding:0!important;margin:0!important;height:100%;display:flex;flex-direction:column;background:#f4efe4;border:2px solid #d32f2f;border-radius:12px;box-shadow:0 6px 22px rgba(0,0,0,.35);overflow:hidden}
 #mmo .mbh{flex:none;display:flex;align-items:center;gap:8px;padding:6px 8px;background:#d32f2f;color:#fff}
-#mmo .mbh b{flex:1;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#mmo .mbh b{color:#fff!important;flex:1;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #mmo .mbh button{border:1px solid rgba(255,255,255,.7);background:transparent;color:#fff;border-radius:999px;padding:5px 12px;font-size:14px;cursor:pointer;min-height:0}
 #mmo .bd{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;padding:8px}
 #mmo figure{margin:0 0 12px}
 @media(min-width:900px){#mm{bottom:20px;width:140px}#mm img{height:104px}#mmo{left:auto;right:16px;bottom:16px;width:min(460px,40vw);height:calc(100vh - 90px)}}
+@media(max-width:700px){
+.eli-bar{position:static!important}.eli-bar-in{min-height:42px}.eli-bar .brand{font-size:16px}
+.eli-bar nav a:not(.home):not([aria-current]){display:none}
+.crumb{display:none}
+main h1{margin-top:12px}
+.cast{flex-wrap:nowrap;overflow-x:auto;gap:12px;margin:4px 0 10px;padding:6px 10px;-webkit-overflow-scrolling:touch}
+.cast>b{display:none}
+.cast .ct{flex:none}.cast .ct img{width:40px;height:40px;object-fit:contain}.cast .ct i{font-size:11px}
+.pager{display:none}
+.dock{padding:4px 8px max(4px,env(safe-area-inset-bottom));gap:6px;transition:transform .2s}
+.dock.hd{transform:translateY(110%)}
+.dock a{min-height:38px;padding:0 10px;font-size:14px;border-radius:10px}
+body{padding-bottom:56px}
+#mm{width:56px;right:8px;bottom:calc(54px + env(safe-area-inset-bottom))}
+#mm img{height:42px}#mm span{font-size:11px}
+#mmo{left:auto;right:8px;width:64vw;height:50vh;bottom:calc(54px + env(safe-area-inset-bottom))}
+}
 </style><style id="eli-theme">:root{color-scheme:light;--paper:#f4efe4;--card:#ffffff;--ink:#2a2623;--muted:#6f675c;--line:#ddd3be;--soft:#e9e1cf;--green:#c62828;--accent:#c62828;--rust:#c62828;color:#2a2623;background:#f4efe4}
 body{background:#f4efe4;color:#2a2623}
 a{color:#c62828}
@@ -179,4 +196,4 @@ nav.top,header p,.lead,.foot{color:#6f675c}.tabs button{background:#ffffff;borde
 <li>前往播音塔，回答柜台最右边NPC的问题后发生剧情，满金市道馆馆主小茜返回道馆。</li>
 <li>在满金道馆，和道馆馆主小茜进行宝可梦对战。（<i>获胜后往回走触发剧情，之后跟小茜对话即可</i>。获胜后可以获得标准徽章以及招式学习器４５（迷人））</li>
 <li>在花店内获得<img class="icon" src="../img/items/squirt-bottle.png" alt="杰尼龟喷壶" width="30" height="30" loading="lazy">杰尼龟喷壶。</li></ul></li></ul>
-<nav class="pager"><a class="next" href="part-2.html"><small>下一页 →</small>继续</a></nav><p class="src">原文：神奇宝贝百科《<a href="https://wiki.52poke.com/wiki/附录:寶可夢_心金／魂銀流程" target="_blank" rel="noopener noreferrer">附录:寶可夢 心金／魂銀流程</a>》（<a href="https://wiki.52poke.com/wiki/附录:寶可夢_心金／魂銀流程?oldid=2540259" target="_blank" rel="noopener noreferrer">修订版本 2540259</a>，2026-02-10），作者见<a href="https://wiki.52poke.com/wiki/附录:寶可夢_心金／魂銀流程?action=history" target="_blank" rel="noopener noreferrer">原文页面历史</a>。本页由 Eli 的杂货间转载，并有改动（重新排版、去掉站内链接）。原文与本页均以 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 3.0</a> 授权。配图来自原站，版权归原作者与游戏厂商；地图截图和人物图来自 <a href="https://archives.bulbagarden.net/wiki/Category:HeartGold_and_SoulSilver_maps" target="_blank" rel="noopener noreferrer">Bulbagarden Archives</a>，游戏画面版权归 Nintendo / Game Freak / The Pokémon Company。道具与属性图标来自 <a href="https://github.com/PokeAPI/sprites" target="_blank" rel="noopener noreferrer">PokeAPI sprites</a>。</p><nav class="dock"><a class="dis">← 上一页</a><a href="./">目录</a><a href="../">大全</a><a href="part-2.html">下一页 →</a></nav></main></body></html>
+<nav class="pager"><a class="next" href="part-2.html"><small>下一页 →</small>继续</a></nav><p class="src">原文：神奇宝贝百科《<a href="https://wiki.52poke.com/wiki/附录:寶可夢_心金／魂銀流程" target="_blank" rel="noopener noreferrer">附录:寶可夢 心金／魂銀流程</a>》（<a href="https://wiki.52poke.com/wiki/附录:寶可夢_心金／魂銀流程?oldid=2540259" target="_blank" rel="noopener noreferrer">修订版本 2540259</a>，2026-02-10），作者见<a href="https://wiki.52poke.com/wiki/附录:寶可夢_心金／魂銀流程?action=history" target="_blank" rel="noopener noreferrer">原文页面历史</a>。本页由 Eli 的杂货间转载，并有改动（重新排版、去掉站内链接）。原文与本页均以 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 3.0</a> 授权。配图来自原站，版权归原作者与游戏厂商；地图截图和人物图来自 <a href="https://archives.bulbagarden.net/wiki/Category:HeartGold_and_SoulSilver_maps" target="_blank" rel="noopener noreferrer">Bulbagarden Archives</a>，游戏画面版权归 Nintendo / Game Freak / The Pokémon Company。道具与属性图标来自 <a href="https://github.com/PokeAPI/sprites" target="_blank" rel="noopener noreferrer">PokeAPI sprites</a>。</p><nav class="dock"><a class="dis">← 上一页</a><a href="./">目录</a><a href="../">大全</a><a href="part-2.html">下一页 →</a></nav><script>(function(){var d=document.querySelector('.dock');if(!d)return;var y=scrollY;addEventListener('scroll',function(){var n=scrollY;if(Math.abs(n-y)<8)return;var end=n>document.documentElement.scrollHeight-innerHeight-400;d.classList.toggle('hd',n>y&&n>200&&!end);y=n},{passive:true})})()</script></main></body></html>

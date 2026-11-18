@@ -102,11 +102,28 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,
 #mmo.on{display:block}
 #mmo .box{padding:0!important;margin:0!important;height:100%;display:flex;flex-direction:column;background:#f4efe4;border:2px solid #d32f2f;border-radius:12px;box-shadow:0 6px 22px rgba(0,0,0,.35);overflow:hidden}
 #mmo .mbh{flex:none;display:flex;align-items:center;gap:8px;padding:6px 8px;background:#d32f2f;color:#fff}
-#mmo .mbh b{flex:1;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#mmo .mbh b{color:#fff!important;flex:1;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #mmo .mbh button{border:1px solid rgba(255,255,255,.7);background:transparent;color:#fff;border-radius:999px;padding:5px 12px;font-size:14px;cursor:pointer;min-height:0}
 #mmo .bd{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;padding:8px}
 #mmo figure{margin:0 0 12px}
 @media(min-width:900px){#mm{bottom:20px;width:140px}#mm img{height:104px}#mmo{left:auto;right:16px;bottom:16px;width:min(460px,40vw);height:calc(100vh - 90px)}}
+@media(max-width:700px){
+.eli-bar{position:static!important}.eli-bar-in{min-height:42px}.eli-bar .brand{font-size:16px}
+.eli-bar nav a:not(.home):not([aria-current]){display:none}
+.crumb{display:none}
+main h1{margin-top:12px}
+.cast{flex-wrap:nowrap;overflow-x:auto;gap:12px;margin:4px 0 10px;padding:6px 10px;-webkit-overflow-scrolling:touch}
+.cast>b{display:none}
+.cast .ct{flex:none}.cast .ct img{width:40px;height:40px;object-fit:contain}.cast .ct i{font-size:11px}
+.pager{display:none}
+.dock{padding:4px 8px max(4px,env(safe-area-inset-bottom));gap:6px;transition:transform .2s}
+.dock.hd{transform:translateY(110%)}
+.dock a{min-height:38px;padding:0 10px;font-size:14px;border-radius:10px}
+body{padding-bottom:56px}
+#mm{width:56px;right:8px;bottom:calc(54px + env(safe-area-inset-bottom))}
+#mm img{height:42px}#mm span{font-size:11px}
+#mmo{left:auto;right:8px;width:64vw;height:50vh;bottom:calc(54px + env(safe-area-inset-bottom))}
+}
 </style><style id="eli-theme">:root{color-scheme:light;--paper:#f4efe4;--card:#ffffff;--ink:#2a2623;--muted:#6f675c;--line:#ddd3be;--soft:#e9e1cf;--green:#c62828;--accent:#c62828;--rust:#c62828;color:#2a2623;background:#f4efe4}
 body{background:#f4efe4;color:#2a2623}
 a{color:#c62828}
@@ -242,4 +259,4 @@ nav.top,header p,.lead,.foot{color:#6f675c}.tabs button{background:#ffffff;borde
 <p><b>战斗大师</b>和圣骑士相比也比较吃亏。它最有用的特技「集中力量」（Focus Strength，下一次攻击造成 2.5 倍伤害且必定命中）在 2 星就能学会，几乎不需要投入就能把战士的价值榨干。不过战斗大师提供的能力加成正是哈桑最需要的，所以还是值得给他（也只给他）。</p>
 <p>至于速通，你的职业都练不了多深。你会逃掉游戏里的每一场随机遇敌，一个职业都精通不了。就算打赢了最终头目（他其实比穆德还难），也只是险胜。所以雷克和哈桑选战士：它比武斗家的主要优势是 HP 和力量稍高。正常流程里这点差别无关紧要，但速通时每一点 HP 都很重要。</p>
 <p>不建议新手这样玩；但如果你决定这么做，本攻略的打法依然适用。其实上面这些分类纯粹是为了方便玩家：这个游戏可以在很低的等级、很少职业特技的情况下通关，只是只有高手才能这样走而不一次次阵亡。</p>
-<nav class="pager"><a href="vs-murdaw-round-3.html"><small>← 上一页</small>头目：穆德决战</a><a class="next" href="scrimsley.html"><small>下一页 →</small>继续</a></nav><p class="src">原文：StrategyWiki《<a href="https://strategywiki.org/wiki/Dragon_Quest_VI:_Realms_of_Revelation/All_About_Vocations" target="_blank" rel="noopener noreferrer">Dragon Quest VI: Realms of Revelation/All About Vocations</a>》（<a href="https://strategywiki.org/wiki/Dragon_Quest_VI:_Realms_of_Revelation/All_About_Vocations?oldid=1061757" target="_blank" rel="noopener noreferrer">修订版本 1061757</a>，2024-02-28），作者见<a href="https://strategywiki.org/wiki/Dragon_Quest_VI:_Realms_of_Revelation/All_About_Vocations?action=history" target="_blank" rel="noopener noreferrer">原文页面历史</a>。本页由 Eli 的杂货间翻译为中文，并有改动（重新排版、精简部分图注）。原文与译文均以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> 授权。配图来自原站，版权归原作者与游戏厂商；地图截图和人物图来自 <a href="https://archives.bulbagarden.net/wiki/Category:HeartGold_and_SoulSilver_maps" target="_blank" rel="noopener noreferrer">Bulbagarden Archives</a>，游戏画面版权归 Nintendo / Game Freak / The Pokémon Company。道具与属性图标来自 <a href="https://github.com/PokeAPI/sprites" target="_blank" rel="noopener noreferrer">PokeAPI sprites</a>。</p><nav class="dock"><a href="vs-murdaw-round-3.html">← 上一页</a><a href="./">目录</a><a href="../">大全</a><a href="scrimsley.html">下一页 →</a></nav></main></body></html>
+<nav class="pager"><a href="vs-murdaw-round-3.html"><small>← 上一页</small>头目：穆德决战</a><a class="next" href="scrimsley.html"><small>下一页 →</small>继续</a></nav><p class="src">原文：StrategyWiki《<a href="https://strategywiki.org/wiki/Dragon_Quest_VI:_Realms_of_Revelation/All_About_Vocations" target="_blank" rel="noopener noreferrer">Dragon Quest VI: Realms of Revelation/All About Vocations</a>》（<a href="https://strategywiki.org/wiki/Dragon_Quest_VI:_Realms_of_Revelation/All_About_Vocations?oldid=1061757" target="_blank" rel="noopener noreferrer">修订版本 1061757</a>，2024-02-28），作者见<a href="https://strategywiki.org/wiki/Dragon_Quest_VI:_Realms_of_Revelation/All_About_Vocations?action=history" target="_blank" rel="noopener noreferrer">原文页面历史</a>。本页由 Eli 的杂货间翻译为中文，并有改动（重新排版、精简部分图注）。原文与译文均以 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> 授权。配图来自原站，版权归原作者与游戏厂商；地图截图和人物图来自 <a href="https://archives.bulbagarden.net/wiki/Category:HeartGold_and_SoulSilver_maps" target="_blank" rel="noopener noreferrer">Bulbagarden Archives</a>，游戏画面版权归 Nintendo / Game Freak / The Pokémon Company。道具与属性图标来自 <a href="https://github.com/PokeAPI/sprites" target="_blank" rel="noopener noreferrer">PokeAPI sprites</a>。</p><nav class="dock"><a href="vs-murdaw-round-3.html">← 上一页</a><a href="./">目录</a><a href="../">大全</a><a href="scrimsley.html">下一页 →</a></nav><script>(function(){var d=document.querySelector('.dock');if(!d)return;var y=scrollY;addEventListener('scroll',function(){var n=scrollY;if(Math.abs(n-y)<8)return;var end=n>document.documentElement.scrollHeight-innerHeight-400;d.classList.toggle('hd',n>y&&n>200&&!end);y=n},{passive:true})})()</script></main></body></html>

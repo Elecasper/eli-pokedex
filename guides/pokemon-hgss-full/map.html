@@ -102,11 +102,28 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,
 #mmo.on{display:block}
 #mmo .box{padding:0!important;margin:0!important;height:100%;display:flex;flex-direction:column;background:#f4efe4;border:2px solid #d32f2f;border-radius:12px;box-shadow:0 6px 22px rgba(0,0,0,.35);overflow:hidden}
 #mmo .mbh{flex:none;display:flex;align-items:center;gap:8px;padding:6px 8px;background:#d32f2f;color:#fff}
-#mmo .mbh b{flex:1;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#mmo .mbh b{color:#fff!important;flex:1;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #mmo .mbh button{border:1px solid rgba(255,255,255,.7);background:transparent;color:#fff;border-radius:999px;padding:5px 12px;font-size:14px;cursor:pointer;min-height:0}
 #mmo .bd{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;padding:8px}
 #mmo figure{margin:0 0 12px}
 @media(min-width:900px){#mm{bottom:20px;width:140px}#mm img{height:104px}#mmo{left:auto;right:16px;bottom:16px;width:min(460px,40vw);height:calc(100vh - 90px)}}
+@media(max-width:700px){
+.eli-bar{position:static!important}.eli-bar-in{min-height:42px}.eli-bar .brand{font-size:16px}
+.eli-bar nav a:not(.home):not([aria-current]){display:none}
+.crumb{display:none}
+main h1{margin-top:12px}
+.cast{flex-wrap:nowrap;overflow-x:auto;gap:12px;margin:4px 0 10px;padding:6px 10px;-webkit-overflow-scrolling:touch}
+.cast>b{display:none}
+.cast .ct{flex:none}.cast .ct img{width:40px;height:40px;object-fit:contain}.cast .ct i{font-size:11px}
+.pager{display:none}
+.dock{padding:4px 8px max(4px,env(safe-area-inset-bottom));gap:6px;transition:transform .2s}
+.dock.hd{transform:translateY(110%)}
+.dock a{min-height:38px;padding:0 10px;font-size:14px;border-radius:10px}
+body{padding-bottom:56px}
+#mm{width:56px;right:8px;bottom:calc(54px + env(safe-area-inset-bottom))}
+#mm img{height:42px}#mm span{font-size:11px}
+#mmo{left:auto;right:8px;width:64vw;height:50vh;bottom:calc(54px + env(safe-area-inset-bottom))}
+}
 </style><style id="eli-theme">:root{color-scheme:light;--paper:#f4efe4;--card:#ffffff;--ink:#2a2623;--muted:#6f675c;--line:#ddd3be;--soft:#e9e1cf;--green:#c62828;--accent:#c62828;--rust:#c62828;color:#2a2623;background:#f4efe4}
 body{background:#f4efe4;color:#2a2623}
 a{color:#c62828}

@@ -125,11 +125,28 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,
 #mmo.on{display:block}
 #mmo .box{padding:0!important;margin:0!important;height:100%;display:flex;flex-direction:column;background:#f4efe4;border:2px solid #d32f2f;border-radius:12px;box-shadow:0 6px 22px rgba(0,0,0,.35);overflow:hidden}
 #mmo .mbh{flex:none;display:flex;align-items:center;gap:8px;padding:6px 8px;background:#d32f2f;color:#fff}
-#mmo .mbh b{flex:1;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#mmo .mbh b{color:#fff!important;flex:1;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #mmo .mbh button{border:1px solid rgba(255,255,255,.7);background:transparent;color:#fff;border-radius:999px;padding:5px 12px;font-size:14px;cursor:pointer;min-height:0}
 #mmo .bd{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;padding:8px}
 #mmo figure{margin:0 0 12px}
 @media(min-width:900px){#mm{bottom:20px;width:140px}#mm img{height:104px}#mmo{left:auto;right:16px;bottom:16px;width:min(460px,40vw);height:calc(100vh - 90px)}}
+@media(max-width:700px){
+.eli-bar{position:static!important}.eli-bar-in{min-height:42px}.eli-bar .brand{font-size:16px}
+.eli-bar nav a:not(.home):not([aria-current]){display:none}
+.crumb{display:none}
+main h1{margin-top:12px}
+.cast{flex-wrap:nowrap;overflow-x:auto;gap:12px;margin:4px 0 10px;padding:6px 10px;-webkit-overflow-scrolling:touch}
+.cast>b{display:none}
+.cast .ct{flex:none}.cast .ct img{width:40px;height:40px;object-fit:contain}.cast .ct i{font-size:11px}
+.pager{display:none}
+.dock{padding:4px 8px max(4px,env(safe-area-inset-bottom));gap:6px;transition:transform .2s}
+.dock.hd{transform:translateY(110%)}
+.dock a{min-height:38px;padding:0 10px;font-size:14px;border-radius:10px}
+body{padding-bottom:56px}
+#mm{width:56px;right:8px;bottom:calc(54px + env(safe-area-inset-bottom))}
+#mm img{height:42px}#mm span{font-size:11px}
+#mmo{left:auto;right:8px;width:64vw;height:50vh;bottom:calc(54px + env(safe-area-inset-bottom))}
+}
 </style>'''
 
 
@@ -448,6 +465,8 @@ O.querySelector('.cl').addEventListener('click',close);O.querySelector('.op').ad
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&O.classList.contains('on'))close()});
 })()</script>"""
 
+DOCKJS = "<script>(function(){var d=document.querySelector('.dock');if(!d)return;var y=scrollY;addEventListener('scroll',function(){var n=scrollY;if(Math.abs(n-y)<8)return;var end=n>document.documentElement.scrollHeight-innerHeight-400;d.classList.toggle('hd',n>y&&n>200&&!end);y=n},{passive:true})})()</script>"
+
 def autoterm(body, terms):
     """make plain-text item / TM / HM names tappable (first mention per h2 section)"""
     names = sorted((n for n in terms if n not in ('大葱', '要害攻击') and len(n) >= 2 and terms[n].get('k') != '徽章'), key=len, reverse=True)
@@ -743,7 +762,7 @@ def build(folder):
             body, items = treeify(body, nxt)
             tocs[slug] = items
         (out / f'{slug}.html').write_text(page_html(f'{short_title(info["title"])[0]} - {g["game"]}',
-            f'{crumb}<h1>{e(short_title(info["title"])[0])}</h1><p class="chap">第 {slug.split("-")[-1]} 节 · {e(info["chapter"])}'+(f' · 途经 {e(short_title(info["title"])[1])}' if short_title(info["title"])[1] else '')+f'</p>{cast_strip(cast)}{tree}{body}{pager}{credit(slug)}{dock}{backjs if hasmap else ""}{tipblock}{MMJS if 'figure class="map"' in body else ""}'), encoding='utf-8')
+            f'{crumb}<h1>{e(short_title(info["title"])[0])}</h1><p class="chap">第 {slug.split("-")[-1]} 节 · {e(info["chapter"])}'+(f' · 途经 {e(short_title(info["title"])[1])}' if short_title(info["title"])[1] else '')+f'</p>{cast_strip(cast)}{tree}{body}{pager}{credit(slug)}{dock}{backjs if hasmap else ""}{DOCKJS}{tipblock}{MMJS if 'figure class="map"' in body else ""}'), encoding='utf-8')
 
     toc, last = '', None
     for slug, info, _ in pages:
