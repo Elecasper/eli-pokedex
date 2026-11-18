@@ -112,6 +112,8 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,
 .mw{position:relative;line-height:0}
 .ip,.ip:active,.ip:hover{transform:none!important}.ip{position:absolute;margin:-15px 0 0 -15px;min-height:0;min-width:0;width:30px;height:30px;border-radius:50%;background:#fff;border:2px solid #d32f2f;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.35);cursor:pointer;display:flex;align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent}
 .ip img{pointer-events:none;-webkit-user-drag:none;width:24px;height:24px;image-rendering:pixelated;border:0!important;border-radius:0!important;background:none!important}
+.bp{position:absolute;margin:-14px 0 0 -14px;min-height:0;min-width:0;width:28px;height:28px;border-radius:8px;background:#fff;border:2px solid #1565c0;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.35);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;line-height:1;-webkit-tap-highlight-color:transparent}.bp,.bp:active,.bp:hover{transform:none!important}
+#tip .tl{display:inline-block;margin-top:8px;color:#d32f2f;font-weight:600;text-decoration:none}
 .ip:focus-visible,.ip.on{outline:3px solid #ffd54f}
 #tip{z-index:95}
 #mm{position:fixed;right:12px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:50;width:96px;background:#fff;border:2px solid #d32f2f;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.3);padding:0;overflow:hidden;display:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
@@ -363,20 +365,49 @@ def cast_strip(cast):
     return ('<div class="cast"><b>本节人物</b>' + ''.join(f'<span class="ct">{av(n, "av")}<i>{n}</i></span>' for n in cast) + '</div>')
 
 
-def mappins(body, pins, terms=None):
+def mappins(body, pins, terms=None, bpins=None):
     """overlay item icons on map figures (rows are looked up inside the same h2 section); returns (body, popup data)"""
     terms = terms or {}
+    bpins = bpins or {}
     extra = {}
     rowrx = re.compile(r'<tr><td>(?:<img class="icon" src="\.\./img/([^"]+)"[^>]*>)?([^<]*?)(?:\s*×\d+)?</td><td>[^<]*</td><td>(.*?)</td></tr>')
     def section(chunk):
+        bdesc = {}
+        for img_, blst_ in bpins.items():
+            for bi, bp in enumerate(blst_):
+                hh = bp.get('h')
+                if not hh: continue
+                m = re.search(r'<h3>' + re.escape(hh) + r'</h3>', chunk)
+                if m:
+                    bid = f'bld-{img_}-{bi}'
+                    rest = chunk[m.end():]
+                    nx = re.search(r'<h[23][ >]', rest)
+                    seg = rest[:nx.start()] if nx else rest
+                    pm = re.search(r'<p[ >][^>]*>?.*?</p>', seg, re.S)
+                    pm2 = re.search(r'<p>(.*?)</p>', seg, re.S)
+                    txt = re.sub(r'<[^>]+>', '', pm2.group(1) if pm2 else '').strip()
+                    chunk = chunk.replace(m.group(0), f'<h3 id="{bid}">{hh}</h3>', 1)
+                    bdesc[(img_, bi)] = (bid, txt)
         rows = {}
         for m in rowrx.finditer(chunk):
             rows.setdefault(m.group(2).strip(), []).append((m.group(1), m.group(3)))
         def fig(m):
             inner, img = m.group(0), m.group(1)
-            lst = pins.get(img)
-            if not lst: return inner
+            lst = pins.get(img) or []
+            blst = bpins.get(img) or []
+            if not lst and not blst: return inner
             btns = ''
+            ICON = {'center': '🏥', 'mart': '🛒', 'gym': '🏆', 'house': '🏠', 'tower': '🗼', 'lab': '🔬', 'station': '🚆', 'other': '📍'}
+            for bi, bp in enumerate(blst):
+                bid, txt = bdesc.get((img, bi), (None, ''))
+                d_ = bp.get('d') or (txt if len(txt) <= 80 else txt[:78] + '…')
+                key = f'@b:{img}:{bi}'
+                if not d_:
+                    d_ = {'center': '回复队伍的宝可梦，也能使用电脑存取宝可梦。', 'mart': '出售精灵球、伤药等常用道具。', 'gym': '宝可梦道馆，馆主和打法见下文说明。'}.get(bp.get('t'), '')
+                ent = {'k': '建筑', 'n': bp['n'], 'd': d_}
+                if bid: ent['l'] = '#' + bid
+                extra[key] = ent
+                btns += f'<button class="bp" type="button" style="left:{bp["x"]}%;top:{bp["y"]}%" data-t="{e(key)}" aria-label="{e(bp["n"])}">{ICON.get(bp.get("t", "other"), "📍")}</button>'
             for i, p in enumerate(lst):
                 cand = rows.get(p['n'])
                 if not cand: continue
@@ -464,11 +495,11 @@ function esc(x){return String(x).replace(/[&<>]/g,function(c){return{'&':'&amp;'
 function hide(){T.classList.remove('on');cur=null}
 function show(el){var k=el.getAttribute('data-t'),d=D[k];if(!d)return;if(cur===el){hide();return}cur=el;
 var ic=d.i?'<img src="../img/'+d.i+'" alt="">':(SV[d.k]||'');
-T.innerHTML='<button class="tx" aria-label="关闭">×</button><div class="th">'+ic+'<div><span class="tk">'+esc(d.k)+'</span><h4>'+esc(d.n||k.replace(/（.*/,''))+'</h4></div></div>'+(d.a?'<div class="ta">'+esc(d.a)+(d.b?' ｜ '+esc(d.b):'')+'</div>':'')+(d.d?'<div>'+esc(d.d)+'</div>':'');
+T.innerHTML='<button class="tx" aria-label="关闭">×</button><div class="th">'+ic+'<div><span class="tk">'+esc(d.k)+'</span><h4>'+esc(d.n||k.replace(/（.*/,''))+'</h4></div></div>'+(d.a?'<div class="ta">'+esc(d.a)+(d.b?' ｜ '+esc(d.b):'')+'</div>':'')+(d.d?'<div>'+esc(d.d)+'</div>':'')+(d.l?'<a class="tl" href="'+esc(d.l)+'">看下文说明 ↓</a>':'');
 T.classList.add('on');place();var b=T.getBoundingClientRect().bottom,lim=innerHeight-(innerWidth<=700?80:12);if(b>lim)scrollBy({top:b-lim,behavior:'smooth'})}
 function place(){if(!cur)return;var r=cur.getBoundingClientRect(),w=T.offsetWidth,x=Math.min(Math.max(12,r.left),innerWidth-w-12);T.style.left=x+'px';T.style.top=(r.bottom+12)+'px';T.style.setProperty('--ax',Math.min(Math.max(20,r.left+r.width/2-x),w-20)+'px')}
 addEventListener('scroll',function(){requestAnimationFrame(place)},{passive:true});addEventListener('resize',place);
-document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('.tp,.ip');if(b){ev.preventDefault();show(b);return}if((ev.target.closest&&ev.target.closest('#tip .tx'))||!ev.target.closest('#tip'))hide()});
+document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('.tp,.ip,.bp');if(b){ev.preventDefault();show(b);return}if(ev.target.closest&&ev.target.closest('#tip .tl')){hide();var mo=document.getElementById('mmo');if(mo&&mo.classList.contains('on')){mo.classList.remove('on');document.documentElement.style.overflow=''}return}if((ev.target.closest&&ev.target.closest('#tip .tx'))||!ev.target.closest('#tip'))hide()});
 document.addEventListener('keydown',function(ev){if(ev.key==='Escape')hide();if((ev.key==='Enter'||ev.key===' ')&&ev.target.classList&&ev.target.classList.contains('tp')){ev.preventDefault();show(ev.target)}})})()</script>"""
 
 def link_maps(body, cur=99):
@@ -680,7 +711,8 @@ def build(folder):
         if NODEIDX['by']:
             body = link_maps(body, int(slug.split('-')[-1]))
         pins = json.loads((folder / 'item-pins.json').read_text(encoding='utf-8')) if (folder / 'item-pins.json').exists() else {}
-        body, pextra = mappins(body, pins, json.loads((folder / 'terms.json').read_text(encoding='utf-8')) if (folder / 'terms.json').exists() else {})
+        bpins = json.loads((folder / 'building-pins.json').read_text(encoding='utf-8')) if (folder / 'building-pins.json').exists() else {}
+        body, pextra = mappins(body, pins, json.loads((folder / 'terms.json').read_text(encoding='utf-8')) if (folder / 'terms.json').exists() else {}, bpins)
         body = compact(body)
         body, cast = npcify(body)
         tdata = json.loads((folder / 'terms.json').read_text(encoding='utf-8')) if (folder / 'terms.json').exists() else {}
