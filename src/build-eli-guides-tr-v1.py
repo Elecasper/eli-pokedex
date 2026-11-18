@@ -118,7 +118,7 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,
 .ip:focus-visible,.ip.on{outline:3px solid #ffd54f}
 [id^="bld-"]{scroll-margin-top:84px}
 #tip{z-index:95}
-#mm{position:fixed;right:12px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:50;width:96px;background:#fff;border:2px solid #d32f2f;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.3);padding:0;overflow:hidden;display:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+#mm{position:fixed;left:12px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:50;width:96px;background:#fff;border:2px solid #d32f2f;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.3);padding:0;overflow:hidden;display:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
 #mm.on{display:block}
 #mm img{display:block;width:100%;height:78px;object-fit:cover;background:#c9d9b8;image-rendering:auto}
 #mm span{display:block;font-size:12px;background:#d32f2f;color:#fff;text-align:center;padding:0;line-height:1.4}
@@ -130,7 +130,7 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,
 #mmo .mbh button{border:1px solid rgba(255,255,255,.7);background:transparent;color:#fff;border-radius:999px;width:34px;height:30px;padding:0;font-size:18px;line-height:1;cursor:pointer;min-height:0}
 #mmo .bd{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;padding:8px}
 #mmo figure{margin:0 0 12px}
-@media(min-width:900px){#mm{bottom:20px;width:140px}#mm img{height:104px}#mmo{left:auto;right:16px;bottom:16px;width:min(460px,40vw);height:calc(100vh - 90px)}}
+@media(min-width:900px){#mm{bottom:20px;width:140px}#mm img{height:104px}#mmo{right:auto;left:16px;bottom:16px;width:min(460px,40vw);height:calc(100vh - 90px)}}
 @media(max-width:700px){
 .eli-bar{position:static!important}.eli-bar-in{min-height:42px}.eli-bar .brand{font-size:16px}
 .eli-bar nav a:not(.home):not([aria-current]){display:none}
@@ -144,9 +144,9 @@ main h1{margin-top:12px}
 .dock.hd{transform:translateY(110%)}
 .dock a{min-height:38px;padding:0 10px;font-size:14px;border-radius:10px}
 body{padding-bottom:56px}
-#mm{width:56px;right:8px;bottom:calc(54px + env(safe-area-inset-bottom))}
+#mm{width:56px;left:8px;right:auto;bottom:calc(54px + env(safe-area-inset-bottom))}
 #mm img{height:42px}#mm span{font-size:11px}
-#mmo{left:auto;right:8px;width:64vw;height:50vh;bottom:calc(54px + env(safe-area-inset-bottom))}
+#mmo{right:auto;left:8px;width:64vw;height:50vh;bottom:calc(54px + env(safe-area-inset-bottom))}
 }
 </style>'''
 
