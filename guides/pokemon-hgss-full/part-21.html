@@ -92,6 +92,10 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,
 .ip img{pointer-events:none;-webkit-user-drag:none;width:24px;height:24px;image-rendering:pixelated;border:0!important;border-radius:0!important;background:none!important}
 .bp{position:absolute;margin:-14px 0 0 -14px;min-height:0;min-width:0;width:28px;height:28px;border-radius:8px;background:#fff;border:2px solid #1565c0;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.35);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;line-height:1;-webkit-tap-highlight-color:transparent}.bp,.bp:active,.bp:hover{transform:none!important}
 #tip .tl{display:inline-block;margin-top:8px;color:#d32f2f;font-weight:600;text-decoration:none}
+.fls{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0 2px;text-align:left}
+.fls b{font-size:12.5px;color:#6f675c;font-weight:600;margin-right:2px}
+.fi{width:34px;height:34px;border-radius:50%;background:#fff;border:2px solid #d32f2f;padding:0;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;min-height:0;min-width:0;-webkit-tap-highlight-color:transparent}
+.fi img{pointer-events:none;width:26px;height:26px;image-rendering:pixelated;border:0!important;border-radius:0!important;background:none!important}
 .ip:focus-visible,.ip.on{outline:3px solid #ffd54f}
 [id^="bld-"]{scroll-margin-top:84px}
 #tip{z-index:95}
@@ -230,7 +234,7 @@ T.innerHTML='<button class="tx" aria-label="关闭">×</button><div class="th">'
 T.classList.add('on');place();var b=T.getBoundingClientRect().bottom,lim=innerHeight-(innerWidth<=700?80:12);if(b>lim)scrollBy({top:b-lim,behavior:'smooth'})}
 function place(){if(!cur)return;var r=cur.getBoundingClientRect(),w=T.offsetWidth,x=Math.min(Math.max(12,r.left),innerWidth-w-12);T.style.left=x+'px';T.style.top=(r.bottom+12)+'px';T.style.setProperty('--ax',Math.min(Math.max(20,r.left+r.width/2-x),w-20)+'px')}
 addEventListener('scroll',function(){requestAnimationFrame(place)},{passive:true});addEventListener('resize',place);
-document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('.tp,.ip,.bp');if(b){ev.preventDefault();show(b);return}if(ev.target.closest&&ev.target.closest('#tip .tl')){hide();return}if((ev.target.closest&&ev.target.closest('#tip .tx'))||!ev.target.closest('#tip'))hide()});
+document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('.tp,.ip,.bp,.fi');if(b){ev.preventDefault();show(b);return}if(ev.target.closest&&ev.target.closest('#tip .tl')){hide();return}if((ev.target.closest&&ev.target.closest('#tip .tx'))||!ev.target.closest('#tip'))hide()});
 document.addEventListener('keydown',function(ev){if(ev.key==='Escape')hide();if((ev.key==='Enter'||ev.key===' ')&&ev.target.classList&&ev.target.classList.contains('tp')){ev.preventDefault();show(ev.target)}})})()</script><div id="mm" role="button" aria-label="放大地图"><img alt=""><span>🗺</span></div><div id="mmo"><div class="box"><div class="mbh"><b></b><button type="button" class="op" aria-label="透明度" title="透明度">◐</button><button type="button" class="cl" aria-label="关闭" title="关闭">×</button></div><div class="bd"></div></div></div><script>(function(){
 var els=[].slice.call(document.querySelectorAll('main h2, figure.map'));if(!els.some(function(e){return e.tagName=='FIGURE'}))return;
 var secs=[],cur=null;els.forEach(function(e){if(e.tagName=='H2'){cur={h:e,maps:[]};secs.push(cur)}else{if(!cur){cur={h:null,maps:[]};secs.push(cur)}cur.maps.push(e)}});

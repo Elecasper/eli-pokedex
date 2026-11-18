@@ -115,6 +115,10 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,
 .ip img{pointer-events:none;-webkit-user-drag:none;width:24px;height:24px;image-rendering:pixelated;border:0!important;border-radius:0!important;background:none!important}
 .bp{position:absolute;margin:-14px 0 0 -14px;min-height:0;min-width:0;width:28px;height:28px;border-radius:8px;background:#fff;border:2px solid #1565c0;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.35);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;line-height:1;-webkit-tap-highlight-color:transparent}.bp,.bp:active,.bp:hover{transform:none!important}
 #tip .tl{display:inline-block;margin-top:8px;color:#d32f2f;font-weight:600;text-decoration:none}
+.fls{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0 2px;text-align:left}
+.fls b{font-size:12.5px;color:#6f675c;font-weight:600;margin-right:2px}
+.fi{width:34px;height:34px;border-radius:50%;background:#fff;border:2px solid #d32f2f;padding:0;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;min-height:0;min-width:0;-webkit-tap-highlight-color:transparent}
+.fi img{pointer-events:none;width:26px;height:26px;image-rendering:pixelated;border:0!important;border-radius:0!important;background:none!important}
 .ip:focus-visible,.ip.on{outline:3px solid #ffd54f}
 [id^="bld-"]{scroll-margin-top:84px}
 #tip{z-index:95}
@@ -385,6 +389,29 @@ def cast_strip(cast):
     return ('<div class="cast"><b>本节人物</b>' + ''.join(f'<span class="ct">{av(n, "av")}<i>{n}</i></span>' for n in cast) + '</div>')
 
 
+FLOOR_ALIAS = {
+    'mt-mortar-entrance-hgss': ['入口'], 'mt-mortar-lower-cave-hgss': ['下层洞窟'],
+    'slowpoke-well-entrance-hgss': ['入口'],
+    'dark-cave-2-hgss': ['东北洞室'], 'dark-cave-1-hgss': ['西南洞室'],
+    'rock-tunnel-1-hgss': ['1F'], 'rock-tunnel-2-hgss': ['B1F'],
+    'mt-silver-lower-mountainside-hgss': ['山腰下段'], 'mt-silver-upper-mountainside-hgss': ['山腰上段'], 'mt-silver-summit-hgss': ['山顶'],
+    'whirl-islands-b3f-hgss': ['B3F（上层）'],
+    'goldenrod-tunnel-basement-hgss': ['B2F'], 'underground-warehouse-hgss': ['仓库'],
+}
+DIRS = {'ne': '东北', 'nw': '西北', 'se': '东南', 'sw': '西南'}
+
+def floor_match(key, label):
+    if not label: return False
+    if key in FLOOR_ALIAS: return any(label.startswith(a) for a in FLOOR_ALIAS[key])
+    m = re.search(r'-(b?\d+)f(?:-(ne|nw|se|sw))?-hgss$', key)
+    if not m: return False
+    tok = m.group(1).upper() + 'F'
+    lm = re.match(r'^(B?\d+F)', label)
+    if not lm or lm.group(1) != tok: return False
+    if m.group(2): return DIRS[m.group(2)] in label
+    if key.startswith('whirl-islands-1f'): return False
+    return True
+
 def mappins(body, pins, terms=None, bpins=None):
     """overlay item icons on map figures (rows are looked up inside the same h2 section); returns (body, popup data)"""
     terms = terms or {}
@@ -419,8 +446,8 @@ def mappins(body, pins, terms=None, bpins=None):
             inner, img = m.group(0), m.group(1)
             lst = pins.get(img) or []
             blst = bpins.get(img) or []
-            if not lst and not blst: return inner
             btns = ''
+            pinned = set()
             ICON = {'center': '🏥', 'mart': '🛒', 'gym': '🏆', 'house': '🏠', 'tower': '🗼', 'lab': '🔬', 'station': '🚆', 'other': '📍'}
             for bi, bp in enumerate(blst):
                 bid, txt = bdesc.get((img, bi), (None, ''))
@@ -439,6 +466,7 @@ def mappins(body, pins, terms=None, bpins=None):
                     c2 = [c for c in cand if (not p.get('f') or p['f'] in c[2] or c[1].startswith(p['f'])) and (not p.get('m') or p['m'] in re.sub(r'<[^>]+>', '', c[1]))]
                     if c2: cand = c2
                 ic, loc, _dv = cand[min(p.get('o', 0), len(cand) - 1)]
+                pinned.add((p['n'], loc))
                 parts = re.split(r'<br\s*/?>', loc)
                 txt = re.sub(r'<[^>]+>', '', parts[p.get('l', 0)] if p.get('l', 0) < len(parts) else parts[0])
                 key = f'@{img}:{i}'
@@ -449,8 +477,30 @@ def mappins(body, pins, terms=None, bpins=None):
                 extra[key] = ent
                 ic2 = ic or (t.get('i') if t else None)
                 btns += f'<button class="ip" type="button" style="left:{p["x"]}%;top:{p["y"]}%" data-t="{e(key)}" aria-label="{e(p["n"])}">' + (f'<img src="../img/{ic2}" alt="">' if ic2 else '●') + '</button>'
-            if not btns: return inner
-            return re.sub(r'(<img src="[^"]*' + re.escape(img) + r'[^>]*>)', lambda mm: '<div class="mw">' + mm.group(1) + btns + '</div>', inner, count=1)
+            strip = ''
+            seen_fl = 0
+            for nm_, cands in rows.items():
+                for ic_, loc_, dv_ in cands:
+                    if (nm_, loc_) in pinned: continue
+                    pm_ = re.match(r'^(B?\d+F[^，,]*)[，,]', re.sub(r'<[^>]+>', '', loc_))
+                    label_ = pm_.group(1) if pm_ else dv_
+                    if not floor_match(img, label_): continue
+                    for li_, part_ in enumerate(re.split(r'<br\s*/?>', loc_)):
+                        txt_ = re.sub(r'<[^>]+>', '', part_)
+                        pm2 = re.match(r'^(B?\d+F[^，,]*)[，,]', txt_)
+                        if len(re.split(r'<br\s*/?>', loc_)) > 1 and pm2 and not floor_match(img, pm2.group(1)): continue
+                        fk = f'@fl:{img}:{seen_fl}'; seen_fl += 1
+                        t_ = terms.get(nm_)
+                        ent_ = {'k': '道具', 'n': nm_, 'a': '拾取位置：' + txt_, 'd': t_['d'] if t_ else ''}
+                        ic3 = ic_ or (t_.get('i') if t_ else None)
+                        if ic3: ent_['i'] = ic3
+                        extra[fk] = ent_
+                        strip += f'<button class="fi" type="button" data-t="{e(fk)}" aria-label="{e(nm_)}">' + (f'<img src="../img/{ic3}" alt="">' if ic3 else '●') + '</button>'
+            if not btns and not strip: return inner
+            res = inner
+            if btns: res = re.sub(r'(<img src="[^"]*' + re.escape(img) + r'[^>]*>)', lambda mm: '<div class="mw">' + mm.group(1) + btns + '</div>', res, count=1)
+            if strip: res = res.replace('</figcaption>', '</figcaption><p class="fls"><b>本层道具</b>' + strip + '</p>', 1)
+            return res
         return re.sub(r'<figure class="map">(?:(?!</figure>).)*?maps/([^"/]+?)\.webp.*?</figure>', fig, chunk, flags=re.S)
     parts = re.split(r'(?=<h2[ >])', body)
     return ''.join(section(c) for c in parts), extra
@@ -528,7 +578,7 @@ T.innerHTML='<button class="tx" aria-label="关闭">×</button><div class="th">'
 T.classList.add('on');place();var b=T.getBoundingClientRect().bottom,lim=innerHeight-(innerWidth<=700?80:12);if(b>lim)scrollBy({top:b-lim,behavior:'smooth'})}
 function place(){if(!cur)return;var r=cur.getBoundingClientRect(),w=T.offsetWidth,x=Math.min(Math.max(12,r.left),innerWidth-w-12);T.style.left=x+'px';T.style.top=(r.bottom+12)+'px';T.style.setProperty('--ax',Math.min(Math.max(20,r.left+r.width/2-x),w-20)+'px')}
 addEventListener('scroll',function(){requestAnimationFrame(place)},{passive:true});addEventListener('resize',place);
-document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('.tp,.ip,.bp');if(b){ev.preventDefault();show(b);return}if(ev.target.closest&&ev.target.closest('#tip .tl')){hide();return}if((ev.target.closest&&ev.target.closest('#tip .tx'))||!ev.target.closest('#tip'))hide()});
+document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('.tp,.ip,.bp,.fi');if(b){ev.preventDefault();show(b);return}if(ev.target.closest&&ev.target.closest('#tip .tl')){hide();return}if((ev.target.closest&&ev.target.closest('#tip .tx'))||!ev.target.closest('#tip'))hide()});
 document.addEventListener('keydown',function(ev){if(ev.key==='Escape')hide();if((ev.key==='Enter'||ev.key===' ')&&ev.target.classList&&ev.target.classList.contains('tp')){ev.preventDefault();show(ev.target)}})})()</script>"""
 
 def link_maps(body, cur=99):
