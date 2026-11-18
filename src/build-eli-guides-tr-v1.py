@@ -113,6 +113,19 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:rgba(201,
 .ip,.ip:active,.ip:hover{transform:none!important}.ip{position:absolute;margin:-15px 0 0 -15px;min-height:0;min-width:0;width:30px;height:30px;border-radius:50%;background:#fff;border:2px solid #d32f2f;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.35);cursor:pointer;display:flex;align-items:center;justify-content:center;-webkit-tap-highlight-color:transparent}
 .ip img{pointer-events:none;-webkit-user-drag:none;width:24px;height:24px;image-rendering:pixelated;border:0!important;border-radius:0!important;background:none!important}
 .ip:focus-visible,.ip.on{outline:3px solid #ffd54f}
+#tip{z-index:95}
+#mm{position:fixed;right:12px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:50;width:96px;background:#fff;border:2px solid #d32f2f;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.3);padding:0;overflow:hidden;display:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+#mm.on{display:block}
+#mm img{display:block;width:100%;height:78px;object-fit:cover;background:#c9d9b8;image-rendering:auto}
+#mm span{display:block;font-size:12px;background:#d32f2f;color:#fff;text-align:center;padding:2px 0;line-height:1.3}
+#mmo{position:fixed;inset:0;z-index:80;background:rgba(30,25,20,.8);display:none;overflow:auto;-webkit-overflow-scrolling:touch;padding:10px 10px 96px}
+#mmo.on{display:block}
+#mmo .box{max-width:900px;margin:0 auto;background:#f4efe4;border-radius:12px;padding:10px 10px 4px}
+#mmo .bh{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 8px;position:sticky;top:0;background:#f4efe4;padding:2px 0 6px;z-index:2}
+#mmo .bh b{font-size:16px}
+#mmo .bh button{border:0;background:#d32f2f;color:#fff;border-radius:999px;padding:8px 18px;font-size:15px;cursor:pointer}
+#mmo figure{margin:0 0 12px}
+@media(min-width:900px){#mm{bottom:20px;width:140px}#mm img{height:104px}}
 </style>'''
 
 
@@ -383,6 +396,24 @@ def mappins(body, pins, terms=None):
         return re.sub(r'<figure class="map">(?:(?!</figure>).)*?maps/([^"/]+?)\.webp.*?</figure>', fig, chunk, flags=re.S)
     parts = re.split(r'(?=<h2[ >])', body)
     return ''.join(section(c) for c in parts), extra
+
+MMJS = """<div id="mm" role="button" aria-label="放大地图"><img alt=""><span>🗺 点开地图</span></div><div id="mmo"><div class="box"><div class="bh"><b></b><button type="button">关闭 ×</button></div><div class="bd"></div></div></div><script>(function(){
+var els=[].slice.call(document.querySelectorAll('main h2, figure.map'));if(!els.some(function(e){return e.tagName=='FIGURE'}))return;
+var secs=[],cur=null;els.forEach(function(e){if(e.tagName=='H2'){cur={h:e,maps:[]};secs.push(cur)}else{if(!cur){cur={h:null,maps:[]};secs.push(cur)}cur.maps.push(e)}});
+var M=document.getElementById('mm'),O=document.getElementById('mmo'),img=M.querySelector('img'),cs=null,tick=0;
+function vis(e){var r=e.getBoundingClientRect();return r.bottom>60&&r.top<innerHeight-60}
+function upd(){tick=0;if(O.classList.contains('on'))return;var best=null,vh=innerHeight;secs.forEach(function(s){var t=(s.h||s.maps[0]||document.body).getBoundingClientRect().top;if(t<=vh*0.7)best=s});
+if(!best||!best.maps.length||best.maps.some(vis)){M.classList.remove('on');cs=null;return}
+if(cs!==best){cs=best;var i=best.maps[0].querySelector('img');img.src=i.currentSrc||i.src}M.classList.add('on')}
+function sched(){if(!tick){tick=1;requestAnimationFrame(upd)}}
+addEventListener('scroll',sched,{passive:true});addEventListener('resize',sched);upd();
+M.addEventListener('click',function(){if(!cs)return;var bd=O.querySelector('.bd');bd.innerHTML='';O.querySelector('.bh b').textContent=(cs.h?cs.h.textContent:'地图');
+cs.maps.forEach(function(f){var c=f.cloneNode(true);[].forEach.call(c.querySelectorAll('img'),function(im){im.removeAttribute('loading')});bd.appendChild(c)});
+O.classList.add('on');M.classList.remove('on');O.scrollTop=0;document.documentElement.style.overflow='hidden'});
+function close(){O.classList.remove('on');document.documentElement.style.overflow='';sched()}
+O.querySelector('.bh button').addEventListener('click',close);O.addEventListener('click',function(e){if(e.target===O)close()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&O.classList.contains('on'))close()});
+})()</script>"""
 
 def autoterm(body, terms):
     """make plain-text item / TM / HM names tappable (first mention per h2 section)"""
@@ -678,7 +709,7 @@ def build(folder):
             body, items = treeify(body, nxt)
             tocs[slug] = items
         (out / f'{slug}.html').write_text(page_html(f'{short_title(info["title"])[0]} - {g["game"]}',
-            f'{crumb}<h1>{e(short_title(info["title"])[0])}</h1><p class="chap">第 {slug.split("-")[-1]} 节 · {e(info["chapter"])}'+(f' · 途经 {e(short_title(info["title"])[1])}' if short_title(info["title"])[1] else '')+f'</p>{cast_strip(cast)}{tree}{body}{pager}{credit(slug)}{dock}{backjs if hasmap else ""}{tipblock}'), encoding='utf-8')
+            f'{crumb}<h1>{e(short_title(info["title"])[0])}</h1><p class="chap">第 {slug.split("-")[-1]} 节 · {e(info["chapter"])}'+(f' · 途经 {e(short_title(info["title"])[1])}' if short_title(info["title"])[1] else '')+f'</p>{cast_strip(cast)}{tree}{body}{pager}{credit(slug)}{dock}{backjs if hasmap else ""}{tipblock}{MMJS if 'figure class="map"' in body else ""}'), encoding='utf-8')
 
     toc, last = '', None
     for slug, info, _ in pages:
